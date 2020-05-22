@@ -138,6 +138,12 @@ function abc_booking_validateDate($date, $format = 'Y-m-d')
                 $dateValid = true;
             }
             break;
+        case 'j. n. Y':
+            if (preg_match("/^([1-9]|[1-2][0-9]|3[0-1])\. ([1-9]|1[0-2])\. [0-9]{4}$/",$date))
+            {
+                $dateValid = true;
+            }
+            break;
         case 'd/m/Y':
             if (preg_match("/^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/[0-9]{4}$/",$date))
             {
@@ -174,6 +180,12 @@ function abc_booking_formatDateToDB($string) {
     $month = '';
     $year = '';
     switch ($dateformat) {
+        case 'j. n. Y':
+            $day = intval ( explode(". ", $string)[0] );
+        	$month = intval ( explode(". ", $string)[1] );
+        	$year = intval ( explode(". ", $string)[2] );
+            $newDate = date('Y-m-d', mktime(0, 0, 0, $month, $day, $year));
+            break;
         case 'd.m.Y':
         case 'd/m/Y':
         	$day = intval ( substr($string, 0, 2) );
@@ -212,6 +224,8 @@ function abc_booking_dateFormatToJS($string) {
         $dateformat = 'yy-mm-dd';
     } elseif($string == "d.m.Y") {
         $dateformat = 'dd.mm.yy';
+    } elseif($string == "j. n. Y") {
+        $dateformat = 'd. m. yy';
     } elseif($string == "d/m/Y") {
         $dateformat = 'dd/mm/yy';
     } elseif($string == "m/d/Y") {

@@ -318,6 +318,7 @@ function advanced_booking_calendar_show_settings() {
 	$date2 = "";
 	$date3 = "";
 	$date4 = "";
+	$date5 = "";
 	if(getAbcSetting("dateformat") == "Y-m-d") {
 		$date1 = 'selected';
 	} elseif(getAbcSetting("dateformat") == "d.m.Y") {
@@ -326,6 +327,8 @@ function advanced_booking_calendar_show_settings() {
 		$date3 = 'selected';
 	} elseif(getAbcSetting("dateformat") == "m/d/Y") {
 		$date4 = 'selected';
+	} elseif(getAbcSetting("dateformat") == "j. n. Y") {
+		$date5 = 'selected';
 	}
 	
 	//Price Format
@@ -680,6 +683,7 @@ function advanced_booking_calendar_show_settings() {
 						<option value="d.m.Y" '.$date2.'>15.12.2016</option>
 						<option value="d/m/Y" '.$date3.'>15/12/2016</option>
 						<option value="m/d/Y" '.$date4.'>12/15/2016</option>
+						<option value="j. n. Y" '.$date5.'>15. 12. 2016</option>
 				  	  </select></div>
 			    </div>
 				<div class="uk-form-row">

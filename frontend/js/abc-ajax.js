@@ -148,6 +148,8 @@ jQuery('.abc-singlecalendar').on('click', '.abc-date-selector', function(){
 	};
 	jQuery.post(ajax_abc_booking_SingleCalendar.ajaxurl, data, function (response){
 		jQuery('#abc-booking-' + uniqid).html(response);
+		jQuery('#abc-from').val(response.split("</b>")[1].trim().split("</div>")[0]);
+		jQuery('#abc-to').val(response.split("</b>")[2].trim().split("</div>")[0]);
 	});
 	jQuery('#abc_singlecalendar_' + uniqid).data('checkin-' + uniqid, abcSingleCheckin);
 	jQuery('#abc_singlecalendar_' + uniqid).data('checkout-' + uniqid, abcSingleCheckout);

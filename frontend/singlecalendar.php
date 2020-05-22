@@ -410,17 +410,17 @@ function ajax_abc_booking_setDataRange() {
 		$dateformat = getAbcSetting('dateformat');
 		$currency = getAbcSetting('currency');
 		if($start != 0){
-			$output .= '<div class="abc-column"><b>'.abc_booking_getCustomText('checkin').':</b> '.date($dateformat, $start).'<br/>
-				<b>'.abc_booking_getCustomText('checkout').':</b> ';
+			$output .= '<div class="abc-column"><div><b>'.abc_booking_getCustomText('checkin').':</b> '.date($dateformat, $start).'</div>
+				<div><b>'.abc_booking_getCustomText('checkout').':</b> ';
 			if($end != 0 && $end > $start){
 				$success = true;
-				$output .= date($dateformat, $end);
+				$output .= date($dateformat, $end).'</div>';
 				$numberOfDays = abc_booking_dateDiffInDays($end, $start);
-				$output .= '<br/><b>'.abc_booking_getCustomText('roomPrice').': </b>
-						'.abc_booking_formatPrice(abc_booking_getTotalPrice($calendarId, date("Y-m-d", $start), $numberOfDays));
+				$output .= '<div><b>'.abc_booking_getCustomText('roomPrice').': </b>
+						'.abc_booking_formatPrice(abc_booking_getTotalPrice($calendarId, date("Y-m-d", $start), $numberOfDays)).'</div>';
 				$extrasMandatory = getAbcExtrasList($numberOfDays, 1, 2, $calendarId); // Getting mandatory extras
 				if(count($extrasMandatory) > 0){
-					$output .= '<br/><b>'.abc_booking_getCustomText('extras').': </b>';
+					$output .= '<b>'.abc_booking_getCustomText('extras').': </b>';
 					$maxExtras = count($extrasMandatory);
 					$extraCounter = 0;
 					foreach($extrasMandatory as $extra){
@@ -454,7 +454,7 @@ function ajax_abc_booking_setDataRange() {
 					$output .= '<input type="hidden" name="abc-trigger" value="'.$calendarId.'">';
 				$output .= '</form>';	
 			} else {
-				$output .= '-';
+				$output .= '–</div>';
 			}
 			$output .= '</div><div style="clear:both"></div>';
 		}

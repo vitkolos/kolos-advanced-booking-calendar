@@ -25,7 +25,7 @@ datepicker.regional.cs = {
 	dayNamesShort: [ "ne", "po", "út", "st", "čt", "pá", "so" ],
 	dayNamesMin: [ "ne","po","út","st","čt","pá","so" ],
 	weekHeader: "Týd",
-	dateFormat: "dd.mm.yy",
+	dateFormat: "d. m. yy",
 	firstDay: 1,
 	isRTL: false,
 	showMonthAfterYear: false,

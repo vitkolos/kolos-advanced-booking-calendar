@@ -625,4 +625,4 @@ function advanced_booking_update_check(){
 		update_option( 'abc_pluginversion', '164');
 	}	
 }
-add_action( 'plugins_loaded', 'advanced_booking_update_check' );
+// add_action( 'plugins_loaded', 'advanced_booking_update_check' );
