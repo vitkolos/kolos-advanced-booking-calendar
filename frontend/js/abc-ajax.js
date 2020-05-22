@@ -150,6 +150,19 @@ jQuery('.abc-singlecalendar').on('click', '.abc-date-selector', function(){
 		jQuery('#abc-booking-' + uniqid).html(response);
 		jQuery('#abc-from').val(response.split("</b>")[1].trim().split("</div>")[0]);
 		jQuery('#abc-to').val(response.split("</b>")[2].trim().split("</div>")[0]);
+
+		data = {
+			action: 'abc_booking_getBookingFormStep2',
+			from: jQuery("#abc-from").val(),
+			to: jQuery("#abc-to").val(),
+			persons: jQuery("#abc-persons").val(),
+			calendar: calendar
+		};
+		jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
+			jQuery('#abc-bookingresults').html(response);
+			jQuery('#abc-bookingresults').fadeIn('medium');
+			jQuery('#abc-back-to-availabilities').show();
+		});
 	});
 	jQuery('#abc_singlecalendar_' + uniqid).data('checkin-' + uniqid, abcSingleCheckin);
 	jQuery('#abc_singlecalendar_' + uniqid).data('checkout-' + uniqid, abcSingleCheckout);
