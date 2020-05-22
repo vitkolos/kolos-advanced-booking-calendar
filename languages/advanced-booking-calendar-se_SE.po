@@ -1,0 +1,2534 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Advanced Booking Calendar\n"
+"POT-Creation-Date: 2019-09-29 09:17+0200\n"
+"PO-Revision-Date: 2019-09-30 19:11+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: advanced-booking-calendar.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: sv_SE\n"
+"X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,-1,1,-1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: advanced-booking-calendar.php:168
+msgid "Your details"
+msgstr "Detaljer"
+
+#: advanced-booking-calendar.php:169
+msgid "Hi [abc_first_name]!"
+msgstr "Hej [abc_first_name]!"
+
+#: advanced-booking-calendar.php:170 backend/bookings.php:1068
+#, php-format
+msgid "Your %s-Team"
+msgstr "Vänliga hälsningar %s-gruppen"
+
+#: advanced-booking-calendar.php:171 backend/settings.php:1061 functions.php:59
+msgid "Room type"
+msgstr "Rumtyp"
+
+#: advanced-booking-calendar.php:172 functions.php:623
+msgid "Room price"
+msgstr "Rumpris"
+
+#: advanced-booking-calendar.php:173 functions.php:621
+msgid "Selected extras"
+msgstr "Extra tillägg"
+
+#: advanced-booking-calendar.php:174 backend/bookings.php:925
+#: backend/bookings.php:2027 frontend/bookingform.php:472
+#: frontend/bookingform.php:490 functions.php:617
+msgid "Additional costs"
+msgstr "Tilläggskostnad"
+
+#: advanced-booking-calendar.php:175 backend/coupons.php:22 functions.php:640
+msgid "Discount"
+msgstr "Rabatt"
+
+#: advanced-booking-calendar.php:176 backend/bookings.php:341
+#: backend/bookings.php:931 backend/bookings.php:1606 backend/bookings.php:2032
+#: frontend/bookingform.php:317 functions.php:653
+msgid "Total price"
+msgstr "Totalt pris"
+
+#: advanced-booking-calendar.php:177
+msgid "Checkin - Checkout"
+msgstr "Incheckning - Utcheckning"
+
+#: advanced-booking-calendar.php:178
+msgid "Number of guests"
+msgstr "Antal gäster"
+
+#: advanced-booking-calendar.php:179
+msgid "Full Name"
+msgstr "Fullständigt namn"
+
+#: advanced-booking-calendar.php:180 backend/bookings.php:197
+#: backend/settings.php:622 functions.php:802
+msgid "Email"
+msgstr "E-post"
+
+#: advanced-booking-calendar.php:181 backend/bookings.php:197 functions.php:803
+msgid "Phone"
+msgstr "Telefon"
+
+#: advanced-booking-calendar.php:182 backend/bookings.php:198 functions.php:804
+msgid "Address"
+msgstr "Adress"
+
+#: advanced-booking-calendar.php:183
+msgid "Your message to us"
+msgstr "Ditt meddelande till oss"
+
+#: advanced-booking-calendar.php:184
+#, php-format
+msgid "Your booking at %s"
+msgstr "Din bokning för  %s"
+
+#: advanced-booking-calendar.php:187
+#, php-format
+msgid ""
+"Thank you for booking at %s. Your booking has not yet been confirmed. Please "
+"wait for an additional confirmation email."
+msgstr ""
+"Tack för din bokning av %s. Din bokning har ännu inte bekräftats. "
+"Bekräftelse kommer när totalt pris har betalats vilket ska göras inom 5 "
+"bankdagar."
+
+#: advanced-booking-calendar.php:191
+#, php-format
+msgid "Confirming your booking at %s"
+msgstr "Bekräftelse av Din bokning av %s"
+
+#: advanced-booking-calendar.php:194
+msgid "We are happy to confirm your booking!"
+msgstr "Vi är glada att bekräfta din bokning!"
+
+#: advanced-booking-calendar.php:196
+msgid "If you have any questions regard your stay, feel free to contact us."
+msgstr ""
+"Om Du har några frågor angående Din vistelse, tveka inte att kontakta oss."
+
+#: advanced-booking-calendar.php:199
+#, php-format
+msgid "Canceling your booking at %s"
+msgstr "Annullering av Din bokning av %s"
+
+#: advanced-booking-calendar.php:202
+msgid ""
+"We are very sorry to cancel your booking! We already had another reservation "
+"for your requested travel period."
+msgstr ""
+"Vi är mycket ledsna att behöva annullera Din bokning! Vi har redan en annan "
+"bokning för Din önskade period."
+
+#: advanced-booking-calendar.php:203 advanced-booking-calendar.php:210
+#, php-format
+msgid ""
+"Please check our website at %s for an alternative. We would be very happy to "
+"welcome you any time soon."
+msgstr ""
+"Vänligen kontrollera vår hemsida på %s för ett alternativ. Vi skulle vara "
+"mycket glada att välkomna dig när som helst snart."
+
+#: advanced-booking-calendar.php:206
+#, php-format
+msgid "Rejecting your booking at %s"
+msgstr "Din bokning av %s är tyvärr avböjd"
+
+#: advanced-booking-calendar.php:209
+msgid ""
+"We are very sorry to reject your booking! We already had another reservation "
+"for your requested travel period."
+msgstr ""
+"Vi är mycket ledsna att behöva annullera Din bokning! Vi har redan en annan "
+"bokning för Din önskade period."
+
+#: advanced-booking-calendar.php:326
+msgid "Plugin uninstalled"
+msgstr "Plugin oinstallerad"
+
+#: advanced-booking-calendar.php:327
+msgid "Hi!"
+msgstr "Hej!"
+
+#: advanced-booking-calendar.php:328
+msgid ""
+"you just uninstalled the plugin Advanced Booking Calendar on your WordPress "
+"website, but for safety reasons the data in the database created by the "
+"plugin was not deleted."
+msgstr ""
+"du avinstallerade just plugin Advanced Booking Calendar på din WordPress "
+"hemsida, men av säkerhetsskäl så raderades inte de data som har skapats av "
+"denna plugin."
+
+#: advanced-booking-calendar.php:329
+msgid ""
+"If this was a mistake, please install the plugin again, go the plugins "
+"settings, tick the box for plugin deletion and uninstall it again."
+msgstr ""
+"Om detta var ett misstag, vänligen installera denna plugin igen, gå till "
+"plugin inställningar, bocka i rutan för plugin borttagning och avinstallera "
+"den igen."
+
+#: advanced-booking-calendar.php:330
+msgid "Kindly,"
+msgstr "Vänligen,"
+
+#: advanced-booking-calendar.php:353 advanced-booking-calendar.php:354
+#: backend/bookings.php:1968
+msgid "Bookings"
+msgstr "Bokningar"
+
+#: advanced-booking-calendar.php:361 advanced-booking-calendar.php:362
+#: backend/bookings.php:1885 backend/seasons-calendars.php:673
+msgid "Seasons & Calendars"
+msgstr "Säsonger & kalendrar"
+
+#: advanced-booking-calendar.php:369 advanced-booking-calendar.php:370
+#: backend/bookings.php:199 backend/bookings.php:340 backend/bookings.php:919
+#: backend/bookings.php:2022 backend/extras.php:179
+msgid "Extras"
+msgstr "Tillägg"
+
+#: advanced-booking-calendar.php:377 advanced-booking-calendar.php:378
+#: backend/analytics.php:14
+msgid "Analytics"
+msgstr "Analyser"
+
+#: advanced-booking-calendar.php:385 advanced-booking-calendar.php:386
+#: backend/settings.php:607
+msgid "Settings"
+msgstr "Inställningar"
+
+#: advanced-booking-calendar.php:393 advanced-booking-calendar.php:394
+msgid "More Features"
+msgstr "Fler funktioner"
+
+#: backend/analytics.php:41
+msgid "There are currently no calendars."
+msgstr "Inga kalendrar tillgängliga för ögonblicket."
+
+#: backend/analytics.php:43
+msgid "Please create a calendar first."
+msgstr "Vänligen skapa först en kalender."
+
+#: backend/analytics.php:86
+#, php-format
+msgid "Overall Occupation Rate for the next %d days"
+msgstr "Övergripande beläggningsgrad följande dagar för %d"
+
+#: backend/analytics.php:96
+#, php-format
+msgid "Occupation Rate of each calendar for the next %d days"
+msgstr "Beläggningsgrad för varje kalender följande dagar för %d"
+
+#: backend/analytics.php:132
+#, php-format
+msgid "Number of requests for the next %d days"
+msgstr "Antal förfrågningar följande dagar för %d"
+
+#: backend/analytics.php:167
+#, php-format
+msgid "Percentage per person for the next %d days"
+msgstr "Procentuellt per person följande dagar för %d"
+
+#: backend/analytics.php:207
+#, php-format
+msgid "Average revenue per calendar for the next %d days"
+msgstr "Medelintäkt per kalender följande dagar för %d"
+
+#. Plugin Name of the plugin/theme
+#. Author of the plugin/theme
+#: backend/blocks/class-abc-blocks.php:35
+msgid "Advanced Booking Calendar"
+msgstr "Avancerad bokningskalender"
+
+#: backend/blocks/class-abc-blocks.php:65 backend/tinymce-translations.php:12
+msgid "Calendar Overview"
+msgstr "Kalenderöversikt"
+
+#: backend/blocks/class-abc-blocks.php:66
+msgid "It shows all calendars and their availabilities by month."
+msgstr "Visar alla kalendrar och tillgängligheten per månad."
+
+#: backend/blocks/class-abc-blocks.php:69 backend/tinymce-translations.php:18
+msgid "Single Calendar"
+msgstr "Enkel kalender"
+
+#: backend/blocks/class-abc-blocks.php:70
+msgid "It shows one single calendar. Please select a calender below."
+msgstr "Visar en enkel kalender. Vänligen välj en kalender nedan."
+
+#: backend/blocks/class-abc-blocks.php:71
+msgid "Please select a calendar:"
+msgstr "Vänligen välj en kalender:"
+
+#: backend/blocks/class-abc-blocks.php:72
+msgid "Select a calendar"
+msgstr "Välj en kalender"
+
+#: backend/blocks/class-abc-blocks.php:73
+msgid "Display legend?"
+msgstr "Visa mottot?"
+
+#: backend/blocks/class-abc-blocks.php:76 backend/tinymce-translations.php:9
+msgid "Booking Form"
+msgstr "Bokningsformulär"
+
+#: backend/blocks/class-abc-blocks.php:77
+msgid ""
+"The booking form fulfils two tasks: finding the right room for users and "
+"generating booking requests. Every user action happens onpage via AJAX, so "
+"the page does not reload during interactions."
+msgstr ""
+"Bokningsformuläret fullgör två syften: Att hitta rätt rum för användaren och "
+"skapa bokningsförfrågan. Varje aktivitet sker på sidan via AJAX, så sidan "
+"uppdateras inte under inmatningen."
+
+#: backend/blocks/class-abc-blocks.php:78
+msgid "Please select calendars:"
+msgstr "Vänligen välj kalendrar:"
+
+#: backend/blocks/class-abc-blocks.php:79
+msgid "Hide other Rooms when coming from a Single Calendars?"
+msgstr "Dölj andra rum vid visning från en Enkel kalender?"
+
+#: backend/blocks/class-abc-blocks.php:80
+msgid "Hide Rooms when minimum number of nights is too short?"
+msgstr "Dölj rum när antalet nätter är för litet?"
+
+#: backend/bookings.php:180 backend/bookings.php:251
+msgid "Payment"
+msgstr "Betalning"
+
+#: backend/bookings.php:194
+msgid "ID"
+msgstr "ID"
+
+#: backend/bookings.php:195 backend/settings.php:1073 functions.php:65
+msgid "Checkin"
+msgstr "Incheckning"
+
+#: backend/bookings.php:195 backend/bookings.php:437 backend/bookings.php:443
+#: backend/bookings.php:448 backend/settings.php:1079 functions.php:68
+msgid "Checkout"
+msgstr "Utcheckning"
+
+#: backend/bookings.php:196 backend/bookings.php:887 backend/bookings.php:1987
+#: backend/seasons-calendars.php:608 backend/seasons-calendars.php:936
+#: backend/seasons-calendars.php:950 backend/tinymce-translations.php:14
+msgid "Calendar"
+msgstr "Kalender"
+
+#: backend/bookings.php:196
+msgid "Room"
+msgstr "Rum"
+
+#: backend/bookings.php:197 backend/extras.php:245 backend/extras.php:408
+#: backend/extras.php:527 backend/extras.php:547
+#: backend/seasons-calendars.php:472 backend/seasons-calendars.php:537
+#: backend/seasons-calendars.php:741 backend/seasons-calendars.php:760
+#: backend/seasons-calendars.php:837 backend/seasons-calendars.php:851
+#: functions.php:797
+msgid "Name"
+msgstr "Namn"
+
+#: backend/bookings.php:199 backend/bookings.php:463 backend/bookings.php:468
+#: backend/extras.php:290 backend/extras.php:412 backend/extras.php:531
+#: backend/extras.php:593 backend/seasons-calendars.php:542
+#: backend/seasons-calendars.php:838 backend/seasons-calendars.php:856
+msgid "Price"
+msgstr "Pris"
+
+#: backend/bookings.php:201 backend/bookings.php:344 backend/bookings.php:1062
+#: backend/bookings.php:1607 frontend/bookingform.php:575 functions.php:811
+msgid "Message"
+msgstr "Meddelande"
+
+#: backend/bookings.php:228
+msgid "No extras"
+msgstr "Inget extra"
+
+#: backend/bookings.php:233
+msgid "n/a"
+msgstr "ej tillgänglig"
+
+#: backend/bookings.php:280 backend/bookings.php:281 backend/bookings.php:1603
+#: functions.php:657
+msgid "Booking Request"
+msgstr "Bokningsbegäran"
+
+#: backend/bookings.php:349 backend/bookings.php:371 backend/bookings.php:380
+#: backend/bookings.php:1612 backend/bookings.php:1633
+#: backend/bookings.php:1642
+msgid "Confirm"
+msgstr "Bekräftelse"
+
+#: backend/bookings.php:349 backend/bookings.php:1612
+msgid "Do you really want to confirm this booking?"
+msgstr "Vill du verkligen bekräfta denna bokning?"
+
+#: backend/bookings.php:352 backend/bookings.php:1615
+msgid "Reject"
+msgstr "Avböj"
+
+#: backend/bookings.php:352 backend/bookings.php:1615
+msgid "Do you really want to reject this booking?"
+msgstr "Vill du verkligen avböja denna bokning?"
+
+#: backend/bookings.php:362 backend/bookings.php:890 backend/bookings.php:1624
+msgid "Change room"
+msgstr "Ändra rum"
+
+#: backend/bookings.php:365 backend/bookings.php:1627
+msgctxt "a booking"
+msgid "Cancel"
+msgstr "Annullera"
+
+#: backend/bookings.php:365 backend/bookings.php:1627
+msgid "Do you really want to cancel this booking?"
+msgstr "Vill du verkligen annullera denna bokning?"
+
+#: backend/bookings.php:371 backend/bookings.php:1633
+msgid ""
+"Do you really want to confirm this booking (it has already been canceled)?"
+msgstr ""
+"Vill du verkligen bekräfta denna bokning (den har redan blivit annullerad)?"
+
+#: backend/bookings.php:374 backend/bookings.php:383 backend/bookings.php:1636
+#: backend/bookings.php:1645 backend/extras.php:503
+#: backend/seasons-calendars.php:725 backend/seasons-calendars.php:827
+#: backend/seasons-calendars.php:926
+msgid "Delete"
+msgstr "Radera"
+
+#: backend/bookings.php:374 backend/bookings.php:383 backend/bookings.php:1636
+#: backend/bookings.php:1645
+msgid "Do you really want to delete this booking?"
+msgstr "Vill du verkligen radera denna bokning?"
+
+#: backend/bookings.php:380 backend/bookings.php:1642
+msgid ""
+"Do you really want to confirm this booking (it has already been rejected)?"
+msgstr ""
+"Vill du verkligen bekräfta denna bokning (den har redan blivit avböjd)?"
+
+#: backend/bookings.php:392 backend/bookings.php:407 backend/bookings.php:1656
+#: backend/extras.php:497 backend/seasons-calendars.php:721
+#: backend/seasons-calendars.php:823 backend/seasons-calendars.php:922
+#: frontend/bookingform.php:237
+msgid "Edit"
+msgstr "Ändra"
+
+#: backend/bookings.php:398 backend/bookings.php:413
+msgid "Custom message"
+msgstr "Kundmeddelande"
+
+#: backend/bookings.php:417 backend/bookings.php:1659
+msgid "Scroll up"
+msgstr "Skrolla upp"
+
+#: backend/bookings.php:440
+msgid "Sorting"
+msgstr "Sorterar"
+
+#: backend/bookings.php:453 backend/bookings.php:458 backend/bookings.php:942
+#: backend/bookings.php:2050 backend/settings.php:795
+#: frontend/bookingform.php:529
+msgid "Last Name"
+msgstr "Efternamn"
+
+#: backend/bookings.php:473 backend/bookings.php:478
+msgid "Created at"
+msgstr "Skapad"
+
+#: backend/bookings.php:498
+msgid "No Bookings found."
+msgstr "Inga bokningar hittade."
+
+#: backend/bookings.php:498
+msgid ""
+"Take a look at our <a href=\"https://booking-calendar-plugin.com/pro-"
+"download/?cmp=PayPalSetting\" target=\"_blank\">Pro-Version</a> to benefit "
+"from more features like payment via PayPal or Stripe."
+msgstr ""
+"Titta på vår <a href=\"https://booking-calendar-plugin.com/pro-download/?"
+"cmp=PayPalSetting\" target=\"_blank\">Pro-Version</a> för fördelarna av fler "
+"funktioner som betalning via PayPal eller Stripe."
+
+#: backend/bookings.php:507
+msgid "Select..."
+msgstr "Välj..."
+
+#: backend/bookings.php:559
+msgid "Calendar is available."
+msgstr "Kalender är tillgänglig."
+
+#: backend/bookings.php:560
+msgid "Room price for the stay"
+msgstr "Pris för vistelsen"
+
+#: backend/bookings.php:562
+msgid ""
+"There is an overlap in the bookings. Check if you can move other bookings to "
+"other rooms. The booking can only be saved as \"open\""
+msgstr ""
+"Det finns en överlappning i bokningen. Kontrollera om du kan flytta andra "
+"bokningar. Bokningen kan bara sparas som \"öppen\"."
+
+#: backend/bookings.php:565
+msgid "No rooms available for this calendar during the selected time period"
+msgstr "Inget ledigt i kalendern för den valda tidsperioden"
+
+#: backend/bookings.php:568 frontend/bookingform.php:357
+msgid "Something went wrong."
+msgstr "Något gick fel."
+
+#: backend/bookings.php:735
+msgid "Change room for a booking"
+msgstr "Ändra bokningen"
+
+#: backend/bookings.php:744
+msgid "Booking"
+msgstr "Bokning"
+
+#: backend/bookings.php:745 backend/bookings.php:1386 backend/bookings.php:1388
+#: backend/bookings.php:1443 backend/bookings.php:1445 functions.php:366
+#: functions.php:391
+#, php-format
+msgid "%d person"
+msgid_plural "%d persons"
+msgstr[0] "%d person"
+msgstr[1] "%d personer"
+
+#: backend/bookings.php:749
+msgid "state"
+msgstr "tillstånd"
+
+#: backend/bookings.php:750 backend/settings.php:865
+msgid "message"
+msgstr "meddeland"
+
+#: backend/bookings.php:754
+msgid "Available rooms"
+msgstr "Tillgängliga rum"
+
+#: backend/bookings.php:756
+msgid "Room changes will not affect any price changes!"
+msgstr "Ändring av rum kommer inte att påverka priset!"
+
+#: backend/bookings.php:760 backend/bookings.php:1008 backend/extras.php:320
+#: backend/seasons-calendars.php:512 backend/seasons-calendars.php:553
+#: backend/seasons-calendars.php:626 backend/seasons-calendars.php:664
+#: backend/settings.php:776 backend/settings.php:885 backend/settings.php:956
+#: backend/settings.php:1000 backend/settings.php:1109
+msgid "Save"
+msgstr "Spara"
+
+#: backend/bookings.php:761 backend/extras.php:323 backend/extras.php:422
+#: backend/seasons-calendars.php:513 backend/seasons-calendars.php:554
+#: backend/seasons-calendars.php:627 backend/seasons-calendars.php:665
+msgctxt "a change"
+msgid "Cancel"
+msgstr "Annullering"
+
+#: backend/bookings.php:881
+msgid "Edit booking"
+msgstr "Ändra bokning"
+
+#: backend/bookings.php:894 backend/bookings.php:1993 backend/extras.php:300
+#: backend/extras.php:413 backend/extras.php:532 backend/extras.php:603
+#: frontend/bookingform.php:67 frontend/bookingform.php:223 functions.php:800
+msgid "Persons"
+msgstr "Personer"
+
+#: backend/bookings.php:900 backend/bookings.php:1999
+msgid "Checkin Date"
+msgstr "Incheckningsdatum"
+
+#: backend/bookings.php:909 backend/bookings.php:2008
+msgid "Checkout Date"
+msgstr "Utcheckningsdatum"
+
+#: backend/bookings.php:936 backend/bookings.php:2044 backend/settings.php:785
+#: frontend/bookingform.php:522
+msgid "First Name"
+msgstr "Förnamn"
+
+#: backend/bookings.php:948 backend/bookings.php:2056
+#: frontend/bookingform.php:533
+msgid "Email Address"
+msgstr "E-postadress"
+
+#: backend/bookings.php:954 backend/bookings.php:2069 backend/settings.php:805
+#: frontend/bookingform.php:539
+msgid "Phone Number"
+msgstr "Telefonnummer"
+
+#: backend/bookings.php:960 backend/bookings.php:2075 backend/settings.php:815
+#: frontend/bookingform.php:545
+msgid "Street Address, House no."
+msgstr "Adress."
+
+#: backend/bookings.php:966 backend/bookings.php:2081 backend/settings.php:825
+#: frontend/bookingform.php:551 functions.php:805
+msgid "ZIP Code"
+msgstr "Postnummer"
+
+#: backend/bookings.php:972 backend/bookings.php:2087 backend/settings.php:845
+#: frontend/bookingform.php:557 functions.php:806
+msgid "City"
+msgstr "Ort"
+
+#: backend/bookings.php:978 backend/bookings.php:2093 backend/settings.php:835
+#: frontend/bookingform.php:563 functions.php:807
+msgid "State / County"
+msgstr "Län"
+
+#: backend/bookings.php:984 backend/bookings.php:2099 backend/settings.php:855
+#: frontend/bookingform.php:569 functions.php:808
+msgid "Country"
+msgstr "Land"
+
+#: backend/bookings.php:990 backend/bookings.php:2105
+msgid "Message, special note for stay"
+msgstr "Meddelande speciellt för vistelsen"
+
+#: backend/bookings.php:996 backend/bookings.php:1072 backend/bookings.php:2017
+msgid "State"
+msgstr "Bokningsläge"
+
+#: backend/bookings.php:999 backend/bookings.php:1075
+msgid "Open"
+msgstr "Öppen"
+
+#: backend/bookings.php:1000 backend/bookings.php:1076
+#: backend/bookings.php:2040
+msgid "Confirmed"
+msgstr "Bekräftad"
+
+#: backend/bookings.php:1001 backend/bookings.php:1077
+msgid "Rejected"
+msgstr "Avböjd"
+
+#: backend/bookings.php:1002 backend/bookings.php:1078
+msgid "Canceled"
+msgstr "Annullerad"
+
+#: backend/bookings.php:1004
+msgid ""
+"Note: Changing the booking state here will not sent an email to the guest."
+msgstr ""
+"Notera: Ändring av bokningen här kommer inte att skicka mail till gästen."
+
+#: backend/bookings.php:1009 backend/bookings.php:1084
+msgid "Cancel"
+msgstr "Annullera"
+
+#: backend/bookings.php:1046
+msgid "Could not confirm booking, room is not available."
+msgstr "Kunde inte bekräfta bokningen, rummet ej tillgängligt."
+
+#: backend/bookings.php:1047 backend/bookings.php:1826
+#: backend/bookings.php:1831 backend/bookings.php:1836
+#: backend/bookings.php:1841 backend/bookings.php:1846
+#: backend/bookings.php:1851 backend/bookings.php:1856
+#: backend/bookings.php:1861 backend/bookings.php:1866
+#: backend/bookings.php:1871 backend/bookings.php:1876 backend/extras.php:152
+#: backend/extras.php:157 backend/extras.php:164 backend/extras.php:169
+#: backend/extras.php:174 backend/seasons-calendars.php:390
+#: backend/seasons-calendars.php:395 backend/seasons-calendars.php:409
+#: backend/seasons-calendars.php:414 backend/seasons-calendars.php:419
+#: backend/seasons-calendars.php:424 backend/seasons-calendars.php:429
+#: backend/seasons-calendars.php:434 backend/seasons-calendars.php:439
+#: backend/seasons-calendars.php:444 backend/seasons-calendars.php:449
+#: backend/settings.php:491 backend/settings.php:502 backend/settings.php:507
+#: backend/settings.php:512 backend/settings.php:517 backend/settings.php:532
+#: backend/settings.php:536 backend/settings.php:543 backend/settings.php:549
+msgid "Dismiss this notice."
+msgstr "Avlägsna denna notering."
+
+#: backend/bookings.php:1050
+msgid "Custom Message"
+msgstr "Kundmeddelande"
+
+#: backend/bookings.php:1051
+msgid ""
+"Send a customized email to your guest. You can also change the status of the "
+"booking."
+msgstr ""
+"Skicka ett särskilt meddelade till din gäst. Du kan också ändra statusen för "
+"bokningen."
+
+#: backend/bookings.php:1056
+msgid "Subject"
+msgstr "Ärende"
+
+#: backend/bookings.php:1058
+#, php-format
+msgid "Your booking at %s, from %s to %s"
+msgstr "Din bokning för %s, från %s till %s"
+
+#: backend/bookings.php:1065
+msgid "Hello"
+msgstr "Hej"
+
+#: backend/bookings.php:1067
+msgid "Best regards,"
+msgstr "Vänliga hälsningar,"
+
+#: backend/bookings.php:1083
+msgid "Send custom message"
+msgstr "Skicka kundmeddelande"
+
+#: backend/bookings.php:1273
+msgid "January"
+msgstr "Januari"
+
+#: backend/bookings.php:1274
+msgid "February"
+msgstr "Februari"
+
+#: backend/bookings.php:1275
+msgid "March"
+msgstr "Mars"
+
+#: backend/bookings.php:1276
+msgid "April"
+msgstr "April"
+
+#: backend/bookings.php:1277
+msgid "May"
+msgstr "Maj"
+
+#: backend/bookings.php:1278
+msgid "June"
+msgstr "Juni"
+
+#: backend/bookings.php:1279
+msgid "July"
+msgstr "Juli"
+
+#: backend/bookings.php:1280
+msgid "August"
+msgstr "Augusti"
+
+#: backend/bookings.php:1281
+msgid "September"
+msgstr "September"
+
+#: backend/bookings.php:1282
+msgid "October"
+msgstr "Oktober"
+
+#: backend/bookings.php:1283
+msgid "November"
+msgstr "November"
+
+#: backend/bookings.php:1284
+msgid "December"
+msgstr "December"
+
+#: backend/bookings.php:1529
+msgid "Thank you for your Feedback!"
+msgstr "Tack för Din återkoppling!"
+
+#: backend/bookings.php:1543
+msgid "Thank you! The link is now activated."
+msgstr "Tack! Länken är nu aktiverad."
+
+#: backend/bookings.php:1556
+msgid "Thank you!"
+msgstr "Tack!"
+
+#: backend/bookings.php:1569
+msgid "Search not set."
+msgstr "Sökning ej gjord."
+
+#: backend/bookings.php:1688
+msgid "Congratulations on your 10th confirmed Booking!"
+msgstr "Grattis till din tionde bekräftade bokning!"
+
+#: backend/bookings.php:1689
+msgid ""
+"We would like to give your more tips on how to raise your occupation rate "
+"via our Newsletter. We promise to never spam you. You can unsubscribe "
+"anytime."
+msgstr ""
+"Vi vill gärna ge dig fler tips på hur du höjer din bokningsgrad via vårt "
+"Nyhetsbrev. Vi lovar att aldrig skicka spam. Du kan när som helst avsluta "
+"nyhetsbrevet."
+
+#: backend/bookings.php:1690 backend/bookings.php:1697
+#: backend/bookings.php:1704
+msgid "Click OK to subscribe now!"
+msgstr "Klicka på OK för att abonnera!"
+
+#: backend/bookings.php:1695
+msgid "Wow! Congratulations on your 100th confirmed Booking!"
+msgstr "Toppen! Grattis till din etthundrade bekräftade bokning!"
+
+#: backend/bookings.php:1696 backend/bookings.php:1703
+msgid ""
+"You are obviously doing a great job! But still, maybe you could learn "
+"something by our tips on how to raise your occupation rate via our "
+"Newsletter. We promise to never spam you. You can unsubscribe anytime."
+msgstr ""
+"Du gör bevisligen ett bra jobb! Men vi vill ändå gärna ge dig fler tips på "
+"hur du höjer din bokningsgrad via vårt Nyhetsbrev. Vi lovar att aldrig "
+"skicka spam. Du kan när som helst avsluta nyhetsbrevet."
+
+#: backend/bookings.php:1702
+#, php-format
+msgid "Congratulations! You just surpassed a total revenue of 20000 %s!"
+msgstr "Grattis! Du passerade just en total intäkt på 20000 för %s!"
+
+#: backend/bookings.php:1714
+msgid "Do you like this Plugin?"
+msgstr "Gillar du denna Plugin?"
+
+#: backend/bookings.php:1720 backend/bookings.php:1764
+msgid "Oh, we are sorry!"
+msgstr "Å, vi är ledsna!"
+
+#: backend/bookings.php:1721 backend/bookings.php:1765
+msgid "Would you tell us what you don't like?"
+msgstr "Vill du berätta för oss vad som inte var bra?"
+
+#: backend/bookings.php:1724 backend/bookings.php:1768
+msgid "Send Feedback"
+msgstr "Skicka återkoppling"
+
+#: backend/bookings.php:1728 backend/bookings.php:1772
+msgid "Great!"
+msgstr "Toppen!"
+
+#: backend/bookings.php:1729 backend/bookings.php:1773
+msgid "We would really appreciate a review:"
+msgstr "Vi uppskattar verkligen en återblick:"
+
+#: backend/bookings.php:1733 backend/bookings.php:1777
+msgid ""
+"You can also help us by activating a tiny \"Powered by Advanced Booking "
+"Calendar\"-notice below the calendar overview and booking form. It would "
+"help us a lot!"
+msgstr ""
+"Du kan också hjälpa oss genom att aktivera en liten \"Powered by Advanced "
+"Booking Calendar\"-notering nedanför kalenderöversikten och "
+"bokningsformuläret. Det skulle hjälpa oss mycket!"
+
+#: backend/bookings.php:1735 backend/bookings.php:1779
+msgid "Activate Powered-By-Link"
+msgstr "Aktivera  Powered-By-Link"
+
+#: backend/bookings.php:1757
+msgid "Please help us!"
+msgstr "Vänligen hjälp oss!"
+
+#: backend/bookings.php:1758
+msgid "Lets make this plugin better!"
+msgstr "Låt oss göra denna plugin bättre!"
+
+#: backend/bookings.php:1759
+msgid "Help us to make this plugin better by committing some usage data."
+msgstr ""
+"Hjälp oss att göra denna plugin bättre genom att skicka viss användardata."
+
+#: backend/bookings.php:1759 backend/settings.php:758
+msgid ""
+"Your visitors will not be affected. No sensible data will be transmitted."
+msgstr ""
+"Dina besökare kommer inte att påverkas.. Ingen känslig data kommer att "
+"skickas."
+
+#: backend/bookings.php:1761
+msgid "Commit Usage"
+msgstr "Använd"
+
+#: backend/bookings.php:1825
+msgid "Booking has been saved. Has yet to be confirmed."
+msgstr "Bokning har sparats. Dock ej bekräftad."
+
+#: backend/bookings.php:1830
+msgid "Booking has been saved and state set to confirmed."
+msgstr "Bokning har sparats och väntar på bekräftelse."
+
+#: backend/bookings.php:1835
+msgid "Booking has been changed."
+msgstr "Bokning har ändrats."
+
+#: backend/bookings.php:1840
+msgid ""
+"Booking has been changed, but dates could not be changed! Calendar was "
+"occupied."
+msgstr "Bokning har ändrats men datum kunde inte ändras! Upptaget i kalendern."
+
+#: backend/bookings.php:1845
+msgid "Booking confirmed."
+msgstr "Bokning bekräftad."
+
+#: backend/bookings.php:1850
+msgid "Booking canceled."
+msgstr "Bokning annullerad."
+
+#: backend/bookings.php:1855
+msgid "Booking rejected."
+msgstr "Bokning avböjd."
+
+#: backend/bookings.php:1860
+msgid "Booking deleted."
+msgstr "Bokning raderad."
+
+#: backend/bookings.php:1865
+msgid "Something went wrong, change didn't work."
+msgstr "Något gick fel, ändringen fungerade inte."
+
+#: backend/bookings.php:1870
+msgid "Room has been changed."
+msgstr "Rummet har ändrats."
+
+#: backend/bookings.php:1875
+msgid "Message has been send."
+msgstr "Meddelade har skickats."
+
+#: backend/bookings.php:1884
+msgid "setup guide"
+msgstr "inställningshjälp"
+
+#: backend/bookings.php:1886 backend/bookings.php:1944
+#: backend/bookings.php:1976
+msgid "Create a Booking"
+msgstr "Skapa en bokning"
+
+#: backend/bookings.php:1892 backend/bookings.php:1903
+msgid "Create a Calendar"
+msgstr "Skapa en kalender"
+
+#: backend/bookings.php:1904
+#, php-format
+msgid ""
+"A calendar is one room or even a group of rooms of the same room type. Start "
+"by adding a calendar here: \"%s\""
+msgstr ""
+"En kalender är ett rum eller en grupp av rum av samma typ. Börja med att "
+"lägga till en kalender här: \"%s\""
+
+#: backend/bookings.php:1913 backend/bookings.php:1924
+msgid "Create a Season & assign it to a Calendar"
+msgstr "Skapa en säsong & koppla den till en Kalender"
+
+#: backend/bookings.php:1925
+#, php-format
+msgid ""
+"With seasons you can create differnt rates for different time periods. Go to "
+"\"%s\" and add a season and assign it to a calendar."
+msgstr ""
+"Med säsong kan du skapa olika taxor för olika tidsperioder. Gå till \"%s\" "
+"och lägg till en säsong och koppla den till en kalender."
+
+#: backend/bookings.php:1932
+#, php-format
+msgid "There are currently no bookings. Check out our %s to get started."
+msgstr "Det finns just nu inga bokningar. Kontrollera vår %s för att starta."
+
+#: backend/bookings.php:1933
+msgid "If you have a question, feel free to contact us:"
+msgstr "Om Du har en fråga, tveka inte att kontakta oss:"
+
+#: backend/bookings.php:1934
+msgid "Contact Support"
+msgstr "Kontakt"
+
+#: backend/bookings.php:1945
+msgid ""
+"When everything is set up, add shortcodes to your WordPress pages and wait "
+"for the first guest."
+msgstr ""
+"När allt är klart, addera shortcodes till din WordPress-sida och vänta på "
+"din första gäst."
+
+#: backend/bookings.php:1946
+#, php-format
+msgid "You can also click on \"%s\" and add your first Booking manually."
+msgstr ""
+"Du kan också klicka på \"%s\" och lägga till din första bokning manuellt."
+
+#: backend/bookings.php:1973
+msgid "Open Bookings"
+msgstr "Öppna bokningar"
+
+#: backend/bookings.php:1974
+msgid "Confirmed Bookings"
+msgstr "Bekräftade bokningar"
+
+#: backend/bookings.php:1975
+msgid "Rejected & canceled Bookings"
+msgstr "Avböjda och annullerade bokningar"
+
+#: backend/bookings.php:1977 backend/bookings.php:2118
+msgid "Search"
+msgstr "Sök"
+
+#: backend/bookings.php:1995
+msgid "Set calendar"
+msgstr "Ställ in kalender"
+
+#: backend/bookings.php:2037
+msgid "Set Booking State to"
+msgstr "Ställ in bokningsstaus till"
+
+#: backend/bookings.php:2039
+msgid "Open (has to be confirmed)"
+msgstr "Öppen (måste bekräftas)"
+
+#: backend/bookings.php:2062
+msgid "Send confirmation email to guest"
+msgstr "Skicka bekräftelsemail till gäst"
+
+#: backend/bookings.php:2064 backend/extras.php:282 backend/extras.php:353
+#: backend/extras.php:455 backend/extras.php:585
+msgid "Yes"
+msgstr "Ja"
+
+#: backend/bookings.php:2065 backend/extras.php:283 backend/extras.php:356
+#: backend/extras.php:458 backend/extras.php:586
+msgid "No"
+msgstr "Nej"
+
+#: backend/bookings.php:2111
+msgid "Create Booking"
+msgstr "Skapa bokning"
+
+#: backend/bookings.php:2117
+msgid "search"
+msgstr "sök"
+
+#: backend/coupons.php:3
+msgid "Edit a Coupon"
+msgstr "Ändra en kupong"
+
+#: backend/coupons.php:4 backend/coupons.php:30 backend/extras.php:249
+#: backend/extras.php:551
+msgid "The name will be shown in the booking form."
+msgstr "Namnet kommer att synas i bokningsformuläret."
+
+#: backend/coupons.php:5 backend/coupons.php:31 backend/extras.php:264
+#: backend/extras.php:410 backend/extras.php:529 backend/extras.php:567
+msgid "Type of calculation"
+msgstr "Typ av beräkning"
+
+#: backend/coupons.php:6 backend/coupons.php:32
+msgid "Absolute - e.g. reducing price by $ 5"
+msgstr "Absolut - t. ex. reducering av pricet med 40.- SEK"
+
+#: backend/coupons.php:7 backend/coupons.php:33
+msgid "Relative - e.g. reducing price by 10%"
+msgstr "Relativt - t. ex. reducering av pricet med 10%"
+
+#: backend/coupons.php:8 backend/coupons.php:34
+msgid "Discount Value"
+msgstr "Rabattvärde"
+
+#: backend/coupons.php:9 backend/coupons.php:35
+msgid ""
+"Enter the value of the discount. It will be applied to extras and room costs."
+msgstr ""
+"Mata in värdet av rabatten. Det kommer att påverka tillägg och rumspris."
+
+#: backend/coupons.php:10
+msgid "Valid from"
+msgstr "Giltig från"
+
+#: backend/coupons.php:11
+msgid "Valid to"
+msgstr "Giltig till"
+
+#: backend/coupons.php:12 backend/coupons.php:25
+msgid "Code"
+msgstr "Kod"
+
+#: backend/coupons.php:13 backend/coupons.php:37
+msgid "This code has to be entered by the user in the booking form."
+msgstr "Den här koden måste matas in av användaren i bokningsformuläret."
+
+#: backend/coupons.php:14 backend/coupons.php:38
+msgid "Number of times the code can be redeemed"
+msgstr "Antal gånger som koden kan återanvändas"
+
+#: backend/coupons.php:15 backend/coupons.php:39
+msgid "Once - coupon gets invalid after one usage"
+msgstr "En - kupongen blir ogiltig efter en användning"
+
+#: backend/coupons.php:16 backend/coupons.php:40
+msgid "Multiple times - coupon can be used unlimited times"
+msgstr "Obegränsad - kupongen kan användas utan tidsbegränsning"
+
+#: backend/coupons.php:17
+msgid "Minimum Number of Nights"
+msgstr "Minsta antal nätter"
+
+#: backend/coupons.php:18 backend/extras.php:255 backend/extras.php:557
+#: backend/seasons-calendars.php:507 backend/seasons-calendars.php:795
+msgid "(optional)"
+msgstr "(tillägg)"
+
+#: backend/coupons.php:19
+msgid ""
+"Limit the discount to a minimum number of nights. Leave empty to set no "
+"limit."
+msgstr ""
+"Begränsa rabatten till ett visst antal nätter. Lämna tomt om ingen "
+"begränsning ska gälla."
+
+#: backend/coupons.php:20
+msgid "Valid for Calendars"
+msgstr "Giltig för kalendrar"
+
+#: backend/coupons.php:21
+msgid "Select the calendars the coupon is valid for."
+msgstr "Välj de kalendrar som kupongen är giltig för."
+
+#: backend/coupons.php:23
+msgid "Valid during"
+msgstr "Giltig till"
+
+#: backend/coupons.php:24 backend/seasons-calendars.php:677
+#: backend/tinymce-translations.php:15
+msgid "Calendars"
+msgstr "Kalendrar"
+
+#: backend/coupons.php:26
+msgid "Redeem type"
+msgstr "Användningssätt"
+
+#: backend/coupons.php:27
+msgid "Nights"
+msgstr "Nätter"
+
+#: backend/coupons.php:28
+msgid "Add new Coupon"
+msgstr "Lägg till ny kupong"
+
+#: backend/coupons.php:29
+msgid "Summer-Discount"
+msgstr "Sommarrabatt"
+
+#: backend/coupons.php:36
+msgid "SUMMERTIME"
+msgstr "SOMMARTID"
+
+#: backend/extras.php:151
+msgid ""
+"Extras are limited to 2 in the free version! If you need more extras, please "
+"download our <a href=\"https://booking-calendar-plugin.com/pro-download/?"
+"cmp=ExtraLimit\" target=\"_blank\">Pro-Version</a>."
+msgstr ""
+"Tilläggen är begränsade till 2 i gratisversionen. Om du behöver fler "
+"tillägg, var vänlig ladda ner vår  <a href=\"https://booking-calendar-plugin."
+"com/pro-download/?cmp=ExtraLimit\" target=\"_blank\">Pro-Version</a>."
+
+#: backend/extras.php:156 backend/extras.php:161
+msgid "Extra has been added."
+msgstr "Tillägg har adderats."
+
+#: backend/extras.php:162
+msgid "Make sure to add the placeholdes for extras in your email settings"
+msgstr ""
+"Säkerställ att addera platshållarna för tilläggen i din e-postinställning"
+
+#: backend/extras.php:163 backend/settings.php:613
+msgid "Email Settings"
+msgstr "E-postinställning"
+
+#: backend/extras.php:168 backend/seasons-calendars.php:399
+msgid "Change has been saved."
+msgstr "Ändringen har sparats."
+
+#: backend/extras.php:173
+msgid "Extras have been ordered."
+msgstr "Tillägg har beställts."
+
+#: backend/extras.php:236
+msgid "Edit an Extra"
+msgstr "Ändra ett tillägg"
+
+#: backend/extras.php:255 backend/extras.php:409 backend/extras.php:528
+#: backend/extras.php:557
+msgid "Explanation"
+msgstr "Förklaring"
+
+#: backend/extras.php:259 backend/extras.php:561
+msgid "Explain what the extra is for."
+msgstr "Förklara vad tillägget är avsett för."
+
+#: backend/extras.php:268 backend/extras.php:363 backend/extras.php:465
+#: backend/extras.php:571
+msgid "per night"
+msgstr "per natt"
+
+#: backend/extras.php:269 backend/extras.php:366 backend/extras.php:468
+#: backend/extras.php:572
+msgid "per day"
+msgstr "per dag"
+
+#: backend/extras.php:270 backend/extras.php:369 backend/extras.php:471
+#: backend/extras.php:573
+msgid "once (no matter how many persons)"
+msgstr "en gång (oavsett hur många personer)"
+
+#: backend/extras.php:271 backend/extras.php:372 backend/extras.php:474
+#: backend/extras.php:574
+msgid "per person (once)"
+msgstr "per person (en gång)"
+
+#: backend/extras.php:272 backend/extras.php:375 backend/extras.php:477
+#: backend/extras.php:575
+msgid "per person per night"
+msgstr "per person per natt"
+
+#: backend/extras.php:273 backend/extras.php:378 backend/extras.php:480
+#: backend/extras.php:576
+msgid "per person per day"
+msgstr "per person per dag"
+
+#: backend/extras.php:275 backend/extras.php:578
+msgid "Define how the price of the extra is getting charged."
+msgstr "Definiera hur priset för tillägget debiteras."
+
+#: backend/extras.php:280 backend/extras.php:583
+msgid "Mandatory extra"
+msgstr "Obligatoriskt tillägg"
+
+#: backend/extras.php:284 backend/extras.php:587
+msgid ""
+"You can make an extra mandatory, so every guest has to pay for it (eg. final "
+"cleaning)."
+msgstr ""
+"Du kan göra ett tillägg obligatoriskt, så att varje gäst måste betala för "
+"det (exempelvis slutstädning)"
+
+#: backend/extras.php:294 backend/extras.php:597
+msgid "Enter the price you want to charge for the extra."
+msgstr "Ange priset du vill sätta på tillägget."
+
+#: backend/extras.php:304 backend/extras.php:607
+msgid ""
+"Enter the number of persons in a booking request to activate this extra. For "
+"example, if you enter &quot;4&quot;, the extra will be shown for <b>4 or "
+"more</b> persons."
+msgstr ""
+"Ange antalet personer som krävs i en bokningsbegäran för att aktivera detta "
+"tillägg. Exempelvis, om du anger &quot;4&quot;, kommer tillägget att visas "
+"för <b>4 eller fler</b> personer."
+
+#: backend/extras.php:310 backend/extras.php:407 backend/extras.php:526
+#: backend/extras.php:613
+msgid "Order"
+msgstr "Order"
+
+#: backend/extras.php:314 backend/extras.php:617
+msgid ""
+"Enter the position of the extra it should appear in. For example 1 for the "
+"first position."
+msgstr ""
+"Ange positionen för tillägget det ska synas i. Exempelvis 1 för den första "
+"positionen."
+
+#: backend/extras.php:400
+msgid "Order Extras"
+msgstr "Beställ tillägg"
+
+#: backend/extras.php:411 backend/extras.php:530
+msgid "Mandatory"
+msgstr "Obligatoriskt"
+
+#: backend/extras.php:420
+msgid "Save Order"
+msgstr "Spara beställning"
+
+#: backend/extras.php:427 backend/extras.php:628
+msgid "Do you want to promote your business using discount codes?"
+msgstr "Vill du stödja din verksamhet genom användning av rabattkoder?"
+
+#: backend/extras.php:428 backend/extras.php:629
+msgid "Or do you want to limit an extra to a calendar?"
+msgstr "Eller vill du begränsa ett tillägg till en kalender?"
+
+#: backend/extras.php:429 backend/extras.php:630
+msgid ""
+"Take a look at our <a target=\"_blank\" href=\"https://www.booking-calendar-"
+"plugin.com/pro-download/?cmp=DiscountCodes\">Pro Version</a>!"
+msgstr ""
+"Titta på vår <a target=\"_blank\" href=\"https://www.booking-calendar-plugin."
+"com/pro-download/?cmp=DiscountCodes\">Pro Version</a>!"
+
+#: backend/extras.php:430 backend/extras.php:631 backend/settings.php:891
+#: backend/settings.php:1005
+msgid "Use discount code <b>BASICUPGRADE</b> to save 10€."
+msgstr "Använd rabattkod <b>BASICUPGRADE</b> för att spara 100.- SEK."
+
+#: backend/extras.php:503
+msgid "Do you really want to delete this extra?"
+msgstr "Vill du verkligen radera detta tillägg?"
+
+#: backend/extras.php:517
+msgid "Existing Extras"
+msgstr "Befintliga tillägg"
+
+#: backend/extras.php:520
+msgid "Sort Extras"
+msgstr "Sortera tillägg"
+
+#: backend/extras.php:540
+msgid "Add new Extra"
+msgstr "Lägg till ett nytt tillägg"
+
+#: backend/extras.php:550
+msgid "Wifi"
+msgstr "Wifi"
+
+#: backend/extras.php:560
+msgid "Get Wifi-access in your room."
+msgstr "Få tillgång till wifi i Ditt rum."
+
+#: backend/extras.php:623
+msgid "Add Extra"
+msgstr "Lägg till tillägg"
+
+#: backend/more-features.php:12
+msgid "Add more features with our Pro Version"
+msgstr "Lägg till fler funktioner med vår Pro Version"
+
+#: backend/more-features.php:12
+msgid "Get it here"
+msgstr "Hämta den här"
+
+#: backend/more-features.php:16
+msgid "Stripe Integration (Credit Card)"
+msgstr "Stripe Integration (Kreditkort)"
+
+#: backend/more-features.php:17
+msgid ""
+"Stripe is an easy way to accept credit card. After the credit card details "
+"are entered and validated bookings get automatically confirmed.\n"
+"                            </br>"
+msgstr ""
+"Stripe är ett enkelt sätt att acceptera kreditkort. Efter att "
+"kreditkortetsuppgifterna har angetts och kontrollerats så bekräftas "
+"automatiskt bokningen.\n"
+"                            </br>"
+
+#: backend/more-features.php:19
+msgid ""
+"You can enter your Payment Credentials, select the currency and activate or "
+"deactivate the Stripe Test Environment."
+msgstr ""
+"Du kan ange ditt betalningsunderlag, välj valuta och aktivera eller "
+"avaktivera Stripe Test Environment."
+
+#: backend/more-features.php:24
+msgid "PayPal Gateway"
+msgstr "PayPal Gateway"
+
+#: backend/more-features.php:25
+msgid ""
+"You can offer PayPal payments to your guests. A valid and paid booking is "
+"set to ‘confirmed’ automatically. Just enter your PayPal API credentials and "
+"you are ready to go."
+msgstr ""
+"Du kan erbjuda PayPal-betalning för dina gäster. En kontrollerad och betalad "
+"bokning blir markerad \"bekräftad\" automatiskt. Ange bara dina PayPal API-"
+"uppgifter och du är redo att börja."
+
+#: backend/more-features.php:30
+msgid "Payment Fees"
+msgstr "Betalningsavgift"
+
+#: backend/more-features.php:31
+msgid ""
+"Your guests want to pay via PayPal but you don’t like their payment fees? "
+"Just let your guest decide if an additional fee is worth using PayPal or "
+"Stripe."
+msgstr ""
+"Dina gäster vill betala med PayPal men du gillar inte deras "
+"betalningsavgifter? Låt bara dina gäster besluta om avgifterna är värda att "
+"använda PayPal eller Stripe."
+
+#: backend/more-features.php:36
+msgid "Discount Codes"
+msgstr "Rabattkoder"
+
+#: backend/more-features.php:37
+msgid ""
+"Use Discount Codes to raise the number of consecutive nights per stay by "
+"offering Discounts at a certain number of nights. Just use the new Coupon "
+"feature and start promoting your accommodation with Coupons."
+msgstr ""
+"Använd rabattkoder för att öka antal nätter i följd genom att erbjuda rabatt "
+"vid ett vissta antal nätter. Bara använd det nya kupong-systemet och börja "
+"markandsföra ditt boende med kuponger."
+
+#: backend/more-features.php:42
+msgid "Custom Inputs"
+msgstr "Kundinmatning"
+
+#: backend/more-features.php:43
+msgid ""
+"The Pro Version offers you three custom inputs for your booking form. Just "
+"activate them in the settings, name them anything you want and decide "
+"whether they are optional or mandatory. They will be shown in the booking "
+"list and you can use them in the email templates."
+msgstr ""
+"Pro Version erbjuder dig tre kundinmatningar i bokningsformuläret. Bara "
+"aktivera dem under inställningar, ge dem ett lämpligt namn och bestäm om de "
+"ska vara valbara eller obligatoriska. De kommer att synas i bokningslistan "
+"och du kan använda dem i e-postmallen."
+
+#: backend/more-features.php:48
+msgid "Discount by Length of Stay"
+msgstr "Rabatt beroende på vistelselängd"
+
+#: backend/more-features.php:49
+msgid ""
+"You can add discounts which will be applied automatically when a given "
+"number of nights is reached."
+msgstr ""
+"Du kan lägga till rabatter som aktiveras automatiskt när ett givet antal "
+"nätter har uppnåtts."
+
+#: backend/more-features.php:54
+msgid "Combine Extras with Calendars"
+msgstr "Kombinera tillägg med kalendrar"
+
+#: backend/more-features.php:55
+msgid ""
+"If you have some Extras, which are not available in certain rooms, you can "
+"now manage them at will. Just tick the check boxes for each calendar and the "
+"extra will only show up for those rooms."
+msgstr ""
+"Om du har några tillägg, som inte är tillgängliga i vissa rum, så kan du nu "
+"styra dem som du vill. Markera bara kontrollrutan för varje kalender och "
+"tillägget kommer bara att synas för dessa rum."
+
+#: backend/more-features.php:60
+msgid "iCal Export"
+msgstr "iCal Export"
+
+#: backend/more-features.php:61
+msgid ""
+"Enable an iCal export of your confirmed bookings for each calendar (just "
+"edit an existing calendar)."
+msgstr ""
+"Aktivera en iCal export för dina bekräftade bokningar för varje kalender "
+"(bara ändra en excisterande kalender)."
+
+#: backend/more-features.php:66
+msgid "MailChimp"
+msgstr "MailChimp"
+
+#: backend/more-features.php:67
+msgid ""
+"Automatically add your guests to your MailChimp list and send them personal "
+"newsletters. When configuring the integration you have two options: Use "
+"double-opt-in or not and show a checkbox in the booking form or sign the "
+"guests up automatically. You can also change the text of the label for the "
+"subscribe-checkbox."
+msgstr ""
+"Lägg automatiskt till dina gäster till din MailChimp-lista and skicka dem "
+"personliga nyhetsbrev. När du formar integreringen så har du två alternativ: "
+"Använd double-opt-in eller inte och visa en kontrollruta i "
+"bokningsformuläret eller anslut automatikt gästen. Du kan också ändra texten "
+"i rubriken för abonnemangskontrollrutan."
+
+#: backend/more-features.php:72
+msgid "Send timed Emails to your Guests"
+msgstr "Skicka tidstyrda e-brev till dina gäster"
+
+#: backend/more-features.php:73
+msgid ""
+"Create Reminder and Feedback Emails which will be sent before the guests "
+"arrival or after his departure. You define how many days before or after a "
+"stay the Emails will be send and of course their content."
+msgstr ""
+"Skapa påminnelse- och återkopplings-e-brev som kommer att skickas före "
+"ankomsten eller efter avfärden. Du definierar hur många dagar före eller "
+"efter vistelsen e-breven ska skickas och naturligtvis innehållet i breven."
+
+#: backend/more-features.php:78
+msgid "Unlimited Extras and Rooms"
+msgstr "Obegränsade tillägg och rum"
+
+#: backend/more-features.php:79
+msgid ""
+"If you have some Extras, which are not available in certain rooms, you can "
+"now manage them at will. The number of Extras and Rooms is not limited in "
+"the Pro Version. Create as many as you want."
+msgstr ""
+"Om du har några tillägg, som inte är tillgängliga i vissa rum, så kan du nu "
+"hantera dem som du vill. Antalet tillägg och rum är inte begränsat i Pro "
+"Version. Skapa så många du vill."
+
+#: backend/seasons-calendars.php:389
+msgid ""
+"Number of rooms is limited to 15 rooms! If you need more rooms, please "
+"download our <a href=\"https://booking-calendar-plugin.com/pro-download/?"
+"cmp=RoomLimit\" target=\"_blank\">Pro-Version</a>."
+msgstr ""
+"Antalet rum är begränsat till 15! Om du behöver fler rum, var vänlig ladda "
+"ner vår <a href=\"https://booking-calendar-plugin.com/pro-download/?"
+"cmp=RoomLimit\" target=\"_blank\">Pro-Version</a>."
+
+#: backend/seasons-calendars.php:394
+msgid ""
+"This is the Pro-Version of the <a href=\"https://booking-calendar-plugin.com/"
+"\" target=\"_blank\">Advanced Booking Calendar Plugin</a>, but it has never "
+"been activated. Please enter a valid license first."
+msgstr ""
+"Detta är  Pro-Version av <a href=\"https://booking-calendar-plugin.com/\" "
+"target=\"_blank\">Advanced Booking Calendar Plugin</a>, men den har aldrig "
+"blivit aktiverad. Vänligen ange en giltig licenskod först."
+
+#: backend/seasons-calendars.php:403
+msgid "Rooms could not be deleted. There are still active bookings."
+msgstr "Rummen kunde inte raderas. Där finns fortfarande aktiva bokningar."
+
+#: backend/seasons-calendars.php:405
+#, php-format
+msgid "Rooms reduced to %s rooms"
+msgstr "Antalet rum har minskats till %s rum"
+
+#: backend/seasons-calendars.php:413
+msgid "Season has been added."
+msgstr "Säsong har lagts till."
+
+#: backend/seasons-calendars.php:418
+msgid "Calendar has been deleted."
+msgstr "Kalender har blivit raderad."
+
+#: backend/seasons-calendars.php:423
+msgid "Calendar was not deleted. There still exist bookings in this calendar."
+msgstr "Kalender raderades inte. Det finns fortfarande bokningar i kalendern."
+
+#: backend/seasons-calendars.php:428
+msgid "Calendar has been added."
+msgstr "Kalender har lagts till."
+
+#: backend/seasons-calendars.php:433
+msgid "Season has been deleted."
+msgstr "Säsong har raderats."
+
+#: backend/seasons-calendars.php:438
+msgid "Room names have been saved."
+msgstr "Rumsnamn har sparats."
+
+#: backend/seasons-calendars.php:443
+msgid "Season assignment has been added."
+msgstr "Säsonganslutning har lagts till."
+
+#: backend/seasons-calendars.php:448
+msgid "Season assignment has been deleted."
+msgstr "Säsonganslutning har raderats."
+
+#: backend/seasons-calendars.php:465
+msgid "Edit existing Calendar"
+msgstr "Ändra excisterande kalender"
+
+#: backend/seasons-calendars.php:473 backend/seasons-calendars.php:538
+#: backend/seasons-calendars.php:761
+msgid "Room Type A"
+msgstr "Rum typ A"
+
+#: backend/seasons-calendars.php:474 backend/seasons-calendars.php:539
+#: backend/seasons-calendars.php:762 backend/seasons-calendars.php:853
+msgid "Please choose a meaningful title."
+msgstr "Vänligen välj en meningsfull titel."
+
+#: backend/seasons-calendars.php:477 backend/seasons-calendars.php:742
+#: backend/seasons-calendars.php:765
+msgid "Number of rooms"
+msgstr "Antal rum"
+
+#: backend/seasons-calendars.php:479 backend/seasons-calendars.php:767
+msgid "eg. max. 10 Rooms available"
+msgstr "exempelvis maximalt 10 rum tillgängliga"
+
+#: backend/seasons-calendars.php:482 backend/seasons-calendars.php:743
+#: backend/seasons-calendars.php:770
+msgid "Max. Persons"
+msgstr "Maximalt antal personer"
+
+#: backend/seasons-calendars.php:484 backend/seasons-calendars.php:772
+msgid "eg. max. 5 persons in one room"
+msgstr "exempelvis maximalt 5 personer i ett rum"
+
+#: backend/seasons-calendars.php:487 backend/seasons-calendars.php:744
+#: backend/seasons-calendars.php:775
+msgid "Price Preset"
+msgstr "Förinställt pris"
+
+#: backend/seasons-calendars.php:489 backend/seasons-calendars.php:777
+msgid ""
+"If no season is active, the price preset will be used for price calculations"
+msgstr "Om ingen säsong är aktiv, används förinställt  pris för beräkningar"
+
+#: backend/seasons-calendars.php:492 backend/seasons-calendars.php:780
+msgid "Minimum Stay Preset"
+msgstr "Förinställd minimum vistelsetid"
+
+#: backend/seasons-calendars.php:494 backend/seasons-calendars.php:782
+msgid ""
+"Select the minimum number of nights a guest has to stay. You can also set "
+"different values for different seasons."
+msgstr ""
+"Välj det minsta antal nätter en gäst måste boka. Du kan också välja olika "
+"värden för olika säsonger."
+
+#: backend/seasons-calendars.php:497 backend/seasons-calendars.php:785
+msgid "Threshold for \"partly booked\""
+msgstr "Tröskel för \"delvis bokad\""
+
+#: backend/seasons-calendars.php:499 backend/seasons-calendars.php:787
+msgid ""
+"The number of rooms after which days in the calendars will be marked as "
+"\"partly booked\". Example: 3 rooms, partly booked is set to 2. Partly "
+"booked will be shown when two rooms are booked."
+msgstr ""
+"Antalet rum varefter dagar i kalendern kommer att markeras med \"delvis "
+"bokade\". Exempelvis 3 rum, delvis bokade sätts till 2. Delvis bokade kommer "
+"att visas när två rum är bokade."
+
+#: backend/seasons-calendars.php:502 backend/seasons-calendars.php:790
+msgid "Information Page"
+msgstr "Informationssida"
+
+#: backend/seasons-calendars.php:503 backend/seasons-calendars.php:791
+#: backend/settings.php:657
+msgid "Manage Pages"
+msgstr "Underhåll sida"
+
+#: backend/seasons-calendars.php:504 backend/seasons-calendars.php:792
+msgid "You can link to an existing Page for further information."
+msgstr "Du kan länka till en excisterande sida för ytterligare information."
+
+#: backend/seasons-calendars.php:507 backend/seasons-calendars.php:795
+msgid "Short information text"
+msgstr "Kort informationstext"
+
+#: backend/seasons-calendars.php:508 backend/seasons-calendars.php:796
+msgid "Nice Apartment with sea view..."
+msgstr "Fin våning med havsutsikt..."
+
+#: backend/seasons-calendars.php:508 backend/seasons-calendars.php:796
+msgid "Maximum 200 chars"
+msgstr "Maximalt 200 tecken"
+
+#: backend/seasons-calendars.php:530
+msgid "Edit existing Season"
+msgstr "Ändra excixterande säsong"
+
+#: backend/seasons-calendars.php:544 backend/seasons-calendars.php:858
+msgid "The currency code will be attached automatically."
+msgstr "Valutakod kommer att anges automatiskt."
+
+#: backend/seasons-calendars.php:547 backend/seasons-calendars.php:839
+#: backend/seasons-calendars.php:861
+msgid "Minimum Stay"
+msgstr "Minimal vistelsetid"
+
+#: backend/seasons-calendars.php:549 backend/seasons-calendars.php:863
+msgid ""
+"Enter the number of nights a guest has to stay. Bookings below this number "
+"of nights will not be accepted."
+msgstr ""
+"Ange det antal nätter en gäst måste boka. Bokningar av färre nätter kommer "
+"inte att accepteras."
+
+#: backend/seasons-calendars.php:593 backend/seasons-calendars.php:887
+#: backend/seasons-calendars.php:916
+#, php-format
+msgid "%d night minimum stay"
+msgid_plural "%d nights minimum stay"
+msgstr[0] "%d natt är minsta antal"
+msgstr[1] "%d nätter är minsta antal"
+
+#: backend/seasons-calendars.php:601
+msgid "Edit existing Assignment"
+msgstr "Ändra excisterande tilldelning"
+
+#: backend/seasons-calendars.php:612 backend/seasons-calendars.php:937
+#: backend/seasons-calendars.php:954
+msgid "Season"
+msgstr "Säsong"
+
+#: backend/seasons-calendars.php:616 backend/seasons-calendars.php:958
+msgid "Start Date"
+msgstr "Startdatum"
+
+#: backend/seasons-calendars.php:620 backend/seasons-calendars.php:962
+msgid "End Date"
+msgstr "Slutdatum"
+
+#: backend/seasons-calendars.php:645
+#, php-format
+msgid "Edit room names for calendar \"%s\""
+msgstr "Ändra rumsnamn för kalender \"%s\""
+
+#: backend/seasons-calendars.php:654
+#, php-format
+msgid "Name for room %d"
+msgstr "Namn för rum %d"
+
+#: backend/seasons-calendars.php:678
+msgid "Seasons"
+msgstr "Säsonger"
+
+#: backend/seasons-calendars.php:679
+msgid "Season - Calendar - Assignments"
+msgstr "Säsong - Kalender - Tilldelning"
+
+#: backend/seasons-calendars.php:703
+msgid "No Page selected"
+msgstr "Ingen sida vald"
+
+#: backend/seasons-calendars.php:725
+msgid "Do you really want to delete this calendar?"
+msgstr "Vill du verkligen radera denna kalender?"
+
+#: backend/seasons-calendars.php:731
+msgid "Room Names"
+msgstr "Rumsnamn"
+
+#: backend/seasons-calendars.php:738
+msgid "Existing Calendars"
+msgstr "Excisterande kalendrar"
+
+#: backend/seasons-calendars.php:745
+msgid "Min. Stay Preset"
+msgstr "Förinställning av minimum vistelsetid"
+
+#: backend/seasons-calendars.php:746
+msgid "Info Page"
+msgstr "Informationssida"
+
+#: backend/seasons-calendars.php:747
+msgid "Info Text"
+msgstr "Informationstext"
+
+#: backend/seasons-calendars.php:748
+msgid "Shortcode"
+msgstr "Kortkod"
+
+#: backend/seasons-calendars.php:754
+msgid "Add new Calendar"
+msgstr "Lägg till ny kalender"
+
+#: backend/seasons-calendars.php:791
+msgid "Don't link"
+msgstr "Länka inte"
+
+#: backend/seasons-calendars.php:800
+msgid "Add Calendar"
+msgstr "Lägg till kalender"
+
+#: backend/seasons-calendars.php:827
+msgid "Do you really want to delete this Season?"
+msgstr "Vill du verkligen radera denna säsong?"
+
+#: backend/seasons-calendars.php:834
+msgid "Existing Seasons"
+msgstr "Excisterande säsonger"
+
+#: backend/seasons-calendars.php:845
+msgid "Add new Season"
+msgstr "Lägg till ny säsong"
+
+#: backend/seasons-calendars.php:852
+msgid "Summer High Price"
+msgstr "Sommar högsäsongspris"
+
+#: backend/seasons-calendars.php:867
+msgid "Add Season"
+msgstr "Lägg till säsong"
+
+#: backend/seasons-calendars.php:926
+msgid "Do you really want to delete this Season Assignment?"
+msgstr "Vill du verkligen radera denna säsongtilldelning?"
+
+#: backend/seasons-calendars.php:933
+msgid "Existing Assignments"
+msgstr "Excisterande tilldelningar"
+
+#: backend/seasons-calendars.php:938
+msgid "Date"
+msgstr "Datum"
+
+#: backend/seasons-calendars.php:944
+msgid "Add new Assignment"
+msgstr "Lägg till ny tilldelning"
+
+#: backend/seasons-calendars.php:968
+msgid "Add Assignment"
+msgstr "Lägg till tilldelning"
+
+#: backend/settings.php:490
+msgid "Email settings have been saved."
+msgstr "E-postinställningar har sparats."
+
+#: backend/settings.php:495
+msgid "General settings have been saved."
+msgstr "Generella inställningar har sparats."
+
+#: backend/settings.php:497
+msgid ""
+"Warning! The page you selected does not contain the booking form shortcode. "
+"Please add the shortcode [abc-bookingform] or some functions may not work "
+"properly."
+msgstr ""
+"Varning! Sidan du valde innehåller inte kortkoder för bokningsformuläret. "
+"Vänligen lägg till kortkoderna [abc-bookingform]. Annars kanske inte alla "
+"funktioner fungerar som de ska."
+
+#: backend/settings.php:499
+msgid "Great! The page you selected contains the booking form shortcode."
+msgstr "Toppen! Sidan du valde innehåller kortkoderna för bokningsformuläret."
+
+#: backend/settings.php:506
+msgid ""
+"Booking form settings have been saved. Please make sure to update the email "
+"templates as well."
+msgstr ""
+"Inställningarna för bokningsformuläret har sparats. Vänligen var noga med "
+"att uppdatera e-postmallarna också."
+
+#: backend/settings.php:511
+msgid "New text labels have been saved."
+msgstr "Nya textetiketter har sparats."
+
+#: backend/settings.php:516
+msgid "Payment Settings have been saved."
+msgstr "Betalningsinställningar har sparats."
+
+#: backend/settings.php:531
+msgid ""
+"Error while saving Payment Settings. Please fill out all required fields for"
+msgstr ""
+"Fel vid sparande av betalningsinställningar. Vänligen fyll i alla "
+"obligatoriska fält för"
+
+#: backend/settings.php:535
+msgid ""
+"Unable to activate the selected Payment Gateway. The selected Booking Form "
+"Page is invalid."
+msgstr ""
+"Kan inte aktivera den valda Payment Gateway. Det valda bokningsformuläret är "
+"ogiltigt."
+
+#: backend/settings.php:542
+msgid "License was successfully activated."
+msgstr "Licens aktiverades utan problem."
+
+#: backend/settings.php:611
+msgid "General Settings"
+msgstr "Generella inställnigar"
+
+#: backend/settings.php:612
+msgid "Booking Form Settings"
+msgstr "Inställningar för bokningsformulär"
+
+#: backend/settings.php:614 backend/settings.php:963
+msgid "Payment Settings"
+msgstr "Inställningar för betalning"
+
+#: backend/settings.php:615 backend/settings.php:1016
+msgid "Text Customization"
+msgstr "Formgivning av text"
+
+#: backend/settings.php:624
+msgid "This Email Address will receive all booking requests"
+msgstr "E-postadressen kommer att ta emot all bokningsbegäran"
+
+#: backend/settings.php:627
+msgid "Send copies of guest mails to the email address above"
+msgstr "Skicka kopior av gästers e-post till e-postadressen ovan"
+
+#: backend/settings.php:630 backend/settings.php:704 backend/settings.php:714
+#: backend/settings.php:724 backend/settings.php:735 backend/settings.php:745
+#: backend/settings.php:755
+msgid "Enabled"
+msgstr "Aktiverad"
+
+#: backend/settings.php:631 backend/settings.php:705 backend/settings.php:715
+#: backend/settings.php:725 backend/settings.php:736 backend/settings.php:746
+#: backend/settings.php:756 backend/settings.php:790 backend/settings.php:800
+#: backend/settings.php:810 backend/settings.php:820 backend/settings.php:830
+#: backend/settings.php:840 backend/settings.php:850 backend/settings.php:860
+#: backend/settings.php:870 backend/settings.php:880
+msgid "Disabled"
+msgstr "Avaktiverad"
+
+#: backend/settings.php:636
+msgid "Newsletter"
+msgstr "Nyhetsbrev"
+
+#: backend/settings.php:639
+msgid ""
+"Yes, I want to get vital informations on how to raise my occupation rate and "
+"stay tuned about Advanced Booking Calendar"
+msgstr ""
+"Ja, jag vill få viktig information om hur jag ökar beläggningsgraden och "
+"fortsätta vara fullt informerad om Advanced Booking Calendar"
+
+#: backend/settings.php:640
+msgid "No, disable the newsletter"
+msgstr "Nej, avaktivera nyhetsbrevet"
+
+#: backend/settings.php:642
+msgid ""
+"You will receive regular tips on how to create great Hotel websites and "
+"informations about this plugin. We promise to never spam you. You can "
+"unsubscribe anytime."
+msgstr ""
+"Du kommer att motta regelbundna tips om hur du skapar fantastiska hemsidor "
+"för hotel och information om denna plugin. Vi lovar att aldrig skicka spam "
+"till dig. Du kan avsluta abonnemanget när som helst."
+
+#: backend/settings.php:646
+msgid "Page with booking form"
+msgstr "Sida med bokningsformulär"
+
+#: backend/settings.php:651
+msgid "Not selected"
+msgstr "Ej vald"
+
+#: backend/settings.php:658
+msgid ""
+"Select the page which uses the booking form shortcode. You have to add the "
+"shortcode [abc-bookingform] manually to this page. The page will be linked, "
+"if user selects dates on the single calendar shortcode."
+msgstr ""
+"Välj sidan som använder kortkoden för bokningsformuläret. Du måste lägga "
+"till kortkoden [abc-bookingform] manuellt till denna sida. Sidan kommer att "
+"länkas, om användaren väljer datum med kortkoder för enkelkalender."
+
+#: backend/settings.php:661
+msgid "Currency"
+msgstr "Valuta"
+
+#: backend/settings.php:663
+msgid "Example: &euro; or $"
+msgstr "Exempel: &euro; eller $"
+
+#: backend/settings.php:666
+msgid "Price format"
+msgstr "Prisformat"
+
+#: backend/settings.php:674
+msgid "Date format"
+msgstr "Datumformat"
+
+#: backend/settings.php:683
+msgid "Position of currency sign"
+msgstr "Position för valutakod"
+
+#: backend/settings.php:687
+msgid "Before the amount"
+msgstr "Före beloppet"
+
+#: backend/settings.php:689
+msgid "After the amount"
+msgstr "Efter belppet"
+
+#: backend/settings.php:694
+msgid "Custom CSS"
+msgstr "Användning av CSS"
+
+#: backend/settings.php:697
+msgid "Will be loaded on every page containing the shortcode or the widget."
+msgstr ""
+"Kommer att laddas till varje sida som innehåller kortkoden för widgeten."
+
+#: backend/settings.php:701
+msgid "Unconfirmed Bookings block dates"
+msgstr "Obekräftade bokningsblocksdatum"
+
+#: backend/settings.php:707
+msgid ""
+"If enabled, unconfirmed bookings will be handled like confirmed bookings. "
+"They will block calendars until they are rejected."
+msgstr ""
+"Om aktiverad, kommer obekräftade bokningar att hanteras lika som bekräftade "
+"bokningar. De kommer att blockera kalendern tills de är avböjda."
+
+#: backend/settings.php:711
+msgid "Cookies"
+msgstr "Kakor"
+
+#: backend/settings.php:717
+msgid ""
+"If cookies are enabled, customer date inputs are saved in a cookie (no "
+"personal data is stored in the cookie)."
+msgstr ""
+"Om kakor är aktiverade, kommer kundinformation att sparas i kakor (ingen "
+"personlig information sparas i kakor)."
+
+#: backend/settings.php:727
+msgid ""
+"If enabled, user interactions with calendars and forms will be tracked in "
+"your Google Universal Analytics. Please configure Universal Analytics "
+"seperately. We recommend using the following plugin:"
+msgstr ""
+"Om aktiverad, kommer kundinmatningar i kalendrar och formulär att spåras i "
+"din Google Universal Analytics. Vänligen konfigurera Universal Analytics för "
+"sig. Vi rekommenderar att använda följande plugin:"
+
+#: backend/settings.php:732
+msgid "Powered-by-Link"
+msgstr "Powerd-by-Link"
+
+#: backend/settings.php:738
+msgid ""
+"If link is enabled, a tiny \"powered by Advanced Booking Calendar\"-link "
+"will show up below the calendar overview and the booking form."
+msgstr ""
+"Om länken är aktiverad, kommer en liten \"powered by Advanced Booking "
+"Calendar\"-länk att synas under kalenderöversikten och i bokningsformuläret."
+
+#: backend/settings.php:742
+msgid "Delete Data on Uninstall"
+msgstr "Radera data vid kommando Uninstall"
+
+#: backend/settings.php:748
+msgid ""
+"If enabled, the data created by this plugin will be deleted when "
+"uninstalling the plugin."
+msgstr ""
+"Om aktiverad, kommer data som har skapats av denna plugin att raderas när "
+"denna plugin avinstalleras."
+
+#: backend/settings.php:752
+msgid "Commit Usage Data"
+msgstr "Dela användardata"
+
+#: backend/settings.php:758
+msgid ""
+"If enabled, you will help us to make this plugin better by committing some "
+"usage data."
+msgstr ""
+"Om aktiverad, kommer du att hjälpa oss att göra denna plugin bättre genom "
+"att dela viss data."
+
+#: backend/settings.php:762
+msgid "Access Level"
+msgstr "Behörighetsnivå"
+
+#: backend/settings.php:765
+msgid ""
+"Minimum access level required for a WordPress user to access this plugin."
+msgstr ""
+"Minimum behörighetsnivå som krävs för en WordPress-användare för att komma "
+"åt denna plugin."
+
+#: backend/settings.php:769
+msgid "Export"
+msgstr "Exportera"
+
+#: backend/settings.php:771
+msgid "Download"
+msgstr "Ladda ner"
+
+#: backend/settings.php:772
+msgid "Generate a JSON-file with all database tables and settings."
+msgstr "Skapa en JSON-fil med alla databastabeller och inställningar."
+
+#: backend/settings.php:781
+msgid "Booking Form Inputs"
+msgstr "Bokningsformulärindata"
+
+#: backend/settings.php:788 backend/settings.php:798 backend/settings.php:808
+#: backend/settings.php:818 backend/settings.php:828 backend/settings.php:838
+#: backend/settings.php:848 backend/settings.php:858 backend/settings.php:868
+#: backend/settings.php:878
+msgid "Required"
+msgstr "Krävs"
+
+#: backend/settings.php:789 backend/settings.php:799 backend/settings.php:809
+#: backend/settings.php:819 backend/settings.php:829 backend/settings.php:839
+#: backend/settings.php:849 backend/settings.php:859 backend/settings.php:869
+#: backend/settings.php:879
+msgid "Optional"
+msgstr "Valfri"
+
+#: backend/settings.php:875
+msgid "Opt-in-Checkbox"
+msgstr "Opt-in-Checkbox"
+
+#: backend/settings.php:890
+msgid ""
+"Want to add a <b>custom input</b> in your booking form? Our <a href="
+"\"https://booking-calendar-plugin.com/pro-download/?cmp=CustomInputs\" "
+"target=\"_blank\">Pro-Version</a> lets you add three additional inputs!"
+msgstr ""
+"Vill du lägga till en <b>specialinmatning</b> i ditt bokningsformulär? Vår "
+"<a href=\"https://booking-calendar-plugin.com/pro-download/?cmp=CustomInputs"
+"\" target=\"_blank\">Pro-Version</a> låter dig lägga till tre ytterligare "
+"inmatningsfunktioner!"
+
+#: backend/settings.php:896
+msgid "Placeholders"
+msgstr "Platsreservationer"
+
+#: backend/settings.php:897
+msgid ""
+"You can use the following placeholder in both subject and text. They will be "
+"replaced with the actual content when the email is send to the guest:"
+msgstr ""
+"Du kan använda följande platsreservationer i både ärende och text. De kommer "
+"att ersättas med verkligt innehåll när e-brevet skickas till gästen:"
+
+#: backend/settings.php:902
+msgid "Templates"
+msgstr "Mallar"
+
+#: backend/settings.php:903
+msgid "Unconfirmed Booking"
+msgstr "Obekräftad bokning"
+
+#: backend/settings.php:905
+msgid "Subject for an unconfirmed booking mail"
+msgstr "Mailunderlag för en obekräftad bokning"
+
+#: backend/settings.php:911
+msgid "Text for an unconfirmed booking mail"
+msgstr "Mailtext för en obekräftad bokning"
+
+#: backend/settings.php:916
+msgid "Confirming an open Booking"
+msgstr "Bekräftelse av en öppen bokning"
+
+#: backend/settings.php:918
+msgid "Subject for a booking confirmation mail"
+msgstr "Mailunderlag för bokningsbekräftelse"
+
+#: backend/settings.php:924
+msgid "Text for a booking confirmation mail"
+msgstr "Mailtext för bokningsbekräftelse"
+
+#: backend/settings.php:928
+msgid "Canceling a confirmed Booking"
+msgstr "Annullering av bekräftad bokning"
+
+#: backend/settings.php:931
+msgid "Subject for a cancelation mail"
+msgstr "Mailunderlag för annullering"
+
+#: backend/settings.php:937
+msgid "Text for a cancelation mail"
+msgstr "Mailtext för annullering"
+
+#: backend/settings.php:942
+msgid "Rejecting an open Booking"
+msgstr "Avböjning av bokning"
+
+#: backend/settings.php:944
+msgid "Subject for a rejection mail"
+msgstr "Mailunderlag för avböjning"
+
+#: backend/settings.php:950
+msgid "Text for a rejection mail"
+msgstr "Mailtext för avböjning"
+
+#: backend/settings.php:971
+msgid "Activate Cash onsite"
+msgstr "Aktivera Kontant online"
+
+#: backend/settings.php:977
+msgid "Cash onsite Text (shown in booking form)"
+msgstr "Kontant onsite text (visas i bokningsformuläret)"
+
+#: backend/settings.php:979
+msgid "e.g. Pay cash onsite"
+msgstr "exempelvis Betala kontant onsite"
+
+#: backend/settings.php:988
+msgid "Activate On Invoice"
+msgstr "Aktivera Med Faktura"
+
+#: backend/settings.php:994
+msgid "On Invoice Payment Text (shown in booking form)"
+msgstr "Med Fakturabetalning text (visas i bokningsformuläret)"
+
+#: backend/settings.php:996
+msgid "e.g. Pay on invoice"
+msgstr "exempelvis Betala med faktura"
+
+#: backend/settings.php:1004
+msgid ""
+"If you are looking for a <strong>PayPal</strong> or <strong>Stripe</strong> "
+"integration, please take a look at our <a href=\"https://booking-calendar-"
+"plugin.com/pro-download/?cmp=PayPalSetting\" target=\"_blank\">Pro-Version</"
+"a>."
+msgstr ""
+"Om du söker efter <strong>PayPal</strong> eller <strong>Stripe</strong> "
+"anslutning, vänligen titta på vår <a href=\"https://booking-calendar-plugin."
+"com/pro-download/?cmp=PayPalSetting\" target=\"_blank\">Pro-Version</a>."
+
+#: backend/settings.php:1017
+msgid ""
+"You can change the label of buttons in the booking form. Leave these fields "
+"empty to use default labels."
+msgstr ""
+"Du kan ändra etiketterna för knapparna i bokningsformuläret. Lämna fälten "
+"tomma för att använda förinställda etiketter."
+
+#: backend/settings.php:1019
+msgid "Select language"
+msgstr "Välj språk"
+
+#: backend/settings.php:1022
+msgid "Please save any changes before selecting a new language!"
+msgstr "Vänligen spara alla ändringar innan val av nytt språk!"
+
+#: backend/settings.php:1025 backend/settings.php:1031
+#: backend/settings.php:1037 backend/settings.php:1043
+#: backend/settings.php:1049 backend/settings.php:1055
+#: backend/settings.php:1061 backend/settings.php:1067
+#: backend/settings.php:1073 backend/settings.php:1079
+#: backend/settings.php:1085 backend/settings.php:1091
+#: backend/settings.php:1097 backend/settings.php:1103
+msgid "Text for:"
+msgstr "Text för:"
+
+#: backend/settings.php:1025 functions.php:41
+msgid "Check availabilities"
+msgstr "Kontrollera tillgänglighet"
+
+#: backend/settings.php:1031 functions.php:44
+msgid "Select room"
+msgstr "Välj rum"
+
+#: backend/settings.php:1037 functions.php:47
+msgid "Selected room"
+msgstr "Valt rum"
+
+#: backend/settings.php:1043 functions.php:50
+msgid "Other available rooms for your stay"
+msgstr "Andra tillgängliga rum för din vistelse"
+
+#: backend/settings.php:1049 functions.php:53
+msgid "No rooms available for your search request."
+msgstr "Inga rum tillgängliga för dina önskemål."
+
+#: backend/settings.php:1055 functions.php:56
+msgid "Available rooms for your stay"
+msgstr "Tillgängliga rum för din vistelse"
+
+#: backend/settings.php:1067 functions.php:62
+msgid "Your stay"
+msgstr "Din vistelse"
+
+#: backend/settings.php:1085 functions.php:71
+msgid "Book now"
+msgstr "Boka nu"
+
+#: backend/settings.php:1091 functions.php:74
+msgid "Thank you for your booking request!"
+msgstr "Tack för Din bokningsbegäran!"
+
+#: backend/settings.php:1097 functions.php:77
+msgid "Price for the room"
+msgstr "Pris för bokningen"
+
+#: backend/settings.php:1103 functions.php:80
+msgid "Please store my data to contact me."
+msgstr "Vänligen spara mina uppgifter för att kontakta mig."
+
+#: backend/settings.php:1110
+msgid "Saving"
+msgstr "Sparar"
+
+#: backend/settings.php:1111
+msgid "Changes have been saved!"
+msgstr "Ändringar har sparats!"
+
+#: backend/tinymce-translations.php:10
+msgid "Hide other Rooms when coming from a Single Calendar link."
+msgstr "Dölj andra rum vid hantering av en länk för  enkel kalender."
+
+#: backend/tinymce-translations.php:11
+msgid "Hide Rooms when minimum number of nights is too short."
+msgstr "Dölj rum när minimum antal nätter är för litet."
+
+#: backend/tinymce-translations.php:13
+msgid "Add Single Calendar"
+msgstr "Lägg till enkel kalender"
+
+#: backend/tinymce-translations.php:16
+msgid ""
+"Comma separated list of calendar ids, if you want to limit the form to a "
+"calendar. If in doubt, leave empty."
+msgstr ""
+"Markera med komma separata listor med kalenderidentiteter, om du vill "
+"begränsa formen för en kalender. Om du är tveksam, lämna tomt."
+
+#: backend/tinymce-translations.php:17
+msgid "Show legend"
+msgstr "Visa förklaring"
+
+#: frontend/bookingform.php:86
+msgid ""
+"There is no booking page configured. Check the settings of the Advanced "
+"Booking Calendar."
+msgstr ""
+"Det finns ingen konfigurerad bokningssida. Kontrollera inställingarna för "
+"Advanced Booking Calendar."
+
+#: frontend/bookingform.php:207 frontend/bookingform.php:236
+#: frontend/singlecalendar.php:41
+msgid "Loading..."
+msgstr "Laddar..."
+
+#: frontend/bookingform.php:245 frontend/calendaroverview.php:217
+msgid "Powered by:"
+msgstr "Powerd by:"
+
+#: frontend/bookingform.php:315 frontend/singlecalendar.php:424
+#, php-format
+msgid "Your stay is too short. Minimum stay for those dates is %d nights."
+msgstr "Din vistelse är för kort. Minimum längd för vistelse är %d nätter."
+
+#: frontend/bookingform.php:317
+msgid "average"
+msgstr "medel"
+
+#: frontend/bookingform.php:397
+msgid "Optional extra"
+msgid_plural "Optional extras"
+msgstr[0] "Extra tillval"
+msgstr[1] "Extra tillval"
+
+#: frontend/bookingform.php:429
+msgid "Continue"
+msgstr "Fortsätt"
+
+#: frontend/bookingform.php:483
+msgid "Selected extra"
+msgid_plural "Selected extras"
+msgstr[0] "Valt tillval"
+msgstr[1] "Valda tillval"
+
+#: frontend/bookingform.php:487
+msgid "Costs for the extras"
+msgstr "Kostnad för tillval"
+
+#: frontend/bookingform.php:596 functions.php:809
+msgid "Payment Selection"
+msgstr "Val för betalning"
+
+#: frontend/bookingform.php:612
+msgid "Total Price"
+msgstr "Totalt pris"
+
+#: frontend/bookingform.php:727
+msgid "We have sent you an email including a summary of your booking!"
+msgstr "Vi har skickat ett e-brev med en sammanställning av Din bokning!"
+
+#: frontend/bookingform.php:732
+msgid ""
+"Something went wrong, your booking could not be completed. Please try again."
+msgstr ""
+"Något gick fel, din bokning kunde inte slutföras. Vänligen försök igen."
+
+#: frontend/calendaroverview.php:136 frontend/calendaroverview.php:196
+#: frontend/singlecalendar.php:55 frontend/singlecalendar.php:350
+#: frontend/singlecalendar.php:365
+msgid "Available"
+msgstr "Tillgänglig"
+
+#: frontend/calendaroverview.php:139 frontend/calendaroverview.php:199
+#: frontend/singlecalendar.php:58
+msgid "Partly booked"
+msgstr "Delvis bokad"
+
+#: frontend/calendaroverview.php:142 frontend/calendaroverview.php:202
+#: frontend/singlecalendar.php:61 frontend/singlecalendar.php:338
+msgid "Fully booked"
+msgstr "Komplett bokad"
+
+#: frontend/singlecalendar.php:18 frontend/singlecalendar.php:32
+msgid "Su"
+msgstr "Sö"
+
+#: frontend/singlecalendar.php:19 frontend/singlecalendar.php:26
+msgid "Mo"
+msgstr "Mo"
+
+#: frontend/singlecalendar.php:20 frontend/singlecalendar.php:27
+msgid "Tu"
+msgstr "Ti"
+
+#: frontend/singlecalendar.php:21 frontend/singlecalendar.php:28
+msgid "We"
+msgstr "On"
+
+#: frontend/singlecalendar.php:22 frontend/singlecalendar.php:29
+msgid "Th"
+msgstr "To"
+
+#: frontend/singlecalendar.php:23 frontend/singlecalendar.php:30
+msgid "Fr"
+msgstr "Fr"
+
+#: frontend/singlecalendar.php:24 frontend/singlecalendar.php:31
+msgid "Sa"
+msgstr "Lö"
+
+#: frontend/singlecalendar.php:343
+msgid "Partly available"
+msgstr "Delvis tillgänglig"
+
+#: functions.php:501
+msgid "No optional extras."
+msgstr "Inga extra tillval."
+
+#: functions.php:504
+msgid "No discount."
+msgstr "Ingen rabatt."
+
+#: functions.php:507
+msgid "No mandatory extras."
+msgstr "Inga obligatoriska tillval."
+
+#: functions.php:573
+msgid "EMAIL COPY:"
+msgstr "KOPIA E-BREV:"
+
+#: functions.php:640
+msgid "Coupon"
+msgstr "Kupong"
+
+#: functions.php:647
+msgid "New Booking Request"
+msgstr "Ny bokningsbegäran"
+
+#: functions.php:649
+msgid "Already paid via:"
+msgstr "Redan betalt via:"
+
+#: functions.php:651
+msgid "New Booking - Already paid"
+msgstr "Ny bokning - Redan betald"
+
+#: functions.php:798
+msgid "From"
+msgstr "Från"
+
+#: functions.php:799
+msgid "To"
+msgstr "Till"
+
+#: functions.php:830
+msgid "Click here to confirm"
+msgstr "Klicka här för att bekräfta"
+
+#: functions.php:846
+msgid "Click here to reject"
+msgstr "Klicka här för att avböja"
+
+#: functions.php:862
+msgid "Answer with custom message"
+msgstr "Svara med kundmeddeland"
+
+#: functions.php:1067
+#, php-format
+msgid "%s for each of the %d nights"
+msgstr "%s för var och en av de %d nätterna"
+
+#: functions.php:1073
+#, php-format
+msgid "%s for each of the %d days"
+msgstr "%s för var och en av de %d dagarna"
+
+#: functions.php:1078
+#, php-format
+msgid "%s paid once"
+msgstr "%s betald en gång"
+
+#: functions.php:1083
+#, php-format
+msgid "%s for each of the %d persons"
+msgstr "%s för var och en av de %d personerna"
+
+#: functions.php:1089
+#, php-format
+msgid "%s for each of the %d persons and %d nights"
+msgstr "%s för var och en av de %d personerna och %d nätterna"
+
+#: functions.php:1095
+#, php-format
+msgid "%s for each of the %d persons and %d days"
+msgstr "%s för var och en av de %d personerna och %d dagarna"
+
+#: functions.php:1200
+msgid "Once Weekly"
+msgstr "En gång i veckan"
+
+#: widget.php:9
+msgid "Advanced Booking Calendar Widget."
+msgstr "Advanced Booking Calendar Widget."
+
+#: widget.php:11
+msgid "Availability Form Widget"
+msgstr "Availability Form Widget"
+
+#: widget.php:23
+msgid "Availability"
+msgstr "Tillgänglighet"
+
+#: widget.php:26
+msgid "Title:"
+msgstr "Titel:"
+
+#: widget.php:31
+msgid ""
+"This widgets loads a small booking form. After a user selected the dates and "
+"clicked on \"Check availabilites\", the booking form is loaded."
+msgstr ""
+"Denna widget laddar ett litet bokningsformulär. Efter att en användare "
+"väljer datum och klickar på \"Kontrollera tillgänglighet\", så laddas "
+"bokningsformuläret."
+
+#: widget.php:33
+msgid ""
+"There is no booking page configured. Check the settings and select a page "
+"with the booking form."
+msgstr ""
+"Det finns inte konfigurerad bokningssida. Kontrollera inställningarna och "
+"välj en sida med ett bokningsformulär."
+
+#. Plugin URI of the plugin/theme
+msgid "https://booking-calendar-plugin.com/"
+msgstr "https://booking-calendar-plugin.com/"
+
+#. Description of the plugin/theme
+msgid ""
+"The Booking System that makes managing your online reservations easy. A "
+"great Booking Calendar plugin for Accommodations."
+msgstr ""
+"Bokningssystemet tsom gör hanteringen av dina online-bokningar enkla. En "
+"fantastisk Booking Calendar plugin för logi."
+
+#. Author URI of the plugin/theme
+msgid "https://booking-calendar-plugin.com"
+msgstr "https://booking-calendar-plugin.com"
