@@ -148,21 +148,22 @@ jQuery('.abc-singlecalendar').on('click', '.abc-date-selector', function(){
 	};
 	jQuery.post(ajax_abc_booking_SingleCalendar.ajaxurl, data, function (response){
 		jQuery('#abc-booking-' + uniqid).html(response);
-		jQuery('#abc-from').val(response.split("</b>")[1].trim().split("</div>")[0]);
-		jQuery('#abc-to').val(response.split("</b>")[2].trim().split("</div>")[0]);
 
-		data = {
-			action: 'abc_booking_getBookingFormStep2',
-			from: jQuery("#abc-from").val(),
-			to: jQuery("#abc-to").val(),
-			persons: jQuery("#abc-persons").val(),
-			calendar: calendar
-		};
-		jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
-			jQuery('#abc-bookingresults').html(response);
-			jQuery('#abc-bookingresults').fadeIn('medium');
-			jQuery('#abc-back-to-availabilities').show();
-		});
+		if(response.split("</b>")[2].trim().split("</div>")[0] != "–") {
+			data = {
+				action: 'abc_booking_getBookingFormStep2',
+				from: response.split("</b>")[1].trim().split("</div>")[0],
+				to: response.split("</b>")[2].trim().split("</div>")[0],
+				persons: jQuery("#abc-persons").val(),
+				calendar: calendar
+			};
+			jQuery('#abc-bookingresults').fadeOut('slow');
+			jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
+				jQuery('#abc-bookingresults').html(response);
+				jQuery('#abc-bookingresults').fadeIn('medium');
+				jQuery('#abc-back-to-availabilities').show();
+			});
+		}
 	});
 	jQuery('#abc_singlecalendar_' + uniqid).data('checkin-' + uniqid, abcSingleCheckin);
 	jQuery('#abc_singlecalendar_' + uniqid).data('checkout-' + uniqid, abcSingleCheckout);
@@ -180,10 +181,14 @@ jQuery('.abc-singlecalendar').on('mouseenter', '.abc-date-selector', function(){
 		while(tempDate <= dateDate){
 			if(jQuery('#abc-day-'+ uniqid + getDateYYYYMMDD(tempDate)).hasClass('abc-booked')){
 				break;
+			} else if(jQuery('#abc-day-'+ uniqid + getDateYYYYMMDD(tempDate)).hasClass('abc-booked')) {
+				break;
 			}
 			jQuery('#abc-day-'+ uniqid + getDateYYYYMMDD(tempDate)).addClass('abc-date-selected');
 			tempDate.setDate(tempDate.getDate() + 1);
 		}
+	} else if(abcSingleCheckin == 0) {
+		jQuery(this).addClass('abc-date-selected');
 	}
 });
 
@@ -199,146 +204,148 @@ jQuery('.abc-singlecalendar').on('mouseleave', '.abc-date-selector', function(){
 			jQuery('#abc-day-'+ uniqid + getDateYYYYMMDD(tempDate)).removeClass('abc-date-selected');
 			tempDate.setDate(tempDate.getDate() - 1);
 		}
+	} else if(abcSingleCheckin == 0) {
+		jQuery(this).removeClass('abc-date-selected');
 	}
 });	
 
 // Calendar overview
-jQuery('.abc-calendar-overview').on('click', '.abc-overview-button', function(){
-	var uniqid = jQuery(this).data('id');
-	var overviewMonth = jQuery(this).data('month');
-	var overviewYear = jQuery(this).data('year');
-	jQuery('.abc-overview-button').attr('disabled',true);
-	jQuery('.abcMonth').attr('disabled',true);
-	jQuery('.abcYear').attr('disabled',true);
-	data = {
-		action: 'abc_booking_getCalOverview',
-		abc_nonce: ajax_abc_booking_calOverview.abc_nonce,
-		month: overviewMonth,
-		year: overviewYear,
-		uniqid: uniqid
-	};
+// jQuery('.abc-calendar-overview').on('click', '.abc-overview-button', function(){
+// 	var uniqid = jQuery(this).data('id');
+// 	var overviewMonth = jQuery(this).data('month');
+// 	var overviewYear = jQuery(this).data('year');
+// 	jQuery('.abc-overview-button').attr('disabled',true);
+// 	jQuery('.abcMonth').attr('disabled',true);
+// 	jQuery('.abcYear').attr('disabled',true);
+// 	data = {
+// 		action: 'abc_booking_getCalOverview',
+// 		abc_nonce: ajax_abc_booking_calOverview.abc_nonce,
+// 		month: overviewMonth,
+// 		year: overviewYear,
+// 		uniqid: uniqid
+// 	};
 	
-	jQuery.post(ajax_abc_booking_calOverview.ajaxurl, data, function (response){
-		jQuery('#abc-calendaroverview-' + uniqid).html(response);
-		jQuery('.abc-overview-button').attr('disabled',false);
-		jQuery('.abcMonth').attr('disabled',false);
-		jQuery('.abcYear').attr('disabled',false);
-	});
+// 	jQuery.post(ajax_abc_booking_calOverview.ajaxurl, data, function (response){
+// 		jQuery('#abc-calendaroverview-' + uniqid).html(response);
+// 		jQuery('.abc-overview-button').attr('disabled',false);
+// 		jQuery('.abcMonth').attr('disabled',false);
+// 		jQuery('.abcYear').attr('disabled',false);
+// 	});
 	
-	return false;	
-});	
+// 	return false;	
+// });	
 
-jQuery( '.abc-calendar-overview' ).on('change', "select[name='abcMonth']", function () {
-	var uniqid = jQuery(this).data('id');
-	var overviewMonth = jQuery( "select[name='abcMonth']").val();
-	var overviewYear = jQuery( "select[name='abcYear']").val();
-	jQuery('.abcMonth').attr('disabled',true);
-	jQuery('.abcYear').attr('disabled',true);
-	jQuery('.abc-button-rl').attr('disabled',true);
-	data = {
-		action: 'abc_booking_getCalOverview',
-		abc_nonce: ajax_abc_booking_calOverview.abc_nonce,
-		month: overviewMonth,
-		year: overviewYear,
-		uniqid: uniqid
-	};
-	jQuery.post(ajax_abc_booking_calOverview.ajaxurl, data, function (response){
-		jQuery('#abc-calendaroverview-' + uniqid).html(response);
-		jQuery('.abc-button-rl').attr('disabled',false);
-		jQuery('.abcMonth').attr('disabled',false);
-		jQuery('.abcYear').attr('disabled',false);
-	});
-	return false;
-});
-jQuery( '.abc-calendar-overview' ).on('change', "select[name='abcYear']", function () {
-	var uniqid = jQuery(this).data('id');
-	var overviewMonth = jQuery( "select[name='abcMonth']").val();
-	var overviewYear = jQuery( "select[name='abcYear']").val();
-	jQuery('.abcMonth').attr('disabled',true);
-	jQuery('.abcYear').attr('disabled',true);
-	jQuery('.abc-button-rl').attr('disabled',true);
-	data = {
-		action: 'abc_booking_getCalOverview',
-		abc_nonce: ajax_abc_booking_calOverview.abc_nonce,
-		month: overviewMonth,
-		year: overviewYear,
-		uniqid: uniqid
-	};
-	jQuery.post(ajax_abc_booking_calOverview.ajaxurl, data, function (response){
-		jQuery('#abc-calendaroverview-' + uniqid).html(response);
-		jQuery('.abc-button-rl').attr('disabled',false);
-		jQuery('.abcMonth').attr('disabled',false);
-		jQuery('.abcYear').attr('disabled',false);
-	});
-	return false;
-});
+// jQuery( '.abc-calendar-overview' ).on('change', "select[name='abcMonth']", function () {
+// 	var uniqid = jQuery(this).data('id');
+// 	var overviewMonth = jQuery( "select[name='abcMonth']").val();
+// 	var overviewYear = jQuery( "select[name='abcYear']").val();
+// 	jQuery('.abcMonth').attr('disabled',true);
+// 	jQuery('.abcYear').attr('disabled',true);
+// 	jQuery('.abc-button-rl').attr('disabled',true);
+// 	data = {
+// 		action: 'abc_booking_getCalOverview',
+// 		abc_nonce: ajax_abc_booking_calOverview.abc_nonce,
+// 		month: overviewMonth,
+// 		year: overviewYear,
+// 		uniqid: uniqid
+// 	};
+// 	jQuery.post(ajax_abc_booking_calOverview.ajaxurl, data, function (response){
+// 		jQuery('#abc-calendaroverview-' + uniqid).html(response);
+// 		jQuery('.abc-button-rl').attr('disabled',false);
+// 		jQuery('.abcMonth').attr('disabled',false);
+// 		jQuery('.abcYear').attr('disabled',false);
+// 	});
+// 	return false;
+// });
+// jQuery( '.abc-calendar-overview' ).on('change', "select[name='abcYear']", function () {
+// 	var uniqid = jQuery(this).data('id');
+// 	var overviewMonth = jQuery( "select[name='abcMonth']").val();
+// 	var overviewYear = jQuery( "select[name='abcYear']").val();
+// 	jQuery('.abcMonth').attr('disabled',true);
+// 	jQuery('.abcYear').attr('disabled',true);
+// 	jQuery('.abc-button-rl').attr('disabled',true);
+// 	data = {
+// 		action: 'abc_booking_getCalOverview',
+// 		abc_nonce: ajax_abc_booking_calOverview.abc_nonce,
+// 		month: overviewMonth,
+// 		year: overviewYear,
+// 		uniqid: uniqid
+// 	};
+// 	jQuery.post(ajax_abc_booking_calOverview.ajaxurl, data, function (response){
+// 		jQuery('#abc-calendaroverview-' + uniqid).html(response);
+// 		jQuery('.abc-button-rl').attr('disabled',false);
+// 		jQuery('.abcMonth').attr('disabled',false);
+// 		jQuery('.abcYear').attr('disabled',false);
+// 	});
+// 	return false;
+// });
 
 // Booking form
-function getAbcAvailabilities(calendarId){
-	data = {
-		action: 'abc_booking_getBookingResult',			
-		from: jQuery("#abc-from").val(),
-		to: jQuery("#abc-to").val(),
-		persons: jQuery("#abc-persons").val(),
-		hide_other: ajax_abc_booking_showBookingForm.hide_other,
-		hide_tooshort: ajax_abc_booking_showBookingForm.hide_tooshort,
-		calendarId: calendarId
-	};
-	jQuery('#abc-submit-button').hide();
-	jQuery('#abc-bookingresults').hide();
-	jQuery('.abc-submit-loading').show();
-	jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
-		jQuery('#abc-submit-button').show();
-		jQuery('.abc-submit-loading').hide();
-		jQuery('#abc-bookingresults').html(response);
-		jQuery("#abc-bookingresults").slideDown("slow");
-		jQuery('.abc-submit').attr('disabled',false);
-	});	
-	return false;	
-}
+// function getAbcAvailabilities(calendarId){
+// 	data = {
+// 		action: 'abc_booking_getBookingResult',			
+// 		from: jQuery("#abc-from").val(),
+// 		to: jQuery("#abc-to").val(),
+// 		persons: jQuery("#abc-persons").val(),
+// 		hide_other: ajax_abc_booking_showBookingForm.hide_other,
+// 		hide_tooshort: ajax_abc_booking_showBookingForm.hide_tooshort,
+// 		calendarId: calendarId
+// 	};
+// 	jQuery('#abc-submit-button').hide();
+// 	jQuery('#abc-bookingresults').hide();
+// 	jQuery('.abc-submit-loading').show();
+// 	jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
+// 		jQuery('#abc-submit-button').show();
+// 		jQuery('.abc-submit-loading').hide();
+// 		jQuery('#abc-bookingresults').html(response);
+// 		jQuery("#abc-bookingresults").slideDown("slow");
+// 		jQuery('.abc-submit').attr('disabled',false);
+// 	});	
+// 	return false;	
+// }
 
-jQuery('#abc-form-content').on('click', '#abc-check-availabilities', function() {
-	getAbcAvailabilities(jQuery("#abcPostCalendarId").val());
-});
+// jQuery('#abc-form-content').on('click', '#abc-check-availabilities', function() {
+// 	getAbcAvailabilities(jQuery("#abcPostCalendarId").val());
+// });
 
-jQuery.urlParam = function(name){
-    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-    if (results==null){
-       return null;
-    }
-    else{
-       return results[1] || 0;
-    }
-}
+// jQuery.urlParam = function(name){
+//     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+//     if (results==null){
+//        return null;
+//     }
+//     else{
+//        return results[1] || 0;
+//     }
+// }
 
-jQuery(document).ready(function() {
-	if(jQuery.urlParam('abc-paypal') !== null && jQuery.urlParam('token') !== null){
-		jQuery('#abc-form-content').hide();
-		jQuery('#abc_bookinform_loading').show();
-		var payerId;
-		payerId = 'null';
-		if(jQuery.urlParam('PayerID') !== null){
-			payerId = jQuery.urlParam('PayerID');
-		}
-		data = {
-			action: 'abc_booking_getPayPalResponse',
-			paypal: jQuery.urlParam('abc-paypal'),
-			token: jQuery.urlParam('token'),
-			payerId: payerId
-		};
-		jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
-			jQuery('#abc_bookinform_loading').hide();
-			jQuery('#abc-form-content').html(response);
-			jQuery('#abc-form-content').fadeIn('medium');
-		});	
-	}
-    if (jQuery("#abcPostTrigger").length && jQuery("#abcPostTrigger").val() > 0 ) {
-    	getAbcAvailabilities(jQuery("#abcPostCalendarId").val());
-		jQuery('html, body').animate({
-                    scrollTop: jQuery("#abc-form-content").offset().top
-                }, 2000);
-	}
-});
+// jQuery(document).ready(function() {
+// 	if(jQuery.urlParam('abc-paypal') !== null && jQuery.urlParam('token') !== null){
+// 		jQuery('#abc-form-content').hide();
+// 		jQuery('#abc_bookinform_loading').show();
+// 		var payerId;
+// 		payerId = 'null';
+// 		if(jQuery.urlParam('PayerID') !== null){
+// 			payerId = jQuery.urlParam('PayerID');
+// 		}
+// 		data = {
+// 			action: 'abc_booking_getPayPalResponse',
+// 			paypal: jQuery.urlParam('abc-paypal'),
+// 			token: jQuery.urlParam('token'),
+// 			payerId: payerId
+// 		};
+// 		jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
+// 			jQuery('#abc_bookinform_loading').hide();
+// 			jQuery('#abc-form-content').html(response);
+// 			jQuery('#abc-form-content').fadeIn('medium');
+// 		});	
+// 	}
+//     if (jQuery("#abcPostTrigger").length && jQuery("#abcPostTrigger").val() > 0 ) {
+//     	getAbcAvailabilities(jQuery("#abcPostCalendarId").val());
+// 		jQuery('html, body').animate({
+//                     scrollTop: jQuery("#abc-form-content").offset().top
+//                 }, 2000);
+// 	}
+// });
 
 jQuery('#abc-back-to-availabilities').click(function(){
 	jQuery('#abc-from').attr('disabled',false);
@@ -446,40 +453,43 @@ jQuery(document).on('click', '#abc-bookingform-back', function(){
 });
 
 jQuery(document).on('click', '#abc-bookingform-book-submit', function(){
-		data = {
-			action: 'abc_booking_getBookingFormBook',
-			from: jQuery(this).data('from'),
-			to: jQuery(this).data('to'),
-			persons: jQuery(this).data('persons'),
-			calendar: jQuery(this).data('calendar'),
-			extraslist: jQuery(this).data('extraslist'),
-			firstname: jQuery('#first_name').val(),
-			lastname: jQuery('#last_name').val(),
-			email: jQuery('#email').val(),
-			phone: jQuery('#phone').val(),
-			address: jQuery('#address').val(),
-			zip: jQuery('#zip').val(),
-			city: jQuery('#city').val(),
-			county: jQuery('#county').val(),
-			country: jQuery('#country').val(),
-			coupon: jQuery('#abc-coupon').val(),
-			payment: jQuery("input[name='payment']:checked").val(),
-			message: jQuery('#message').val(),
-			optincheckbox: jQuery("input[name='optincheckbox']:checked").val()
-		};
+	data = {
+		action: 'abc_booking_getBookingFormBook',
+		from: jQuery(this).data('from'),
+		to: jQuery(this).data('to'),
+		persons: jQuery(this).data('persons'),
+		calendar: jQuery(this).data('calendar'),
+		extraslist: jQuery(this).data('extraslist'),
+		firstname: jQuery('#first_name').val(),
+		lastname: jQuery('#last_name').val(),
+		email: jQuery('#email').val(),
+		phone: jQuery('#phone').val(),
+		address: jQuery('#address').val(),
+		zip: jQuery('#zip').val(),
+		city: jQuery('#city').val(),
+		county: jQuery('#county').val(),
+		country: jQuery('#country').val(),
+		coupon: jQuery('#abc-coupon').val(),
+		payment: jQuery("input[name='payment']:checked").val(),
+		message: jQuery('#message').val(),
+		optincheckbox: jQuery("input[name='optincheckbox']:checked").val()
+	};
 	jQuery('.abc-booking-form').validate({ // initialize the plugin
         errorClass:'abc-form-error',
 		rules: ajax_abc_booking_showBookingForm.rules,
-		submitHandler: function (form) { 
-		jQuery('#abc-form-content').fadeOut('medium');
-		jQuery('#abc_bookinform_loading').show();
-		jQuery('html, body').animate({ scrollTop: (jQuery('#abc-form-wrapper').offset().top - 150)}, 'slow');
-		jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
-			jQuery('#abc_bookinform_loading').hide();
-			jQuery('#abc-form-content').html(response);
-			jQuery('#abc-form-content').fadeIn('medium');
-		});	
-		return false;
+		submitHandler: function (form) {
+			jQuery('#abc-bookingform-book-submit').hide();
+			jQuery('.wp-block-abc-shortcodes-single-calendar').hide();
+			jQuery('.article-header').hide();
+			jQuery('#abc-form-content').fadeOut('medium');
+			jQuery('#abc_bookinform_loading').show();
+			jQuery('html, body').animate({ scrollTop: (jQuery('#abc-form-wrapper').offset().top - 150)}, 'slow');
+			jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
+				jQuery('#abc_bookinform_loading').hide();
+				jQuery('#abc-form-content').html(response);
+				jQuery('#abc-form-content').fadeIn('medium');
+			});	
+			return false;
         }
     });	
 });

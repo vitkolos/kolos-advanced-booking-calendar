@@ -649,7 +649,7 @@ function ajax_abc_booking_getBookingFormBook () {
 	if (isset($_POST["from"])  && isset($_POST["to"]) && abc_booking_formatDateToDB($_POST["from"]) >= date('Y-m-d') 
 		&& isset($_POST["persons"]) && isset($_POST["calendar"]) && filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)
 		&& getAbcAvailability(sanitize_text_field($_POST["calendar"]),sanitize_text_field($_POST["from"]), sanitize_text_field($_POST["to"])) 
-		&& abc_booking_checkMinimumStay(intval($_POST["calendar"]), abc_booking_formatDateToDB($_POST["from"]), abc_booking_formatDateToDB($_POST["to"])) == 0
+		// && abc_booking_checkMinimumStay(intval($_POST["calendar"]), abc_booking_formatDateToDB($_POST["from"]), abc_booking_formatDateToDB($_POST["to"])) == 0
 		&& (isset($_POST["firstname"]) || ($bookingForm["firstname"] < 2))  && (isset($_POST["lastname"]) || ($bookingForm["lastname"] < 2))
 		&& (isset($_POST["phone"]) || ($bookingForm["phone"] < 2)) && (isset($_POST["address"]) || ($bookingForm["street"] < 2))
 		&& (isset($_POST["zip"]) || ($bookingForm["zip"] < 2)) && (isset($_POST["county"]) || ($bookingForm["county"] < 2))

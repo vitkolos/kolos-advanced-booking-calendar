@@ -776,24 +776,24 @@ function abc_booking_editBookingContent() {
 		$bookingId = intval($_GET["id"]);
 		$dateformat = abc_booking_dateFormatToJS(getAbcSetting("dateformat"));
 		wp_dequeue_script('abc-bookings');
-		wp_enqueue_script('jquery-ui-datepicker');
+		// wp_enqueue_script('jquery-ui-datepicker');
 		wp_enqueue_script('uikit-js', $abcUrl.'backend/js/uikit.min.js', array('jquery'));
 		wp_enqueue_script('abc-functions', $abcUrl.'backend/js/abc-functions.js', array('jquery'));
 		wp_localize_script( 'abc-functions', 'abc_functions_vars', array( 'dateformat' => $dateformat, 'firstday' => getAbcSetting("firstdayofweek")));
-		wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
+		// wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
 		wp_enqueue_style('uikit', $abcUrl.'/frontend/css/uikit.gradient.min.css');
 		wp_enqueue_style('abc-adminstyle', $abcUrl.'/backend/css/admin.css');
 		wp_enqueue_style( 'font-awesome', $abcUrl.'frontend/css/font-awesome.min.css' );
-		$datepickerLang = array('af','ar-DZ','ar','az','be','bg','bs','ca','cs','cy-GB','da','de','el','en-AU','en-GB','en-NZ',
-				'eo','es','et','eu','fa','fi','fo','fr-CA','fr-CH','fr','gl','he','hi','hr','hu','hy','id','is',
-				'it-CH','it','ja','ka','kk','km','ko','ky','lb','lt','lv','mk','ml','ms','nb','nl-BE','nl','nn',
-				'no','pl','pt-BR','pt','rm','ro','ru','sk','sl','sq','sr-SR','sr','sv','ta','th','tj','tr','uk',
-				'vi','zh-CN','zh-HK','zh-TW');
-		if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $datepickerLang)){
-			wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
-		}elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $datepickerLang)){
-			wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
-		}
+		// $datepickerLang = array('af','ar-DZ','ar','az','be','bg','bs','ca','cs','cy-GB','da','de','el','en-AU','en-GB','en-NZ',
+		// 		'eo','es','et','eu','fa','fi','fo','fr-CA','fr-CH','fr','gl','he','hi','hr','hu','hy','id','is',
+		// 		'it-CH','it','ja','ka','kk','km','ko','ky','lb','lt','lv','mk','ml','ms','nb','nl-BE','nl','nn',
+		// 		'no','pl','pt-BR','pt','rm','ro','ru','sk','sl','sq','sr-SR','sr','sv','ta','th','tj','tr','uk',
+		// 		'vi','zh-CN','zh-HK','zh-TW');
+		// if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $datepickerLang)){
+		// 	wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
+		// }elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $datepickerLang)){
+		// 	wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
+		// }
 		$er = $wpdb->get_row('SELECT * FROM '.$wpdb->prefix.'abc_bookings WHERE id = '.$bookingId, ARRAY_A);
 		wp_enqueue_script('abc-booking-edit', $abcUrl.'backend/js/abc-booking-edit.js', array('jquery'));
 		wp_localize_script( 'abc-booking-edit', 'ajax_abc_bookings', array(
@@ -1796,7 +1796,7 @@ function advanced_booking_calendar_show_bookings() {
 			'nlText' =>  $nlText
 			)
 	);
-	wp_enqueue_script('jquery-ui-datepicker');
+	// wp_enqueue_script('jquery-ui-datepicker');
 	wp_enqueue_script('uikit-js', $abcUrl.'backend/js/uikit.min.js', array('jquery'));
 	wp_enqueue_script('uikit-accordion-js', $abcUrl.'backend/js/accordion.min.js', array('jquery'));
 	wp_enqueue_script('uikit-tooltip-js', $abcUrl.'backend/js/tooltip.min.js', array('jquery'));
@@ -1804,22 +1804,22 @@ function advanced_booking_calendar_show_bookings() {
 	wp_enqueue_script('jquery-validate', $abcUrl.'frontend/js/jquery.validate.min.js', array('jquery'));
 	wp_enqueue_script('abc-functions', $abcUrl.'backend/js/abc-functions.js', array('jquery'));
 	wp_localize_script( 'abc-functions', 'abc_functions_vars', array( 'dateformat' => $dateformat, 'firstday' => getAbcSetting("firstdayofweek")));
-	wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
+	// wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
 	wp_enqueue_style('uk-accordion', $abcUrl.'backend/css/accordion.gradient.min.css');
 	wp_enqueue_style('uk-tooltip', $abcUrl.'backend/css/tooltip.gradient.min.css');
 	wp_enqueue_style('uikit', $abcUrl.'/frontend/css/uikit.gradient.min.css');
 	wp_enqueue_style('abc-adminstyle', $abcUrl.'/backend/css/admin.css');
 	wp_enqueue_style( 'font-awesome', $abcUrl.'frontend/css/font-awesome.min.css' );
-	$datepickerLang = array('af','ar-DZ','ar','az','be','bg','bs','ca','cs','cy-GB','da','de','el','en-AU','en-GB','en-NZ',
-		'eo','es','et','eu','fa','fi','fo','fr-CA','fr-CH','fr','gl','he','hi','hr','hu','hy','id','is',
-		'it-CH','it','ja','ka','kk','km','ko','ky','lb','lt','lv','mk','ml','ms','nb','nl-BE','nl','nn',
-		'no','pl','pt-BR','pt','rm','ro','ru','sk','sl','sq','sr-SR','sr','sv','ta','th','tj','tr','uk',
-		'vi','zh-CN','zh-HK','zh-TW');
-	if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $datepickerLang)){
-		wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
-	}elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $datepickerLang)){
-		wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
-	}
+	// $datepickerLang = array('af','ar-DZ','ar','az','be','bg','bs','ca','cs','cy-GB','da','de','el','en-AU','en-GB','en-NZ',
+	// 	'eo','es','et','eu','fa','fi','fo','fr-CA','fr-CH','fr','gl','he','hi','hr','hu','hy','id','is',
+	// 	'it-CH','it','ja','ka','kk','km','ko','ky','lb','lt','lv','mk','ml','ms','nb','nl-BE','nl','nn',
+	// 	'no','pl','pt-BR','pt','rm','ro','ru','sk','sl','sq','sr-SR','sr','sv','ta','th','tj','tr','uk',
+	// 	'vi','zh-CN','zh-HK','zh-TW');
+	// if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $datepickerLang)){
+	// 	wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
+	// }elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $datepickerLang)){
+	// 	wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
+	// }
 	$settingsMessage = '';
 	if ( isset($_GET["setting"]) ) {
 		switch ($_GET["setting"]) {

@@ -2249,7 +2249,7 @@ msgstr ""
 #: frontend/singlecalendar.php:55 frontend/singlecalendar.php:350
 #: frontend/singlecalendar.php:365
 msgid "Available"
-msgstr "Volno"
+msgstr "Dostupné"
 
 #: frontend/calendaroverview.php:139 frontend/calendaroverview.php:199
 #: frontend/singlecalendar.php:58

@@ -61,8 +61,8 @@ function abc_booking_showSingleCalendar( $atts ) {
 										'.__('Fully booked', 'advanced-booking-calendar').'
 										</div>';
 					}
-				$calSingleOutput .= '<div id="abc-booking-'.$divId.'" class="abc-booking-selection">
-					</div>
+				$calSingleOutput .= '<div id="abc-booking-'.$divId.'" class="abc-booking-selection"><div>'.__('Click in the calendar to select your preferred checkin date. <br>You can switch months using the buttons on top of the calendar.').'
+					</div></div>
 				</div>';
 				return $calSingleOutput;
 			
@@ -334,19 +334,19 @@ function abc_booking_getSingleCalendar($atts){
 				if($cAvailability == 0){ 
 					$cAvailability = '0';
 					$cssClass .= abc_booking_getCssForSingleCalendar($cAvailability, $prevAvailability, $newCurrentTime);
-					$priceOutput .= '&nbsp;';
+					// $priceOutput .= '&nbsp;';
 					$title = ($prevAvailability <= -1 ? abc_booking_getCustomText('checkout') : __('Fully booked', 'advanced-booking-calendar') );
 					$prevAvailability = $cAvailability;
 				}elseif($cAvailability > 0 && ($maxAvailability-$cAvailability) >= $partlyBooked){
 					$cssClass .= abc_booking_getCssForSingleCalendar($cAvailability, $prevAvailability, $newCurrentTime);
-					$priceOutput .= $cPrice;
+					// $priceOutput .= $cPrice;
 					$title = __('Partly available', 'advanced-booking-calendar')."\n".date($dateformat, $newCurrentTime).": ".$cPrice;
 					$prevAvailability = $cAvailability;
 				}else{
 					$cAvailability = -1;
 					$cssClass .= abc_booking_getCssForSingleCalendar($cAvailability, $prevAvailability, $newCurrentTime);
 					$prevAvailability = -1;
-					$priceOutput .= $cPrice;
+					// $priceOutput .= $cPrice;
 					$title = __('Available', 'advanced-booking-calendar').":\n".date($dateformat, $newCurrentTime).": ".$cPrice;
 				}
 				switch ($cAvailability) {
@@ -433,28 +433,29 @@ function ajax_abc_booking_setDataRange() {
 				if($minimumStay > 0){ // Checking if the minimum number of nights to stay is reached
 					$output .= '</div>
 						<div class="abc-column"><b>'.sprintf( __('Your stay is too short. Minimum stay for those dates is %d nights.', 'advanced-booking-calendar'), $minimumStay ).'</b>';
-				}elseif(getAbcSetting("bookingpage") > 0 && get_option('abc_bookingformvalidated') == 1){ // Checking if bookingpage in the settings has been defined
-					$output .='</div>
-						<div class="abc-column">
-							<form action="'.get_permalink(getAbcSetting("bookingpage")).'" method="post">
-							<button class="abc-submit">
-								<span class="abc-submit-text">'.abc_booking_getCustomText('bookNow').'</span>
-							</button>
-							';
 				}
-				if(getAbcSetting("cookies") == 1) { // Storing selected dates in cookie, if activated
-					$domain = str_replace('www', '', str_replace('https://','',str_replace('http://','',get_site_url()))); // Getting domain-name for creating cookies
-					setcookie('abc-from', date($dateformat, $start), time()+3600*24*30*6, '/',  $domain);
-					setcookie('abc-to', date($dateformat, $end), time()+3600*24*30*6, '/', $domain );
-					setcookie('abc-calendar', $calendarId, time()+3600*24*30*6, '/', $domain );
-				} 
+				// elseif(getAbcSetting("bookingpage") > 0 && get_option('abc_bookingformvalidated') == 1){ // Checking if bookingpage in the settings has been defined
+				// 	$output .='</div>
+				// 		<div class="abc-column">
+				// 			<form action="'.get_permalink(getAbcSetting("bookingpage")).'" method="post">
+				// 			<button class="abc-submit">
+				// 				<span class="abc-submit-text">'.abc_booking_getCustomText('bookNow').'</span>
+				// 			</button>
+				// 			';
+				// }
+				// if(getAbcSetting("cookies") == 1) { // Storing selected dates in cookie, if activated
+				// 	$domain = str_replace('www', '', str_replace('https://','',str_replace('http://','',get_site_url()))); // Getting domain-name for creating cookies
+				// 	setcookie('abc-from', date($dateformat, $start), time()+3600*24*30*6, '/',  $domain);
+				// 	setcookie('abc-to', date($dateformat, $end), time()+3600*24*30*6, '/', $domain );
+				// 	setcookie('abc-calendar', $calendarId, time()+3600*24*30*6, '/', $domain );
+				// } 
 					$output .= '<input type="hidden" name="abc-from" value="'.date($dateformat, $start).'">';
 					$output .= '<input type="hidden" name="abc-to" value="'.date($dateformat, $end).'">';
 					$output .= '<input type="hidden" name="abc-calendarId" value="'.$calendarId.'">';
 					$output .= '<input type="hidden" name="abc-trigger" value="'.$calendarId.'">';
 				$output .= '</form>';	
 			} else {
-				$output .= '–</div>';
+				$output .= '–</div><div>'.__('Now select your checkout date.').'</div>';
 			}
 			$output .= '</div><div style="clear:both"></div>';
 		}

@@ -561,7 +561,11 @@ label.abc-form-error  {
 }
 
 .abc-past{
-	font-style: italic; 
+	color: grey;
+}
+
+.abc-past + div:not(.abc-past) {
+	text-decoration: underline;
 }
 
 .abc-booked {
@@ -731,4 +735,7 @@ label.abc-form-error  {
  	margin-right: auto;
  	display: block;
 }	
-	
+
+#abc-form-content > .abc-column, #abc-check-availabilities, #abc-back-to-availabilities {
+	display: none !important;
+}
