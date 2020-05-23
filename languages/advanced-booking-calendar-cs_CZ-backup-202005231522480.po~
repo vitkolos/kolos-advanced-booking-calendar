@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Booking Calendar\n"
 "POT-Creation-Date: 2019-03-01 08:45+0100\n"
-"PO-Revision-Date: 2020-05-23 11:46+0000\n"
+"PO-Revision-Date: 2020-05-23 15:22+0000\n"
 "Last-Translator: \n"
 "Language-Team: Čeština\n"
 "Language: cs_CZ\n"
@@ -65,7 +65,7 @@ msgstr "Cena celkem"
 
 #: advanced-booking-calendar.php:177
 msgid "Checkin - Checkout"
-msgstr "Přihlášení - odhlášení"
+msgstr "Checkin (příjezd) – checkout (odjezd)"
 
 #: advanced-booking-calendar.php:178
 msgid "Number of guests"
@@ -309,7 +309,7 @@ msgstr ""
 
 #: backend/bookings.php:195 backend/settings.php:1073 functions.php:65
 msgid "Checkin"
-msgstr "Přihlášení"
+msgstr "Checkin (datum příjezdu)"
 
 #: backend/bookings.php:195 backend/bookings.php:437 backend/bookings.php:443
 #: backend/bookings.php:448 backend/settings.php:1079 functions.php:68
@@ -542,7 +542,7 @@ msgstr "Osoby"
 
 #: backend/bookings.php:900 backend/bookings.php:1999
 msgid "Checkin Date"
-msgstr "Datum přihlášení"
+msgstr "Checkin (datum příjezdu)"
 
 #: backend/bookings.php:909 backend/bookings.php:2008
 msgid "Checkout Date"
@@ -2249,7 +2249,7 @@ msgstr ""
 #: frontend/singlecalendar.php:55 frontend/singlecalendar.php:350
 #: frontend/singlecalendar.php:365
 msgid "Available"
-msgstr "Dostupné"
+msgstr "Volno"
 
 #: frontend/calendaroverview.php:139 frontend/calendaroverview.php:199
 #: frontend/singlecalendar.php:58
