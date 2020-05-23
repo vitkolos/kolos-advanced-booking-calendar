@@ -524,17 +524,17 @@ label.abc-form-error  {
     /*height: 12.5px;*/
 }
 
-.abc-single-button-right{
+.abc-single-button-right, .abc-single-button-right-2 {
 	text-align: right;
 }
 
-.abc-single-button-left{
+.abc-single-button-left, .abc-single-button-left-2 {
 	text-align: left;
 }
 
 .abc-month {
 	float: left;
-	width: 75%;
+	width: 50%;
 	height: 40px;
 	padding-top: 10px;
 	font-size: 120%;
@@ -736,6 +736,24 @@ label.abc-form-error  {
  	display: block;
 }	
 
+
+
+/* My styles */
+
 #abc-form-content > .abc-column, #abc-check-availabilities, #abc-back-to-availabilities {
 	display: none !important;
+}
+
+.abc-box, .abc-box button {
+	transition: opacity 0.2s;
+}
+
+.abc-box[disabled], .abc-box[disabled] button {
+	opacity: 0.5;
+	cursor: initial;
+}
+
+.abc-booking-selection .abc-column {
+	padding: 0;
+	width: 100%;
 }

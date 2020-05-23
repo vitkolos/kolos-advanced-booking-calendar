@@ -34,13 +34,25 @@ function abc_booking_showSingleCalendar( $atts ) {
 			$calSingleOutput = abcEnqueueCustomCss().'
 				<div class="abc-singlecalendar" data-checkin-'.$divId.'="0" data-offset-'.$divId.'="0" data-month-'.$divId.'="0" id="abc_singlecalendar_'.$divId.'">
 					<div class="abc-box abc-single-row">
+						<div data-calendar="'.sanitize_text_field($atts['calendar']).'" data-id="'.$divId.'" class="abc-box abc-button abc-single-button-left-2">
+							<button class="abc-button-rl">
+								<span class="fa fa-chevron-left"></span><span class="fa fa-chevron-left"></span>
+							</button>
+						</div>
 						<div data-calendar="'.sanitize_text_field($atts['calendar']).'" data-id="'.$divId.'" class="abc-box abc-button abc-single-button-left">
 							<button class="fa fa-chevron-left abc-button-rl"></button>
 						</div>
 						<div class="abc-box abc-month">
-							<img alt="'.__('Loading...', 'advanced-booking-calendar').'" src="'.admin_url('/images/wpspin_light.gif').'" class="waiting" id="abc_single_loading-'.$divId.'" style="display:none" /><span id="singlecalendar-month-'.$divId.'">'.date_i18n('F').' '.date_i18n('Y').'</span></div>
-							<div data-calendar="'.sanitize_text_field($atts['calendar']).'" data-id="'.$divId.'" class="abc-box abc-button abc-single-button-right">
-								<button class="fa fa-chevron-right abc-button-rl"></button>
+							<img alt="'.__('Loading...', 'advanced-booking-calendar').'" src="'.admin_url('/images/wpspin_light.gif').'" class="waiting" id="abc_single_loading-'.$divId.'" style="display:none" />
+							<span id="singlecalendar-month-'.$divId.'">'.date_i18n('F').' '.date_i18n('Y').'</span>
+						</div>
+						<div data-calendar="'.sanitize_text_field($atts['calendar']).'" data-id="'.$divId.'" class="abc-box abc-button abc-single-button-right">
+							<button class="fa fa-chevron-right abc-button-rl"></button>
+						</div>
+						<div data-calendar="'.sanitize_text_field($atts['calendar']).'" data-id="'.$divId.'" class="abc-box abc-button abc-single-button-right-2">
+						<button class="abc-button-rl">
+							<span class="fa fa-chevron-right"></span><span class="fa fa-chevron-right"></span>
+						</button>
 						</div>
 					</div>
 					<div class="abc-box abc-single-row">
@@ -61,7 +73,7 @@ function abc_booking_showSingleCalendar( $atts ) {
 										'.__('Fully booked', 'advanced-booking-calendar').'
 										</div>';
 					}
-				$calSingleOutput .= '<div id="abc-booking-'.$divId.'" class="abc-booking-selection"><div>'.__('Click in the calendar to select your preferred checkin date. <br>You can switch months using the buttons on top of the calendar.').'
+				$calSingleOutput .= '<div id="abc-booking-'.$divId.'" class="abc-booking-selection"><div>'.__('Click in the calendar to select your preferred checkin date.').' <br>'.__('You can switch months using the buttons on top of the calendar.').'
 					</div></div>
 				</div>';
 				return $calSingleOutput;
@@ -334,19 +346,19 @@ function abc_booking_getSingleCalendar($atts){
 				if($cAvailability == 0){ 
 					$cAvailability = '0';
 					$cssClass .= abc_booking_getCssForSingleCalendar($cAvailability, $prevAvailability, $newCurrentTime);
-					// $priceOutput .= '&nbsp;';
+					$priceOutput .= '&nbsp;';
 					$title = ($prevAvailability <= -1 ? abc_booking_getCustomText('checkout') : __('Fully booked', 'advanced-booking-calendar') );
 					$prevAvailability = $cAvailability;
 				}elseif($cAvailability > 0 && ($maxAvailability-$cAvailability) >= $partlyBooked){
 					$cssClass .= abc_booking_getCssForSingleCalendar($cAvailability, $prevAvailability, $newCurrentTime);
-					// $priceOutput .= $cPrice;
+					$priceOutput .= $cPrice;
 					$title = __('Partly available', 'advanced-booking-calendar')."\n".date($dateformat, $newCurrentTime).": ".$cPrice;
 					$prevAvailability = $cAvailability;
 				}else{
 					$cAvailability = -1;
 					$cssClass .= abc_booking_getCssForSingleCalendar($cAvailability, $prevAvailability, $newCurrentTime);
 					$prevAvailability = -1;
-					// $priceOutput .= $cPrice;
+					$priceOutput .= $cPrice;
 					$title = __('Available', 'advanced-booking-calendar').":\n".date($dateformat, $newCurrentTime).": ".$cPrice;
 				}
 				switch ($cAvailability) {
@@ -368,7 +380,9 @@ function abc_booking_getSingleCalendar($atts){
 			}
 			$priceOutput .= '</span>';
 			$cssClass .= 'abc-date-item ';
-			$calSingleOutput .='<div title="'.$title.'" data-calendar="'.intval(sanitize_text_field($atts['calendar'])).'" data-id="'.$divId.'" data-date="'.date('Y-m-d', $newCurrentTime).'" class="'.$cssClass.'" id="abc-day-'.$divId.date('Y-m-d', $newCurrentTime).'">'.date('j', ($newCurrentTime)).$priceOutput.'</div>';
+			$calSingleOutput .='<div title="'.$title.'" data-calendar="'.intval(sanitize_text_field($atts['calendar'])).'" data-id="'.$divId.'" data-date="'.date('Y-m-d', $newCurrentTime).'" class="'.$cssClass.'" id="abc-day-'.$divId.date('Y-m-d', $newCurrentTime).'">'.date('j', ($newCurrentTime)).
+			// $priceOutput.
+			'</div>';
 		}
 		if($i % 7 == 0 OR $i == ($maxday+$startday-1)) { // Closing row if week is over or last day of month has been reached.
 			$calSingleOutput .= '</div>';
@@ -455,7 +469,7 @@ function ajax_abc_booking_setDataRange() {
 					$output .= '<input type="hidden" name="abc-trigger" value="'.$calendarId.'">';
 				$output .= '</form>';	
 			} else {
-				$output .= '–</div><div>'.__('Now select your checkout date.').'</div>';
+				$output .= '–</div><div>'.__('Now select your checkout date.').' <br>'.__('You can switch months using the buttons on top of the calendar.').'</div>';
 			}
 			$output .= '</div><div style="clear:both"></div>';
 		}
