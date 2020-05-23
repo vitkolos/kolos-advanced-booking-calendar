@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Booking Calendar\n"
-"POT-Creation-Date: 2016-10-07 19:48+0200\n"
-"PO-Revision-Date: 2016-10-07 19:48+0200\n"
+"POT-Creation-Date: 2019-03-01 08:45+0100\n"
+"PO-Revision-Date: 2020-05-23 08:11+0000\n"
 "Last-Translator: \n"
-"Language-Team: Webstudio Petrbok <webstudio@petrbok.cz>\n"
+"Language-Team: Čeština\n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Loco https://localise.biz/\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: advanced-booking-calendar.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -19,78 +19,85 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Loco-Version: 2.3.4; wp-5.4.1"
 
-#: advanced-booking-calendar.php:144
+#: advanced-booking-calendar.php:168
 msgid "Your details"
 msgstr "Vaše údaje"
 
-#: advanced-booking-calendar.php:145
+#: advanced-booking-calendar.php:169
 msgid "Hi [abc_first_name]!"
 msgstr "Zdravím, [abc_first_name]!"
 
-#: advanced-booking-calendar.php:146
+#: advanced-booking-calendar.php:170 backend/bookings.php:1068
 #, php-format
 msgid "Your %s-Team"
 msgstr "Váš %s-Team"
 
-#: advanced-booking-calendar.php:147 frontend/bookingform.php:390
+#: advanced-booking-calendar.php:171 backend/settings.php:1061 functions.php:59
 msgid "Room type"
 msgstr "Typ pokoje"
 
-#: advanced-booking-calendar.php:148
+#: advanced-booking-calendar.php:172 functions.php:623
 msgid "Room price"
 msgstr "Cena za pokoj"
 
-#: advanced-booking-calendar.php:149
+#: advanced-booking-calendar.php:173 functions.php:621
 msgid "Selected extras"
 msgstr "Vybrané dodatečné služby"
 
-#: advanced-booking-calendar.php:150 backend/bookings.php:1171
-#: frontend/bookingform.php:292 frontend/bookingform.php:310
+#: advanced-booking-calendar.php:174 backend/bookings.php:925
+#: backend/bookings.php:2027 frontend/bookingform.php:472
+#: frontend/bookingform.php:490 functions.php:617
 msgid "Additional costs"
 msgstr "Dodatečné náklady"
 
-#: advanced-booking-calendar.php:151 backend/bookings.php:197
-#: backend/bookings.php:828 backend/bookings.php:1176
-#: frontend/bookingform.php:171 frontend/singlecalendar.php:333
+#: advanced-booking-calendar.php:175 backend/coupons.php:22 functions.php:640
+msgid "Discount"
+msgstr ""
+
+#: advanced-booking-calendar.php:176 backend/bookings.php:341
+#: backend/bookings.php:931 backend/bookings.php:1606 backend/bookings.php:2032
+#: frontend/bookingform.php:317 functions.php:653
 msgid "Total price"
 msgstr "Cena celkem"
 
-#: advanced-booking-calendar.php:152
+#: advanced-booking-calendar.php:177
 msgid "Checkin - Checkout"
 msgstr "Přihlášení - odhlášení"
 
-#: advanced-booking-calendar.php:153
+#: advanced-booking-calendar.php:178
 msgid "Number of guests"
 msgstr "Počet osob"
 
-#: advanced-booking-calendar.php:154
+#: advanced-booking-calendar.php:179
 msgid "Full Name"
 msgstr "Celé jméno"
 
-#: advanced-booking-calendar.php:155 backend/bookings.php:147
-#: backend/settings.php:269
+#: advanced-booking-calendar.php:180 backend/bookings.php:197
+#: backend/settings.php:622 functions.php:802
 msgid "Email"
 msgstr "E-Mail"
 
-#: advanced-booking-calendar.php:156 backend/bookings.php:147
+#: advanced-booking-calendar.php:181 backend/bookings.php:197 functions.php:803
 msgid "Phone"
 msgstr "Telefon"
 
-#: advanced-booking-calendar.php:157 backend/bookings.php:148
+#: advanced-booking-calendar.php:182 backend/bookings.php:198 functions.php:804
 msgid "Address"
 msgstr "Adresa"
 
-#: advanced-booking-calendar.php:158
+#: advanced-booking-calendar.php:183
 msgid "Your message to us"
 msgstr "Vaše zpráva pro nás"
 
-#: advanced-booking-calendar.php:159
+#: advanced-booking-calendar.php:184
 #, php-format
 msgid "Your booking at %s"
 msgstr "Vaše rezervace u %s"
 
-#: advanced-booking-calendar.php:162
+#: advanced-booking-calendar.php:187
 #, php-format
 msgid ""
 "Thank you for booking at %s. Your booking has not yet been confirmed. Please "
@@ -99,25 +106,25 @@ msgstr ""
 "Vřelé díky za rezervaci u %s. Vaše rezervace není ještě potvrzena. Vyčkejte "
 "prosím na náš potvrzovací e-mail."
 
-#: advanced-booking-calendar.php:166
+#: advanced-booking-calendar.php:191
 #, php-format
 msgid "Confirming your booking at %s"
 msgstr "Potvrzení Vaší rezervace u %s"
 
-#: advanced-booking-calendar.php:169
+#: advanced-booking-calendar.php:194
 msgid "We are happy to confirm your booking!"
 msgstr "Těší nás, že můžeme Vaši rezervaci potvrdit!"
 
-#: advanced-booking-calendar.php:171
+#: advanced-booking-calendar.php:196
 msgid "If you have any questions regard your stay, feel free to contact us."
 msgstr "Neváhejte se na nás obrátit s případnými dotazy."
 
-#: advanced-booking-calendar.php:174
+#: advanced-booking-calendar.php:199
 #, php-format
 msgid "Canceling your booking at %s"
 msgstr "Odmítnutí Vaší rezervace u %s"
 
-#: advanced-booking-calendar.php:177
+#: advanced-booking-calendar.php:202
 msgid ""
 "We are very sorry to cancel your booking! We already had another reservation "
 "for your requested travel period."
@@ -125,7 +132,7 @@ msgstr ""
 "Bohužel musíme Vaši rezervaci odmítnout. V tomto časovém rozmezí jsme "
 "vytíženi. Můžete zkusit rezervaci v jiném termínu."
 
-#: advanced-booking-calendar.php:178 advanced-booking-calendar.php:185
+#: advanced-booking-calendar.php:203 advanced-booking-calendar.php:210
 #, php-format
 msgid ""
 "Please check our website at %s for an alternative. We would be very happy to "
@@ -134,12 +141,12 @@ msgstr ""
 "Podívejte se na našem webu %s na jiné alternativy. Bude nás moc těšit, "
 "budeme-li Vás moci přivítat v jiném termínu."
 
-#: advanced-booking-calendar.php:181
+#: advanced-booking-calendar.php:206
 #, php-format
 msgid "Rejecting your booking at %s"
 msgstr "Storno Vaší rezervace u %s"
 
-#: advanced-booking-calendar.php:184
+#: advanced-booking-calendar.php:209
 msgid ""
 "We are very sorry to reject your booking! We already had another reservation "
 "for your requested travel period."
@@ -147,31 +154,60 @@ msgstr ""
 "Je nám líto, ale Vaši rezervaci jsme nuceni stornovat! V tomto termínu již "
 "máme zarezervováno."
 
-#: advanced-booking-calendar.php:265 advanced-booking-calendar.php:266
-#: backend/bookings.php:1112
+#: advanced-booking-calendar.php:326
+msgid "Plugin uninstalled"
+msgstr ""
+
+#: advanced-booking-calendar.php:327
+msgid "Hi!"
+msgstr ""
+
+#: advanced-booking-calendar.php:328
+msgid ""
+"you just uninstalled the plugin Advanced Booking Calendar on your WordPress "
+"website, but for safety reasons the data in the database created by the "
+"plugin was not deleted."
+msgstr ""
+
+#: advanced-booking-calendar.php:329
+msgid ""
+"If this was a mistake, please install the plugin again, go the plugins "
+"settings, tick the box for plugin deletion and uninstall it again."
+msgstr ""
+
+#: advanced-booking-calendar.php:330
+msgid "Kindly,"
+msgstr ""
+
+#: advanced-booking-calendar.php:353 advanced-booking-calendar.php:354
+#: backend/bookings.php:1968
 msgid "Bookings"
 msgstr "Rezervace"
 
-#: advanced-booking-calendar.php:273 advanced-booking-calendar.php:274
-#: backend/bookings.php:1033 backend/seasons-calendars.php:663
+#: advanced-booking-calendar.php:361 advanced-booking-calendar.php:362
+#: backend/bookings.php:1885 backend/seasons-calendars.php:673
 msgid "Seasons & Calendars"
 msgstr "Sezóna & Kalendář"
 
-#: advanced-booking-calendar.php:281 advanced-booking-calendar.php:282
-#: backend/bookings.php:149 backend/bookings.php:196 backend/bookings.php:1166
-#: backend/extras.php:125
+#: advanced-booking-calendar.php:369 advanced-booking-calendar.php:370
+#: backend/bookings.php:199 backend/bookings.php:340 backend/bookings.php:919
+#: backend/bookings.php:2022 backend/extras.php:179
 msgid "Extras"
 msgstr "Doplňkové služby"
 
-#: advanced-booking-calendar.php:289 advanced-booking-calendar.php:290
+#: advanced-booking-calendar.php:377 advanced-booking-calendar.php:378
 #: backend/analytics.php:14
 msgid "Analytics"
 msgstr "Analýza"
 
-#: advanced-booking-calendar.php:297 advanced-booking-calendar.php:298
-#: backend/settings.php:256
+#: advanced-booking-calendar.php:385 advanced-booking-calendar.php:386
+#: backend/settings.php:607
 msgid "Settings"
 msgstr "Nastavení"
+
+#: advanced-booking-calendar.php:393 advanced-booking-calendar.php:394
+msgid "More Features"
+msgstr ""
 
 #: backend/analytics.php:41
 msgid "There are currently no calendars."
@@ -206,127 +242,230 @@ msgstr "Podíl počtu osob dalších %d dnů"
 msgid "Average revenue per calendar for the next %d days"
 msgstr "Průměrný obrat pro kalendář na dalších %d dnů"
 
-#: backend/bookings.php:143 frontend/bookingform.php:85
-#: frontend/bookingform.php:388 frontend/singlecalendar.php:327 widget.php:110
+#. Plugin Name of the plugin/theme
+#. Author of the plugin/theme
+#: backend/blocks/class-abc-blocks.php:35
+msgid "Advanced Booking Calendar"
+msgstr "Advanced Booking Calendar"
+
+#: backend/blocks/class-abc-blocks.php:65 backend/tinymce-translations.php:12
+msgid "Calendar Overview"
+msgstr ""
+
+#: backend/blocks/class-abc-blocks.php:66
+msgid "It shows all calendars and their availabilities by month."
+msgstr ""
+
+#: backend/blocks/class-abc-blocks.php:69 backend/tinymce-translations.php:18
+msgid "Single Calendar"
+msgstr ""
+
+#: backend/blocks/class-abc-blocks.php:70
+msgid "It shows one single calendar. Please select a calender below."
+msgstr ""
+
+#: backend/blocks/class-abc-blocks.php:71
+msgid "Please select a calendar:"
+msgstr ""
+
+#: backend/blocks/class-abc-blocks.php:72
+msgid "Select a calendar"
+msgstr ""
+
+#: backend/blocks/class-abc-blocks.php:73
+msgid "Display legend?"
+msgstr ""
+
+#: backend/blocks/class-abc-blocks.php:76 backend/tinymce-translations.php:9
+msgid "Booking Form"
+msgstr ""
+
+#: backend/blocks/class-abc-blocks.php:77
+msgid ""
+"The booking form fulfils two tasks: finding the right room for users and "
+"generating booking requests. Every user action happens onpage via AJAX, so "
+"the page does not reload during interactions."
+msgstr ""
+
+#: backend/blocks/class-abc-blocks.php:78
+msgid "Please select calendars:"
+msgstr ""
+
+#: backend/blocks/class-abc-blocks.php:79
+msgid "Hide other Rooms when coming from a Single Calendars?"
+msgstr ""
+
+#: backend/blocks/class-abc-blocks.php:80
+msgid "Hide Rooms when minimum number of nights is too short?"
+msgstr ""
+
+#: backend/bookings.php:180 backend/bookings.php:251
+msgid "Payment"
+msgstr ""
+
+#: backend/bookings.php:194
+msgid "ID"
+msgstr ""
+
+#: backend/bookings.php:195 backend/settings.php:1073 functions.php:65
 msgid "Checkin"
 msgstr "Přihlášení"
 
-#: backend/bookings.php:144 frontend/bookingform.php:90
-#: frontend/bookingform.php:389 frontend/singlecalendar.php:328 widget.php:115
+#: backend/bookings.php:195 backend/bookings.php:437 backend/bookings.php:443
+#: backend/bookings.php:448 backend/settings.php:1079 functions.php:68
 msgid "Checkout"
 msgstr "Odhlášení"
 
-#: backend/bookings.php:145 backend/bookings.php:1131
-#: backend/seasons-calendars.php:598 backend/seasons-calendars.php:926
-#: backend/seasons-calendars.php:940
+#: backend/bookings.php:196 backend/bookings.php:887 backend/bookings.php:1987
+#: backend/seasons-calendars.php:608 backend/seasons-calendars.php:936
+#: backend/seasons-calendars.php:950 backend/tinymce-translations.php:14
 msgid "Calendar"
 msgstr "Kalendář"
 
-#: backend/bookings.php:145
+#: backend/bookings.php:196
 msgid "Room"
 msgstr "Pokoj"
 
-#: backend/bookings.php:146 backend/extras.php:179 backend/extras.php:282
-#: backend/extras.php:298 backend/seasons-calendars.php:462
-#: backend/seasons-calendars.php:527 backend/seasons-calendars.php:731
-#: backend/seasons-calendars.php:750 backend/seasons-calendars.php:827
-#: backend/seasons-calendars.php:841
+#: backend/bookings.php:197 backend/extras.php:245 backend/extras.php:408
+#: backend/extras.php:527 backend/extras.php:547
+#: backend/seasons-calendars.php:472 backend/seasons-calendars.php:537
+#: backend/seasons-calendars.php:741 backend/seasons-calendars.php:760
+#: backend/seasons-calendars.php:837 backend/seasons-calendars.php:851
+#: functions.php:797
 msgid "Name"
 msgstr "Jméno"
 
-#: backend/bookings.php:149 backend/extras.php:209 backend/extras.php:286
-#: backend/extras.php:328 backend/seasons-calendars.php:532
-#: backend/seasons-calendars.php:828 backend/seasons-calendars.php:846
+#: backend/bookings.php:199 backend/bookings.php:463 backend/bookings.php:468
+#: backend/extras.php:290 backend/extras.php:412 backend/extras.php:531
+#: backend/extras.php:593 backend/seasons-calendars.php:542
+#: backend/seasons-calendars.php:838 backend/seasons-calendars.php:856
 msgid "Price"
 msgstr "Cena"
 
-#: backend/bookings.php:150 backend/bookings.php:198 backend/bookings.php:829
-#: frontend/bookingform.php:376
+#: backend/bookings.php:201 backend/bookings.php:344 backend/bookings.php:1062
+#: backend/bookings.php:1607 frontend/bookingform.php:575 functions.php:811
 msgid "Message"
 msgstr "Zpráva"
 
-#: backend/bookings.php:177
+#: backend/bookings.php:228
 msgid "No extras"
 msgstr "Žádné doplňkové služby"
 
-#: backend/bookings.php:184 backend/bookings.php:193 backend/bookings.php:825
-#: functions.php:500
+#: backend/bookings.php:233
+msgid "n/a"
+msgstr ""
+
+#: backend/bookings.php:280 backend/bookings.php:281 backend/bookings.php:1603
+#: functions.php:657
 msgid "Booking Request"
 msgstr "Žádost o rezervaci"
 
-#: backend/bookings.php:203 backend/bookings.php:225 backend/bookings.php:234
-#: backend/bookings.php:834 backend/bookings.php:849 backend/bookings.php:858
+#: backend/bookings.php:349 backend/bookings.php:371 backend/bookings.php:380
+#: backend/bookings.php:1612 backend/bookings.php:1633
+#: backend/bookings.php:1642
 msgid "Confirm"
 msgstr "Potvrdit"
 
-#: backend/bookings.php:203 backend/bookings.php:834
+#: backend/bookings.php:349 backend/bookings.php:1612
 msgid "Do you really want to confirm this booking?"
 msgstr "Chcete tuto rezervaci opravdu potvrdit?"
 
-#: backend/bookings.php:206 backend/bookings.php:837
+#: backend/bookings.php:352 backend/bookings.php:1615
 msgid "Reject"
 msgstr "Odmítnout"
 
-#: backend/bookings.php:206 backend/bookings.php:837
+#: backend/bookings.php:352 backend/bookings.php:1615
 msgid "Do you really want to reject this booking?"
 msgstr "Chcete tuto rezervaci opravdu odmítnout?"
 
-#: backend/bookings.php:216
+#: backend/bookings.php:362 backend/bookings.php:890 backend/bookings.php:1624
 msgid "Change room"
 msgstr "Změnit pokoj"
 
-#: backend/bookings.php:219 backend/bookings.php:843
+#: backend/bookings.php:365 backend/bookings.php:1627
 msgctxt "a booking"
 msgid "Cancel"
 msgstr "Stornovat"
 
-#: backend/bookings.php:219 backend/bookings.php:843
+#: backend/bookings.php:365 backend/bookings.php:1627
 msgid "Do you really want to cancel this booking?"
 msgstr "Chcete tuto rezervaci opravdu stornovat?"
 
-#: backend/bookings.php:225 backend/bookings.php:849
+#: backend/bookings.php:371 backend/bookings.php:1633
 msgid ""
 "Do you really want to confirm this booking (it has already been canceled)?"
 msgstr "Chcete tuto rezervaci opravdu potvrdit? Byla již stornována."
 
-#: backend/bookings.php:228 backend/bookings.php:237 backend/bookings.php:852
-#: backend/bookings.php:861 backend/extras.php:274
-#: backend/seasons-calendars.php:715 backend/seasons-calendars.php:817
-#: backend/seasons-calendars.php:916
+#: backend/bookings.php:374 backend/bookings.php:383 backend/bookings.php:1636
+#: backend/bookings.php:1645 backend/extras.php:503
+#: backend/seasons-calendars.php:725 backend/seasons-calendars.php:827
+#: backend/seasons-calendars.php:926
 msgid "Delete"
 msgstr "Smazat"
 
-#: backend/bookings.php:228 backend/bookings.php:237 backend/bookings.php:852
-#: backend/bookings.php:861
+#: backend/bookings.php:374 backend/bookings.php:383 backend/bookings.php:1636
+#: backend/bookings.php:1645
 msgid "Do you really want to delete this booking?"
 msgstr "Chcete tuto rezervaci opravdu smazat?"
 
-#: backend/bookings.php:234 backend/bookings.php:858
+#: backend/bookings.php:380 backend/bookings.php:1642
 msgid ""
 "Do you really want to confirm this booking (it has already been rejected)?"
 msgstr "Chcete tuto rezervaci opravdu potvrdit? Byla již odmítnuta."
 
-#: backend/bookings.php:244 backend/bookings.php:868
+#: backend/bookings.php:392 backend/bookings.php:407 backend/bookings.php:1656
+#: backend/extras.php:497 backend/seasons-calendars.php:721
+#: backend/seasons-calendars.php:823 backend/seasons-calendars.php:922
+#: frontend/bookingform.php:237
+msgid "Edit"
+msgstr "Upravit"
+
+#: backend/bookings.php:398 backend/bookings.php:413
+msgid "Custom message"
+msgstr ""
+
+#: backend/bookings.php:417 backend/bookings.php:1659
 msgid "Scroll up"
 msgstr "Nahoru"
 
-#: backend/bookings.php:271
+#: backend/bookings.php:440
+msgid "Sorting"
+msgstr ""
+
+#: backend/bookings.php:453 backend/bookings.php:458 backend/bookings.php:942
+#: backend/bookings.php:2050 backend/settings.php:795
+#: frontend/bookingform.php:529
+msgid "Last Name"
+msgstr "Příjmení"
+
+#: backend/bookings.php:473 backend/bookings.php:478
+msgid "Created at"
+msgstr ""
+
+#: backend/bookings.php:498
 msgid "No Bookings found."
 msgstr "Nenalezeny žádné rezervace"
 
-#: backend/bookings.php:279
+#: backend/bookings.php:498
+msgid ""
+"Take a look at our <a href=\"https://booking-calendar-plugin.com/pro-"
+"download/?cmp=PayPalSetting\" target=\"_blank\">Pro-Version</a> to benefit "
+"from more features like payment via PayPal or Stripe."
+msgstr ""
+
+#: backend/bookings.php:507
 msgid "Select..."
 msgstr "Vyberte..."
 
-#: backend/bookings.php:327
+#: backend/bookings.php:559
 msgid "Calendar is available."
 msgstr "Kalendář je dostupný."
 
-#: backend/bookings.php:328
+#: backend/bookings.php:560
 msgid "Room price for the stay"
 msgstr "Cena pokoje za pobyt"
 
-#: backend/bookings.php:330
+#: backend/bookings.php:562
 msgid ""
 "There is an overlap in the bookings. Check if you can move other bookings to "
 "other rooms. The booking can only be saved as \"open\""
@@ -334,25 +473,25 @@ msgstr ""
 "Nastalo překrývání v rezervaci. Zvažte, jestli můžete rezervaci přeložit na "
 "jiný pokoj. Tato rezervace může být uložena pouze jako \"otevřená\""
 
-#: backend/bookings.php:333
+#: backend/bookings.php:565
 msgid "No rooms available for this calendar during the selected time period"
 msgstr "V tomto kalendáři nejsou žádné volné pokoje v tomto časovém úseku"
 
-#: backend/bookings.php:336 frontend/bookingform.php:199
+#: backend/bookings.php:568 frontend/bookingform.php:357
 msgid "Something went wrong."
 msgstr "Něco se nezdařilo."
 
-#: backend/bookings.php:490
+#: backend/bookings.php:735
 msgid "Change room for a booking"
 msgstr "Změnit pokoj pro rezervaci"
 
-#: backend/bookings.php:498
+#: backend/bookings.php:744
 msgid "Booking"
 msgstr "Rezervace"
 
-#: backend/bookings.php:499 backend/bookings.php:658 backend/bookings.php:664
-#: backend/bookings.php:694 backend/bookings.php:702 functions.php:281
-#: functions.php:306
+#: backend/bookings.php:745 backend/bookings.php:1386 backend/bookings.php:1388
+#: backend/bookings.php:1443 backend/bookings.php:1445 functions.php:366
+#: functions.php:391
 #, php-format
 msgid "%d person"
 msgid_plural "%d persons"
@@ -360,101 +499,252 @@ msgstr[0] "%d osoba"
 msgstr[1] "%d osob"
 msgstr[2] "%d osob"
 
-#: backend/bookings.php:503
+#: backend/bookings.php:749
 msgid "state"
 msgstr "Stav"
 
-#: backend/bookings.php:504 backend/settings.php:452
+#: backend/bookings.php:750 backend/settings.php:865
 msgid "message"
 msgstr "Zpráva"
 
-#: backend/bookings.php:508
+#: backend/bookings.php:754
 msgid "Available rooms"
 msgstr "Volné pokoje"
 
-#: backend/bookings.php:510
+#: backend/bookings.php:756
 msgid "Room changes will not affect any price changes!"
 msgstr "Změna pokoje nemá žádný vliv na cenu!"
 
-#: backend/bookings.php:514 backend/extras.php:215
-#: backend/seasons-calendars.php:502 backend/seasons-calendars.php:543
-#: backend/seasons-calendars.php:616 backend/seasons-calendars.php:654
-#: backend/settings.php:363 backend/settings.php:462 backend/settings.php:527
+#: backend/bookings.php:760 backend/bookings.php:1008 backend/extras.php:320
+#: backend/seasons-calendars.php:512 backend/seasons-calendars.php:553
+#: backend/seasons-calendars.php:626 backend/seasons-calendars.php:664
+#: backend/settings.php:776 backend/settings.php:885 backend/settings.php:956
+#: backend/settings.php:1000 backend/settings.php:1109
 msgid "Save"
 msgstr "Uložit"
 
-#: backend/bookings.php:515 backend/extras.php:216
-#: backend/seasons-calendars.php:503 backend/seasons-calendars.php:544
-#: backend/seasons-calendars.php:617 backend/seasons-calendars.php:655
+#: backend/bookings.php:761 backend/extras.php:323 backend/extras.php:422
+#: backend/seasons-calendars.php:513 backend/seasons-calendars.php:554
+#: backend/seasons-calendars.php:627 backend/seasons-calendars.php:665
 msgctxt "a change"
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: backend/bookings.php:578
+#: backend/bookings.php:881
+msgid "Edit booking"
+msgstr ""
+
+#: backend/bookings.php:894 backend/bookings.php:1993 backend/extras.php:300
+#: backend/extras.php:413 backend/extras.php:532 backend/extras.php:603
+#: frontend/bookingform.php:67 frontend/bookingform.php:223 functions.php:800
+msgid "Persons"
+msgstr "Osoby"
+
+#: backend/bookings.php:900 backend/bookings.php:1999
+msgid "Checkin Date"
+msgstr "Datum přihlášení"
+
+#: backend/bookings.php:909 backend/bookings.php:2008
+msgid "Checkout Date"
+msgstr "Datum odhlášení"
+
+#: backend/bookings.php:936 backend/bookings.php:2044 backend/settings.php:785
+#: frontend/bookingform.php:522
+msgid "First Name"
+msgstr "Křestní jméno"
+
+#: backend/bookings.php:948 backend/bookings.php:2056
+#: frontend/bookingform.php:533
+msgid "Email Address"
+msgstr "E-mailová adresa"
+
+#: backend/bookings.php:954 backend/bookings.php:2069 backend/settings.php:805
+#: frontend/bookingform.php:539
+msgid "Phone Number"
+msgstr "Telefon"
+
+#: backend/bookings.php:960 backend/bookings.php:2075 backend/settings.php:815
+#: frontend/bookingform.php:545
+msgid "Street Address, House no."
+msgstr "Ulice a č.p."
+
+#: backend/bookings.php:966 backend/bookings.php:2081 backend/settings.php:825
+#: frontend/bookingform.php:551 functions.php:805
+msgid "ZIP Code"
+msgstr "PSČ"
+
+#: backend/bookings.php:972 backend/bookings.php:2087 backend/settings.php:845
+#: frontend/bookingform.php:557 functions.php:806
+msgid "City"
+msgstr "Město"
+
+#: backend/bookings.php:978 backend/bookings.php:2093 backend/settings.php:835
+#: frontend/bookingform.php:563 functions.php:807
+msgid "State / County"
+msgstr "Stát / země"
+
+#: backend/bookings.php:984 backend/bookings.php:2099 backend/settings.php:855
+#: frontend/bookingform.php:569 functions.php:808
+msgid "Country"
+msgstr "Země"
+
+#: backend/bookings.php:990 backend/bookings.php:2105
+msgid "Message, special note for stay"
+msgstr "Zpráva, poznámka k pobytu"
+
+#: backend/bookings.php:996 backend/bookings.php:1072 backend/bookings.php:2017
+msgid "State"
+msgstr "Stav"
+
+#: backend/bookings.php:999 backend/bookings.php:1075
+msgid "Open"
+msgstr ""
+
+#: backend/bookings.php:1000 backend/bookings.php:1076
+#: backend/bookings.php:2040
+msgid "Confirmed"
+msgstr "Potvrzeno"
+
+#: backend/bookings.php:1001 backend/bookings.php:1077
+msgid "Rejected"
+msgstr ""
+
+#: backend/bookings.php:1002 backend/bookings.php:1078
+msgid "Canceled"
+msgstr ""
+
+#: backend/bookings.php:1004
+msgid ""
+"Note: Changing the booking state here will not sent an email to the guest."
+msgstr ""
+
+#: backend/bookings.php:1009 backend/bookings.php:1084
+msgid "Cancel"
+msgstr ""
+
+#: backend/bookings.php:1046
+msgid "Could not confirm booking, room is not available."
+msgstr ""
+
+#: backend/bookings.php:1047 backend/bookings.php:1826
+#: backend/bookings.php:1831 backend/bookings.php:1836
+#: backend/bookings.php:1841 backend/bookings.php:1846
+#: backend/bookings.php:1851 backend/bookings.php:1856
+#: backend/bookings.php:1861 backend/bookings.php:1866
+#: backend/bookings.php:1871 backend/bookings.php:1876 backend/extras.php:152
+#: backend/extras.php:157 backend/extras.php:164 backend/extras.php:169
+#: backend/extras.php:174 backend/seasons-calendars.php:390
+#: backend/seasons-calendars.php:395 backend/seasons-calendars.php:409
+#: backend/seasons-calendars.php:414 backend/seasons-calendars.php:419
+#: backend/seasons-calendars.php:424 backend/seasons-calendars.php:429
+#: backend/seasons-calendars.php:434 backend/seasons-calendars.php:439
+#: backend/seasons-calendars.php:444 backend/seasons-calendars.php:449
+#: backend/settings.php:491 backend/settings.php:502 backend/settings.php:507
+#: backend/settings.php:512 backend/settings.php:517 backend/settings.php:532
+#: backend/settings.php:536 backend/settings.php:543 backend/settings.php:549
+msgid "Dismiss this notice."
+msgstr "Zavřít tuto poznámku."
+
+#: backend/bookings.php:1050
+msgid "Custom Message"
+msgstr ""
+
+#: backend/bookings.php:1051
+msgid ""
+"Send a customized email to your guest. You can also change the status of the "
+"booking."
+msgstr ""
+
+#: backend/bookings.php:1056
+msgid "Subject"
+msgstr ""
+
+#: backend/bookings.php:1058
+#, php-format
+msgid "Your booking at %s, from %s to %s"
+msgstr ""
+
+#: backend/bookings.php:1065
+msgid "Hello"
+msgstr ""
+
+#: backend/bookings.php:1067
+msgid "Best regards,"
+msgstr ""
+
+#: backend/bookings.php:1083
+msgid "Send custom message"
+msgstr ""
+
+#: backend/bookings.php:1273
 msgid "January"
 msgstr "Leden"
 
-#: backend/bookings.php:579
+#: backend/bookings.php:1274
 msgid "February"
 msgstr "Únor"
 
-#: backend/bookings.php:580
+#: backend/bookings.php:1275
 msgid "March"
 msgstr "Březen"
 
-#: backend/bookings.php:581
+#: backend/bookings.php:1276
 msgid "April"
 msgstr "Duben"
 
-#: backend/bookings.php:582
+#: backend/bookings.php:1277
 msgid "May"
 msgstr "Květen"
 
-#: backend/bookings.php:583
+#: backend/bookings.php:1278
 msgid "June"
 msgstr "Červen"
 
-#: backend/bookings.php:584
+#: backend/bookings.php:1279
 msgid "July"
 msgstr "Červenec"
 
-#: backend/bookings.php:585
+#: backend/bookings.php:1280
 msgid "August"
 msgstr "Srpen"
 
-#: backend/bookings.php:586
+#: backend/bookings.php:1281
 msgid "September"
 msgstr "Září"
 
-#: backend/bookings.php:587
+#: backend/bookings.php:1282
 msgid "October"
 msgstr "Říjen"
 
-#: backend/bookings.php:588
+#: backend/bookings.php:1283
 msgid "November"
 msgstr "Listopad"
 
-#: backend/bookings.php:589
+#: backend/bookings.php:1284
 msgid "December"
 msgstr "Prosinec"
 
-#: backend/bookings.php:774
+#: backend/bookings.php:1529
 msgid "Thank you for your Feedback!"
 msgstr "Děkujeme za zpětnou vazbu!"
 
-#: backend/bookings.php:788
+#: backend/bookings.php:1543
 msgid "Thank you! The link is now activated."
 msgstr "Děkujeme! Odkaz je nyní aktivní."
 
-#: backend/bookings.php:799
+#: backend/bookings.php:1556
+msgid "Thank you!"
+msgstr ""
+
+#: backend/bookings.php:1569
 msgid "Search not set."
 msgstr "Hledání není nastaveno."
 
-#: backend/bookings.php:897
+#: backend/bookings.php:1688
 msgid "Congratulations on your 10th confirmed Booking!"
 msgstr "Srdečně blahopřejeme k Vaší 10. potvrzené rezervaci!"
 
-#: backend/bookings.php:898
+#: backend/bookings.php:1689
 msgid ""
 "We would like to give your more tips on how to raise your occupation rate "
 "via our Newsletter. We promise to never spam you. You can unsubscribe "
@@ -464,15 +754,16 @@ msgstr ""
 "prostřednictvím našeho zpravodaje. Slibujeme, že Vám nebudeme posílat žádnou "
 "nevyžádanou poštu. Můžete se kdykoliv odhlásit."
 
-#: backend/bookings.php:899 backend/bookings.php:906 backend/bookings.php:913
+#: backend/bookings.php:1690 backend/bookings.php:1697
+#: backend/bookings.php:1704
 msgid "Click OK to subscribe now!"
 msgstr "Klikněte na Ok pro přihlášení!"
 
-#: backend/bookings.php:904
+#: backend/bookings.php:1695
 msgid "Wow! Congratulations on your 100th confirmed Booking!"
 msgstr "Wow! Srdečně blahopřejeme k Vaší 100. potvrzené rezervaci!"
 
-#: backend/bookings.php:905 backend/bookings.php:912
+#: backend/bookings.php:1696 backend/bookings.php:1703
 msgid ""
 "You are obviously doing a great job! But still, maybe you could learn "
 "something by our tips on how to raise your occupation rate via our "
@@ -482,108 +773,128 @@ msgstr ""
 "zvýšit míru obsazenosti prostřednictvím našeho zpravodaje. Slibujeme, že Vám "
 "nebudeme posílat žádnou nevyžádanou poštu. Můžete se kdykoliv odhlásit."
 
-#: backend/bookings.php:911
+#: backend/bookings.php:1702
 #, php-format
 msgid "Congratulations! You just surpassed a total revenue of 20000 %s!"
 msgstr ""
 "Srdečně blahopřejeme! Právě jste překonali celkový příjem jak 20.000 %s !"
 
-#: backend/bookings.php:923
+#: backend/bookings.php:1714
 msgid "Do you like this Plugin?"
 msgstr "Líbí se Vám tento Plugin?"
 
-#: backend/bookings.php:929
+#: backend/bookings.php:1720 backend/bookings.php:1764
 msgid "Oh, we are sorry!"
 msgstr "Škoda, to je nám líto!"
 
-#: backend/bookings.php:930
+#: backend/bookings.php:1721 backend/bookings.php:1765
 msgid "Would you tell us what you don't like?"
 msgstr "Můžete nám sdělit, co se Vám nelíbí?"
 
-#: backend/bookings.php:933
+#: backend/bookings.php:1724 backend/bookings.php:1768
 msgid "Send Feedback"
 msgstr "Odeslat zpětnou vazbu"
 
-#: backend/bookings.php:937
+#: backend/bookings.php:1728 backend/bookings.php:1772
 msgid "Great!"
 msgstr "Super!"
 
-#: backend/bookings.php:938
+#: backend/bookings.php:1729 backend/bookings.php:1773
 msgid "We would really appreciate a review:"
 msgstr "Moc nás potěšilo Vaše hodnocení:"
 
-#: backend/bookings.php:942
+#: backend/bookings.php:1733 backend/bookings.php:1777
 msgid ""
-"You can also help us by activating a tiny \"Power by Advanced Booking "
-"Calendar\"-notice below the calendar overview. It would help us a lot!"
+"You can also help us by activating a tiny \"Powered by Advanced Booking "
+"Calendar\"-notice below the calendar overview and booking form. It would "
+"help us a lot!"
 msgstr ""
-"Můžete nám pomoci také tím, že aktivuje odkaz \"Vytvořeno Pokročilým "
-"rezervačním kalendářem\" -poznámkou pod kalendářem. To by nám hodně pomohlo!"
 
-#: backend/bookings.php:944
+#: backend/bookings.php:1735 backend/bookings.php:1779
 msgid "Activate Powered-By-Link"
 msgstr "Aktivovat odkaz vytvořeno-kým"
 
-#: backend/bookings.php:989
+#: backend/bookings.php:1757
+msgid "Please help us!"
+msgstr ""
+
+#: backend/bookings.php:1758
+msgid "Lets make this plugin better!"
+msgstr ""
+
+#: backend/bookings.php:1759
+msgid "Help us to make this plugin better by committing some usage data."
+msgstr ""
+
+#: backend/bookings.php:1759 backend/settings.php:758
+msgid ""
+"Your visitors will not be affected. No sensible data will be transmitted."
+msgstr ""
+
+#: backend/bookings.php:1761
+msgid "Commit Usage"
+msgstr ""
+
+#: backend/bookings.php:1825
 msgid "Booking has been saved. Has yet to be confirmed."
 msgstr "Rezervace uložena. Musí být ale ještě potvrzena."
 
-#: backend/bookings.php:990 backend/bookings.php:995 backend/bookings.php:1000
-#: backend/bookings.php:1005 backend/bookings.php:1010
-#: backend/bookings.php:1015 backend/bookings.php:1020
-#: backend/bookings.php:1025 backend/extras.php:103 backend/extras.php:108
-#: backend/extras.php:115 backend/extras.php:120
-#: backend/seasons-calendars.php:385 backend/seasons-calendars.php:399
-#: backend/seasons-calendars.php:404 backend/seasons-calendars.php:409
-#: backend/seasons-calendars.php:414 backend/seasons-calendars.php:419
-#: backend/seasons-calendars.php:424 backend/seasons-calendars.php:429
-#: backend/seasons-calendars.php:434 backend/seasons-calendars.php:439
-#: backend/settings.php:239 backend/settings.php:244 backend/settings.php:249
-msgid "Dismiss this notice."
-msgstr "Zavřít tuto poznámku."
-
-#: backend/bookings.php:994
+#: backend/bookings.php:1830
 msgid "Booking has been saved and state set to confirmed."
 msgstr "Rezervace byla uložena se stavem potvrzeno."
 
-#: backend/bookings.php:999
+#: backend/bookings.php:1835
+msgid "Booking has been changed."
+msgstr ""
+
+#: backend/bookings.php:1840
+msgid ""
+"Booking has been changed, but dates could not be changed! Calendar was "
+"occupied."
+msgstr ""
+
+#: backend/bookings.php:1845
 msgid "Booking confirmed."
 msgstr "Rezervace potvrzena."
 
-#: backend/bookings.php:1004
+#: backend/bookings.php:1850
 msgid "Booking canceled."
 msgstr "Rezervace odmítnuta."
 
-#: backend/bookings.php:1009
+#: backend/bookings.php:1855
 msgid "Booking rejected."
 msgstr "Rezervace stornována."
 
-#: backend/bookings.php:1014
+#: backend/bookings.php:1860
 msgid "Booking deleted."
 msgstr "Rezervace smazána."
 
-#: backend/bookings.php:1019
+#: backend/bookings.php:1865
 msgid "Something went wrong, change didn't work."
 msgstr "Něco se nezdařilo, změny nebyly provedeny."
 
-#: backend/bookings.php:1024
+#: backend/bookings.php:1870
 msgid "Room has been changed."
 msgstr "Změna pokoje uložena."
 
-#: backend/bookings.php:1032
+#: backend/bookings.php:1875
+msgid "Message has been send."
+msgstr ""
+
+#: backend/bookings.php:1884
 msgid "setup guide"
 msgstr "První kroky"
 
-#: backend/bookings.php:1034 backend/bookings.php:1092
-#: backend/bookings.php:1120
+#: backend/bookings.php:1886 backend/bookings.php:1944
+#: backend/bookings.php:1976
 msgid "Create a Booking"
 msgstr "Vytvořit rezervaci"
 
-#: backend/bookings.php:1040 backend/bookings.php:1051
+#: backend/bookings.php:1892 backend/bookings.php:1903
 msgid "Create a Calendar"
 msgstr "Vytvořit kalendář"
 
-#: backend/bookings.php:1052
+#: backend/bookings.php:1904
 #, php-format
 msgid ""
 "A calendar is one room or even a group of rooms of the same room type. Start "
@@ -592,11 +903,11 @@ msgstr ""
 "Jeden Kalendář je jeden pokoj nebo skupina pokojů stejných vlastností. "
 "Začněte tím, že si založíte nový kalendář: \"%s\""
 
-#: backend/bookings.php:1061 backend/bookings.php:1072
+#: backend/bookings.php:1913 backend/bookings.php:1924
 msgid "Create a Season & assign it to a Calendar"
 msgstr "Vytvořit sezónu a přidružit ji konkrétnímu kalendáři"
 
-#: backend/bookings.php:1073
+#: backend/bookings.php:1925
 #, php-format
 msgid ""
 "With seasons you can create differnt rates for different time periods. Go to "
@@ -605,20 +916,20 @@ msgstr ""
 "Se sezónou můžete vytvořit rozdílné ceny pro různá kalendářní období. Jdi na "
 "\"%s\", vytvoř si nějakou sezónu a přidruž ji konkrétnímu kalendáři."
 
-#: backend/bookings.php:1080
+#: backend/bookings.php:1932
 #, php-format
 msgid "There are currently no bookings. Check out our %s to get started."
 msgstr "Ještě nejsou žádné rezervace. Podívejte se na naše %s , a pokračujte."
 
-#: backend/bookings.php:1081
+#: backend/bookings.php:1933
 msgid "If you have a question, feel free to contact us:"
 msgstr "Máte-li nějaké otázky, obraťte se přímo na nás:"
 
-#: backend/bookings.php:1082
+#: backend/bookings.php:1934
 msgid "Contact Support"
 msgstr "Kontakt"
 
-#: backend/bookings.php:1093
+#: backend/bookings.php:1945
 msgid ""
 "When everything is set up, add shortcodes to your WordPress pages and wait "
 "for the first guest."
@@ -626,213 +937,251 @@ msgstr ""
 "Máte-li vše připraveno, vložte shortcode do Vaší stránky WordPressu a "
 "očekávejte první návštěvy."
 
-#: backend/bookings.php:1094
+#: backend/bookings.php:1946
 #, php-format
 msgid "You can also click on \"%s\" and add your first Booking manually."
 msgstr "Vaši první rezervaci můžete také provést kliknutím na \"%s\" ."
 
-#: backend/bookings.php:1117
+#: backend/bookings.php:1973
 msgid "Open Bookings"
 msgstr "Otevřené rezervace"
 
-#: backend/bookings.php:1118
+#: backend/bookings.php:1974
 msgid "Confirmed Bookings"
 msgstr "Potvrzené rezervace"
 
-#: backend/bookings.php:1119
+#: backend/bookings.php:1975
 msgid "Rejected & canceled Bookings"
 msgstr "Odmítnuté & stornované rezervace"
 
-#: backend/bookings.php:1121 backend/bookings.php:1262
+#: backend/bookings.php:1977 backend/bookings.php:2118
 msgid "Search"
 msgstr "Hledat"
 
-#: backend/bookings.php:1137 frontend/bookingform.php:97 widget.php:120
-msgid "Persons"
-msgstr "Osoby"
-
-#: backend/bookings.php:1139
+#: backend/bookings.php:1995
 msgid "Set calendar"
 msgstr "Zvolit kalendář"
 
-#: backend/bookings.php:1143
-msgid "Checkin Date"
-msgstr "Datum přihlášení"
-
-#: backend/bookings.php:1152
-msgid "Checkout Date"
-msgstr "Datum odhlášení"
-
-#: backend/bookings.php:1161
-msgid "State"
-msgstr "Stav"
-
-#: backend/bookings.php:1181
+#: backend/bookings.php:2037
 msgid "Set Booking State to"
 msgstr "Stav rezervace změnit na"
 
-#: backend/bookings.php:1183
+#: backend/bookings.php:2039
 msgid "Open (has to be confirmed)"
 msgstr "Otevřeno (musí být ještě potvrzeno)"
 
-#: backend/bookings.php:1184
-msgid "Confirmed"
-msgstr "Potvrzeno"
-
-#: backend/bookings.php:1188 backend/settings.php:372
-#: frontend/bookingform.php:324
-msgid "First Name"
-msgstr "Křestní jméno"
-
-#: backend/bookings.php:1194 backend/settings.php:382
-#: frontend/bookingform.php:330
-msgid "Last Name"
-msgstr "Příjmení"
-
-#: backend/bookings.php:1200 frontend/bookingform.php:335
-msgid "Email Address"
-msgstr "E-mailová adresa"
-
-#: backend/bookings.php:1206
+#: backend/bookings.php:2062
 msgid "Send confirmation email to guest"
 msgstr "Poslat potvrzující mail žadateli (hostu)"
 
-#: backend/bookings.php:1208 backend/extras.php:204 backend/extras.php:233
-#: backend/extras.php:323
+#: backend/bookings.php:2064 backend/extras.php:282 backend/extras.php:353
+#: backend/extras.php:455 backend/extras.php:585
 msgid "Yes"
 msgstr "Ano"
 
-#: backend/bookings.php:1209 backend/extras.php:205 backend/extras.php:236
-#: backend/extras.php:324
+#: backend/bookings.php:2065 backend/extras.php:283 backend/extras.php:356
+#: backend/extras.php:458 backend/extras.php:586
 msgid "No"
 msgstr "Ne"
 
-#: backend/bookings.php:1213 backend/settings.php:392
-#: frontend/bookingform.php:340
-msgid "Phone Number"
-msgstr "Telefon"
-
-#: backend/bookings.php:1219 backend/settings.php:402
-#: frontend/bookingform.php:346
-msgid "Street Address, House no."
-msgstr "Ulice a č.p."
-
-#: backend/bookings.php:1225 backend/settings.php:412
-#: frontend/bookingform.php:352
-msgid "ZIP Code"
-msgstr "PSČ"
-
-#: backend/bookings.php:1231 backend/settings.php:432
-#: frontend/bookingform.php:358
-msgid "City"
-msgstr "Město"
-
-#: backend/bookings.php:1237 backend/settings.php:422
-#: frontend/bookingform.php:364
-msgid "State / County"
-msgstr "Stát / země"
-
-#: backend/bookings.php:1243 backend/settings.php:442
-#: frontend/bookingform.php:370
-msgid "Country"
-msgstr "Země"
-
-#: backend/bookings.php:1249
-msgid "Message, special note for stay"
-msgstr "Zpráva, poznámka k pobytu"
-
-#: backend/bookings.php:1255
+#: backend/bookings.php:2111
 msgid "Create Booking"
 msgstr "Vytvořit rezervaci"
 
-#: backend/bookings.php:1261
+#: backend/bookings.php:2117
 msgid "search"
 msgstr "hledat"
 
-#: backend/extras.php:102
-msgid ""
-"Extras are limited to 2 in the free version! If you need more extras, please "
-"download our <a href=\"https://booking-calendar-plugin.com/pro-download/\" "
-"target=\"_blank\">Pro-Version</a>."
+#: backend/coupons.php:3
+msgid "Edit a Coupon"
 msgstr ""
-"Další služby jsou v bezplatné verzi omezeny na 2! Potřebujete-li jich více, "
-"stáhněte si  <a href=\"https://booking-calendar-plugin.com/pro-download/\" "
-"target=\"_blank\">Pro-Verzi</a> ."
 
-#: backend/extras.php:107 backend/extras.php:112
-msgid "Extra has been added."
-msgstr "Doplňková služba byla přidána."
-
-#: backend/extras.php:113
-msgid "Make sure to add the placeholdes for extras in your email settings"
-msgstr "Prosím přizpůsobte  placeholdy v nastavení e-mailu."
-
-#: backend/extras.php:114 backend/settings.php:262
-msgid "Email Settings"
-msgstr "Nastavení e-mailu"
-
-#: backend/extras.php:119 backend/seasons-calendars.php:389
-msgid "Change has been saved."
-msgstr "Změny byly uloženy."
-
-#: backend/extras.php:172
-msgid "Edit an Extra"
-msgstr "Upravit služby"
-
-#: backend/extras.php:181 backend/extras.php:300
+#: backend/coupons.php:4 backend/coupons.php:30 backend/extras.php:249
+#: backend/extras.php:551
 msgid "The name will be shown in the booking form."
 msgstr "Název bude zobrazen v rezervačním formuláři."
 
-#: backend/extras.php:184 backend/extras.php:283 backend/extras.php:303
-msgid "Explanation"
-msgstr "Popis"
-
-#: backend/extras.php:184 backend/extras.php:303
-#: backend/seasons-calendars.php:497 backend/seasons-calendars.php:785
-msgid "(optional)"
-msgstr "(optional)"
-
-#: backend/extras.php:186 backend/extras.php:305
-msgid "Explain what the extra is for."
-msgstr "Popište, z čeho se skládá doplňková služba."
-
-#: backend/extras.php:189 backend/extras.php:284 backend/extras.php:308
+#: backend/coupons.php:5 backend/coupons.php:31 backend/extras.php:264
+#: backend/extras.php:410 backend/extras.php:529 backend/extras.php:567
 msgid "Type of calculation"
 msgstr "Typ výpočtu"
 
-#: backend/extras.php:192 backend/extras.php:242 backend/extras.php:311
+#: backend/coupons.php:6 backend/coupons.php:32
+msgid "Absolute - e.g. reducing price by $ 5"
+msgstr ""
+
+#: backend/coupons.php:7 backend/coupons.php:33
+msgid "Relative - e.g. reducing price by 10%"
+msgstr ""
+
+#: backend/coupons.php:8 backend/coupons.php:34
+msgid "Discount Value"
+msgstr ""
+
+#: backend/coupons.php:9 backend/coupons.php:35
+msgid ""
+"Enter the value of the discount. It will be applied to extras and room costs."
+msgstr ""
+
+#: backend/coupons.php:10
+msgid "Valid from"
+msgstr ""
+
+#: backend/coupons.php:11
+msgid "Valid to"
+msgstr ""
+
+#: backend/coupons.php:12 backend/coupons.php:25
+msgid "Code"
+msgstr ""
+
+#: backend/coupons.php:13 backend/coupons.php:37
+msgid "This code has to be entered by the user in the booking form."
+msgstr ""
+
+#: backend/coupons.php:14 backend/coupons.php:38
+msgid "Number of times the code can be redeemed"
+msgstr ""
+
+#: backend/coupons.php:15 backend/coupons.php:39
+msgid "Once - coupon gets invalid after one usage"
+msgstr ""
+
+#: backend/coupons.php:16 backend/coupons.php:40
+msgid "Multiple times - coupon can be used unlimited times"
+msgstr ""
+
+#: backend/coupons.php:17
+msgid "Minimum Number of Nights"
+msgstr ""
+
+#: backend/coupons.php:18 backend/extras.php:255 backend/extras.php:557
+#: backend/seasons-calendars.php:507 backend/seasons-calendars.php:795
+msgid "(optional)"
+msgstr "(optional)"
+
+#: backend/coupons.php:19
+msgid ""
+"Limit the discount to a minimum number of nights. Leave empty to set no "
+"limit."
+msgstr ""
+
+#: backend/coupons.php:20
+msgid "Valid for Calendars"
+msgstr ""
+
+#: backend/coupons.php:21
+msgid "Select the calendars the coupon is valid for."
+msgstr ""
+
+#: backend/coupons.php:23
+msgid "Valid during"
+msgstr ""
+
+#: backend/coupons.php:24 backend/seasons-calendars.php:677
+#: backend/tinymce-translations.php:15
+msgid "Calendars"
+msgstr "Kalendář"
+
+#: backend/coupons.php:26
+msgid "Redeem type"
+msgstr ""
+
+#: backend/coupons.php:27
+msgid "Nights"
+msgstr ""
+
+#: backend/coupons.php:28
+msgid "Add new Coupon"
+msgstr ""
+
+#: backend/coupons.php:29
+msgid "Summer-Discount"
+msgstr ""
+
+#: backend/coupons.php:36
+msgid "SUMMERTIME"
+msgstr ""
+
+#: backend/extras.php:151
+msgid ""
+"Extras are limited to 2 in the free version! If you need more extras, please "
+"download our <a href=\"https://booking-calendar-plugin.com/pro-download/?"
+"cmp=ExtraLimit\" target=\"_blank\">Pro-Version</a>."
+msgstr ""
+
+#: backend/extras.php:156 backend/extras.php:161
+msgid "Extra has been added."
+msgstr "Doplňková služba byla přidána."
+
+#: backend/extras.php:162
+msgid "Make sure to add the placeholdes for extras in your email settings"
+msgstr "Prosím přizpůsobte  placeholdy v nastavení e-mailu."
+
+#: backend/extras.php:163 backend/settings.php:613
+msgid "Email Settings"
+msgstr "Nastavení e-mailu"
+
+#: backend/extras.php:168 backend/seasons-calendars.php:399
+msgid "Change has been saved."
+msgstr "Změny byly uloženy."
+
+#: backend/extras.php:173
+msgid "Extras have been ordered."
+msgstr ""
+
+#: backend/extras.php:236
+msgid "Edit an Extra"
+msgstr "Upravit služby"
+
+#: backend/extras.php:255 backend/extras.php:409 backend/extras.php:528
+#: backend/extras.php:557
+msgid "Explanation"
+msgstr "Popis"
+
+#: backend/extras.php:259 backend/extras.php:561
+msgid "Explain what the extra is for."
+msgstr "Popište, z čeho se skládá doplňková služba."
+
+#: backend/extras.php:268 backend/extras.php:363 backend/extras.php:465
+#: backend/extras.php:571
 msgid "per night"
 msgstr "za noc"
 
-#: backend/extras.php:193 backend/extras.php:245 backend/extras.php:312
+#: backend/extras.php:269 backend/extras.php:366 backend/extras.php:468
+#: backend/extras.php:572
 msgid "per day"
 msgstr "za den"
 
-#: backend/extras.php:194 backend/extras.php:248 backend/extras.php:313
+#: backend/extras.php:270 backend/extras.php:369 backend/extras.php:471
+#: backend/extras.php:573
 msgid "once (no matter how many persons)"
 msgstr "Jednorázový (nezávisle na počtu osob)"
 
-#: backend/extras.php:195 backend/extras.php:251 backend/extras.php:314
+#: backend/extras.php:271 backend/extras.php:372 backend/extras.php:474
+#: backend/extras.php:574
 msgid "per person (once)"
 msgstr "na osobu (jednorázově)"
 
-#: backend/extras.php:196 backend/extras.php:254 backend/extras.php:315
+#: backend/extras.php:272 backend/extras.php:375 backend/extras.php:477
+#: backend/extras.php:575
 msgid "per person per night"
 msgstr "na osobu a noc"
 
-#: backend/extras.php:197 backend/extras.php:257 backend/extras.php:316
+#: backend/extras.php:273 backend/extras.php:378 backend/extras.php:480
+#: backend/extras.php:576
 msgid "per person per day"
 msgstr "na osobu a den"
 
-#: backend/extras.php:199 backend/extras.php:318
+#: backend/extras.php:275 backend/extras.php:578
 msgid "Define how the price of the extra is getting charged."
 msgstr "Definujte, jak bude započítán příplatek."
 
-#: backend/extras.php:202 backend/extras.php:321
+#: backend/extras.php:280 backend/extras.php:583
 msgid "Mandatory extra"
 msgstr "Povinné služby"
 
-#: backend/extras.php:206 backend/extras.php:325
+#: backend/extras.php:284 backend/extras.php:587
 msgid ""
 "You can make an extra mandatory, so every guest has to pay for it (eg. final "
 "cleaning)."
@@ -840,138 +1189,325 @@ msgstr ""
 "Doplňková služba může být povinná, takže hosté si ji vždy musí připlatit "
 "(např. konečný úklid)."
 
-#: backend/extras.php:211 backend/extras.php:330
+#: backend/extras.php:294 backend/extras.php:597
 msgid "Enter the price you want to charge for the extra."
 msgstr "Zadejte cenu doplňkové služby."
 
-#: backend/extras.php:270 backend/seasons-calendars.php:711
-#: backend/seasons-calendars.php:813 backend/seasons-calendars.php:912
-#: frontend/bookingform.php:110
-msgid "Edit"
-msgstr "Upravit"
+#: backend/extras.php:304 backend/extras.php:607
+msgid ""
+"Enter the number of persons in a booking request to activate this extra. For "
+"example, if you enter &quot;4&quot;, the extra will be shown for <b>4 or "
+"more</b> persons."
+msgstr ""
 
-#: backend/extras.php:274
-msgid "Do you really want to delete this extra?"
-msgstr "Chcete tuto doplňkovou službu opravdu smazat?"
+#: backend/extras.php:310 backend/extras.php:407 backend/extras.php:526
+#: backend/extras.php:613
+msgid "Order"
+msgstr ""
 
-#: backend/extras.php:279
-msgid "Existing Extras"
-msgstr "Stávající doplňkové služby"
+#: backend/extras.php:314 backend/extras.php:617
+msgid ""
+"Enter the position of the extra it should appear in. For example 1 for the "
+"first position."
+msgstr ""
 
-#: backend/extras.php:285
+#: backend/extras.php:400
+msgid "Order Extras"
+msgstr ""
+
+#: backend/extras.php:411 backend/extras.php:530
 msgid "Mandatory"
 msgstr "Povinné"
 
-#: backend/extras.php:292
+#: backend/extras.php:420
+msgid "Save Order"
+msgstr ""
+
+#: backend/extras.php:427 backend/extras.php:628
+msgid "Do you want to promote your business using discount codes?"
+msgstr ""
+
+#: backend/extras.php:428 backend/extras.php:629
+msgid "Or do you want to limit an extra to a calendar?"
+msgstr ""
+
+#: backend/extras.php:429 backend/extras.php:630
+msgid ""
+"Take a look at our <a target=\"_blank\" href=\"https://www.booking-calendar-"
+"plugin.com/pro-download/?cmp=DiscountCodes\">Pro Version</a>!"
+msgstr ""
+
+#: backend/extras.php:430 backend/extras.php:631 backend/settings.php:891
+#: backend/settings.php:1005
+msgid "Use discount code <b>BASICUPGRADE</b> to save 10€."
+msgstr ""
+
+#: backend/extras.php:503
+msgid "Do you really want to delete this extra?"
+msgstr "Chcete tuto doplňkovou službu opravdu smazat?"
+
+#: backend/extras.php:517
+msgid "Existing Extras"
+msgstr "Stávající doplňkové služby"
+
+#: backend/extras.php:520
+msgid "Sort Extras"
+msgstr ""
+
+#: backend/extras.php:540
 msgid "Add new Extra"
 msgstr "Leistung hinzufügen"
 
-#: backend/extras.php:299
+#: backend/extras.php:550
 msgid "Wifi"
 msgstr "WLAN"
 
-#: backend/extras.php:334
+#: backend/extras.php:560
+msgid "Get Wifi-access in your room."
+msgstr ""
+
+#: backend/extras.php:623
 msgid "Add Extra"
 msgstr "Přidat službu"
 
-#: backend/seasons-calendars.php:384
+#: backend/more-features.php:12
+msgid "Add more features with our Pro Version"
+msgstr ""
+
+#: backend/more-features.php:12
+msgid "Get it here"
+msgstr ""
+
+#: backend/more-features.php:16
+msgid "Stripe Integration (Credit Card)"
+msgstr ""
+
+#: backend/more-features.php:17
+msgid ""
+"Stripe is an easy way to accept credit card. After the credit card details "
+"are entered and validated bookings get automatically confirmed.\n"
+"                            </br>"
+msgstr ""
+
+#: backend/more-features.php:19
+msgid ""
+"You can enter your Payment Credentials, select the currency and activate or "
+"deactivate the Stripe Test Environment."
+msgstr ""
+
+#: backend/more-features.php:24
+msgid "PayPal Gateway"
+msgstr ""
+
+#: backend/more-features.php:25
+msgid ""
+"You can offer PayPal payments to your guests. A valid and paid booking is "
+"set to ‘confirmed’ automatically. Just enter your PayPal API credentials and "
+"you are ready to go."
+msgstr ""
+
+#: backend/more-features.php:30
+msgid "Payment Fees"
+msgstr ""
+
+#: backend/more-features.php:31
+msgid ""
+"Your guests want to pay via PayPal but you don’t like their payment fees? "
+"Just let your guest decide if an additional fee is worth using PayPal or "
+"Stripe."
+msgstr ""
+
+#: backend/more-features.php:36
+msgid "Discount Codes"
+msgstr ""
+
+#: backend/more-features.php:37
+msgid ""
+"Use Discount Codes to raise the number of consecutive nights per stay by "
+"offering Discounts at a certain number of nights. Just use the new Coupon "
+"feature and start promoting your accommodation with Coupons."
+msgstr ""
+
+#: backend/more-features.php:42
+msgid "Custom Inputs"
+msgstr ""
+
+#: backend/more-features.php:43
+msgid ""
+"The Pro Version offers you three custom inputs for your booking form. Just "
+"activate them in the settings, name them anything you want and decide "
+"whether they are optional or mandatory. They will be shown in the booking "
+"list and you can use them in the email templates."
+msgstr ""
+
+#: backend/more-features.php:48
+msgid "Discount by Length of Stay"
+msgstr ""
+
+#: backend/more-features.php:49
+msgid ""
+"You can add discounts which will be applied automatically when a given "
+"number of nights is reached."
+msgstr ""
+
+#: backend/more-features.php:54
+msgid "Combine Extras with Calendars"
+msgstr ""
+
+#: backend/more-features.php:55
+msgid ""
+"If you have some Extras, which are not available in certain rooms, you can "
+"now manage them at will. Just tick the check boxes for each calendar and the "
+"extra will only show up for those rooms."
+msgstr ""
+
+#: backend/more-features.php:60
+msgid "iCal Export"
+msgstr ""
+
+#: backend/more-features.php:61
+msgid ""
+"Enable an iCal export of your confirmed bookings for each calendar (just "
+"edit an existing calendar)."
+msgstr ""
+
+#: backend/more-features.php:66
+msgid "MailChimp"
+msgstr ""
+
+#: backend/more-features.php:67
+msgid ""
+"Automatically add your guests to your MailChimp list and send them personal "
+"newsletters. When configuring the integration you have two options: Use "
+"double-opt-in or not and show a checkbox in the booking form or sign the "
+"guests up automatically. You can also change the text of the label for the "
+"subscribe-checkbox."
+msgstr ""
+
+#: backend/more-features.php:72
+msgid "Send timed Emails to your Guests"
+msgstr ""
+
+#: backend/more-features.php:73
+msgid ""
+"Create Reminder and Feedback Emails which will be sent before the guests "
+"arrival or after his departure. You define how many days before or after a "
+"stay the Emails will be send and of course their content."
+msgstr ""
+
+#: backend/more-features.php:78
+msgid "Unlimited Extras and Rooms"
+msgstr ""
+
+#: backend/more-features.php:79
+msgid ""
+"If you have some Extras, which are not available in certain rooms, you can "
+"now manage them at will. The number of Extras and Rooms is not limited in "
+"the Pro Version. Create as many as you want."
+msgstr ""
+
+#: backend/seasons-calendars.php:389
 msgid ""
 "Number of rooms is limited to 15 rooms! If you need more rooms, please "
-"download our <a href=\"https://booking-calendar-plugin.com/pro-download/\" "
-"target=\"_blank\">Pro-Version</a>."
+"download our <a href=\"https://booking-calendar-plugin.com/pro-download/?"
+"cmp=RoomLimit\" target=\"_blank\">Pro-Version</a>."
 msgstr ""
-"Počet pokojů je omezen na 15! Pro více pokojů si prosím stáhněte <a href="
-"\"https://booking-calendar-plugin.com/pro-download/\" target=\"_blank\">Pro-"
-"Verzi</a> ."
 
-#: backend/seasons-calendars.php:393
+#: backend/seasons-calendars.php:394
+msgid ""
+"This is the Pro-Version of the <a href=\"https://booking-calendar-plugin."
+"com/\" target=\"_blank\">Advanced Booking Calendar Plugin</a>, but it has "
+"never been activated. Please enter a valid license first."
+msgstr ""
+
+#: backend/seasons-calendars.php:403
 msgid "Rooms could not be deleted. There are still active bookings."
 msgstr "Pokoje nemohou být smazány. Ještě existuji aktivní rezervace."
 
-#: backend/seasons-calendars.php:395
+#: backend/seasons-calendars.php:405
 #, php-format
 msgid "Rooms reduced to %s rooms"
 msgstr "Pokoje redukovány na %s "
 
-#: backend/seasons-calendars.php:403
+#: backend/seasons-calendars.php:413
 msgid "Season has been added."
 msgstr "Sezóna byla přidána."
 
-#: backend/seasons-calendars.php:408
+#: backend/seasons-calendars.php:418
 msgid "Calendar has been deleted."
 msgstr "Kalendář byl smazán."
 
-#: backend/seasons-calendars.php:413
+#: backend/seasons-calendars.php:423
 msgid "Calendar was not deleted. There still exist bookings in this calendar."
 msgstr "Kalendář nebyl smazán. V tomto kalendáři existují ještě rezervace."
 
-#: backend/seasons-calendars.php:418
+#: backend/seasons-calendars.php:428
 msgid "Calendar has been added."
 msgstr "Kalendář byl přidán."
 
-#: backend/seasons-calendars.php:423
+#: backend/seasons-calendars.php:433
 msgid "Season has been deleted."
 msgstr "Sezóna byla smazána."
 
-#: backend/seasons-calendars.php:428
+#: backend/seasons-calendars.php:438
 msgid "Room names have been saved."
 msgstr "Názvy pokojů byly uloženy."
 
-#: backend/seasons-calendars.php:433
+#: backend/seasons-calendars.php:443
 msgid "Season assignment has been added."
 msgstr "Přiřazení sezóny bylo uloženo."
 
-#: backend/seasons-calendars.php:438
+#: backend/seasons-calendars.php:448
 msgid "Season assignment has been deleted."
 msgstr "Přiřazení sezóny bylo odstraněno."
 
-#: backend/seasons-calendars.php:455
+#: backend/seasons-calendars.php:465
 msgid "Edit existing Calendar"
 msgstr "Upravit existující kalendář"
 
-#: backend/seasons-calendars.php:463 backend/seasons-calendars.php:528
-#: backend/seasons-calendars.php:751
+#: backend/seasons-calendars.php:473 backend/seasons-calendars.php:538
+#: backend/seasons-calendars.php:761
 msgid "Room Type A"
 msgstr "Typ pokoje A"
 
-#: backend/seasons-calendars.php:464 backend/seasons-calendars.php:529
-#: backend/seasons-calendars.php:752 backend/seasons-calendars.php:843
+#: backend/seasons-calendars.php:474 backend/seasons-calendars.php:539
+#: backend/seasons-calendars.php:762 backend/seasons-calendars.php:853
 msgid "Please choose a meaningful title."
 msgstr "Prosím, vyberte srozumitelný název."
 
-#: backend/seasons-calendars.php:467 backend/seasons-calendars.php:732
-#: backend/seasons-calendars.php:755
+#: backend/seasons-calendars.php:477 backend/seasons-calendars.php:742
+#: backend/seasons-calendars.php:765
 msgid "Number of rooms"
 msgstr "Počet pokojů"
 
-#: backend/seasons-calendars.php:469 backend/seasons-calendars.php:757
+#: backend/seasons-calendars.php:479 backend/seasons-calendars.php:767
 msgid "eg. max. 10 Rooms available"
 msgstr "např. max. 10 volných pokojů"
 
-#: backend/seasons-calendars.php:472 backend/seasons-calendars.php:733
-#: backend/seasons-calendars.php:760
+#: backend/seasons-calendars.php:482 backend/seasons-calendars.php:743
+#: backend/seasons-calendars.php:770
 msgid "Max. Persons"
 msgstr "Max. počet osob"
 
-#: backend/seasons-calendars.php:474 backend/seasons-calendars.php:762
+#: backend/seasons-calendars.php:484 backend/seasons-calendars.php:772
 msgid "eg. max. 5 persons in one room"
 msgstr "např. max. 5 osob v jednom pokoji"
 
-#: backend/seasons-calendars.php:477 backend/seasons-calendars.php:734
-#: backend/seasons-calendars.php:765
+#: backend/seasons-calendars.php:487 backend/seasons-calendars.php:744
+#: backend/seasons-calendars.php:775
 msgid "Price Preset"
 msgstr "Standardní cena"
 
-#: backend/seasons-calendars.php:479 backend/seasons-calendars.php:767
+#: backend/seasons-calendars.php:489 backend/seasons-calendars.php:777
 msgid ""
 "If no season is active, the price preset will be used for price calculations"
 msgstr "Není li aktivní žádná sezóna, bude účtována standardní cena"
 
-#: backend/seasons-calendars.php:482 backend/seasons-calendars.php:770
+#: backend/seasons-calendars.php:492 backend/seasons-calendars.php:780
 msgid "Minimum Stay Preset"
 msgstr "Standardní minimální pobyt"
 
-#: backend/seasons-calendars.php:484 backend/seasons-calendars.php:772
+#: backend/seasons-calendars.php:494 backend/seasons-calendars.php:782
 msgid ""
 "Select the minimum number of nights a guest has to stay. You can also set "
 "different values for different seasons."
@@ -979,11 +1515,11 @@ msgstr ""
 "Zadejte počet nocí, které u vás musí host strávit. Hodnota může být "
 "variabilní v různých sezónách."
 
-#: backend/seasons-calendars.php:487 backend/seasons-calendars.php:775
+#: backend/seasons-calendars.php:497 backend/seasons-calendars.php:785
 msgid "Threshold for \"partly booked\""
 msgstr "Práh pro \"částečně rezervován\""
 
-#: backend/seasons-calendars.php:489 backend/seasons-calendars.php:777
+#: backend/seasons-calendars.php:499 backend/seasons-calendars.php:787
 msgid ""
 "The number of rooms after which days in the calendars will be marked as "
 "\"partly booked\". Example: 3 rooms, partly booked is set to 2. Partly "
@@ -993,45 +1529,45 @@ msgstr ""
 "kartou\". Příklad: 3 pokoje, částečně rezervované je nastaveno na hodnotu 2. "
 "Částečně rezervované se zobrazí, když jsou dva pokoje obsazené."
 
-#: backend/seasons-calendars.php:492 backend/seasons-calendars.php:780
+#: backend/seasons-calendars.php:502 backend/seasons-calendars.php:790
 msgid "Information Page"
 msgstr "Informační stránka"
 
-#: backend/seasons-calendars.php:493 backend/seasons-calendars.php:781
-#: backend/settings.php:295
+#: backend/seasons-calendars.php:503 backend/seasons-calendars.php:791
+#: backend/settings.php:657
 msgid "Manage Pages"
 msgstr "Spravovat stránky"
 
-#: backend/seasons-calendars.php:494 backend/seasons-calendars.php:782
+#: backend/seasons-calendars.php:504 backend/seasons-calendars.php:792
 msgid "You can link to an existing Page for further information."
 msgstr "Pro více informací můžete odkázat na stávající stránku."
 
-#: backend/seasons-calendars.php:497 backend/seasons-calendars.php:785
+#: backend/seasons-calendars.php:507 backend/seasons-calendars.php:795
 msgid "Short information text"
 msgstr "Krátký informační text"
 
-#: backend/seasons-calendars.php:498 backend/seasons-calendars.php:786
+#: backend/seasons-calendars.php:508 backend/seasons-calendars.php:796
 msgid "Nice Apartment with sea view..."
 msgstr "Pěkný apartement s výhledem na město"
 
-#: backend/seasons-calendars.php:498 backend/seasons-calendars.php:786
+#: backend/seasons-calendars.php:508 backend/seasons-calendars.php:796
 msgid "Maximum 200 chars"
 msgstr "Maximálně 200 znaků"
 
-#: backend/seasons-calendars.php:520
+#: backend/seasons-calendars.php:530
 msgid "Edit existing Season"
 msgstr "Upravit stávající sezónu"
 
-#: backend/seasons-calendars.php:534 backend/seasons-calendars.php:848
+#: backend/seasons-calendars.php:544 backend/seasons-calendars.php:858
 msgid "The currency code will be attached automatically."
 msgstr "Symbol měny bude přidán automaticky"
 
-#: backend/seasons-calendars.php:537 backend/seasons-calendars.php:829
-#: backend/seasons-calendars.php:851
+#: backend/seasons-calendars.php:547 backend/seasons-calendars.php:839
+#: backend/seasons-calendars.php:861
 msgid "Minimum Stay"
 msgstr "Minimální pobyt"
 
-#: backend/seasons-calendars.php:539 backend/seasons-calendars.php:853
+#: backend/seasons-calendars.php:549 backend/seasons-calendars.php:863
 msgid ""
 "Enter the number of nights a guest has to stay. Bookings below this number "
 "of nights will not be accepted."
@@ -1039,8 +1575,8 @@ msgstr ""
 "Uveďte počet nocí, po které musí host minim. zůstat. Rezervace pod touto "
 "hranicí nebudou možné."
 
-#: backend/seasons-calendars.php:583 backend/seasons-calendars.php:877
-#: backend/seasons-calendars.php:906
+#: backend/seasons-calendars.php:593 backend/seasons-calendars.php:887
+#: backend/seasons-calendars.php:916
 #, php-format
 msgid "%d night minimum stay"
 msgid_plural "%d nights minimum stay"
@@ -1048,138 +1584,145 @@ msgstr[0] "minimálně jedna noc"
 msgstr[1] "%d minimálně nocí"
 msgstr[2] "%d minimálně nocí"
 
-#: backend/seasons-calendars.php:591
+#: backend/seasons-calendars.php:601
 msgid "Edit existing Assignment"
 msgstr "Upravit stávajících přiřazení"
 
-#: backend/seasons-calendars.php:602 backend/seasons-calendars.php:927
-#: backend/seasons-calendars.php:944
+#: backend/seasons-calendars.php:612 backend/seasons-calendars.php:937
+#: backend/seasons-calendars.php:954
 msgid "Season"
 msgstr "Sezóna"
 
-#: backend/seasons-calendars.php:606 backend/seasons-calendars.php:948
+#: backend/seasons-calendars.php:616 backend/seasons-calendars.php:958
 msgid "Start Date"
 msgstr "Počáteční datum"
 
-#: backend/seasons-calendars.php:610 backend/seasons-calendars.php:952
+#: backend/seasons-calendars.php:620 backend/seasons-calendars.php:962
 msgid "End Date"
 msgstr "Konečné datum"
 
-#: backend/seasons-calendars.php:635
+#: backend/seasons-calendars.php:645
 #, php-format
 msgid "Edit room names for calendar \"%s\""
 msgstr "Upravit názvy pokojů pro kalendář \"%s\" "
 
-#: backend/seasons-calendars.php:644
+#: backend/seasons-calendars.php:654
 #, php-format
 msgid "Name for room %d"
 msgstr "Název pokoje %d"
 
-#: backend/seasons-calendars.php:667
-msgid "Calendars"
-msgstr "Kalendář"
-
-#: backend/seasons-calendars.php:668
+#: backend/seasons-calendars.php:678
 msgid "Seasons"
 msgstr "Sezóna"
 
-#: backend/seasons-calendars.php:669
+#: backend/seasons-calendars.php:679
 msgid "Season - Calendar - Assignments"
 msgstr "Sezóna - Kalendář - Přiřazení"
 
-#: backend/seasons-calendars.php:693
+#: backend/seasons-calendars.php:703
 msgid "No Page selected"
 msgstr "Nebyla vybrána žádná stránka"
 
-#: backend/seasons-calendars.php:715
+#: backend/seasons-calendars.php:725
 msgid "Do you really want to delete this calendar?"
 msgstr "Chcete tento kalendář opravdu smazat?"
 
-#: backend/seasons-calendars.php:721
+#: backend/seasons-calendars.php:731
 msgid "Room Names"
 msgstr "Názvy pokojů"
 
-#: backend/seasons-calendars.php:728
+#: backend/seasons-calendars.php:738
 msgid "Existing Calendars"
 msgstr "Existující kalendáře"
 
-#: backend/seasons-calendars.php:735
+#: backend/seasons-calendars.php:745
 msgid "Min. Stay Preset"
 msgstr "Standard min. doba pobytu"
 
-#: backend/seasons-calendars.php:736
+#: backend/seasons-calendars.php:746
 msgid "Info Page"
 msgstr "Informační stránka"
 
-#: backend/seasons-calendars.php:737
+#: backend/seasons-calendars.php:747
 msgid "Info Text"
 msgstr "Popis (text)"
 
-#: backend/seasons-calendars.php:738
+#: backend/seasons-calendars.php:748
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#: backend/seasons-calendars.php:744
+#: backend/seasons-calendars.php:754
 msgid "Add new Calendar"
 msgstr "Přidat nový kalendář"
 
-#: backend/seasons-calendars.php:781
+#: backend/seasons-calendars.php:791
 msgid "Don't link"
 msgstr "Žádné přiřazení"
 
-#: backend/seasons-calendars.php:790
+#: backend/seasons-calendars.php:800
 msgid "Add Calendar"
 msgstr "Přidat kalendář"
 
-#: backend/seasons-calendars.php:817
+#: backend/seasons-calendars.php:827
 msgid "Do you really want to delete this Season?"
 msgstr "Chcete tuto sezónu opravdu smazat?"
 
-#: backend/seasons-calendars.php:824
+#: backend/seasons-calendars.php:834
 msgid "Existing Seasons"
 msgstr "Stávající sezóny"
 
-#: backend/seasons-calendars.php:835
+#: backend/seasons-calendars.php:845
 msgid "Add new Season"
 msgstr "Přidat novou sezónu"
 
-#: backend/seasons-calendars.php:842
+#: backend/seasons-calendars.php:852
 msgid "Summer High Price"
 msgstr "Léto hlavní sezóna"
 
-#: backend/seasons-calendars.php:857
+#: backend/seasons-calendars.php:867
 msgid "Add Season"
 msgstr "Přidat sezónu"
 
-#: backend/seasons-calendars.php:916
+#: backend/seasons-calendars.php:926
 msgid "Do you really want to delete this Season Assignment?"
 msgstr "Chcete toto přiřazení sezóny opravdu smazat?"
 
-#: backend/seasons-calendars.php:923
+#: backend/seasons-calendars.php:933
 msgid "Existing Assignments"
 msgstr "Existující přiřazení"
 
-#: backend/seasons-calendars.php:928
+#: backend/seasons-calendars.php:938
 msgid "Date"
 msgstr "Datum"
 
-#: backend/seasons-calendars.php:934
+#: backend/seasons-calendars.php:944
 msgid "Add new Assignment"
 msgstr "Přidat nové přiřazení"
 
-#: backend/seasons-calendars.php:958
+#: backend/seasons-calendars.php:968
 msgid "Add Assignment"
 msgstr "Přidat přiřazení"
 
-#: backend/settings.php:238
+#: backend/settings.php:490
 msgid "Email settings have been saved."
 msgstr "Nastavení e-mailu bylo uloženo."
 
-#: backend/settings.php:243
+#: backend/settings.php:495
 msgid "General settings have been saved."
 msgstr "Hlavní nastavení bylo uloženo."
 
-#: backend/settings.php:248
+#: backend/settings.php:497
+msgid ""
+"Warning! The page you selected does not contain the booking form shortcode. "
+"Please add the shortcode [abc-bookingform] or some functions may not work "
+"properly."
+msgstr ""
+
+#: backend/settings.php:499
+msgid "Great! The page you selected contains the booking form shortcode."
+msgstr ""
+
+#: backend/settings.php:506
 msgid ""
 "Booking form settings have been saved. Please make sure to update the email "
 "templates as well."
@@ -1187,23 +1730,73 @@ msgstr ""
 "Nastavení rezervačního formuláře bylo nastaveno. Přesvědčte se, zda-li "
 "nemusí být aktualizovány šablony emailů."
 
-#: backend/settings.php:260
+#: backend/settings.php:511
+msgid "New text labels have been saved."
+msgstr ""
+
+#: backend/settings.php:516
+msgid "Payment Settings have been saved."
+msgstr ""
+
+#: backend/settings.php:531
+msgid ""
+"Error while saving Payment Settings. Please fill out all required fields for"
+msgstr ""
+
+#: backend/settings.php:535
+msgid ""
+"Unable to activate the selected Payment Gateway. The selected Booking Form "
+"Page is invalid."
+msgstr ""
+
+#: backend/settings.php:542
+msgid "License was successfully activated."
+msgstr ""
+
+#: backend/settings.php:611
 msgid "General Settings"
 msgstr "Hlavní nastavení"
 
-#: backend/settings.php:261
+#: backend/settings.php:612
 msgid "Booking Form Settings"
 msgstr "Rezervační formulář-nastavení"
 
-#: backend/settings.php:271
+#: backend/settings.php:614 backend/settings.php:963
+msgid "Payment Settings"
+msgstr ""
+
+#: backend/settings.php:615 backend/settings.php:1016
+msgid "Text Customization"
+msgstr ""
+
+#: backend/settings.php:624
 msgid "This Email Address will receive all booking requests"
 msgstr "Tato e-mailová adresa obdrží všechny žádosti o rezervace."
 
-#: backend/settings.php:274
+#: backend/settings.php:627
+msgid "Send copies of guest mails to the email address above"
+msgstr ""
+
+#: backend/settings.php:630 backend/settings.php:704 backend/settings.php:714
+#: backend/settings.php:724 backend/settings.php:735 backend/settings.php:745
+#: backend/settings.php:755
+msgid "Enabled"
+msgstr "Aktivní"
+
+#: backend/settings.php:631 backend/settings.php:705 backend/settings.php:715
+#: backend/settings.php:725 backend/settings.php:736 backend/settings.php:746
+#: backend/settings.php:756 backend/settings.php:790 backend/settings.php:800
+#: backend/settings.php:810 backend/settings.php:820 backend/settings.php:830
+#: backend/settings.php:840 backend/settings.php:850 backend/settings.php:860
+#: backend/settings.php:870 backend/settings.php:880
+msgid "Disabled"
+msgstr "Neaktivní"
+
+#: backend/settings.php:636
 msgid "Newsletter"
 msgstr "Newsletter"
 
-#: backend/settings.php:277
+#: backend/settings.php:639
 msgid ""
 "Yes, I want to get vital informations on how to raise my occupation rate and "
 "stay tuned about Advanced Booking Calendar"
@@ -1211,11 +1804,11 @@ msgstr ""
 "Ano, chci dostávat všechny důležité informace o možnostech a o Advanced "
 "Booking Kalendáři."
 
-#: backend/settings.php:278
+#: backend/settings.php:640
 msgid "No, disable the newsletter"
 msgstr "Ne, Newsletter deaktivovat"
 
-#: backend/settings.php:280
+#: backend/settings.php:642
 msgid ""
 "You will receive regular tips on how to create great Hotel websites and "
 "informations about this plugin. We promise to never spam you. You can "
@@ -1225,15 +1818,15 @@ msgstr ""
 "informations about this plugin. We promise to never spam you. You can "
 "unsubscribe anytime."
 
-#: backend/settings.php:284
+#: backend/settings.php:646
 msgid "Page with booking form"
 msgstr "Stránka s rezervačním formulářem"
 
-#: backend/settings.php:289
+#: backend/settings.php:651
 msgid "Not selected"
 msgstr "Nebylo vybráno"
 
-#: backend/settings.php:296
+#: backend/settings.php:658
 msgid ""
 "Select the page which uses the booking form shortcode. You have to add the "
 "shortcode [abc-bookingform] manually to this page. The page will be linked, "
@@ -1243,50 +1836,57 @@ msgstr ""
 "Tento Shortcode [abc-bookingform] musíte na stránku manuálně přidat. Tato "
 "stránka bude zobrazena, jakmile uživatel vybere nějaké datum v kalendáři."
 
-#: backend/settings.php:299
+#: backend/settings.php:661
 msgid "Currency"
 msgstr "Symbol měny"
 
-#: backend/settings.php:301
+#: backend/settings.php:663
 msgid "Example: &euro; or $"
 msgstr "Příklad: &euro; nebo $"
 
-#: backend/settings.php:304
+#: backend/settings.php:666
 msgid "Price format"
 msgstr "Formát ceny"
 
-#: backend/settings.php:312
+#: backend/settings.php:674
 msgid "Date format"
 msgstr "Formát data"
 
-#: backend/settings.php:321
+#: backend/settings.php:683
 msgid "Position of currency sign"
 msgstr "Umístění symbolu měny"
 
-#: backend/settings.php:325
+#: backend/settings.php:687
 msgid "Before the amount"
 msgstr "Před částkou"
 
-#: backend/settings.php:327
+#: backend/settings.php:689
 msgid "After the amount"
 msgstr "Za částkou"
 
-#: backend/settings.php:332
+#: backend/settings.php:694
+msgid "Custom CSS"
+msgstr ""
+
+#: backend/settings.php:697
+msgid "Will be loaded on every page containing the shortcode or the widget."
+msgstr ""
+
+#: backend/settings.php:701
+msgid "Unconfirmed Bookings block dates"
+msgstr ""
+
+#: backend/settings.php:707
+msgid ""
+"If enabled, unconfirmed bookings will be handled like confirmed bookings. "
+"They will block calendars until they are rejected."
+msgstr ""
+
+#: backend/settings.php:711
 msgid "Cookies"
 msgstr "Cookies"
 
-#: backend/settings.php:335 backend/settings.php:345 backend/settings.php:356
-msgid "Enabled"
-msgstr "Aktivní"
-
-#: backend/settings.php:336 backend/settings.php:346 backend/settings.php:357
-#: backend/settings.php:377 backend/settings.php:387 backend/settings.php:397
-#: backend/settings.php:407 backend/settings.php:417 backend/settings.php:427
-#: backend/settings.php:437 backend/settings.php:447 backend/settings.php:457
-msgid "Disabled"
-msgstr "Neaktivní"
-
-#: backend/settings.php:338
+#: backend/settings.php:717
 msgid ""
 "If cookies are enabled, customer date inputs are saved in a cookie (no "
 "personal data is stored in the cookie)."
@@ -1294,7 +1894,7 @@ msgstr ""
 "Pokud jsou povoleny cookies, datum vstupu zákazníka je uloženo v cookies (v "
 "cookie se neukládají osobní údaje)."
 
-#: backend/settings.php:348
+#: backend/settings.php:727
 msgid ""
 "If enabled, user interactions with calendars and forms will be tracked in "
 "your Google Universal Analytics. Please configure Universal Analytics "
@@ -1304,39 +1904,91 @@ msgstr ""
 "sledována v Google Analytics Universal. Prosím konfigurovat Universal "
 "Analytics odděleně. Doporučujeme používat následující plugin:"
 
-#: backend/settings.php:353
+#: backend/settings.php:732
 msgid "Powered-by-Link"
 msgstr "Vytvořeno odkazem"
 
-#: backend/settings.php:359
+#: backend/settings.php:738
 msgid ""
 "If link is enabled, a tiny \"powered by Advanced Booking Calendar\"-link "
-"will show up below the calendar overview."
+"will show up below the calendar overview and the booking form."
 msgstr ""
-"If link is enabled, a tiny \"powered by Advanced Booking Calendar\"-link "
-"will show up below the calendar overview."
 
-#: backend/settings.php:368
+#: backend/settings.php:742
+msgid "Delete Data on Uninstall"
+msgstr ""
+
+#: backend/settings.php:748
+msgid ""
+"If enabled, the data created by this plugin will be deleted when "
+"uninstalling the plugin."
+msgstr ""
+
+#: backend/settings.php:752
+msgid "Commit Usage Data"
+msgstr ""
+
+#: backend/settings.php:758
+msgid ""
+"If enabled, you will help us to make this plugin better by committing some "
+"usage data."
+msgstr ""
+
+#: backend/settings.php:762
+msgid "Access Level"
+msgstr ""
+
+#: backend/settings.php:765
+msgid ""
+"Minimum access level required for a WordPress user to access this plugin."
+msgstr ""
+
+#: backend/settings.php:769
+msgid "Export"
+msgstr ""
+
+#: backend/settings.php:771
+msgid "Download"
+msgstr ""
+
+#: backend/settings.php:772
+msgid "Generate a JSON-file with all database tables and settings."
+msgstr ""
+
+#: backend/settings.php:781
 msgid "Booking Form Inputs"
 msgstr "Vstupy rezervačního formuláře"
 
-#: backend/settings.php:375 backend/settings.php:385 backend/settings.php:395
-#: backend/settings.php:405 backend/settings.php:415 backend/settings.php:425
-#: backend/settings.php:435 backend/settings.php:445 backend/settings.php:455
+#: backend/settings.php:788 backend/settings.php:798 backend/settings.php:808
+#: backend/settings.php:818 backend/settings.php:828 backend/settings.php:838
+#: backend/settings.php:848 backend/settings.php:858 backend/settings.php:868
+#: backend/settings.php:878
 msgid "Required"
 msgstr "Povinné"
 
-#: backend/settings.php:376 backend/settings.php:386 backend/settings.php:396
-#: backend/settings.php:406 backend/settings.php:416 backend/settings.php:426
-#: backend/settings.php:436 backend/settings.php:446 backend/settings.php:456
+#: backend/settings.php:789 backend/settings.php:799 backend/settings.php:809
+#: backend/settings.php:819 backend/settings.php:829 backend/settings.php:839
+#: backend/settings.php:849 backend/settings.php:859 backend/settings.php:869
+#: backend/settings.php:879
 msgid "Optional"
 msgstr "Volitelné"
 
-#: backend/settings.php:467
+#: backend/settings.php:875
+msgid "Opt-in-Checkbox"
+msgstr ""
+
+#: backend/settings.php:890
+msgid ""
+"Want to add a <b>custom input</b> in your booking form? Our <a href=\"https:"
+"//booking-calendar-plugin.com/pro-download/?cmp=CustomInputs\" "
+"target=\"_blank\">Pro-Version</a> lets you add three additional inputs!"
+msgstr ""
+
+#: backend/settings.php:896
 msgid "Placeholders"
 msgstr "Placeholders"
 
-#: backend/settings.php:468
+#: backend/settings.php:897
 msgid ""
 "You can use the following placeholder in both subject and text. They will be "
 "replaced with the actual content when the email is send to the guest:"
@@ -1344,159 +1996,270 @@ msgstr ""
 "Můžete použít následující placeholdery v předmětu a textu. Budou nahrazeny "
 "skutečným obsahem, když je e-mail odeslílán pro hosty:"
 
-#: backend/settings.php:473
+#: backend/settings.php:902
 msgid "Templates"
 msgstr "Šablony"
 
-#: backend/settings.php:474
+#: backend/settings.php:903
 msgid "Unconfirmed Booking"
 msgstr "Nepotvrzené rezervace"
 
-#: backend/settings.php:476
+#: backend/settings.php:905
 msgid "Subject for an unconfirmed booking mail"
 msgstr "Předmět e-mailů pro nepotvrzené rezervace"
 
-#: backend/settings.php:482
+#: backend/settings.php:911
 msgid "Text for an unconfirmed booking mail"
 msgstr "Text e-mailů pro nepotvrzené rezervace"
 
-#: backend/settings.php:487
+#: backend/settings.php:916
 msgid "Confirming an open Booking"
 msgstr "Potvrzení otevřené rezervace"
 
-#: backend/settings.php:489
+#: backend/settings.php:918
 msgid "Subject for a booking confirmation mail"
 msgstr "Předmět e-mailů pro potvrzené rezervace"
 
-#: backend/settings.php:495
+#: backend/settings.php:924
 msgid "Text for a booking confirmation mail"
 msgstr "Text e-mailů pro potvrzené rezervace"
 
-#: backend/settings.php:499
+#: backend/settings.php:928
 msgid "Canceling a confirmed Booking"
 msgstr "Odmítnutí potvrzené rezervace"
 
-#: backend/settings.php:502
+#: backend/settings.php:931
 msgid "Subject for a cancelation mail"
 msgstr "Předmět e-mailů pro odmítnuté rezervace"
 
-#: backend/settings.php:508
+#: backend/settings.php:937
 msgid "Text for a cancelation mail"
 msgstr "Text e-mailů pro zamítnuté rezervace"
 
-#: backend/settings.php:513
+#: backend/settings.php:942
 msgid "Rejecting an open Booking"
 msgstr "Stornování rezervace"
 
-#: backend/settings.php:515
+#: backend/settings.php:944
 msgid "Subject for a rejection mail"
 msgstr "Předmět e-mailů pro stornované rezervace"
 
-#: backend/settings.php:521
+#: backend/settings.php:950
 msgid "Text for a rejection mail"
 msgstr "Text e-mailů pro stornované rezervace"
 
-#: frontend/bookingform.php:81 frontend/bookingform.php:109
+#: backend/settings.php:971
+msgid "Activate Cash onsite"
+msgstr ""
+
+#: backend/settings.php:977
+msgid "Cash onsite Text (shown in booking form)"
+msgstr ""
+
+#: backend/settings.php:979
+msgid "e.g. Pay cash onsite"
+msgstr ""
+
+#: backend/settings.php:988
+msgid "Activate On Invoice"
+msgstr ""
+
+#: backend/settings.php:994
+msgid "On Invoice Payment Text (shown in booking form)"
+msgstr ""
+
+#: backend/settings.php:996
+msgid "e.g. Pay on invoice"
+msgstr ""
+
+#: backend/settings.php:1004
+msgid ""
+"If you are looking for a <strong>PayPal</strong> or <strong>Stripe</strong> "
+"integration, please take a look at our <a href=\"https://booking-calendar-"
+"plugin.com/pro-download/?cmp=PayPalSetting\" target=\"_blank\">Pro-"
+"Version</a>."
+msgstr ""
+
+#: backend/settings.php:1017
+msgid ""
+"You can change the label of buttons in the booking form. Leave these fields "
+"empty to use default labels."
+msgstr ""
+
+#: backend/settings.php:1019
+msgid "Select language"
+msgstr ""
+
+#: backend/settings.php:1022
+msgid "Please save any changes before selecting a new language!"
+msgstr ""
+
+#: backend/settings.php:1025 backend/settings.php:1031
+#: backend/settings.php:1037 backend/settings.php:1043
+#: backend/settings.php:1049 backend/settings.php:1055
+#: backend/settings.php:1061 backend/settings.php:1067
+#: backend/settings.php:1073 backend/settings.php:1079
+#: backend/settings.php:1085 backend/settings.php:1091
+#: backend/settings.php:1097 backend/settings.php:1103
+msgid "Text for:"
+msgstr ""
+
+#: backend/settings.php:1025 functions.php:41
+msgid "Check availabilities"
+msgstr "Zkontrolujte dostupnost"
+
+#: backend/settings.php:1031 functions.php:44
+msgid "Select room"
+msgstr "Vybrat pokoj"
+
+#: backend/settings.php:1037 functions.php:47
+msgid "Selected room"
+msgstr ""
+
+#: backend/settings.php:1043 functions.php:50
+msgid "Other available rooms for your stay"
+msgstr ""
+
+#: backend/settings.php:1049 functions.php:53
+msgid "No rooms available for your search request."
+msgstr "Pro Vaši poptávku nejsou k dispozici žádné pokoje."
+
+#: backend/settings.php:1055 functions.php:56
+msgid "Available rooms for your stay"
+msgstr "Dostupné pokoje pro pobyt"
+
+#: backend/settings.php:1067 functions.php:62
+msgid "Your stay"
+msgstr "Váš pobyt"
+
+#: backend/settings.php:1085 functions.php:71
+msgid "Book now"
+msgstr "Rezervovat nyní"
+
+#: backend/settings.php:1091 functions.php:74
+msgid "Thank you for your booking request!"
+msgstr "Děkujeme za Vaši žádost o rezervaci!"
+
+#: backend/settings.php:1097 functions.php:77
+msgid "Price for the room"
+msgstr "Cena za pokoj"
+
+#: backend/settings.php:1103 functions.php:80
+msgid "Please store my data to contact me."
+msgstr ""
+
+#: backend/settings.php:1110
+msgid "Saving"
+msgstr ""
+
+#: backend/settings.php:1111
+msgid "Changes have been saved!"
+msgstr ""
+
+#: backend/tinymce-translations.php:10
+msgid "Hide other Rooms when coming from a Single Calendar link."
+msgstr ""
+
+#: backend/tinymce-translations.php:11
+msgid "Hide Rooms when minimum number of nights is too short."
+msgstr ""
+
+#: backend/tinymce-translations.php:13
+msgid "Add Single Calendar"
+msgstr ""
+
+#: backend/tinymce-translations.php:16
+msgid ""
+"Comma separated list of calendar ids, if you want to limit the form to a "
+"calendar. If in doubt, leave empty."
+msgstr ""
+
+#: backend/tinymce-translations.php:17
+msgid "Show legend"
+msgstr ""
+
+#: frontend/bookingform.php:86
+msgid ""
+"There is no booking page configured. Check the settings of the Advanced "
+"Booking Calendar."
+msgstr ""
+"Rezervační stránka není nastavena. Zkontrolujte nastavení Advanced Booking "
+"Calendar."
+
+#: frontend/bookingform.php:207 frontend/bookingform.php:236
 #: frontend/singlecalendar.php:41
 msgid "Loading..."
 msgstr "Načítám..."
 
-#: frontend/bookingform.php:109 widget.php:132
-msgid "Check availabilities"
-msgstr "Zkontrolujte dostupnost"
+#: frontend/bookingform.php:245 frontend/calendaroverview.php:217
+msgid "Powered by:"
+msgstr "Vytvořeno s: "
 
-#: frontend/bookingform.php:169 frontend/singlecalendar.php:338
+#: frontend/bookingform.php:315 frontend/singlecalendar.php:424
 #, php-format
 msgid "Your stay is too short. Minimum stay for those dates is %d nights."
 msgstr "Doba pobytu je krátká. Minimální pobyt pro toto datum jsou %d noci."
 
-#: frontend/bookingform.php:171
+#: frontend/bookingform.php:317
 msgid "average"
 msgstr "Průměr"
 
-#: frontend/bookingform.php:175
-msgid "Select room"
-msgstr "Vybrat pokoj"
-
-#: frontend/bookingform.php:183
-msgid "Available rooms for your stay"
-msgstr "Dostupné pokoje pro pobyt"
-
-#: frontend/bookingform.php:186
-msgid "No rooms available for your search request."
-msgstr "Pro Vaši poptávku nejsou k dispozici žádné pokoje."
-
-#: frontend/bookingform.php:231
+#: frontend/bookingform.php:397
 msgid "Optional extra"
 msgid_plural "Optional extras"
 msgstr[0] "Volitelná další služba"
 msgstr[1] "Volitelné další služby"
 msgstr[2] "Volitelné další služby"
 
-#: frontend/bookingform.php:254
+#: frontend/bookingform.php:429
 msgid "Continue"
 msgstr "Dále"
 
-#: frontend/bookingform.php:303
+#: frontend/bookingform.php:483
 msgid "Selected extra"
 msgid_plural "Selected extras"
 msgstr[0] "Vybraná další služba"
 msgstr[1] "Vybrané další služby"
 msgstr[2] "Vybrané další služby"
 
-#: frontend/bookingform.php:307
+#: frontend/bookingform.php:487
 msgid "Costs for the extras"
 msgstr "Náklady na další služby"
 
-#: frontend/bookingform.php:313
-msgid "Price for the room"
-msgstr "Cena za pokoj"
+#: frontend/bookingform.php:596 functions.php:809
+msgid "Payment Selection"
+msgstr ""
 
-#: frontend/bookingform.php:387
-msgid "Your stay"
-msgstr "Váš pobyt"
-
-#: frontend/bookingform.php:392
+#: frontend/bookingform.php:612
 msgid "Total Price"
 msgstr "Cena celkem"
 
-#: frontend/bookingform.php:398 frontend/singlecalendar.php:344
-msgid "Book now"
-msgstr "Rezervovat nyní"
-
-#: frontend/bookingform.php:500
-msgid "Thank you for your booking request!"
-msgstr "Děkujeme za Vaši žádost o rezervaci!"
-
-#: frontend/bookingform.php:501
+#: frontend/bookingform.php:727
 msgid "We have sent you an email including a summary of your booking!"
 msgstr "Zaslali jsme vám e-mail včetně shrnutí vaší objednávky!"
 
-#: frontend/bookingform.php:506
+#: frontend/bookingform.php:732
 msgid ""
 "Something went wrong, your booking could not be completed. Please try again."
 msgstr ""
 "Něco se pokazilo, vaše rezervace nemohla být dokončena. Prosím zkuste to "
 "znovu."
 
-#: frontend/calendaroverview.php:132 frontend/calendaroverview.php:192
-#: frontend/singlecalendar.php:55
+#: frontend/calendaroverview.php:136 frontend/calendaroverview.php:196
+#: frontend/singlecalendar.php:55 frontend/singlecalendar.php:350
+#: frontend/singlecalendar.php:365
 msgid "Available"
 msgstr "Dostupné"
 
-#: frontend/calendaroverview.php:135 frontend/calendaroverview.php:195
+#: frontend/calendaroverview.php:139 frontend/calendaroverview.php:199
 #: frontend/singlecalendar.php:58
 msgid "Partly booked"
 msgstr "Částečně rezervováno"
 
-#: frontend/calendaroverview.php:138 frontend/calendaroverview.php:198
-#: frontend/singlecalendar.php:61
+#: frontend/calendaroverview.php:142 frontend/calendaroverview.php:202
+#: frontend/singlecalendar.php:61 frontend/singlecalendar.php:338
 msgid "Fully booked"
 msgstr "Plně obsazeno"
-
-#: frontend/calendaroverview.php:213
-msgid "Powered by:"
-msgstr "Vytvořeno s: "
 
 #: frontend/singlecalendar.php:18 frontend/singlecalendar.php:32
 msgid "Su"
@@ -1526,47 +2289,95 @@ msgstr "Pá"
 msgid "Sa"
 msgstr "So"
 
-#: functions.php:396
+#: frontend/singlecalendar.php:343
+msgid "Partly available"
+msgstr ""
+
+#: functions.php:501
 msgid "No optional extras."
 msgstr "Žádné volitelné dadatečné služby"
 
-#: functions.php:399
+#: functions.php:504
+msgid "No discount."
+msgstr ""
+
+#: functions.php:507
 msgid "No mandatory extras."
 msgstr "Žádné povinné dodatečné služby"
 
-#: functions.php:507 functions.php:629
+#: functions.php:573
+msgid "EMAIL COPY:"
+msgstr ""
+
+#: functions.php:640
+msgid "Coupon"
+msgstr ""
+
+#: functions.php:647
 msgid "New Booking Request"
 msgstr "Nová žádost o rezervaci"
 
+#: functions.php:649
+msgid "Already paid via:"
+msgstr ""
+
+#: functions.php:651
+msgid "New Booking - Already paid"
+msgstr ""
+
+#: functions.php:798
+msgid "From"
+msgstr ""
+
+#: functions.php:799
+msgid "To"
+msgstr ""
+
+#: functions.php:830
+msgid "Click here to confirm"
+msgstr ""
+
 #: functions.php:846
+msgid "Click here to reject"
+msgstr ""
+
+#: functions.php:862
+msgid "Answer with custom message"
+msgstr ""
+
+#: functions.php:1067
 #, php-format
 msgid "%s for each of the %d nights"
 msgstr "%s pro každou z %d nocí"
 
-#: functions.php:852
+#: functions.php:1073
 #, php-format
 msgid "%s for each of the %d days"
 msgstr "%s pro každý z %d dnů"
 
-#: functions.php:857
+#: functions.php:1078
 #, php-format
 msgid "%s paid once"
 msgstr "jednorázově %s"
 
-#: functions.php:862
+#: functions.php:1083
 #, php-format
 msgid "%s for each of the %d persons"
 msgstr "%s pro každou z %d osob"
 
-#: functions.php:868
+#: functions.php:1089
 #, php-format
 msgid "%s for each of the %d persons and %d nights"
 msgstr "%s pro každou z %d osob a %d nocí"
 
-#: functions.php:874
+#: functions.php:1095
 #, php-format
 msgid "%s for each of the %d persons and %d days"
 msgstr "%s pro každou z %d osob a %d dnů"
+
+#: functions.php:1200
+msgid "Once Weekly"
+msgstr ""
 
 #: widget.php:9
 msgid "Advanced Booking Calendar Widget."
@@ -1600,19 +2411,6 @@ msgstr ""
 "Neexistuje žádná nakonfigurovaná  stránka rezervace. Zkontrolujte nastavení "
 "a vyberte stránku s rezervačním formuláři."
 
-#: widget.php:140
-msgid ""
-"There is no booking page configured. Check the settings of the Advanced "
-"Booking Calendar."
-msgstr ""
-"Rezervační stránka není nastavena. Zkontrolujte nastavení Advanced Booking "
-"Calendar."
-
-#. Plugin Name of the plugin/theme
-#. Author of the plugin/theme
-msgid "Advanced Booking Calendar"
-msgstr "Advanced Booking Calendar"
-
 #. Plugin URI of the plugin/theme
 msgid "https://booking-calendar-plugin.com/"
 msgstr "https://booking-calendar-plugin.com/"
@@ -1628,29 +2426,3 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://booking-calendar-plugin.com"
 msgstr "https://booking-calendar-plugin.com"
-
-#~ msgid "Total price for stay"
-#~ msgstr "Gesamtpreis für den Aufenthalt"
-
-#~ msgid ""
-#~ "There is in overlap in the bookings. Check if you can move other bookings "
-#~ "to other rooms. The booking can only be saved as \"open\""
-#~ msgstr ""
-#~ "Es gibt eine Überschneidung bei den Buchung. Prüfe, ob du die Buchungen "
-#~ "auf andere Zimmer verlegen kannst. Diese Buchung kann nur als \"offen\" "
-#~ "gespeichert werden"
-
-#~ msgid "Party booked"
-#~ msgstr "Teilw. gebucht"
-
-#~ msgid ""
-#~ "The easy way to manage your bookings and raise your occupancy rate. This "
-#~ "plugin is made for modern Hoteliers who want to get hold of their online "
-#~ "reservations."
-#~ msgstr ""
-#~ "Der einfache Weg der Buchungsverwaltung und zur Steigerung der "
-#~ "Belegungsrate. Dieses Plugin wurde für moderne Hoteliers gemacht, die "
-#~ "volle Kontrolle über Ihre Online-Reservierungen haben möchte."
-
-#~ msgid "My Calendar"
-#~ msgstr "Mein Kalender"

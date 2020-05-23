@@ -389,14 +389,6 @@ function advanced_booking_calendar_admin_actions() {
 			'advanced-booking-calendar-show-settings',
 			'advanced_booking_calendar_show_settings'
 	);
-	//Submenu "More Features"
-	add_submenu_page('advanced_booking_calendar',
-			'Advanced Booking Calendar - '.__('More Features', 'advanced-booking-calendar'),
-			'<span class="dashicons dashicons-lock" style="width: 17px;height: 17px; margin-right: 4px; color: #ec4b35;font-size: 17px;vertical-align: -3px;"></span>'.__('More Features', 'advanced-booking-calendar'),
-			$capability,
-			'advanced-booking-calendar-more-features',
-			'advanced_booking_calendar_more_features'
-	);
 
 } //==>advanced_booking_calendar_admin_actions()
 add_action('admin_menu', 'advanced_booking_calendar_admin_actions');
