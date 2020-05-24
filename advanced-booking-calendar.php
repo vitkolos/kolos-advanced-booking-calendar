@@ -340,8 +340,9 @@ register_uninstall_hook( __FILE__, 'advanced_booking_calendar_uninstall');
 function advanced_booking_calendar_admin_actions() {
 	$capability = abc_booking_admin_capabilities();
 	//Backend Menu
-	add_menu_page('Advanced Booking Calendar', 
-			'Advanced Booking Calendar', 
+	add_menu_page(
+			__( 'Advanced Booking Calendar', 'advanced-booking-calendar' ),
+			__( 'Advanced Booking Calendar', 'advanced-booking-calendar' ),
 			$capability, 
 			'advanced_booking_calendar', 
 			'advanced_booking_calendar_show_bookings', 
@@ -351,7 +352,7 @@ function advanced_booking_calendar_admin_actions() {
 			
 	//Submenu "Bookings"
 	add_submenu_page('advanced_booking_calendar',
-			'Advanced Booking Calendar - '.__('Bookings', 'advanced-booking-calendar'),
+			__( 'Advanced Booking Calendar', 'advanced-booking-calendar' ).' – '.__('Bookings', 'advanced-booking-calendar'),
 			__('Bookings', 'advanced-booking-calendar'),
 			$capability,
 			'advanced_booking_calendar',
@@ -359,7 +360,7 @@ function advanced_booking_calendar_admin_actions() {
 	);
 	//Submenu "Seasons & Calendars"
 	add_submenu_page('advanced_booking_calendar',
-			'Advanced Booking Calendar - '.__('Seasons & Calendars', 'advanced-booking-calendar'),
+			__( 'Advanced Booking Calendar', 'advanced-booking-calendar' ).' – '.__('Seasons & Calendars', 'advanced-booking-calendar'),
 			__('Seasons & Calendars', 'advanced-booking-calendar'),
 			$capability,
 			'advanced-booking-calendar-show-seasons-calendars',
@@ -367,7 +368,7 @@ function advanced_booking_calendar_admin_actions() {
 	);
 	//Submenu "Extras"
 	add_submenu_page('advanced_booking_calendar',
-			'Advanced Booking Calendar - '.__('Extras', 'advanced-booking-calendar'),
+			__( 'Advanced Booking Calendar', 'advanced-booking-calendar' ).' – '.__('Extras', 'advanced-booking-calendar'),
 			__('Extras', 'advanced-booking-calendar'),
 			$capability,
 			'advanced-booking-calendar-show-extras',
@@ -375,7 +376,7 @@ function advanced_booking_calendar_admin_actions() {
 	);
 	//Submenu "Analytics"
 	add_submenu_page('advanced_booking_calendar',
-			'Advanced Booking Calendar - '.__('Analytics', 'advanced-booking-calendar'),
+			__( 'Advanced Booking Calendar', 'advanced-booking-calendar' ).' – '.__('Analytics', 'advanced-booking-calendar'),
 			__('Analytics', 'advanced-booking-calendar'),
 			$capability,
 			'advanced-booking-calendar-show-analytics',
@@ -383,7 +384,7 @@ function advanced_booking_calendar_admin_actions() {
 	);
 	//Submenu "Settings"
 	add_submenu_page('advanced_booking_calendar',
-			'Advanced Booking Calendar - '.__('Settings', 'advanced-booking-calendar'),
+			__( 'Advanced Booking Calendar', 'advanced-booking-calendar' ).' – '.__('Settings', 'advanced-booking-calendar'),
 			__('Settings', 'advanced-booking-calendar'),
 			$capability,
 			'advanced-booking-calendar-show-settings',

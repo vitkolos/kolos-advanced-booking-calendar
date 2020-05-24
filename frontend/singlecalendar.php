@@ -12,8 +12,8 @@ function abc_booking_showSingleCalendar( $atts ) {
 			$atts['uniqid'] = $divId;
 			wp_enqueue_script('abc-ajax', $abcUrl.'frontend/js/abc-ajax.js', array('jquery'));
 			wp_localize_script( 'abc-ajax', 'ajax_abc_booking_SingleCalendar', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'abc_nonce' => wp_create_nonce('abc-nonce'), 'abc_calendar' =>  $atts['calendar'] ));
-			wp_enqueue_script('jquery-ui-button');
-			wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
+			// wp_enqueue_script('jquery-ui-button');
+			// wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
 			if(getAbcSetting('firstdayofweek') == 0) {
 				$weekdayRow = '<div class="abc-box abc-col-day abc-dayname">'.__('Su', 'advanced-booking-calendar').'</div>
 						<div class="abc-box abc-col-day abc-dayname abc-dotted">'.__('Mo', 'advanced-booking-calendar').'</div>

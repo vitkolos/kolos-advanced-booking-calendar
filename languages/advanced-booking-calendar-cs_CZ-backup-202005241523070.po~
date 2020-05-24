@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Booking Calendar\n"
 "POT-Creation-Date: 2019-03-01 08:45+0100\n"
-"PO-Revision-Date: 2020-05-23 18:40+0000\n"
+"PO-Revision-Date: 2020-05-24 14:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: Čeština\n"
 "Language: cs_CZ\n"
@@ -28,7 +28,7 @@ msgstr "Vaše údaje"
 
 #: advanced-booking-calendar.php:169
 msgid "Hi [abc_first_name]!"
-msgstr "Zdravím, [abc_first_name]!"
+msgstr "Zdravím, [abc_last_name]!"
 
 #: advanced-booking-calendar.php:170 backend/bookings.php:1068
 #, php-format
@@ -78,7 +78,7 @@ msgstr "Celé jméno"
 #: advanced-booking-calendar.php:180 backend/bookings.php:197
 #: backend/settings.php:622 functions.php:802
 msgid "Email"
-msgstr "E-Mail"
+msgstr "E-mail"
 
 #: advanced-booking-calendar.php:181 backend/bookings.php:197 functions.php:803
 msgid "Phone"
@@ -586,7 +586,7 @@ msgstr "Stát / země"
 #: backend/bookings.php:984 backend/bookings.php:2099 backend/settings.php:855
 #: frontend/bookingform.php:569 functions.php:808
 msgid "Country"
-msgstr "Země"
+msgstr "Jak se s vámi domluvíme"
 
 #: backend/bookings.php:990 backend/bookings.php:2105
 msgid "Message, special note for stay"

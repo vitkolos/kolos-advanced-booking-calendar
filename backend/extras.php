@@ -422,13 +422,13 @@ function advanced_booking_calendar_show_extras() {
 					<input class="button button-secondary" type="button" value="'._x('Cancel', 'a change', 'advanced-booking-calendar').'" />
 				</a>
 			</form>
-			<hr/>	
+			<!--<hr/>	
 			<p>
 				'.__('Do you want to promote your business using discount codes?', 'advanced-booking-calendar').' 
 				'.__('Or do you want to limit an extra to a calendar?', 'advanced-booking-calendar').'<br/>
 				'.__('Take a look at our <a target="_blank" href="https://www.booking-calendar-plugin.com/pro-download/?cmp=DiscountCodes">Pro Version</a>!', 'advanced-booking-calendar').'<br/>
 				'.__('Use discount code <b>BASICUPGRADE</b> to save 10€.', 'advanced-booking-calendar').'
-			</p>
+			</p>-->
 		</div>';
 
 	} else {
@@ -622,14 +622,14 @@ function advanced_booking_calendar_show_extras() {
 
 					<input class="button button-primary" type="submit" value="'.__('Add Extra', 'advanced-booking-calendar').'" />
 				</form>
-				
+				<!--
 				<hr />
 				<p>
 					'.__('Do you want to promote your business using discount codes?', 'advanced-booking-calendar').' 
 					'.__('Or do you want to limit an extra to a calendar?', 'advanced-booking-calendar').'<br/>
 					'.__('Take a look at our <a target="_blank" href="https://www.booking-calendar-plugin.com/pro-download/?cmp=DiscountCodes">Pro Version</a>!', 'advanced-booking-calendar').'<br/>
 					'.__('Use discount code <b>BASICUPGRADE</b> to save 10€.', 'advanced-booking-calendar').'
-				</p>
+				</p>-->
 			</div>';
 	}				  
 	

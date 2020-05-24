@@ -892,12 +892,12 @@ function advanced_booking_calendar_show_settings() {
 					<input class="button button-primary" type="submit" value="'.__('Save', 'advanced-booking-calendar').'" />
 				</div>	
 			    </form>
-				<hr />			
+				<!--<hr />			
 				<div class="uk-form-row">
 					<p>'.__('Want to add a <b>custom input</b> in your booking form? Our <a href="https://booking-calendar-plugin.com/pro-download/?cmp=CustomInputs" target="_blank">Pro-Version</a> lets you add three additional inputs!', 'advanced-booking-calendar').'<br/>
 						'.__('Use discount code <b>BASICUPGRADE</b> to save 10€.', 'advanced-booking-calendar').'
 					</p>
-				</div>	
+				</div>	-->
 			</li>
 		   	<li>
 			  <h3>'.__('Placeholders', 'advanced-booking-calendar').'</h3>
@@ -1006,12 +1006,12 @@ function advanced_booking_calendar_show_settings() {
 				<div class="uk-form-row">
 					<input class="button button-primary" type="submit" value="'.__('Save', 'advanced-booking-calendar').'" />
 				</div>
-				<hr />			
+				<!--<hr />			
 				<div class="uk-form-row">
 					<p>'.__('If you are looking for a <strong>PayPal</strong> or <strong>Stripe</strong> integration, please take a look at our <a href="https://booking-calendar-plugin.com/pro-download/?cmp=PayPalSetting" target="_blank">Pro-Version</a>.', 'advanced-booking-calendar').'<br/>
 						'.__('Use discount code <b>BASICUPGRADE</b> to save 10€.', 'advanced-booking-calendar').'
 					</p>
-				</div>		
+				</div>		-->
 			</form>
 			  
 			</li>

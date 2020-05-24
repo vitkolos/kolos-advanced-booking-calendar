@@ -182,8 +182,8 @@ function abc_booking_formatDateToDB($string) {
     switch ($dateformat) {
         case 'j. n. Y':
             $day = intval ( explode(". ", $string)[0] );
-        	$month = intval ( explode(". ", $string)[1] );
-        	$year = intval ( explode(". ", $string)[2] );
+        	$month = intval ( isset(explode(". ", $string)[1]) ? explode(". ", $string)[1] : 0 );
+        	$year = intval ( isset(explode(". ", $string)[2]) ? explode(". ", $string)[2] : 0 );
             $newDate = date('Y-m-d', mktime(0, 0, 0, $month, $day, $year));
             break;
         case 'd.m.Y':
@@ -883,7 +883,7 @@ $adminBody .='
 	</td>	
     </tr>';
 }	
-$adminBody .='<tr>
+$adminBody .='<!--<tr>
       <td class="container-padding footer-text" align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;color:#aaaaaa;padding-left:24px;padding-right:24px">
         <br><br>
         Are you looking for more features in a Booking Plugin, like PayPal or Stripe gateways?<br/>
@@ -891,7 +891,7 @@ $adminBody .='<tr>
 		Use discount code <b>BASICUPGRADE</b> to save 10€.
         <br><br>
       </td>
-    </tr>
+    </tr>-->
     <tr>
       <td class="container-padding footer-text" align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;color:#aaaaaa;padding-left:24px;padding-right:24px">
         <br><br>

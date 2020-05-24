@@ -187,7 +187,7 @@ function abc_booking_getBookingContent($state, $offset = 0, $itemsOnPage = 10, $
 	
 	$foreachcount = 1;
 	$dateformat = getAbcSetting('dateformat');
-	$tables = '<div class="uk-overflow-container abcBookingsTable">
+	$tables = '<div class="uk-overflow-container abcBookingsTable" style="overflow:visible">
 				<table class="uk-table uk-table-condensed uk-table-striped uk-table-hover">
 				<thead>
 					<tr>
@@ -495,7 +495,7 @@ function abc_booking_getBookings($state){
 		$bookings = abc_booking_getBookingContent($state, 0, $itemsOnPage); // Getting content
 		$sorting .='</div></div>';
 	}  else {
-		$bookings = '<p>'.__('No Bookings found.', 'advanced-booking-calendar').'</p><p>'.__('Take a look at our <a href="https://booking-calendar-plugin.com/pro-download/?cmp=PayPalSetting" target="_blank">Pro-Version</a> to benefit from more features like payment via PayPal or Stripe.', 'advanced-booking-calendar').'</p>';
+		$bookings = '<p>'.__('No Bookings found.', 'advanced-booking-calendar').'</p><!--<p>'.__('Take a look at our <a href="https://booking-calendar-plugin.com/pro-download/?cmp=PayPalSetting" target="_blank">Pro-Version</a> to benefit from more features like payment via PayPal or Stripe.', 'advanced-booking-calendar').'--></p>';
 		$sorting ='';
 	}
 	return $sorting.'<div id="'.$divId.'">'.$bookings.'</div>';
@@ -776,24 +776,24 @@ function abc_booking_editBookingContent() {
 		$bookingId = intval($_GET["id"]);
 		$dateformat = abc_booking_dateFormatToJS(getAbcSetting("dateformat"));
 		wp_dequeue_script('abc-bookings');
-		// wp_enqueue_script('jquery-ui-datepicker');
+		wp_enqueue_script('jquery-ui-datepicker');
 		wp_enqueue_script('uikit-js', $abcUrl.'backend/js/uikit.min.js', array('jquery'));
 		wp_enqueue_script('abc-functions', $abcUrl.'backend/js/abc-functions.js', array('jquery'));
 		wp_localize_script( 'abc-functions', 'abc_functions_vars', array( 'dateformat' => $dateformat, 'firstday' => getAbcSetting("firstdayofweek")));
-		// wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
+		wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
 		wp_enqueue_style('uikit', $abcUrl.'/frontend/css/uikit.gradient.min.css');
 		wp_enqueue_style('abc-adminstyle', $abcUrl.'/backend/css/admin.css');
 		wp_enqueue_style( 'font-awesome', $abcUrl.'frontend/css/font-awesome.min.css' );
-		// $datepickerLang = array('af','ar-DZ','ar','az','be','bg','bs','ca','cs','cy-GB','da','de','el','en-AU','en-GB','en-NZ',
-		// 		'eo','es','et','eu','fa','fi','fo','fr-CA','fr-CH','fr','gl','he','hi','hr','hu','hy','id','is',
-		// 		'it-CH','it','ja','ka','kk','km','ko','ky','lb','lt','lv','mk','ml','ms','nb','nl-BE','nl','nn',
-		// 		'no','pl','pt-BR','pt','rm','ro','ru','sk','sl','sq','sr-SR','sr','sv','ta','th','tj','tr','uk',
-		// 		'vi','zh-CN','zh-HK','zh-TW');
-		// if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $datepickerLang)){
-		// 	wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
-		// }elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $datepickerLang)){
-		// 	wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
-		// }
+		$datepickerLang = array('af','ar-DZ','ar','az','be','bg','bs','ca','cs','cy-GB','da','de','el','en-AU','en-GB','en-NZ',
+				'eo','es','et','eu','fa','fi','fo','fr-CA','fr-CH','fr','gl','he','hi','hr','hu','hy','id','is',
+				'it-CH','it','ja','ka','kk','km','ko','ky','lb','lt','lv','mk','ml','ms','nb','nl-BE','nl','nn',
+				'no','pl','pt-BR','pt','rm','ro','ru','sk','sl','sq','sr-SR','sr','sv','ta','th','tj','tr','uk',
+				'vi','zh-CN','zh-HK','zh-TW');
+		if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $datepickerLang)){
+			wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
+		}elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $datepickerLang)){
+			wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
+		}
 		$er = $wpdb->get_row('SELECT * FROM '.$wpdb->prefix.'abc_bookings WHERE id = '.$bookingId, ARRAY_A);
 		wp_enqueue_script('abc-booking-edit', $abcUrl.'backend/js/abc-booking-edit.js', array('jquery'));
 		wp_localize_script( 'abc-booking-edit', 'ajax_abc_bookings', array(
@@ -883,7 +883,7 @@ function abc_booking_editBookingContent() {
 							<input id="abc-booking-edit-nonce" type="hidden" name="abc-booking-edit-nonce" value="'.wp_create_nonce('abc-booking-edit-nonce').'">
 							<input id="abc-booking-id" type="hidden" name="abc-booking-id" value="'.$bookingId.'">
 							<input id="abc-calendar-id" type="hidden" name="abc-calendar-id" value="'.$er['calendar_id'].'">
-							<div class="uk-form-row">
+							<!--<div class="uk-form-row">
 								<label class="uk-form-label" for="calendar_id">'.__('Calendar', 'advanced-booking-calendar').'</label>
 								<div class="uk-form-controls">
 									'.$calendarName.', '.$roomName.'<br/>
@@ -895,7 +895,7 @@ function abc_booking_editBookingContent() {
 								<div class="uk-form-controls">
 									'.$personList.'
 								</div>
-							</div>
+							</div>-->
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="start">'.__('Checkin Date', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
@@ -932,12 +932,12 @@ function abc_booking_editBookingContent() {
 								<div class="uk-form-controls">'.$price.'</b>
 								</div>
 							</div>
-							<div class="uk-form-row">
+							<!--<div class="uk-form-row">
 								<label class="uk-form-label" for="first_name">'.__('First Name', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
 									<input type="text" id="first_name" name="first_name" value="'.$er['first_name'].'" >
 								</div>
-							</div>
+							</div>-->
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="last_name">'.__('Last Name', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
@@ -956,7 +956,7 @@ function abc_booking_editBookingContent() {
 									<input type="text" id="phone" name="phone" value="'.$er['phone'].'">
 								</div>
 							</div>
-							<div class="uk-form-row">
+							<!--<div class="uk-form-row">
 								<label class="uk-form-label" for="address">'.__('Street Address, House no.', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
 									<input type="text" id="address" name="address" value="'.$er['address'].'">
@@ -979,7 +979,7 @@ function abc_booking_editBookingContent() {
 								 <div class="uk-form-controls">
 									<input type="text" id="county" name="county" value="'.$er['county'].'">
 								</div>
-							</div>
+							</div>-->
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="country">'.__('Country', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
@@ -1259,7 +1259,7 @@ function abc_booking_getAvailabilityTable($initialDate, $bookingId = 0) {
 	}
 	$endDate = strtotime('-1 day', $tempDate);
 	$initialYear = date_i18n("Y", strtotime($initialDate));
-	$output = '<div class="uk-overflow-container abcAvailabilityTable" id="abc_AvailabilityTable">
+	$output = '<div class="uk-overflow-container abcAvailabilityTable" id="abc_AvailabilityTable" style="overflow:visible">
 				<table class="abcAvailabilityTable">
 				<thead>
 					<tr>
@@ -1270,7 +1270,7 @@ function abc_booking_getAvailabilityTable($initialDate, $bookingId = 0) {
 							</div>
 							<div class="abcDateSelector">
 								<div class="uk-button-dropdown" data-uk-dropdown>
-									<button class="uk-button abcMonthWrapper">'.date_i18n("M", strtotime($initialDate)).'<i class="uk-icon-caret-down"></i></button>
+									<button class="uk-button abcMonthWrapper">'.date_i18n("F", strtotime($initialDate)).'<i class="uk-icon-caret-down"></i></button>
 									<div class="uk-dropdown uk-dropdown-small">
 										<ul class="uk-nav uk-nav-dropdown">
 											<li><a class="abcMonthSelector" data-startdate="'.$initialYear.'-01-01" href="">'.__('January', 'advanced-booking-calendar').'</a></li>
@@ -1796,7 +1796,7 @@ function advanced_booking_calendar_show_bookings() {
 			'nlText' =>  $nlText
 			)
 	);
-	// wp_enqueue_script('jquery-ui-datepicker');
+	wp_enqueue_script('jquery-ui-datepicker');
 	wp_enqueue_script('uikit-js', $abcUrl.'backend/js/uikit.min.js', array('jquery'));
 	wp_enqueue_script('uikit-accordion-js', $abcUrl.'backend/js/accordion.min.js', array('jquery'));
 	wp_enqueue_script('uikit-tooltip-js', $abcUrl.'backend/js/tooltip.min.js', array('jquery'));
@@ -1804,22 +1804,22 @@ function advanced_booking_calendar_show_bookings() {
 	wp_enqueue_script('jquery-validate', $abcUrl.'frontend/js/jquery.validate.min.js', array('jquery'));
 	wp_enqueue_script('abc-functions', $abcUrl.'backend/js/abc-functions.js', array('jquery'));
 	wp_localize_script( 'abc-functions', 'abc_functions_vars', array( 'dateformat' => $dateformat, 'firstday' => getAbcSetting("firstdayofweek")));
-	// wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
+	wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
 	wp_enqueue_style('uk-accordion', $abcUrl.'backend/css/accordion.gradient.min.css');
 	wp_enqueue_style('uk-tooltip', $abcUrl.'backend/css/tooltip.gradient.min.css');
 	wp_enqueue_style('uikit', $abcUrl.'/frontend/css/uikit.gradient.min.css');
 	wp_enqueue_style('abc-adminstyle', $abcUrl.'/backend/css/admin.css');
 	wp_enqueue_style( 'font-awesome', $abcUrl.'frontend/css/font-awesome.min.css' );
-	// $datepickerLang = array('af','ar-DZ','ar','az','be','bg','bs','ca','cs','cy-GB','da','de','el','en-AU','en-GB','en-NZ',
-	// 	'eo','es','et','eu','fa','fi','fo','fr-CA','fr-CH','fr','gl','he','hi','hr','hu','hy','id','is',
-	// 	'it-CH','it','ja','ka','kk','km','ko','ky','lb','lt','lv','mk','ml','ms','nb','nl-BE','nl','nn',
-	// 	'no','pl','pt-BR','pt','rm','ro','ru','sk','sl','sq','sr-SR','sr','sv','ta','th','tj','tr','uk',
-	// 	'vi','zh-CN','zh-HK','zh-TW');
-	// if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $datepickerLang)){
-	// 	wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
-	// }elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $datepickerLang)){
-	// 	wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
-	// }
+	$datepickerLang = array('af','ar-DZ','ar','az','be','bg','bs','ca','cs','cy-GB','da','de','el','en-AU','en-GB','en-NZ',
+		'eo','es','et','eu','fa','fi','fo','fr-CA','fr-CH','fr','gl','he','hi','hr','hu','hy','id','is',
+		'it-CH','it','ja','ka','kk','km','ko','ky','lb','lt','lv','mk','ml','ms','nb','nl-BE','nl','nn',
+		'no','pl','pt-BR','pt','rm','ro','ru','sk','sl','sq','sr-SR','sr','sv','ta','th','tj','tr','uk',
+		'vi','zh-CN','zh-HK','zh-TW');
+	if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $datepickerLang)){
+		wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
+	}elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $datepickerLang)){
+		wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
+	}
 	$settingsMessage = '';
 	if ( isset($_GET["setting"]) ) {
 		switch ($_GET["setting"]) {
@@ -1986,7 +1986,9 @@ function advanced_booking_calendar_show_bookings() {
 						<li>
 						<form class="uk-form uk-form-horizontal" id="abc-booking-form" action="admin-post.php?action=postAbcBooking" method="post">
 							<input id="abc-extralist" type="hidden" name="extras" value="">
-							<div class="uk-form-row">
+							<input type="hidden" id="calendar_id" name="calendar_id" value="1" />
+							<input type="hidden" id="persons" name="persons" value="1" />
+							<!--<div class="uk-form-row">
 								<label class="uk-form-label" for="calendar_id">'.__('Calendar', 'advanced-booking-calendar').'</label>
 								<div class="uk-form-controls">
 									<select id="calendar_id" name="calendar_id" required>'.abc_booking_getCalOptList().'</select>
@@ -1997,7 +1999,7 @@ function advanced_booking_calendar_show_bookings() {
 								 <div class="uk-form-controls">
 									<select id="persons" name="persons" required><option disabled value="" selected>'.__('Set calendar', 'advanced-booking-calendar').'...</option></select>
 								</div>
-							</div>
+							</div>-->
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="start">'.__('Checkin Date', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
@@ -2016,11 +2018,11 @@ function advanced_booking_calendar_show_bookings() {
 									</div>	
 								 </div>
 							</div>
-							<div class="uk-form-row">
+							<!--<div class="uk-form-row">
 								<span class="uk-form-label">'.__('State', 'advanced-booking-calendar').'</span>
 								 <div class="uk-form-controls" id="abc_dateStatus">
 								</div>
-							</div>
+							</div>-->
 							<div class="uk-form-row">
 								<span class="uk-form-label">'.__('Extras', 'advanced-booking-calendar').'</span>
 								<div class="uk-form-controls" id="abc_optionalExtras">
@@ -2043,12 +2045,12 @@ function advanced_booking_calendar_show_bookings() {
 									<input id="radio-confirmed" type="radio" name="state" value="confirmed"> <label for="radio-confirmed">'.__('Confirmed', 'advanced-booking-calendar').'</label>
 								</div>
 							</div>
-							<div class="uk-form-row">
+							<!--<div class="uk-form-row">
 								<label class="uk-form-label" for="first_name">'.__('First Name', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
 									<input type="text" id="first_name" name="first_name" placeholder="John">
 								</div>
-							</div>
+							</div>-->
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="last_name">'.__('Last Name', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
@@ -2074,7 +2076,7 @@ function advanced_booking_calendar_show_bookings() {
 									<input type="text" id="phone" name="phone" placeholder="+1 123 456 789">
 								</div>
 							</div>
-							<div class="uk-form-row">
+							<!--<div class="uk-form-row">
 								<label class="uk-form-label" for="address">'.__('Street Address, House no.', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
 									<input type="text" id="address" name="address" placeholder="1 Wall St">
@@ -2097,11 +2099,11 @@ function advanced_booking_calendar_show_bookings() {
 								 <div class="uk-form-controls">
 									<input type="text" id="county" name="county" placeholder="New York">
 								</div>
-							</div>
+							</div>-->
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="country">'.__('Country', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="country" name="country" placeholder="USA">
+									<input type="text" id="country" name="country" placeholder="česky">
 								</div>
 							</div>
 							<div class="uk-form-row">
