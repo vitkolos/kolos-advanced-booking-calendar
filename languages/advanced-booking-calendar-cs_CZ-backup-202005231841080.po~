@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Booking Calendar\n"
 "POT-Creation-Date: 2019-03-01 08:45+0100\n"
-"PO-Revision-Date: 2020-05-23 15:22+0000\n"
+"PO-Revision-Date: 2020-05-23 18:40+0000\n"
 "Last-Translator: \n"
 "Language-Team: Čeština\n"
 "Language: cs_CZ\n"
@@ -41,7 +41,7 @@ msgstr "Typ pokoje"
 
 #: advanced-booking-calendar.php:172 functions.php:623
 msgid "Room price"
-msgstr "Cena za pokoj"
+msgstr "Cena za apartmán"
 
 #: advanced-booking-calendar.php:173 functions.php:621
 msgid "Selected extras"
@@ -314,7 +314,7 @@ msgstr "Checkin (datum příjezdu)"
 #: backend/bookings.php:195 backend/bookings.php:437 backend/bookings.php:443
 #: backend/bookings.php:448 backend/settings.php:1079 functions.php:68
 msgid "Checkout"
-msgstr "Odhlášení"
+msgstr "Checkout (datum odjezdu)"
 
 #: backend/bookings.php:196 backend/bookings.php:887 backend/bookings.php:1987
 #: backend/seasons-calendars.php:608 backend/seasons-calendars.php:936
@@ -436,7 +436,7 @@ msgstr ""
 #: backend/bookings.php:2050 backend/settings.php:795
 #: frontend/bookingform.php:529
 msgid "Last Name"
-msgstr "Příjmení"
+msgstr "Jméno a příjmení"
 
 #: backend/bookings.php:473 backend/bookings.php:478
 msgid "Created at"
@@ -463,15 +463,15 @@ msgstr "Kalendář je dostupný."
 
 #: backend/bookings.php:560
 msgid "Room price for the stay"
-msgstr "Cena pokoje za pobyt"
+msgstr "Cena apartmánu za pobyt"
 
 #: backend/bookings.php:562
 msgid ""
 "There is an overlap in the bookings. Check if you can move other bookings to "
 "other rooms. The booking can only be saved as \"open\""
 msgstr ""
-"Nastalo překrývání v rezervaci. Zvažte, jestli můžete rezervaci přeložit na "
-"jiný pokoj. Tato rezervace může být uložena pouze jako \"otevřená\""
+"Rezervace se překrývají. Zvažte, jestli tuto rezervaci není možné přeložit "
+"na jiný termín. Zatím může být uložena pouze jako „otevřená“"
 
 #: backend/bookings.php:565
 msgid "No rooms available for this calendar during the selected time period"
@@ -546,7 +546,7 @@ msgstr "Checkin (datum příjezdu)"
 
 #: backend/bookings.php:909 backend/bookings.php:2008
 msgid "Checkout Date"
-msgstr "Datum odhlášení"
+msgstr "Checkout (datum odjezdu)"
 
 #: backend/bookings.php:936 backend/bookings.php:2044 backend/settings.php:785
 #: frontend/bookingform.php:522
@@ -2142,7 +2142,7 @@ msgstr "Děkujeme za Vaši žádost o rezervaci!"
 
 #: backend/settings.php:1097 functions.php:77
 msgid "Price for the room"
-msgstr "Cena za pokoj"
+msgstr "Cena za apartmán"
 
 #: backend/settings.php:1103 functions.php:80
 msgid "Please store my data to contact me."
@@ -2198,7 +2198,10 @@ msgstr "Vytvořeno s: "
 #: frontend/bookingform.php:315 frontend/singlecalendar.php:424
 #, php-format
 msgid "Your stay is too short. Minimum stay for those dates is %d nights."
-msgstr "Doba pobytu je krátká. Minimální pobyt pro toto datum jsou %d noci."
+msgstr ""
+"Nastavili jste příliš krátké časové rozmezí. Minimální délka pobytu v našem "
+"apartmánu činí %d noci. Rezervaci však můžete dokončit, jenom vás budeme "
+"následně kontaktovat, abychom se dohodli na podmínkách."
 
 #: frontend/bookingform.php:317
 msgid "average"

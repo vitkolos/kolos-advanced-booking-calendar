@@ -673,7 +673,7 @@ function advanced_booking_calendar_show_seasons_calendars() {
 					<h1>'.__('Seasons & Calendars', 'advanced-booking-calendar').'</h1>
 					'.$notices.'
 					<div id="abctabs2">
-						<ul class="uk-tab" data-uk-tab="{connect:\'#tab-content\'}">
+						<ul class="uk-tab" data-uk-tab="{connect:\'#tab-content\',swiping:false}">
 							<li><a href="#">'.__('Calendars', 'advanced-booking-calendar').'</a></li>
 							<li><a href="#">'.__('Seasons', 'advanced-booking-calendar').'</a></li>
 							<li><a href="#">'.__('Season - Calendar - Assignments', 'advanced-booking-calendar').'</a></li>

@@ -1972,7 +1972,7 @@ function advanced_booking_calendar_show_bookings() {
 				'.$settingsMessage.'
 				'.abc_booking_getAvailabilityTable(date_i18n("Y-m-d")).'
 				<div id="abctabs2">
-					<ul class="uk-tab" data-uk-tab="{connect:\'#tab-content\'}">
+					<ul class="uk-tab" data-uk-tab="{connect:\'#tab-content\',swiping:false}">
 						<li><a href="#">'.__('Open Bookings', 'advanced-booking-calendar').'</a></li>
 						<li><a href="#">'.__('Confirmed Bookings', 'advanced-booking-calendar').'</a></li>
 						<li><a href="#">'.__('Rejected & canceled Bookings', 'advanced-booking-calendar').'</a></li>

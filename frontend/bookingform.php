@@ -617,9 +617,9 @@ function ajax_abc_booking_getBookingFormStep2 () {
 						<span>
 							<b>'.abc_booking_getCustomText('yourStay').':</b><br/>
 							'.abc_booking_getCustomText('checkin').': '.$abcFromValue.'<br/>
-							'.abc_booking_getCustomText('checkout').': '.$abcToValue.'<br/>
-							'.abc_booking_getCustomText('roomType').': '.$calendarName.'<br/>
-							'.$extrasOptional.$priceOutput.'
+							'.abc_booking_getCustomText('checkout').': '.$abcToValue.'<br/>'.
+							// abc_booking_getCustomText('roomType').': '.$calendarName.'<br/>'.
+							$extrasOptional.$priceOutput.'
 							<span id="abc-bookingform-totalprice" data-totalprice="'.$totalPrice.'"><b>'.__('Total Price', 'advanced-booking-calendar').': '.abc_booking_formatPrice($totalPrice).'</b></span><br/>
 						</span>
 					</div>

@@ -94,7 +94,7 @@ function abc_booking_formatPrice($price){ // Returns price with currency symbol 
         $decimals = 2;
     }
     if(getAbcSetting('priceformat') == ','){
-        $price = number_format($price, $decimals, ',', '.');
+        $price = number_format($price, $decimals, ',', ' ');
     } else{
         $price = number_format($price, $decimals);
     }

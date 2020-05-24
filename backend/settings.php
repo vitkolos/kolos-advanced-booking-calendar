@@ -613,12 +613,12 @@ function advanced_booking_calendar_show_settings() {
 		  <h1>'.__('Settings', 'advanced-booking-calendar').'</h1>
 		  '.$settingsMessage.'
 		  <div>
-		  <ul class="uk-tab" data-uk-tab="{connect:\'#tab-content\'}">
+		  <ul class="uk-tab" data-uk-tab="{connect:\'#tab-content\',swiping:false}">
 					<li><a href="#">'.__('General Settings', 'advanced-booking-calendar').'</a></li>
 					<li><a href="#">'.__('Booking Form Settings', 'advanced-booking-calendar').'</a></li>
 					<li><a href="#">'.__('Email Settings', 'advanced-booking-calendar').'</a></li>
-					<li><a href="#">'.__('Payment Settings', 'advanced-booking-calendar').'</a></li>
-					<li><a href="#">'.__('Text Customization', 'advanced-booking-calendar').'</a></li>
+					<!--<li><a href="#">'.__('Payment Settings', 'advanced-booking-calendar').'</a></li>
+					<li><a href="#">'.__('Text Customization', 'advanced-booking-calendar').'</a></li>-->
 		  </ul>
 		  <ul id="tab-content" class="uk-switcher uk-margin">
 		   	<li>	
