@@ -320,7 +320,7 @@ jQuery(document).ready(function() {
     if (jQuery("#abcPostTrigger").length && jQuery("#abcPostTrigger").val() > 0 ) {
     	getAbcAvailabilities(jQuery("#abcPostCalendarId").val());
 		jQuery('html, body').animate({
-                    scrollTop: jQuery("#abc-form-content").offset().top
+                    // scrollTop: jQuery("#abc-form-content").offset().top
                 }, 2000);
 	}
 });

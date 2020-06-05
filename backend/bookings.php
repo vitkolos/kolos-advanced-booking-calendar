@@ -187,7 +187,7 @@ function abc_booking_getBookingContent($state, $offset = 0, $itemsOnPage = 10, $
 	
 	$foreachcount = 1;
 	$dateformat = getAbcSetting('dateformat');
-	$tables = '<div class="uk-overflow-container abcBookingsTable">
+	$tables = '<div class="uk-overflow-container abcBookingsTable" style="overflow:visible">
 				<table class="uk-table uk-table-condensed uk-table-striped uk-table-hover">
 				<thead>
 					<tr>
@@ -495,7 +495,7 @@ function abc_booking_getBookings($state){
 		$bookings = abc_booking_getBookingContent($state, 0, $itemsOnPage); // Getting content
 		$sorting .='</div></div>';
 	}  else {
-		$bookings = '<p>'.__('No Bookings found.', 'advanced-booking-calendar').'</p><p>'.__('Take a look at our <a href="https://booking-calendar-plugin.com/pro-download/?cmp=PayPalSetting" target="_blank">Pro-Version</a> to benefit from more features like payment via PayPal or Stripe.', 'advanced-booking-calendar').'</p>';
+		$bookings = '<p>'.__('No Bookings found.', 'advanced-booking-calendar').'</p><!--<p>'.__('Take a look at our <a href="https://booking-calendar-plugin.com/pro-download/?cmp=PayPalSetting" target="_blank">Pro-Version</a> to benefit from more features like payment via PayPal or Stripe.', 'advanced-booking-calendar').'</p>-->';
 		$sorting ='';
 	}
 	return $sorting.'<div id="'.$divId.'">'.$bookings.'</div>';
@@ -1259,7 +1259,7 @@ function abc_booking_getAvailabilityTable($initialDate, $bookingId = 0) {
 	}
 	$endDate = strtotime('-1 day', $tempDate);
 	$initialYear = date_i18n("Y", strtotime($initialDate));
-	$output = '<div class="uk-overflow-container abcAvailabilityTable" id="abc_AvailabilityTable">
+	$output = '<div class="uk-overflow-container abcAvailabilityTable" id="abc_AvailabilityTable" style="overflow:visible">
 				<table class="abcAvailabilityTable">
 				<thead>
 					<tr>
@@ -1972,7 +1972,7 @@ function advanced_booking_calendar_show_bookings() {
 				'.$settingsMessage.'
 				'.abc_booking_getAvailabilityTable(date_i18n("Y-m-d")).'
 				<div id="abctabs2">
-					<ul class="uk-tab" data-uk-tab="{connect:\'#tab-content\'}">
+					<ul class="uk-tab" data-uk-tab="{connect:\'#tab-content\',swiping:false}">
 						<li><a href="#">'.__('Open Bookings', 'advanced-booking-calendar').'</a></li>
 						<li><a href="#">'.__('Confirmed Bookings', 'advanced-booking-calendar').'</a></li>
 						<li><a href="#">'.__('Rejected & canceled Bookings', 'advanced-booking-calendar').'</a></li>
@@ -2046,19 +2046,19 @@ function advanced_booking_calendar_show_bookings() {
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="first_name">'.__('First Name', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="first_name" name="first_name" placeholder="John">
+									<input type="text" id="first_name" name="first_name" placeholder="Jan">
 								</div>
 							</div>
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="last_name">'.__('Last Name', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="last_name" name="last_name" placeholder="Doe">
+									<input type="text" id="last_name" name="last_name" placeholder="Novák">
 								</div>
 							</div>
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="email">'.__('Email Address', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="email" name="email" placeholder="your@email.com">
+									<input type="text" id="email" name="email" placeholder="jan.novak@seznam.cz">
 								</div>
 							</div>
 							<div class="uk-form-row">
@@ -2071,10 +2071,10 @@ function advanced_booking_calendar_show_bookings() {
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="phone">'.__('Phone Number', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="phone" name="phone" placeholder="+1 123 456 789">
+									<input type="text" id="phone" name="phone" placeholder="+420 603 123 456">
 								</div>
 							</div>
-							<div class="uk-form-row">
+							<!--<div class="uk-form-row">
 								<label class="uk-form-label" for="address">'.__('Street Address, House no.', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
 									<input type="text" id="address" name="address" placeholder="1 Wall St">
@@ -2085,23 +2085,23 @@ function advanced_booking_calendar_show_bookings() {
 								 <div class="uk-form-controls">
 									<input type="text" id="zip" name="zip" placeholder="NY 10286">
 								</div>
-							</div>
+							</div>-->
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="city">'.__('City', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="city" name="city" placeholder="New York City">
+									<input type="text" id="city" name="city" placeholder="15:00">
 								</div>
 							</div>
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="county">'.__('State / County', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="county" name="county" placeholder="New York">
+									<input type="text" id="county" name="county" placeholder="10:00">
 								</div>
 							</div>
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="country">'.__('Country', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="country" name="country" placeholder="USA">
+									<input type="text" id="country" name="country" placeholder="česky">
 								</div>
 							</div>
 							<div class="uk-form-row">

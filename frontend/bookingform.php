@@ -94,12 +94,12 @@ function abc_booking_showBookingForm( $atts ) {
 	global $abcUrl;
 	
 	wp_enqueue_style( 'styles-css', $abcUrl.'frontend/css/styles.css' );
-	wp_enqueue_style( 'font-awesome', $abcUrl.'frontend/css/font-awesome.min.css' );
-	wp_enqueue_script('abc-functions', $abcUrl.'frontend/js/abc-functions.js', array('jquery'));
+	// wp_enqueue_style( 'font-awesome', $abcUrl.'frontend/css/font-awesome.min.css' );
+	// wp_enqueue_script('abc-functions', $abcUrl.'frontend/js/abc-functions.js', array('jquery'));
 	wp_enqueue_script('abc-ajax', $abcUrl.'frontend/js/abc-ajax.js', array('jquery'));
 	wp_enqueue_script('jquery-validate', $abcUrl.'frontend/js/jquery.validate.min.js', array('jquery'));
 	wp_enqueue_script('abc-bookingform', $abcUrl.'frontend/js/abc-bookingform.js', array('jquery'));
-	wp_enqueue_script('jquery-ui-datepicker');
+	// wp_enqueue_script('jquery-ui-datepicker');
 	$dateformat = abc_booking_dateFormatToJS(getAbcSetting("dateformat"));
 	wp_localize_script( 'abc-functions', 'abc_functions_vars', array(
         'dateformat' => $dateformat,
@@ -110,9 +110,11 @@ function abc_booking_showBookingForm( $atts ) {
 		'fr','ge','gl','he','hr','hu','hy_AM','id','is','it','ja','ka','kk','ko','lt','lv','mk','my','nl','no',
 		'pl','pt_BR','pt_PT','ro','ru','si','sk','sl','sr_lat','sr','sv','th','tj','tr','uk','vi','zh_TW','zh');
 	if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $validateLang)){
-		wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.get_locale().'.js', array('jquery-ui-datepicker'));
+		// wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.get_locale().'.js', array('jquery-ui-datepicker'));
+		wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.get_locale().'.js');
 	}elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $validateLang)){
-		wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.substr(get_locale(), 0,2).'.js', array('jquery-ui-datepicker'));
+		// wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.substr(get_locale(), 0,2).'.js', array('jquery-ui-datepicker'));
+		wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.substr(get_locale(), 0,2).'.js');
 	}
 	$datepickerLang = array('af','ar-DZ','ar','az','be','bg','bs','ca','cs','cy-GB','da','de','el','en-AU','en-GB','en-NZ',
 		'eo','es','et','eu','fa','fi','fo','fr-CA','fr-CH','fr','gl','he','hi','hr','hu','hy','id','is',
@@ -120,9 +122,9 @@ function abc_booking_showBookingForm( $atts ) {
 		'no','pl','pt-BR','pt','rm','ro','ru','sk','sl','sq','sr-SR','sr','sv','ta','th','tj','tr','uk',
 		'vi','zh-CN','zh-HK','zh-TW');
 	if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $datepickerLang)){
-		wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
+		// wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
 	}elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $datepickerLang)){
-		wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
+		// wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
 	}
 	$bookingFormSetting = getAbcSetting("bookingform");	
 	$validateRules = array('email' => array( 'required' => true, 'email' => true));
@@ -463,7 +465,11 @@ function ajax_abc_booking_getBookingFormStep2 () {
 						if(strlen($extra["explanation"]) > 1){
 							$tempText .= '<span class="abc-extra-cost"></br>('.$extra["priceText"].')</br>'.$extra["explanation"].'</span>';
 						}
-						$extrasMandatory .= '<div class="abc-column">'.$tempText.'</div>';
+						// $extrasMandatory .= '<div class="abc-column">'.$tempText.'</div>';
+						if(strlen($extrasMandatory) > 1){
+							$extrasMandatory .= ', ';
+						}
+						$extrasMandatory .= $extra["name"];
 						break;
 					case '0':
 						if(in_array($extra["id"], $extrasSelected)){
@@ -477,7 +483,7 @@ function ajax_abc_booking_getBookingFormStep2 () {
 						break;	
 				}
 			}
-			if(strlen($extrasMandatory) > 1){
+			if(strlen($extrasMandatory) > 1 && false){
 				$extrasOutput .= '<div class="abc-form-row">
 								<div class="abc-column">
 									<span class="abc-result-header">'.__('Additional costs', 'advanced-booking-calendar').'</span>
@@ -498,7 +504,7 @@ function ajax_abc_booking_getBookingFormStep2 () {
 				$priceOutput .= __('Costs for the extras', 'advanced-booking-calendar').': '.abc_booking_formatPrice($optionalCosts).'<br/>';
 			}
 			if($mandatoryCosts >0){
-				$priceOutput .= __('Additional costs', 'advanced-booking-calendar').': '.abc_booking_formatPrice($mandatoryCosts).'<br/>';
+				$priceOutput .= __('Additional costs', 'advanced-booking-calendar').': '.abc_booking_formatPrice($mandatoryCosts).' ('.$extrasMandatory.')<br/>';
 			}
 			if($mandatoryCosts >0 || $optionalCosts >0){
 				$priceOutput .= abc_booking_getCustomText('roomPrice').': '.abc_booking_formatPrice($totalPrice).'<br/>';
@@ -548,7 +554,7 @@ function ajax_abc_booking_getBookingFormStep2 () {
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
 				$bookingFormOutput .= '<label for="phone">'.__('Phone Number', 'advanced-booking-calendar').'</label><br />
-						<input type="text" id="phone" name="phone"><br />';
+						<input type="tel" id="phone" name="phone"><br />';
 			}
 			if($bookingFormSetting["street"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
@@ -566,24 +572,24 @@ function ajax_abc_booking_getBookingFormStep2 () {
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
 				$bookingFormOutput .= '<label for="city">'.__('City', 'advanced-booking-calendar').'</label><br />
-						<input type="text" id="city" name="city"><br />';
+						<input type="time" id="city" name="city" value="15:00"><br />';
 			}
 			if($bookingFormSetting["county"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
 				$bookingFormOutput .= '<label for="county">'.__('State / County', 'advanced-booking-calendar').'</label><br />
-						<input type="text" id="county" name="county"><br />';
+						<input type="time" id="county" name="county" value="10:00"><br />';
 			}
 			if($bookingFormSetting["country"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
 				$bookingFormOutput .= '<label for="country">'.__('Country', 'advanced-booking-calendar').'</label><br />
-						<input type="text" id="country" name="country"><br />';
+						<input type="text" id="country" name="country" value="česky"><br />';
 			}
 			if($bookingFormSetting["message"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
-				$bookingFormOutput .= '<label for="message">'.__('Message', 'advanced-booking-calendar').'</label><br />
+				$bookingFormOutput .= '<label for="message">'.__('Message, special note for stay', 'advanced-booking-calendar').'</label><br />
 						<textarea id="message" name="message"></textarea>';
 			}
 			if($bookingFormSetting["optincheckbox"] > 0){

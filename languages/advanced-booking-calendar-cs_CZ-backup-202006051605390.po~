@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Booking Calendar\n"
 "POT-Creation-Date: 2019-03-01 08:45+0100\n"
-"PO-Revision-Date: 2020-06-05 13:43+0000\n"
+"PO-Revision-Date: 2020-06-05 16:05+0000\n"
 "Last-Translator: \n"
 "Language-Team: Čeština\n"
 "Language: cs_CZ\n"
@@ -187,7 +187,7 @@ msgstr "Rezervace"
 #: advanced-booking-calendar.php:361 advanced-booking-calendar.php:362
 #: backend/bookings.php:1885 backend/seasons-calendars.php:673
 msgid "Seasons & Calendars"
-msgstr "Sezóna & Kalendář"
+msgstr "Sezóny a kalendáře"
 
 #: advanced-booking-calendar.php:369 advanced-booking-calendar.php:370
 #: backend/bookings.php:199 backend/bookings.php:340 backend/bookings.php:919
@@ -576,12 +576,12 @@ msgstr "PSČ"
 #: backend/bookings.php:972 backend/bookings.php:2087 backend/settings.php:845
 #: frontend/bookingform.php:557 functions.php:806
 msgid "City"
-msgstr "Město"
+msgstr "Čas příjezdu"
 
 #: backend/bookings.php:978 backend/bookings.php:2093 backend/settings.php:835
 #: frontend/bookingform.php:563 functions.php:807
 msgid "State / County"
-msgstr "Stát / země"
+msgstr "Čas odjezdu"
 
 #: backend/bookings.php:984 backend/bookings.php:2099 backend/settings.php:855
 #: frontend/bookingform.php:569 functions.php:808
@@ -1759,7 +1759,7 @@ msgstr "Hlavní nastavení"
 
 #: backend/settings.php:612
 msgid "Booking Form Settings"
-msgstr "Rezervační formulář-nastavení"
+msgstr "Nastavení rezervačního formuláře"
 
 #: backend/settings.php:614 backend/settings.php:963
 msgid "Payment Settings"

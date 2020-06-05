@@ -741,3 +741,14 @@ label.abc-form-error  {
 #abc-bookingresults > hr:first-child {
 	display: none;
 }
+
+.abc-single-price {
+	display: none;
+}
+
+.abc-past {
+	color: #ccc;
+	font-style: normal;
+}
+
+.abc-

@@ -818,7 +818,7 @@ function advanced_booking_calendar_show_settings() {
 				     	</fieldset>
 			      	</div>
 			    </div>
-			    <div class="uk-form-row">
+			    <!--<div class="uk-form-row">
 			    	<label class="uk-form-label" for="street">'.__('Street Address, House no.', 'advanced-booking-calendar').':</label>
 			    	<div class="uk-form-controls">
 				    	<fieldset>
@@ -837,7 +837,7 @@ function advanced_booking_calendar_show_settings() {
 				      		<input type="radio" name="zip" id="zip-disabled" value="0"'.$zip[0].'> <label for="zip-disabled"> '.__('Disabled', 'advanced-booking-calendar').'</label>
 				     	</fieldset>
 			      	</div>
-			    </div>
+			    </div>-->
 			    <div class="uk-form-row">
 			    	<label class="uk-form-label" for="county">'.__('State / County', 'advanced-booking-calendar').':</label>
 			    	<div class="uk-form-controls">
@@ -878,7 +878,7 @@ function advanced_booking_calendar_show_settings() {
 				     	</fieldset>
 			      	</div>
 			    </div>
-			    <div class="uk-form-row">
+			    <!--<div class="uk-form-row">
 			    	<label class="uk-form-label" for="optincheckbox">'.__('Opt-in-Checkbox', 'advanced-booking-calendar').':</label>
 			    	<div class="uk-form-controls">
 				    	<fieldset>
@@ -887,7 +887,7 @@ function advanced_booking_calendar_show_settings() {
 				      		<input type="radio" name="optincheckbox" id="optincheckbox-disabled" value="0"'.$optincheckbox[0].'> <label for="optincheckbox-disabled"> '.__('Disabled', 'advanced-booking-calendar').'</label></br>
 						</fieldset>
 			      	</div>
-			    </div>
+			    </div>-->
 				<div class="uk-form-row">
 					<input class="button button-primary" type="submit" value="'.__('Save', 'advanced-booking-calendar').'" />
 				</div>	

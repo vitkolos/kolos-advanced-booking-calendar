@@ -244,3 +244,11 @@ table{border-collapse: collapse;}
 		letter-spacing: -0.0625em;	
 	}
 }
+
+/* My styles */
+
+.abcCalendarName {
+	color: rgb(35, 40, 45);
+	background-color: rgb(238, 238, 238);
+	font-weight: bold;
+}
