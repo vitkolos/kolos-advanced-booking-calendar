@@ -524,17 +524,17 @@ label.abc-form-error  {
     /*height: 12.5px;*/
 }
 
-.abc-single-button-right, .abc-single-button-right-2 {
+.abc-single-button-right{
 	text-align: right;
 }
 
-.abc-single-button-left, .abc-single-button-left-2 {
+.abc-single-button-left{
 	text-align: left;
 }
 
 .abc-month {
 	float: left;
-	width: 50%;
+	width: 75%;
 	height: 40px;
 	padding-top: 10px;
 	font-size: 120%;
@@ -561,11 +561,7 @@ label.abc-form-error  {
 }
 
 .abc-past{
-	color: grey;
-}
-
-.abc-past + div:not(.abc-past) {
-	text-decoration: underline;
+	font-style: italic; 
 }
 
 .abc-booked {
@@ -735,25 +731,4 @@ label.abc-form-error  {
  	margin-right: auto;
  	display: block;
 }	
-
-
-
-/* My styles */
-
-#abc-form-content > .abc-column, #abc-check-availabilities, #abc-back-to-availabilities {
-	display: none !important;
-}
-
-.abc-box, .abc-box button {
-	transition: opacity 0.2s;
-}
-
-.abc-box[disabled], .abc-box[disabled] button {
-	opacity: 0.5;
-	cursor: initial;
-}
-
-.abc-booking-selection .abc-column {
-	padding: 0;
-	width: 100%;
-}
+	

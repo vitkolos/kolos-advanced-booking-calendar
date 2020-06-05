@@ -99,33 +99,31 @@ function abc_booking_showBookingForm( $atts ) {
 	wp_enqueue_script('abc-ajax', $abcUrl.'frontend/js/abc-ajax.js', array('jquery'));
 	wp_enqueue_script('jquery-validate', $abcUrl.'frontend/js/jquery.validate.min.js', array('jquery'));
 	wp_enqueue_script('abc-bookingform', $abcUrl.'frontend/js/abc-bookingform.js', array('jquery'));
-	// wp_enqueue_script('jquery-ui-datepicker');
+	wp_enqueue_script('jquery-ui-datepicker');
 	$dateformat = abc_booking_dateFormatToJS(getAbcSetting("dateformat"));
 	wp_localize_script( 'abc-functions', 'abc_functions_vars', array(
         'dateformat' => $dateformat,
         'firstday' => getAbcSetting("firstdayofweek")
         ));
-	// wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
+	wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
 	$validateLang = array('ar','bg','bn_BD','ca','cs','da','de','el','es_AR','es_PE','es','et','eu','fa','fi',
 		'fr','ge','gl','he','hr','hu','hy_AM','id','is','it','ja','ka','kk','ko','lt','lv','mk','my','nl','no',
 		'pl','pt_BR','pt_PT','ro','ru','si','sk','sl','sr_lat','sr','sv','th','tj','tr','uk','vi','zh_TW','zh');
 	if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $validateLang)){
-		// wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.get_locale().'.js', array('jquery-ui-datepicker'));
-		wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.get_locale().'.js');
+		wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.get_locale().'.js', array('jquery-ui-datepicker'));
 	}elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $validateLang)){
-		// wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.substr(get_locale(), 0,2).'.js', array('jquery-ui-datepicker'));
-		wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.substr(get_locale(), 0,2).'.js');
+		wp_enqueue_script('jquery-validate-lang', $abcUrl.'frontend/js/validate_lang/messages_'.substr(get_locale(), 0,2).'.js', array('jquery-ui-datepicker'));
 	}
-	// $datepickerLang = array('af','ar-DZ','ar','az','be','bg','bs','ca','cs','cy-GB','da','de','el','en-AU','en-GB','en-NZ',
-	// 	'eo','es','et','eu','fa','fi','fo','fr-CA','fr-CH','fr','gl','he','hi','hr','hu','hy','id','is',
-	// 	'it-CH','it','ja','ka','kk','km','ko','ky','lb','lt','lv','mk','ml','ms','nb','nl-BE','nl','nn',
-	// 	'no','pl','pt-BR','pt','rm','ro','ru','sk','sl','sq','sr-SR','sr','sv','ta','th','tj','tr','uk',
-	// 	'vi','zh-CN','zh-HK','zh-TW');
-	// if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $datepickerLang)){
-	// 	wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
-	// }elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $datepickerLang)){
-	// 	wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
-	// }
+	$datepickerLang = array('af','ar-DZ','ar','az','be','bg','bs','ca','cs','cy-GB','da','de','el','en-AU','en-GB','en-NZ',
+		'eo','es','et','eu','fa','fi','fo','fr-CA','fr-CH','fr','gl','he','hi','hr','hu','hy','id','is',
+		'it-CH','it','ja','ka','kk','km','ko','ky','lb','lt','lv','mk','ml','ms','nb','nl-BE','nl','nn',
+		'no','pl','pt-BR','pt','rm','ro','ru','sk','sl','sq','sr-SR','sr','sv','ta','th','tj','tr','uk',
+		'vi','zh-CN','zh-HK','zh-TW');
+	if(substr(get_locale(), 0,2) != 'en' && in_array(get_locale(), $datepickerLang)){
+		wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.get_locale().'.js', array('jquery'));
+	}elseif(substr(get_locale(), 0,2) != 'en' && in_array(substr(get_locale(), 0,2), $datepickerLang)){
+		wp_enqueue_script('jquery-datepicker-lang', $abcUrl.'frontend/js/datepicker_lang/datepicker-'.substr(get_locale(), 0,2).'.js', array('jquery'));
+	}
 	$bookingFormSetting = getAbcSetting("bookingform");	
 	$validateRules = array('email' => array( 'required' => true, 'email' => true));
 	if($bookingFormSetting["firstname"] == 2){$validateRules["first_name"]["required"] = true;}
@@ -580,7 +578,7 @@ function ajax_abc_booking_getBookingFormStep2 () {
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
 				$bookingFormOutput .= '<label for="country">'.__('Country', 'advanced-booking-calendar').'</label><br />
-						<input type="text" id="country" name="country" value="česky"><br />';
+						<input type="text" id="country" name="country"><br />';
 			}
 			if($bookingFormSetting["message"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
@@ -619,9 +617,9 @@ function ajax_abc_booking_getBookingFormStep2 () {
 						<span>
 							<b>'.abc_booking_getCustomText('yourStay').':</b><br/>
 							'.abc_booking_getCustomText('checkin').': '.$abcFromValue.'<br/>
-							'.abc_booking_getCustomText('checkout').': '.$abcToValue.'<br/>'.
-							// abc_booking_getCustomText('roomType').': '.$calendarName.'<br/>'.
-							$extrasOptional.$priceOutput.'
+							'.abc_booking_getCustomText('checkout').': '.$abcToValue.'<br/>
+							'.abc_booking_getCustomText('roomType').': '.$calendarName.'<br/>
+							'.$extrasOptional.$priceOutput.'
 							<span id="abc-bookingform-totalprice" data-totalprice="'.$totalPrice.'"><b>'.__('Total Price', 'advanced-booking-calendar').': '.abc_booking_formatPrice($totalPrice).'</b></span><br/>
 						</span>
 					</div>
@@ -651,7 +649,7 @@ function ajax_abc_booking_getBookingFormBook () {
 	if (isset($_POST["from"])  && isset($_POST["to"]) && abc_booking_formatDateToDB($_POST["from"]) >= date('Y-m-d') 
 		&& isset($_POST["persons"]) && isset($_POST["calendar"]) && filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)
 		&& getAbcAvailability(sanitize_text_field($_POST["calendar"]),sanitize_text_field($_POST["from"]), sanitize_text_field($_POST["to"])) 
-		// && abc_booking_checkMinimumStay(intval($_POST["calendar"]), abc_booking_formatDateToDB($_POST["from"]), abc_booking_formatDateToDB($_POST["to"])) == 0
+		&& abc_booking_checkMinimumStay(intval($_POST["calendar"]), abc_booking_formatDateToDB($_POST["from"]), abc_booking_formatDateToDB($_POST["to"])) == 0
 		&& (isset($_POST["firstname"]) || ($bookingForm["firstname"] < 2))  && (isset($_POST["lastname"]) || ($bookingForm["lastname"] < 2))
 		&& (isset($_POST["phone"]) || ($bookingForm["phone"] < 2)) && (isset($_POST["address"]) || ($bookingForm["street"] < 2))
 		&& (isset($_POST["zip"]) || ($bookingForm["zip"] < 2)) && (isset($_POST["county"]) || ($bookingForm["county"] < 2))

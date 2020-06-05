@@ -12,8 +12,8 @@ function abc_booking_showSingleCalendar( $atts ) {
 			$atts['uniqid'] = $divId;
 			wp_enqueue_script('abc-ajax', $abcUrl.'frontend/js/abc-ajax.js', array('jquery'));
 			wp_localize_script( 'abc-ajax', 'ajax_abc_booking_SingleCalendar', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'abc_nonce' => wp_create_nonce('abc-nonce'), 'abc_calendar' =>  $atts['calendar'] ));
-			// wp_enqueue_script('jquery-ui-button');
-			// wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
+			wp_enqueue_script('jquery-ui-button');
+			wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
 			if(getAbcSetting('firstdayofweek') == 0) {
 				$weekdayRow = '<div class="abc-box abc-col-day abc-dayname">'.__('Su', 'advanced-booking-calendar').'</div>
 						<div class="abc-box abc-col-day abc-dayname abc-dotted">'.__('Mo', 'advanced-booking-calendar').'</div>
@@ -34,25 +34,13 @@ function abc_booking_showSingleCalendar( $atts ) {
 			$calSingleOutput = abcEnqueueCustomCss().'
 				<div class="abc-singlecalendar" data-checkin-'.$divId.'="0" data-offset-'.$divId.'="0" data-month-'.$divId.'="0" id="abc_singlecalendar_'.$divId.'">
 					<div class="abc-box abc-single-row">
-						<div data-calendar="'.sanitize_text_field($atts['calendar']).'" data-id="'.$divId.'" class="abc-box abc-button abc-single-button-left-2">
-							<button class="abc-button-rl">
-								<span class="fa fa-chevron-left"></span><span class="fa fa-chevron-left"></span>
-							</button>
-						</div>
 						<div data-calendar="'.sanitize_text_field($atts['calendar']).'" data-id="'.$divId.'" class="abc-box abc-button abc-single-button-left">
 							<button class="fa fa-chevron-left abc-button-rl"></button>
 						</div>
 						<div class="abc-box abc-month">
-							<img alt="'.__('Loading...', 'advanced-booking-calendar').'" src="'.admin_url('/images/wpspin_light.gif').'" class="waiting" id="abc_single_loading-'.$divId.'" style="display:none" />
-							<span id="singlecalendar-month-'.$divId.'">'.date_i18n('F').' '.date_i18n('Y').'</span>
-						</div>
-						<div data-calendar="'.sanitize_text_field($atts['calendar']).'" data-id="'.$divId.'" class="abc-box abc-button abc-single-button-right">
-							<button class="fa fa-chevron-right abc-button-rl"></button>
-						</div>
-						<div data-calendar="'.sanitize_text_field($atts['calendar']).'" data-id="'.$divId.'" class="abc-box abc-button abc-single-button-right-2">
-						<button class="abc-button-rl">
-							<span class="fa fa-chevron-right"></span><span class="fa fa-chevron-right"></span>
-						</button>
+							<img alt="'.__('Loading...', 'advanced-booking-calendar').'" src="'.admin_url('/images/wpspin_light.gif').'" class="waiting" id="abc_single_loading-'.$divId.'" style="display:none" /><span id="singlecalendar-month-'.$divId.'">'.date_i18n('F').' '.date_i18n('Y').'</span></div>
+							<div data-calendar="'.sanitize_text_field($atts['calendar']).'" data-id="'.$divId.'" class="abc-box abc-button abc-single-button-right">
+								<button class="fa fa-chevron-right abc-button-rl"></button>
 						</div>
 					</div>
 					<div class="abc-box abc-single-row">
@@ -73,8 +61,8 @@ function abc_booking_showSingleCalendar( $atts ) {
 										'.__('Fully booked', 'advanced-booking-calendar').'
 										</div>';
 					}
-				$calSingleOutput .= '<div id="abc-booking-'.$divId.'" class="abc-booking-selection"><div>'.__('Click in the calendar to select your preferred checkin date.').' <br>'.__('You can switch months using the buttons on top of the calendar.').'
-					</div></div>
+				$calSingleOutput .= '<div id="abc-booking-'.$divId.'" class="abc-booking-selection">
+					</div>
 				</div>';
 				return $calSingleOutput;
 			
@@ -380,9 +368,7 @@ function abc_booking_getSingleCalendar($atts){
 			}
 			$priceOutput .= '</span>';
 			$cssClass .= 'abc-date-item ';
-			$calSingleOutput .='<div title="'.$title.'" data-calendar="'.intval(sanitize_text_field($atts['calendar'])).'" data-id="'.$divId.'" data-date="'.date('Y-m-d', $newCurrentTime).'" class="'.$cssClass.'" id="abc-day-'.$divId.date('Y-m-d', $newCurrentTime).'">'.date('j', ($newCurrentTime)).
-			// $priceOutput.
-			'</div>';
+			$calSingleOutput .='<div title="'.$title.'" data-calendar="'.intval(sanitize_text_field($atts['calendar'])).'" data-id="'.$divId.'" data-date="'.date('Y-m-d', $newCurrentTime).'" class="'.$cssClass.'" id="abc-day-'.$divId.date('Y-m-d', $newCurrentTime).'">'.date('j', ($newCurrentTime)).$priceOutput.'</div>';
 		}
 		if($i % 7 == 0 OR $i == ($maxday+$startday-1)) { // Closing row if week is over or last day of month has been reached.
 			$calSingleOutput .= '</div>';
@@ -424,17 +410,17 @@ function ajax_abc_booking_setDataRange() {
 		$dateformat = getAbcSetting('dateformat');
 		$currency = getAbcSetting('currency');
 		if($start != 0){
-			$output .= '<div class="abc-column"><div><b>'.abc_booking_getCustomText('checkin').':</b> '.date($dateformat, $start).'</div>
-				<div><b>'.abc_booking_getCustomText('checkout').':</b> ';
+			$output .= '<div class="abc-column"><b>'.abc_booking_getCustomText('checkin').':</b> '.date($dateformat, $start).'<br/>
+				<b>'.abc_booking_getCustomText('checkout').':</b> ';
 			if($end != 0 && $end > $start){
 				$success = true;
-				$output .= date($dateformat, $end).'</div>';
+				$output .= date($dateformat, $end);
 				$numberOfDays = abc_booking_dateDiffInDays($end, $start);
-				$output .= '<div><b>'.abc_booking_getCustomText('roomPrice').': </b>
-						'.abc_booking_formatPrice(abc_booking_getTotalPrice($calendarId, date("Y-m-d", $start), $numberOfDays)).'</div>';
+				$output .= '<br/><b>'.abc_booking_getCustomText('roomPrice').': </b>
+						'.abc_booking_formatPrice(abc_booking_getTotalPrice($calendarId, date("Y-m-d", $start), $numberOfDays));
 				$extrasMandatory = getAbcExtrasList($numberOfDays, 1, 2, $calendarId); // Getting mandatory extras
 				if(count($extrasMandatory) > 0){
-					$output .= '<b>'.abc_booking_getCustomText('extras').': </b>';
+					$output .= '<br/><b>'.abc_booking_getCustomText('extras').': </b>';
 					$maxExtras = count($extrasMandatory);
 					$extraCounter = 0;
 					foreach($extrasMandatory as $extra){
@@ -447,29 +433,28 @@ function ajax_abc_booking_setDataRange() {
 				if($minimumStay > 0){ // Checking if the minimum number of nights to stay is reached
 					$output .= '</div>
 						<div class="abc-column"><b>'.sprintf( __('Your stay is too short. Minimum stay for those dates is %d nights.', 'advanced-booking-calendar'), $minimumStay ).'</b>';
+				}elseif(getAbcSetting("bookingpage") > 0 && get_option('abc_bookingformvalidated') == 1){ // Checking if bookingpage in the settings has been defined
+					$output .='</div>
+						<div class="abc-column">
+							<form action="'.get_permalink(getAbcSetting("bookingpage")).'" method="post">
+							<button class="abc-submit">
+								<span class="abc-submit-text">'.abc_booking_getCustomText('bookNow').'</span>
+							</button>
+							';
 				}
-				// elseif(getAbcSetting("bookingpage") > 0 && get_option('abc_bookingformvalidated') == 1){ // Checking if bookingpage in the settings has been defined
-				// 	$output .='</div>
-				// 		<div class="abc-column">
-				// 			<form action="'.get_permalink(getAbcSetting("bookingpage")).'" method="post">
-				// 			<button class="abc-submit">
-				// 				<span class="abc-submit-text">'.abc_booking_getCustomText('bookNow').'</span>
-				// 			</button>
-				// 			';
-				// }
-				// if(getAbcSetting("cookies") == 1) { // Storing selected dates in cookie, if activated
-				// 	$domain = str_replace('www', '', str_replace('https://','',str_replace('http://','',get_site_url()))); // Getting domain-name for creating cookies
-				// 	setcookie('abc-from', date($dateformat, $start), time()+3600*24*30*6, '/',  $domain);
-				// 	setcookie('abc-to', date($dateformat, $end), time()+3600*24*30*6, '/', $domain );
-				// 	setcookie('abc-calendar', $calendarId, time()+3600*24*30*6, '/', $domain );
-				// } 
+				if(getAbcSetting("cookies") == 1) { // Storing selected dates in cookie, if activated
+					$domain = str_replace('www', '', str_replace('https://','',str_replace('http://','',get_site_url()))); // Getting domain-name for creating cookies
+					setcookie('abc-from', date($dateformat, $start), time()+3600*24*30*6, '/',  $domain);
+					setcookie('abc-to', date($dateformat, $end), time()+3600*24*30*6, '/', $domain );
+					setcookie('abc-calendar', $calendarId, time()+3600*24*30*6, '/', $domain );
+				} 
 					$output .= '<input type="hidden" name="abc-from" value="'.date($dateformat, $start).'">';
 					$output .= '<input type="hidden" name="abc-to" value="'.date($dateformat, $end).'">';
 					$output .= '<input type="hidden" name="abc-calendarId" value="'.$calendarId.'">';
 					$output .= '<input type="hidden" name="abc-trigger" value="'.$calendarId.'">';
 				$output .= '</form>';	
 			} else {
-				$output .= '–</div><div>'.__('Now select your checkout date.').' <br>'.__('You can switch months using the buttons on top of the calendar.').'</div>';
+				$output .= '-';
 			}
 			$output .= '</div><div style="clear:both"></div>';
 		}
