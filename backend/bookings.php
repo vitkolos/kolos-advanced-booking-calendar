@@ -2125,7 +2125,9 @@ function advanced_booking_calendar_show_bookings() {
 					</ul>
 					'.$setupMessage.'
 				</div>
-			</div>'.$feedbackModal;
+			</div>'
+			// .$feedbackModal
+			.'';
 	}
 
 }//==>advanced_booking_calendar_show_bookings()
