@@ -434,9 +434,23 @@ function ajax_abc_booking_setDataRange() {
 					$output .= '</div>
 						<div class="abc-column"><b>'.sprintf( __('Your stay is too short. Minimum stay for those dates is %d nights.', 'advanced-booking-calendar'), $minimumStay ).'</b>';
 				}elseif(getAbcSetting("bookingpage") > 0 && get_option('abc_bookingformvalidated') == 1){ // Checking if bookingpage in the settings has been defined
+					$optionPersons = '';
+					$abcPersonValue = 1;
+					for( $i = 1; $i <= getAbcSetting('personcount'); $i++) { 
+						$optionPersons .= '<option value="'.$i.'"';
+						if ( $i == $abcPersonValue) {
+							$optionPersons .= ' selected';
+						}
+						$optionPersons .= '>'.$i.'</option>';
+					}
 					$output .='</div>
 						<div class="abc-column">
 							<form action="'.get_permalink(getAbcSetting("bookingpage")).'" method="post">
+							<div class="abc-input-fa">
+								<span class="fa fa-female abc-guest1"></span>
+								<span class="fa fa-male abc-guest2"></span>
+								<select id="abc-persons" name="abc-persons">'.$optionPersons.'</select>
+							</div>
 							<button class="abc-submit">
 								<span class="abc-submit-text">'.abc_booking_getCustomText('bookNow').'</span>
 							</button>

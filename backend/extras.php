@@ -16,7 +16,7 @@ function abc_booking_addExtra() {
 			
 		$er = $wpdb->get_row( 'SELECT COUNT(id) as extras FROM '.$wpdb->prefix.'abc_extras', ARRAY_A );
 		$extras = $er["extras"];
-		if( $extras < 2 ) {
+		if( $extras < 2 || true ) {
 			
 			$name			= sanitize_text_field($_POST["name"]);
 			$explanation	= sanitize_text_field($_POST["explanation"]);

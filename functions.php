@@ -82,6 +82,9 @@ function abc_booking_getCustomText($text){
 			case 'extras':
 				$customText = __('Extras', 'advanced-booking-calendar');
 				break;
+			case 'persons':
+				$customText = __('Number of guests', 'advanced-booking-calendar');
+				break;
 		}
 	}	
 	return $customText;

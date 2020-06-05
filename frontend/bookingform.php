@@ -459,7 +459,7 @@ function ajax_abc_booking_getBookingFormStep2 () {
 				switch($extra["mandatory"]){
 					case '1':
 						$mandatoryCosts += $extra["priceValue"];
-						$tempText = '<span class="abc-extra-name">'.$extra["name"].', '.abc_booking_formatPrice($extra["priceValue"]).'</span>';
+						$tempText = '<span class="abc-extra-name">'.$extra["name"].' – '.abc_booking_formatPrice($extra["priceValue"]).'</span>';
 						if(strlen($extra["explanation"]) > 1){
 							$tempText .= '<span class="abc-extra-cost"></br>('.$extra["priceText"].')</br>'.$extra["explanation"].'</span>';
 						}
@@ -619,6 +619,7 @@ function ajax_abc_booking_getBookingFormStep2 () {
 							'.abc_booking_getCustomText('checkin').': '.$abcFromValue.'<br/>
 							'.abc_booking_getCustomText('checkout').': '.$abcToValue.'<br/>
 							'.abc_booking_getCustomText('roomType').': '.$calendarName.'<br/>
+							'.abc_booking_getCustomText('persons').': '.$abcPersons.'<br/><br/>
 							'.$extrasOptional.$priceOutput.'
 							<span id="abc-bookingform-totalprice" data-totalprice="'.$totalPrice.'"><b>'.__('Total Price', 'advanced-booking-calendar').': '.abc_booking_formatPrice($totalPrice).'</b></span><br/>
 						</span>

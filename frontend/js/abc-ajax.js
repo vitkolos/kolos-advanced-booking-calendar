@@ -261,20 +261,20 @@ jQuery( '.abc-calendar-overview' ).on('change', "select[name='abcYear']", functi
 // Booking form
 function getAbcAvailabilities(calendarId){
 	data = {
-		action: 'abc_booking_getBookingResult',			
+		action: 'abc_booking_getBookingFormStep2',			
 		from: jQuery("#abc-from").val(),
 		to: jQuery("#abc-to").val(),
 		persons: jQuery("#abc-persons").val(),
-		hide_other: ajax_abc_booking_showBookingForm.hide_other,
-		hide_tooshort: ajax_abc_booking_showBookingForm.hide_tooshort,
-		calendarId: calendarId
+		// hide_other: ajax_abc_booking_showBookingForm.hide_other,
+		// hide_tooshort: ajax_abc_booking_showBookingForm.hide_tooshort,
+		calendar: calendarId
 	};
 	jQuery('#abc-submit-button').hide();
 	jQuery('#abc-bookingresults').hide();
-	jQuery('.abc-submit-loading').show();
+	jQuery('#abc_bookinform_loading').show();
 	jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
 		jQuery('#abc-submit-button').show();
-		jQuery('.abc-submit-loading').hide();
+		jQuery('#abc_bookinform_loading').hide();
 		jQuery('#abc-bookingresults').html(response);
 		jQuery("#abc-bookingresults").slideDown("slow");
 		jQuery('.abc-submit').attr('disabled',false);

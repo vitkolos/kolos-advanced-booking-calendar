@@ -731,4 +731,13 @@ label.abc-form-error  {
  	margin-right: auto;
  	display: block;
 }	
-	
+
+/* My styles */
+
+#abc-form-content > div {
+	display: none;
+}
+
+#abc-bookingresults > hr:first-child {
+	display: none;
+}

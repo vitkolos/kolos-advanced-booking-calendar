@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Booking Calendar\n"
 "POT-Creation-Date: 2019-03-01 08:45+0100\n"
-"PO-Revision-Date: 2020-05-24 14:35+0000\n"
+"PO-Revision-Date: 2020-06-05 13:43+0000\n"
 "Last-Translator: \n"
 "Language-Team: Čeština\n"
 "Language: cs_CZ\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Report-Msgid-Bugs-To: \n"
-"X-Loco-Version: 2.3.4; wp-5.4.1"
+"X-Loco-Version: 2.4.0; wp-5.4.1"
 
 #: advanced-booking-calendar.php:168
 msgid "Your details"
@@ -246,7 +246,7 @@ msgstr "Průměrný obrat pro kalendář na dalších %d dnů"
 #. Author of the plugin/theme
 #: backend/blocks/class-abc-blocks.php:35
 msgid "Advanced Booking Calendar"
-msgstr "Advanced Booking Calendar"
+msgstr "Rezervační kalendář"
 
 #: backend/blocks/class-abc-blocks.php:65 backend/tinymce-translations.php:12
 msgid "Calendar Overview"
@@ -436,7 +436,7 @@ msgstr ""
 #: backend/bookings.php:2050 backend/settings.php:795
 #: frontend/bookingform.php:529
 msgid "Last Name"
-msgstr "Jméno a příjmení"
+msgstr "Příjmení"
 
 #: backend/bookings.php:473 backend/bookings.php:478
 msgid "Created at"
@@ -551,7 +551,7 @@ msgstr "Checkout (datum odjezdu)"
 #: backend/bookings.php:936 backend/bookings.php:2044 backend/settings.php:785
 #: frontend/bookingform.php:522
 msgid "First Name"
-msgstr "Křestní jméno"
+msgstr "Jméno"
 
 #: backend/bookings.php:948 backend/bookings.php:2056
 #: frontend/bookingform.php:533
