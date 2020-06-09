@@ -735,7 +735,7 @@ label.abc-form-error  {
 /* My styles */
 
 #abc-form-content > div {
-	display: none;
+	/* display: none; */
 }
 
 #abc-bookingresults > hr:first-child {
@@ -771,4 +771,8 @@ label.abc-form-error  {
 .abc-box[disabled], .abc-box[disabled] button {
 	opacity: 0.5;
 	cursor: initial;
+}
+
+.abc-d-none {
+	display: none;
 }

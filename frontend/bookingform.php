@@ -208,8 +208,8 @@ function abc_booking_showBookingForm( $atts ) {
 	<div id="abc-form-wrapper">
 		<img alt="'.__('Loading...', 'advanced-booking-calendar').'" src="'.admin_url('/images/wpspin_light.gif').'" align="middle" class="waiting" id="abc_bookinform_loading" style="display:none" />				
 		<div id="abc-form-content">
-			<div class="abc-column">
-				<form class="abc-form"  method="post">
+			<form class="abc-form abc-d-none" method="post">
+				<div class="abc-column">
 					<label for="abc-from">'.abc_booking_getCustomText('checkin').'</label>
 					<div class="abc-input-fa">
 						<span class="fa fa-calendar"></span>
@@ -220,8 +220,8 @@ function abc_booking_showBookingForm( $atts ) {
 						<span class="fa fa-calendar"></span>
 						<input id="abc-to" name="abc-to" readonly="true" class="abc-to" value="'.$abcToValue.'">
 					</div>
-			</div>			
-			<div class="abc-column abc-form">	
+				</div>			
+				<div class="abc-column abc-form">	
 					<label for="abc-persons">'.__('Persons', 'advanced-booking-calendar').'</label>
 					<div class="abc-input-fa">
 						<span class="fa fa-female abc-guest1"></span>
@@ -232,9 +232,9 @@ function abc_booking_showBookingForm( $atts ) {
 					</div>
 					<input id="abcPostTrigger" type="hidden" name="abcPostTrigger" value="'.$abcPostTrigger.'">	
 					<input id="abcPostCalendarId" type="hidden" name="abcPostCalendarId" value="'.$abcPostCalendarId.'">	
-				</form>	
-			</div>
-			<div class="abc-form-row">
+				</div>
+			</form>	
+			<div class="abc-form-row abc-d-none">
 				<button class="abc-submit" id="abc-check-availabilities"><span id="abc-submit-button" class="abc-submit-text">'.abc_booking_getCustomText('checkAvailabilities').'</span><span class="abc-submit-loading" >'.__('Loading...', 'advanced-booking-calendar').'</span></button>
 				<button class="abc-submit" id="abc-back-to-availabilities" style="display: none;"><span class="abc-submit-text">'.__('Edit', 'advanced-booking-calendar').'</span></button>
 			</div>	
