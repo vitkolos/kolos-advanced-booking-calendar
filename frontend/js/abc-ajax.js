@@ -490,6 +490,7 @@ jQuery(document).on('click', '#abc-bookingform-back', function(){
 });
 
 jQuery(document).on('click', '#abc-bookingform-book-submit', function(){
+	jQuery('#abc-bookingform-book-submit').hide();
 		data = {
 			action: 'abc_booking_getBookingFormBook',
 			from: jQuery(this).data('from'),
@@ -515,16 +516,20 @@ jQuery(document).on('click', '#abc-bookingform-book-submit', function(){
         errorClass:'abc-form-error',
 		rules: ajax_abc_booking_showBookingForm.rules,
 		submitHandler: function (form) { 
-		jQuery('#abc-form-content').fadeOut('medium');
-		jQuery('#abc_bookinform_loading').show();
-		jQuery('html, body').animate({ scrollTop: (jQuery('#abc-form-wrapper').offset().top - 150)}, 'slow');
-		jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
-			jQuery('#abc_bookinform_loading').hide();
-			jQuery('#abc-form-content').html(response);
-			jQuery('#abc-form-content').fadeIn('medium');
-		});	
-		return false;
-        }
+			jQuery('#abc-form-content').fadeOut('medium');
+			jQuery('#abc_bookinform_loading').show();
+			jQuery('html, body').animate({ scrollTop: (jQuery('#abc-form-wrapper').offset().top - 150)}, 'slow');
+			jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
+				jQuery('#abc_bookinform_loading').hide();
+				jQuery('#abc-form-content').html(response);
+				jQuery('#abc-form-content').fadeIn('medium');
+			});	
+			return false;
+		},
+		invalidHandler: function() {
+			jQuery('#abc-bookingform-book-submit').show();
+			return false;
+		}
     });	
 });
 	

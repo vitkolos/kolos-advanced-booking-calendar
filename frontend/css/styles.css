@@ -49,7 +49,7 @@
 /* Booking form */
 #abc-form-wrapper {
  	width: 100%;
- 	padding: 10px;
+ 	/* padding: 10px; */
  	/* max-width: 800px; */
  	font-size: 16px;
  	margin-left: auto;
@@ -95,6 +95,7 @@ label.abc-form-error  {
 	width: 260px;
 	min-width: 240px;
 	padding: 0 10px 0 10px;
+	/* padding-right: 20px; */
 	float: left;
 }
 
@@ -105,7 +106,7 @@ label.abc-form-error  {
 }
 .abc-form-row {
 	clear: both;
-	padding: 10px 10px;
+	/* padding: 10px 10px; */
 }	
 	
 .abc-form label {
@@ -228,6 +229,7 @@ label.abc-form-error  {
 	letter-spacing: 1px;
 	cursor: pointer;
 	transition: opacity 0.2s;
+	margin: 2px 0;
 }
 
 .abc-submit {
@@ -251,7 +253,7 @@ label.abc-form-error  {
 
 #abc-bookingresults{
 	display: none;
-	padding: 10px;
+	/* padding: 10px; */
 }
 
 .abc-result-header{
@@ -321,7 +323,7 @@ label.abc-form-error  {
 		padding: 10px 10px 0px 10px;
 	}
 	.abc-form-row {
-		padding: 10px;
+		/* padding: 10px; */
 	}
 	.abc-result-calendar{
 		width: 100%;
@@ -661,7 +663,7 @@ label.abc-form-error  {
 }
 .abc-booking-selection{
    border-top: 2px solid rgb(221, 221, 221);
-   padding: 5px 10px 5px 10px;
+   /* padding: 5px 10px 5px 10px; */
    display: block;
    clear:both;
 }
@@ -790,8 +792,9 @@ label.abc-form-error  {
 	height: auto;
 	padding: 1em 3em 1em 1em;
 	display: inline-block;
-	margin-left: 1em;
+	/* margin-left: 1em; */
 	/* width: 5em; */
+	border: 1px #ccc solid;
 }
 
 .abc-persons-div {
@@ -800,4 +803,32 @@ label.abc-form-error  {
 
 .abc-form-hr {
 	display: none;
+}
+
+.entry-content table.abc-my-table {
+	table-layout: fixed;
+	margin-bottom: 0;
+}
+
+.abc-my-table td:first-child {
+	text-align: center;
+}
+
+.abc-my-table td:nth-child(2) {
+	text-align: left;
+}
+
+.abc-my-table td:nth-last-child(2) {
+	text-align: right;
+}
+
+textarea[name=message] {
+	max-width: 400px;
+	resize: vertical;
+	min-height: 80px;
+}
+
+#abc-bookingform-book-submit {
+	margin-top: 1em;
+	margin-bottom: 3em;
 }

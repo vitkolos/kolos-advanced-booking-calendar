@@ -631,7 +631,7 @@ function ajax_abc_booking_getBookingFormStep2 () {
 							<span id="abc-bookingform-totalprice" data-totalprice="'.$totalPrice.'"><b>'.__('Total Price', 'advanced-booking-calendar').': '.abc_booking_formatPrice($totalPrice).'</b></span><br/>
 						</span>
 					</div>
-					<div class="abc-form-row">
+					<div class="abc-form-row abc-fullcolumn">
 						<button class="abc-submit" id="abc-bookingform-book-submit" data-persons="'.$abcPersons.'" data-from="'.$abcFromValue.'" 
 							data-to="'.$abcToValue.'" data-calendar="'.$calendarId.'" data-extraslist="'.$extrasString.'">
 							'.abc_booking_getCustomText('bookNow').'

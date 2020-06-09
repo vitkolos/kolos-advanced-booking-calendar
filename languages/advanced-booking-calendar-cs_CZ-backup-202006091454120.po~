@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Booking Calendar\n"
 "POT-Creation-Date: 2020-06-09 13:36+0000\n"
-"PO-Revision-Date: 2020-06-09 14:11+0000\n"
+"PO-Revision-Date: 2020-06-09 14:52+0000\n"
 "Last-Translator: \n"
 "Language-Team: Čeština\n"
 "Language: cs_CZ\n"
@@ -126,7 +126,7 @@ msgstr ""
 
 #: functions.php:53 backend/settings.php:1056
 msgid "No rooms available for your search request."
-msgstr "Pro Vaši poptávku nejsou k dispozici žádné pokoje."
+msgstr "Pro vaši poptávku nejsou k dispozici žádné pokoje."
 
 #: functions.php:56 backend/settings.php:1062
 msgid "Available rooms for your stay"
@@ -155,7 +155,7 @@ msgstr "Rezervovat apartmán"
 
 #: functions.php:74 backend/settings.php:1098
 msgid "Thank you for your booking request!"
-msgstr "Děkujeme za Vaši žádost o rezervaci!"
+msgstr "Děkujeme za vaši žádost o rezervaci!"
 
 #: functions.php:77 backend/settings.php:1104
 msgid "Price for the room"
@@ -272,7 +272,7 @@ msgstr "Telefon"
 
 #: functions.php:825 backend/bookings.php:198
 msgid "Address"
-msgstr "Adresa"
+msgstr "Ostatní"
 
 #: functions.php:826 backend/bookings.php:966 backend/bookings.php:2084
 #: backend/settings.php:832 frontend/bookingform.php:569
@@ -788,7 +788,7 @@ msgstr "Hledání není nastaveno."
 
 #: backend/bookings.php:1691
 msgid "Congratulations on your 10th confirmed Booking!"
-msgstr "Srdečně blahopřejeme k Vaší 10. potvrzené rezervaci!"
+msgstr "Srdečně blahopřejeme k vaší 10. potvrzené rezervaci!"
 
 #: backend/bookings.php:1692
 msgid ""
@@ -807,7 +807,7 @@ msgstr "Klikněte na Ok pro přihlášení!"
 
 #: backend/bookings.php:1698
 msgid "Wow! Congratulations on your 100th confirmed Booking!"
-msgstr "Wow! Srdečně blahopřejeme k Vaší 100. potvrzené rezervaci!"
+msgstr "Wow! Srdečně blahopřejeme k vaší 100. potvrzené rezervaci!"
 
 #: backend/bookings.php:1699 backend/bookings.php:1706
 msgid ""
@@ -986,7 +986,7 @@ msgstr ""
 #: backend/bookings.php:1949
 #, php-format
 msgid "You can also click on \"%s\" and add your first Booking manually."
-msgstr "Vaši první rezervaci můžete také provést kliknutím na \"%s\" ."
+msgstr "Vaši první rezervaci můžete také provést kliknutím na „%s“."
 
 #: backend/bookings.php:1976
 msgid "Open Bookings"
@@ -2190,9 +2190,9 @@ msgstr "Načítám..."
 #, php-format
 msgid "Your stay is too short. Minimum stay for those dates is %d nights."
 msgstr ""
-"Nastavili jste příliš krátké časové rozmezí. Minimální délka pobytu v našem "
-"apartmánu činí %d noci. Rezervaci však můžete dokončit, jenom vás budeme "
-"následně kontaktovat, abychom se dohodli na podmínkách."
+"Nastavili jste příliš krátké časové rozmezí. Minimální délka pobytu v&nbsp;"
+"našem apartmánu činí %d noci. Rezervaci však můžete dokončit, jenom vás "
+"budeme následně kontaktovat, abychom se dohodli na podmínkách."
 
 #: frontend/bookingform.php:331
 msgid "average"
@@ -2253,12 +2253,12 @@ msgstr "Obsazeno"
 
 #: frontend/singlecalendar.php:18 frontend/singlecalendar.php:81
 msgid "Click in the calendar to select your preferred checkin date."
-msgstr ""
+msgstr "Kliknutím do kalendáře vyberte datum vašeho příjezdu."
 
 #: frontend/singlecalendar.php:18 frontend/singlecalendar.php:81
 #: frontend/singlecalendar.php:498
 msgid "You can switch months using the buttons on top of the calendar."
-msgstr ""
+msgstr "Pomocí šipek nahoře můžete přepínat měsíce."
 
 #: frontend/singlecalendar.php:23 frontend/singlecalendar.php:37
 msgid "Su"
@@ -2294,11 +2294,11 @@ msgstr ""
 
 #: frontend/singlecalendar.php:477
 msgid "Choose the number of persons:"
-msgstr ""
+msgstr "Vyberte počet osob:"
 
 #: frontend/singlecalendar.php:479
 msgid "Continue to the booking"
-msgstr ""
+msgstr "Pokračovat k rezervaci"
 
 #: frontend/singlecalendar.php:482
 msgid "Reset"
@@ -2306,7 +2306,7 @@ msgstr "Resetovat"
 
 #: frontend/singlecalendar.php:498
 msgid "Now select your checkout date."
-msgstr ""
+msgstr "Nyní klepněte na datum odjezdu."
 
 #: backend/blocks/class-abc-blocks.php:66
 msgid "It shows all calendars and their availabilities by month."

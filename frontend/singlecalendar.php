@@ -15,7 +15,7 @@ function abc_booking_showSingleCalendar( $atts ) {
 				'ajaxurl' => admin_url( 'admin-ajax.php' ),
 				'abc_nonce' => wp_create_nonce('abc-nonce'),
 				'abc_calendar' =>  $atts['calendar'],
-				'hint' => __('Click in the calendar to select your preferred checkin date.', 'advanced-booking-calendar').' <br>'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar')
+				'hint' => '<table class="abc-my-table"><tr><td colspan="2">'.__('Click in the calendar to select your preferred checkin date.', 'advanced-booking-calendar').'</td></tr><tr><td colspan="2">'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar').'</td></tr></table>'
 			));
 			// wp_enqueue_script('jquery-ui-button');
 			// wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
@@ -78,8 +78,8 @@ function abc_booking_showSingleCalendar( $atts ) {
 										'.__('Fully booked', 'advanced-booking-calendar').'
 										</div>';
 					}
-				$calSingleOutput .= '<div id="abc-booking-'.$divId.'" class="abc-booking-selection"><div>'.__('Click in the calendar to select your preferred checkin date.', 'advanced-booking-calendar').' <br>'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar').'
-					</div></div>
+				$calSingleOutput .= '<div id="abc-booking-'.$divId.'" class="abc-booking-selection"><table class="abc-my-table"><tr><td colspan="2">'.__('Click in the calendar to select your preferred checkin date.', 'advanced-booking-calendar').'</td></tr><tr><td colspan="2">'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar').'
+					</td></tr></table></div>
 				</div>';
 				return $calSingleOutput;
 			
@@ -432,17 +432,17 @@ function ajax_abc_booking_setDataRange() {
 		$dateformat = getAbcSetting('dateformat');
 		$currency = getAbcSetting('currency');
 		if($start != 0){
-			$output .= '<div class="abc-column"><b>'.abc_booking_getCustomText('checkin').':</b> '.date($dateformat, $start).'<br/>
-				<b>'.abc_booking_getCustomText('checkout').':</b> ';
+			$output .= '<form action="'.get_permalink(getAbcSetting("bookingpage")).'" method="post"><table class="abc-my-table"><tr><td><b>'.abc_booking_getCustomText('checkin').':</b> </td><td>'.date($dateformat, $start).'</td></tr>
+				<tr><td><b>'.abc_booking_getCustomText('checkout').':</b> </td><td>';
 			if($end != 0 && $end > $start){
 				$success = true;
 				$output .= date($dateformat, $end);
 				$numberOfDays = abc_booking_dateDiffInDays($end, $start);
-				$output .= '<br/><b>'.abc_booking_getCustomText('roomPrice').': </b>
+				$output .= '</td></tr><tr><td><b>'.abc_booking_getCustomText('roomPrice').': </b></td><td>
 						'.abc_booking_formatPrice(abc_booking_getTotalPrice($calendarId, date("Y-m-d", $start), $numberOfDays));
 				$extrasMandatory = getAbcExtrasList($numberOfDays, 1, 2, $calendarId); // Getting mandatory extras
 				if(count($extrasMandatory) > 0){
-					$output .= '<br/><b>'.abc_booking_getCustomText('extras').': </b>';
+					$output .= '</td></tr><tr><td><b>'.abc_booking_getCustomText('extras').': </b></td><td>';
 					$maxExtras = count($extrasMandatory);
 					$extraCounter = 0;
 					foreach($extrasMandatory as $extra){
@@ -453,8 +453,7 @@ function ajax_abc_booking_setDataRange() {
 				}
 				$minimumStay = abc_booking_checkMinimumStay($calendarId, sanitize_text_field($_POST['start']), sanitize_text_field($_POST['end']));		
 				if($minimumStay > 0){ // Checking if the minimum number of nights to stay is reached
-					$output .= '</div>
-						<div class="abc-column"><b>'.sprintf( __('Your stay is too short. Minimum stay for those dates is %d nights.', 'advanced-booking-calendar'), $minimumStay ).'</b>';
+					$output .= '</td></tr><tr><td colspan="2"><b>'.sprintf( __('Your stay is too short. Minimum stay for those dates is %d nights.', 'advanced-booking-calendar'), $minimumStay ).'';
 				}
 				if(getAbcSetting("bookingpage") > 0 && get_option('abc_bookingformvalidated') == 1){ // Checking if bookingpage in the settings has been defined
 					$optionPersons = '';
@@ -466,15 +465,9 @@ function ajax_abc_booking_setDataRange() {
 						}
 						$optionPersons .= '>'.$i.'</option>';
 					}
-					$output .='</div>
-						<div class="abc-column">
-							<form action="'.get_permalink(getAbcSetting("bookingpage")).'" method="post">
-							<!--<div class="abc-input-fa">
-								<span class="fa fa-female abc-guest1"></span>
-								<span class="fa fa-male abc-guest2"></span>
-								<select id="abc-persons" name="abc-persons">'.$optionPersons.'</select>
-							</div>-->
-							<div class="abc-persons-div"><b>'.__('Choose the number of persons:', 'advanced-booking-calendar').'</b> <select id="abc-persons" name="abc-persons" class="abc-persons-select">'.$optionPersons.'</select></div>
+					$output .='</td></tr><tr><td>
+							
+							<b>'.__('Choose the number of persons:', 'advanced-booking-calendar').'</b> </td><td><select id="abc-persons" name="abc-persons" class="abc-persons-select">'.$optionPersons.'</select></td></tr><tr><td colspan="2">
 							<button class="abc-submit">
 								<span class="abc-submit-text">'.__('Continue to the booking', 'advanced-booking-calendar').'</span>
 							</button>
@@ -493,11 +486,10 @@ function ajax_abc_booking_setDataRange() {
 					$output .= '<input type="hidden" name="abc-to" value="'.date($dateformat, $end).'">';
 					$output .= '<input type="hidden" name="abc-calendarId" value="'.$calendarId.'">';
 					$output .= '<input type="hidden" name="abc-trigger" value="'.$calendarId.'">';
-				$output .= '</form>';	
 			} else {
-				$output .= '–<br>'.__('Now select your checkout date.', 'advanced-booking-calendar').' <br>'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar');
+				$output .= '–</td></tr><tr><td colspan="2">'.__('Now select your checkout date.', 'advanced-booking-calendar').' </td></tr><tr><td colspan="2">'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar');
 			}
-			$output .= '</div><div style="clear:both"></div>';
+			$output .= '</td></tr></table><div style="clear:both"></div></form>';
 		}
 	}
 	if($success){
