@@ -751,4 +751,24 @@ label.abc-form-error  {
 	font-style: normal;
 }
 
-.abc-
+.abc-booking-selection .abc-column {
+	padding: 0;
+	width: 100%;
+}
+
+.abc-month {
+	width: 50%;
+}
+
+.abc-single-button-right-2 {
+	text-align: right;
+}
+
+.abc-box, .abc-box button {
+	transition: all 0.2s;
+}
+
+.abc-box[disabled], .abc-box[disabled] button {
+	opacity: 0.5;
+	cursor: initial;
+}

@@ -1054,6 +1054,16 @@ function getAbcExtrasForBooking($bookingId){
     return $extras;
 }
 
+function getAbcUnits($bookingId){
+    global $wpdb;
+    $units = 0;
+    $er = $wpdb->get_results('SELECT * FROM '.$wpdb->prefix.'abc_calendars WHERE id = '.intval($bookingId), ARRAY_A);
+    foreach($er as $row) {
+        $units = $row['maxUnits'];
+    }
+    return $units;
+}
+
 function getAbcExtrasList($numberOfDays, $abcPersons, $optionalOnly = 0){
     
     global $wpdb;
