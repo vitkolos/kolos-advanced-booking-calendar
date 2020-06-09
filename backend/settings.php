@@ -638,7 +638,7 @@ function advanced_booking_calendar_show_settings() {
 			      </fieldset>
 			      	</div>
 			    </div>
-			  <div class="uk-form-row">
+			  <!--<div class="uk-form-row">
 			      <label class="uk-form-label" for="newsletter">Advanced Booking Calendar '.__('Newsletter', 'advanced-booking-calendar').':</label>
 			       <div class="uk-form-controls">
 			      <fieldset>
@@ -647,7 +647,7 @@ function advanced_booking_calendar_show_settings() {
 			      </fieldset>
 			      	<p class="description">'.__('You will receive regular tips on how to create great Hotel websites and informations about this plugin. We promise to never spam you. You can unsubscribe anytime.', 'advanced-booking-calendar').'</p>
 				     </div>
-			    </div>
+			    </div>-->
 				<div class="uk-form-row">
 			      <label class="uk-form-label" for="bookingpage">'.__('Page with booking form', 'advanced-booking-calendar').':</label>
 			      <div class="uk-form-controls">
@@ -735,7 +735,7 @@ function advanced_booking_calendar_show_settings() {
 			      			<a href="https://wordpress.org/plugins/google-universal-analytics/" target="_blank">Google Universal Analytics</a>.</p>
 				     </div>
 			    </div>
-			    <div class="uk-form-row">
+			    <!--<div class="uk-form-row">
 			      <label class="uk-form-label" for="poweredby">'.__('Powered-by-Link', 'advanced-booking-calendar').':</label>
 			      <div class="uk-form-controls">
 			      <fieldset>
@@ -764,7 +764,7 @@ function advanced_booking_calendar_show_settings() {
 			      </fieldset>
 			      	<p class="description">'.__('If enabled, you will help us to make this plugin better by committing some usage data.', 'advanced-booking-calendar').' '.__('Your visitors will not be affected. No sensible data will be transmitted.', 'advanced-booking-calendar').'</p>
 				     </div>
-			    </div>
+			    </div>-->
 			    <div class="uk-form-row">
 			      <label class="uk-form-label" for="accessLevel">'.__('Access Level', 'advanced-booking-calendar').':</label>
 			      <div class="uk-form-controls">

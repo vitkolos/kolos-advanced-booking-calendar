@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Booking Calendar\n"
 "POT-Creation-Date: 2020-06-09 13:36+0000\n"
-"PO-Revision-Date: 2020-06-09 13:45+0000\n"
+"PO-Revision-Date: 2020-06-09 14:12+0000\n"
 "Last-Translator: \n"
 "Language-Team: Čeština\n"
 "Language: cs_CZ\n"
@@ -272,7 +272,7 @@ msgstr "Telefon"
 
 #: functions.php:825 backend/bookings.php:198
 msgid "Address"
-msgstr "Adresa"
+msgstr "Ostatní"
 
 #: functions.php:826 backend/bookings.php:966 backend/bookings.php:2084
 #: backend/settings.php:832 frontend/bookingform.php:569
@@ -313,7 +313,7 @@ msgstr ""
 
 #: functions.php:883
 msgid "Answer with custom message"
-msgstr ""
+msgstr "Odpovědět vlastní zprávou"
 
 #: functions.php:1098
 #, php-format
@@ -517,7 +517,7 @@ msgstr "Nahoru"
 
 #: backend/bookings.php:440
 msgid "Sorting"
-msgstr ""
+msgstr "Řazení"
 
 #: backend/bookings.php:453 backend/bookings.php:458 backend/bookings.php:942
 #: backend/bookings.php:2053 backend/settings.php:802
@@ -706,7 +706,7 @@ msgid ""
 "Send a customized email to your guest. You can also change the status of the "
 "booking."
 msgstr ""
-"Prostřednictvím tohoto fomuláře pošleš hostovi e-mail. Také tady můžeš "
+"Prostřednictvím tohoto fomuláře pošlete hostovi e-mail. Také tady můžete "
 "změnit stav rezervace."
 
 #: backend/bookings.php:1056
@@ -1174,7 +1174,7 @@ msgstr "Změny byly uloženy."
 
 #: backend/extras.php:173
 msgid "Extras have been ordered."
-msgstr ""
+msgstr "Doplňkové služby byly seřazeny."
 
 #: backend/extras.php:236
 msgid "Edit an Extra"
@@ -1245,21 +1245,25 @@ msgid ""
 "example, if you enter &quot;4&quot;, the extra will be shown for <b>4 or "
 "more</b> persons."
 msgstr ""
+"Zadejte počet osob, který je potřeba k aktivaci této doplňkové služby. Když "
+"zadáte například „4“, doplňková služba se zobrazí pro <b>4 a více</b> osob."
 
 #: backend/extras.php:310 backend/extras.php:407 backend/extras.php:526
 #: backend/extras.php:613
 msgid "Order"
-msgstr ""
+msgstr "Pořadí"
 
 #: backend/extras.php:314 backend/extras.php:617
 msgid ""
 "Enter the position of the extra it should appear in. For example 1 for the "
 "first position."
 msgstr ""
+"Zadejte pozici doplňkové služby, na které se má zobrazovat. Např. 1 je první "
+"pozice."
 
 #: backend/extras.php:400
 msgid "Order Extras"
-msgstr ""
+msgstr "Seřadit doplňkové služby"
 
 #: backend/extras.php:411 backend/extras.php:530
 msgid "Mandatory"
@@ -1267,7 +1271,7 @@ msgstr "Povinné"
 
 #: backend/extras.php:420
 msgid "Save Order"
-msgstr ""
+msgstr "Uložit pořadí"
 
 #: backend/extras.php:427 backend/extras.php:628
 msgid "Do you want to promote your business using discount codes?"
@@ -1298,19 +1302,19 @@ msgstr "Stávající doplňkové služby"
 
 #: backend/extras.php:520
 msgid "Sort Extras"
-msgstr ""
+msgstr "Seřadit doplňkové služby"
 
 #: backend/extras.php:540
 msgid "Add new Extra"
-msgstr "Leistung hinzufügen"
+msgstr "Přidat novou doplňkovou službu"
 
 #: backend/extras.php:550
 msgid "Wifi"
-msgstr "WLAN"
+msgstr "Wi-Fi"
 
 #: backend/extras.php:560
 msgid "Get Wifi-access in your room."
-msgstr ""
+msgstr "Získejte přístup k Wi-Fi."
 
 #: backend/extras.php:623
 msgid "Add Extra"
@@ -1590,7 +1594,7 @@ msgstr "Krátký informační text"
 
 #: backend/seasons-calendars.php:508 backend/seasons-calendars.php:796
 msgid "Nice Apartment with sea view..."
-msgstr "Pěkný apartement s výhledem na město"
+msgstr "Pěkný apartmán s výhledem na moře…"
 
 #: backend/seasons-calendars.php:508 backend/seasons-calendars.php:796
 msgid "Maximum 200 chars"
@@ -1613,9 +1617,7 @@ msgstr "Minimální pobyt"
 msgid ""
 "Enter the number of nights a guest has to stay. Bookings below this number "
 "of nights will not be accepted."
-msgstr ""
-"Uveďte počet nocí, po které musí host minim. zůstat. Rezervace pod touto "
-"hranicí nebudou možné."
+msgstr "Uveďte počet nocí, po které musí host minimálně zůstat."
 
 #: backend/seasons-calendars.php:593 backend/seasons-calendars.php:887
 #: backend/seasons-calendars.php:916
@@ -1649,7 +1651,7 @@ msgstr "Sezóna"
 
 #: backend/seasons-calendars.php:679
 msgid "Season - Calendar - Assignments"
-msgstr "Sezóna - Kalendář - Přiřazení"
+msgstr "Přiřazení sezón a kalendářů"
 
 #: backend/seasons-calendars.php:703
 msgid "No Page selected"
@@ -1807,7 +1809,7 @@ msgstr "Tato e-mailová adresa obdrží všechny žádosti o rezervace."
 
 #: backend/settings.php:633
 msgid "Send copies of guest mails to the email address above"
-msgstr ""
+msgstr "Posílat kopie e-mailů směřovaných hostům na adresu uvedenou výše"
 
 #: backend/settings.php:636 backend/settings.php:711 backend/settings.php:721
 #: backend/settings.php:731 backend/settings.php:742 backend/settings.php:752
@@ -1981,11 +1983,11 @@ msgstr ""
 
 #: backend/settings.php:778
 msgid "Download"
-msgstr ""
+msgstr "Stáhnout"
 
 #: backend/settings.php:779
 msgid "Generate a JSON-file with all database tables and settings."
-msgstr ""
+msgstr "Vygeneruje soubor JSON se všemi nastaveními a tabulkami databáze."
 
 #: backend/settings.php:788
 msgid "Booking Form Inputs"
