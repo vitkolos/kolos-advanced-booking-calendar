@@ -103,8 +103,7 @@ function buttonLR(el, right, num) {
 			tempDate.setDate(tempDate.getDate() - 1);
 			if(getDateYYYYMMDD(tempDate).slice(-2) != item.html()) {
 				jQuery('#abc_singlecalendar_' + uniqid).data('checkin-' + uniqid, 0);
-				jQuery('#abc-booking-' + uniqid).html(ajax_abc_booking_SingleCalendar.tip);
-				// TODO translation
+				jQuery('#abc-booking-' + uniqid).html(ajax_abc_booking_SingleCalendar.hint);
 			}
 		}
 	}
@@ -132,6 +131,12 @@ function buttonLR(el, right, num) {
 	jQuery('#abc_singlecalendar_' + uniqid).data('month-' + uniqid, month);
 	return false;
 }
+
+jQuery(document).on('click', '.abc-reset', function(){
+	jQuery('.abc-singlecalendar').data('checkin-' + jQuery('.abc-singlecalendar').data('id'), 0);
+	jQuery('.abc-booking-selection').html(ajax_abc_booking_SingleCalendar.hint);
+	jQuery('.abc-date-selected').removeClass('abc-date-selected');
+});
 
 jQuery('.abc-singlecalendar').on('click', '.abc-date-item', function(){
 	var uniqid = jQuery(this).data('id');
@@ -188,22 +193,6 @@ jQuery('.abc-singlecalendar').on('click', '.abc-date-item', function(){
 	if(abcSingleCheckout != 0 || true) {
 		jQuery.post(ajax_abc_booking_SingleCalendar.ajaxurl, data, function (response){
 			jQuery('#abc-booking-' + uniqid).html(response);
-
-			if(response.split("</b>")[2].trim().split("</div>")[0] != "–") {
-				data = {
-					action: 'abc_booking_getBookingFormStep2',
-					from: response.split("</b>")[1].trim().split("</div>")[0],
-					to: response.split("</b>")[2].trim().split("</div>")[0],
-					persons: jQuery("#abc-persons").val(),
-					calendar: calendar
-				};
-				jQuery('#abc-bookingresults').fadeOut('slow');
-				jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
-					jQuery('#abc-bookingresults').html(response);
-					jQuery('#abc-bookingresults').fadeIn('medium');
-					jQuery('#abc-back-to-availabilities').show();
-				});
-			}
 		});
 	}
 	jQuery('#abc_singlecalendar_' + uniqid).data('checkin-' + uniqid, abcSingleCheckin);

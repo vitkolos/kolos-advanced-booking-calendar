@@ -15,7 +15,7 @@ function abc_booking_showSingleCalendar( $atts ) {
 				'ajaxurl' => admin_url( 'admin-ajax.php' ),
 				'abc_nonce' => wp_create_nonce('abc-nonce'),
 				'abc_calendar' =>  $atts['calendar'],
-				'tip' => __('Click in the calendar to select your preferred checkin date.').' <br>'.__('You can switch months using the buttons on top of the calendar.')
+				'hint' => __('Click in the calendar to select your preferred checkin date.', 'advanced-booking-calendar').' <br>'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar')
 			));
 			// wp_enqueue_script('jquery-ui-button');
 			// wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
@@ -78,7 +78,7 @@ function abc_booking_showSingleCalendar( $atts ) {
 										'.__('Fully booked', 'advanced-booking-calendar').'
 										</div>';
 					}
-				$calSingleOutput .= '<div id="abc-booking-'.$divId.'" class="abc-booking-selection"><div>'.__('Click in the calendar to select your preferred checkin date.').' <br>'.__('You can switch months using the buttons on top of the calendar.').'
+				$calSingleOutput .= '<div id="abc-booking-'.$divId.'" class="abc-booking-selection"><div>'.__('Click in the calendar to select your preferred checkin date.', 'advanced-booking-calendar').' <br>'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar').'
 					</div></div>
 				</div>';
 				return $calSingleOutput;
@@ -469,13 +469,17 @@ function ajax_abc_booking_setDataRange() {
 					$output .='</div>
 						<div class="abc-column">
 							<form action="'.get_permalink(getAbcSetting("bookingpage")).'" method="post">
-							<div class="abc-input-fa">
+							<!--<div class="abc-input-fa">
 								<span class="fa fa-female abc-guest1"></span>
 								<span class="fa fa-male abc-guest2"></span>
 								<select id="abc-persons" name="abc-persons">'.$optionPersons.'</select>
-							</div>
+							</div>-->
+							<div class="abc-persons-div"><b>'.__('Choose the number of persons:', 'advanced-booking-calendar').'</b> <select id="abc-persons" name="abc-persons" class="abc-persons-select">'.$optionPersons.'</select></div>
 							<button class="abc-submit">
-								<span class="abc-submit-text">'.abc_booking_getCustomText('bookNow').'</span>
+								<span class="abc-submit-text">'.__('Continue to the booking', 'advanced-booking-calendar').'</span>
+							</button>
+							<button class="abc-reset" type="button">
+								<span class="abc-submit-text">'.__('Reset', 'advanced-booking-calendar').'</span>
 							</button>
 							';
 				}
@@ -491,7 +495,7 @@ function ajax_abc_booking_setDataRange() {
 					$output .= '<input type="hidden" name="abc-trigger" value="'.$calendarId.'">';
 				$output .= '</form>';	
 			} else {
-				$output .= '–<br>'.__('Now select your checkout date.').' <br>'.__('You can switch months using the buttons on top of the calendar.');
+				$output .= '–<br>'.__('Now select your checkout date.', 'advanced-booking-calendar').' <br>'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar');
 			}
 			$output .= '</div><div style="clear:both"></div>';
 		}

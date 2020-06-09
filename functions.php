@@ -1270,7 +1270,7 @@ function getAbcColor($colorInt){
                 $colorCode = '#ffc5aa';
                 break;
             case 10:
-                $colorCode = '#99e7f5';
+                $colorCode = '#9cba4c';
                 break;
             case 11:
                 $colorCode = '#fdea99';
