@@ -185,7 +185,7 @@ function abc_booking_showCalOverview ( $atts ) {
 	wp_enqueue_script('abc-ajax', $abcUrl.'frontend/js/abc-ajax.js', array('jquery'));
 	wp_enqueue_script('uikit-js', $abcUrl.'backend/js/uikit.min.js', array('jquery'));
 	wp_enqueue_script('jqury-tooltip', $abcUrl.'backend/js/tooltip.min.js', array('jquery'));
-	wp_localize_script( 'abc-ajax', 'ajax_abc_booking_calOverview', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'abc_nonce' => wp_create_nonce('abc-nonce')));
+	wp_localize_script( 'abc-ajax', 'ajax_abc_booking_calOverview', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'abc_nonce' => wp_create_nonce('abc-nonce'), 'lang' => substr(get_locale(), 0,2)));
 	$calOverviewResult = '<!-- Begin Advanced Booking Calendar WordPress plugin: https://www.booking-calendar-plugin.com -->'.abcEnqueueCustomCss();
 	$legend = '';
 	if(isset($atts['legend']) && intval($atts['legend']) == 1){

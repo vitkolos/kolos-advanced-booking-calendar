@@ -15,7 +15,8 @@ function abc_booking_showSingleCalendar( $atts ) {
 				'ajaxurl' => admin_url( 'admin-ajax.php' ),
 				'abc_nonce' => wp_create_nonce('abc-nonce'),
 				'abc_calendar' =>  $atts['calendar'],
-				'hint' => '<table class="abc-my-table"><tr><td colspan="2">'.__('Click in the calendar to select your preferred checkin date.', 'advanced-booking-calendar').'</td></tr><tr><td colspan="2">'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar').'</td></tr></table>'
+				'hint' => '<table class="abc-my-table"><tr><td colspan="2">'.__('Click in the calendar to select your preferred checkin date.', 'advanced-booking-calendar').'</td></tr><tr><td colspan="2">'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar').'</td></tr></table>',
+				'lang' => substr(get_locale(), 0,2)
 			));
 			// wp_enqueue_script('jquery-ui-button');
 			// wp_enqueue_style('abc-datepicker', $abcUrl.'/frontend/css/jquery-ui.min.css');
@@ -442,12 +443,13 @@ function ajax_abc_booking_setDataRange() {
 						'.abc_booking_formatPrice(abc_booking_getTotalPrice($calendarId, date("Y-m-d", $start), $numberOfDays));
 				$extrasMandatory = getAbcExtrasList($numberOfDays, 1, 2, $calendarId); // Getting mandatory extras
 				if(count($extrasMandatory) > 0){
+					$langs = array("cs"=>0,"en"=>1,"fr"=>2,"de"=>3);
 					$output .= '</td></tr><tr><td><b>'.abc_booking_getCustomText('extras').': </b></td><td>';
 					$maxExtras = count($extrasMandatory);
 					$extraCounter = 0;
 					foreach($extrasMandatory as $extra){
 						$extraCounter++;
-						$output .= abc_booking_formatPrice($extra["priceValue"]).' ('.$extra["name"].')';
+						$output .= abc_booking_formatPrice($extra["priceValue"]).' ('.explode(" / ", $extra["name"])[$langs[substr(get_locale(), 0,2)]].')';
 						$output .= ($extraCounter == $maxExtras) ? '' : ', ';
 					}
 				}
@@ -486,6 +488,7 @@ function ajax_abc_booking_setDataRange() {
 					$output .= '<input type="hidden" name="abc-to" value="'.date($dateformat, $end).'">';
 					$output .= '<input type="hidden" name="abc-calendarId" value="'.$calendarId.'">';
 					$output .= '<input type="hidden" name="abc-trigger" value="'.$calendarId.'">';
+					$output .= '<input type="hidden" name="lang" value="'.sanitize_text_field($_POST['lang']).'">';
 			} else {
 				$output .= '–</td></tr><tr><td colspan="2">'.__('Now select your checkout date.', 'advanced-booking-calendar').' </td></tr><tr><td colspan="2">'.__('You can switch months using the buttons on top of the calendar.', 'advanced-booking-calendar');
 			}

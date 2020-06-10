@@ -160,6 +160,7 @@ function abc_booking_showBookingForm( $atts ) {
 		'hide_other' => $hideOther,
 		'hide_tooshort' => $hideTooShort,
 		'calendars' => $abcPostCalendarId,
+		'lang' => substr(get_locale(), 0,2)
 	));
 
 	$abcFromValue = '';
@@ -470,7 +471,8 @@ function ajax_abc_booking_getBookingFormStep2 () {
 						if(strlen($extrasMandatory) > 1){
 							$extrasMandatory .= ', ';
 						}
-						$extrasMandatory .= $extra["name"];
+						$langs = array("cs"=>0,"en"=>1,"fr"=>2,"de"=>3);
+						$extrasMandatory .= explode(" / ", $extra["name"])[$langs[substr(get_locale(), 0,2)]];
 						break;
 					case '0':
 						if(in_array($extra["id"], $extrasSelected)){
@@ -555,7 +557,7 @@ function ajax_abc_booking_getBookingFormStep2 () {
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
 				$bookingFormOutput .= '<label for="phone">'.__('Phone Number', 'advanced-booking-calendar').'</label><br />
-						<input type="tel" id="phone" name="phone"><br />';
+						<input type="tel" id="phone" name="phone" value="+420 "><br />';
 			}
 			if($bookingFormSetting["street"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
@@ -585,7 +587,27 @@ function ajax_abc_booking_getBookingFormStep2 () {
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
 				$bookingFormOutput .= '<label for="country">'.__('Country', 'advanced-booking-calendar').'</label><br />
-						<input type="text" id="country" name="country" value="česky"><br />';
+						<input type="text" id="country" name="country" value="';
+				if(isset($_POST["lang"])) {
+					switch ($_POST["lang"]) {
+						case 'en':
+							$bookingFormOutput .= 'English';
+							break;
+
+						case 'fr':
+							$bookingFormOutput .= 'français';
+							break;
+
+						case 'de':
+							$bookingFormOutput .= 'Deutch';
+							break;
+						
+						default:
+							$bookingFormOutput .= 'česky';
+							break;
+					}
+				}
+				$bookingFormOutput .= '"><br />';
 			}
 			if($bookingFormSetting["message"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}

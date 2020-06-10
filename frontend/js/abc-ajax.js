@@ -63,7 +63,8 @@ function buttonLR(el, right, num) {
 	dateData = {
 			action: 'abc_booking_getMonth',
 			abc_nonce: ajax_abc_booking_SingleCalendar.abc_nonce,
-			month: month
+			month: month,
+			lang: ajax_abc_booking_SingleCalendar.lang
 	}
 	data = {
 		action: 'abc_booking_getSingleCalendar',
@@ -188,7 +189,8 @@ jQuery('.abc-singlecalendar').on('click', '.abc-date-item', function(){
 		start: abcSingleCheckin, 
 		end: abcSingleCheckout, 
 		uniqid: uniqid, 
-		calendar: calendar
+		calendar: calendar,
+		lang: ajax_abc_booking_SingleCalendar.lang
 	};
 	if(abcSingleCheckout != 0 || true) {
 		jQuery.post(ajax_abc_booking_SingleCalendar.ajaxurl, data, function (response){
@@ -259,7 +261,8 @@ jQuery('.abc-calendar-overview').on('click', '.abc-overview-button', function(){
 		abc_nonce: ajax_abc_booking_calOverview.abc_nonce,
 		month: overviewMonth,
 		year: overviewYear,
-		uniqid: uniqid
+		uniqid: uniqid,
+		lang: ajax_abc_booking_calOverview.lang
 	};
 	
 	jQuery.post(ajax_abc_booking_calOverview.ajaxurl, data, function (response){
@@ -284,7 +287,8 @@ jQuery( '.abc-calendar-overview' ).on('change', "select[name='abcMonth']", funct
 		abc_nonce: ajax_abc_booking_calOverview.abc_nonce,
 		month: overviewMonth,
 		year: overviewYear,
-		uniqid: uniqid
+		uniqid: uniqid,
+		lang: ajax_abc_booking_calOverview.lang
 	};
 	jQuery.post(ajax_abc_booking_calOverview.ajaxurl, data, function (response){
 		jQuery('#abc-calendaroverview-' + uniqid).html(response);
@@ -306,7 +310,8 @@ jQuery( '.abc-calendar-overview' ).on('change', "select[name='abcYear']", functi
 		abc_nonce: ajax_abc_booking_calOverview.abc_nonce,
 		month: overviewMonth,
 		year: overviewYear,
-		uniqid: uniqid
+		uniqid: uniqid,
+		lang: ajax_abc_booking_calOverview.lang
 	};
 	jQuery.post(ajax_abc_booking_calOverview.ajaxurl, data, function (response){
 		jQuery('#abc-calendaroverview-' + uniqid).html(response);
@@ -326,7 +331,8 @@ function getAbcAvailabilities(calendarId){
 		persons: jQuery("#abc-persons").val(),
 		// hide_other: ajax_abc_booking_showBookingForm.hide_other,
 		// hide_tooshort: ajax_abc_booking_showBookingForm.hide_tooshort,
-		calendar: calendarId
+		calendar: calendarId,
+		lang: ajax_abc_booking_showBookingForm.lang
 	};
 	jQuery('#abc-submit-button').hide();
 	jQuery('#abc-bookingresults').hide();
@@ -368,7 +374,8 @@ jQuery(document).ready(function() {
 			action: 'abc_booking_getPayPalResponse',
 			paypal: jQuery.urlParam('abc-paypal'),
 			token: jQuery.urlParam('token'),
-			payerId: payerId
+			payerId: payerId,
+			lang: ajax_abc_booking_showBookingForm.lang
 		};
 		jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
 			jQuery('#abc_bookinform_loading').hide();
@@ -413,7 +420,8 @@ jQuery(document).on('click', '.abc-bookingform-book', function(){
 		from: jQuery(this).data('from'),
 		to: jQuery(this).data('to'),
 		persons: jQuery(this).data('persons'),
-		calendar: jQuery(this).data('calendar')
+		calendar: jQuery(this).data('calendar'),
+		lang: ajax_abc_booking_showBookingForm.lang
 	};
 	jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
 		jQuery('#abc-bookingresults').html(response);
@@ -433,7 +441,8 @@ jQuery(document).on('click', '#abc-bookingform-coupon-submit', function(){
 		code: jQuery('#abc-coupon').val(),
 		from: jQuery(this).data('from'),
 		to: jQuery(this).data('to'),
-		calendar: jQuery(this).data('calendar')
+		calendar: jQuery(this).data('calendar'),
+		lang: ajax_abc_booking_showBookingForm.lang
 	};
 	jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response) {
         if (response == 0) {
@@ -464,7 +473,8 @@ jQuery(document).on('click', '#abc-bookingform-extras-submit', function(){
 		from: jQuery(this).data('from'),
 		to: jQuery(this).data('to'),
 		persons: jQuery(this).data('persons'),
-		calendar: jQuery(this).data('calendar')
+		calendar: jQuery(this).data('calendar'),
+		lang: ajax_abc_booking_showBookingForm.lang
 	};
 	jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
 		jQuery('#abc-bookingresults').html(response);
@@ -480,7 +490,8 @@ jQuery(document).on('click', '#abc-bookingform-back', function(){
 		action: 'abc_booking_getBackToBookingResult',
 		from: jQuery(this).data('from'),
 		to: jQuery(this).data('to'),
-		persons: jQuery(this).data('persons')
+		persons: jQuery(this).data('persons'),
+		lang: ajax_abc_booking_showBookingForm.lang
 	};
 	jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
 		jQuery('#abc-form-content').html(response);
@@ -510,7 +521,8 @@ jQuery(document).on('click', '#abc-bookingform-book-submit', function(){
 			coupon: jQuery('#abc-coupon').val(),
 			payment: jQuery("input[name='payment']:checked").val(),
 			message: jQuery('#message').val(),
-			optincheckbox: jQuery("input[name='optincheckbox']:checked").val()
+			optincheckbox: jQuery("input[name='optincheckbox']:checked").val(),
+			lang: ajax_abc_booking_showBookingForm.lang
 		};
 	jQuery('.abc-booking-form').validate({ // initialize the plugin
         errorClass:'abc-form-error',
