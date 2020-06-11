@@ -1127,14 +1127,21 @@ function getAbcExtrasList($numberOfDays, $abcPersons, $optionalOnly = 0){
 	                break;
 	        }
             $extrasList[$row["id"]]["id"] = intval($row["id"]);
+
             $langs = array("cs"=>0,"en"=>1,"fr"=>2,"de"=>3);
-            $extraName = esc_html($row["name"]);
             $localeSubstr = substr(get_locale(), 0,2);
             $langIndex = isset($langs[$localeSubstr]) ? $langs[$localeSubstr] : 0;
+
+            $extraName = esc_html($row["name"]);
             $extraNameArray = explode(" / ", $extraName);
             $extraNameTranslated = isset($extraNameArray[$langIndex]) ? $extraNameArray[$langIndex] : $extraName;
-	        $extrasList[$row["id"]]["name"] = $extraNameTranslated;
-	        $extrasList[$row["id"]]["explanation"] = esc_html($row["explanation"]);
+            $extrasList[$row["id"]]["name"] = $extraNameTranslated;
+            
+            $extraExpl = esc_html($row["explanation"]);
+            $extraExplArray = explode(" / ", $extraExpl);
+            $extraExplTranslated = isset($extraExplArray[$langIndex]) ? $extraExplArray[$langIndex] : $extraExpl;
+            $extrasList[$row["id"]]["explanation"] = $extraExplTranslated;
+            
 	        switch($row["mandatory"]){
 	            case 'yes':
 	                $extrasList[$row["id"]]["mandatory"] = 1;

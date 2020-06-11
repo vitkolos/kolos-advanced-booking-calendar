@@ -458,17 +458,19 @@ function ajax_abc_booking_setDataRange() {
 				}
 				if(getAbcSetting("bookingpage") > 0 && get_option('abc_bookingformvalidated') == 1){ // Checking if bookingpage in the settings has been defined
 					$optionPersons = '';
-					$abcPersonValue = 1;
-					for( $i = 1; $i <= getAbcUnits($calendarId); $i++) { 
-						$optionPersons .= '<option value="'.$i.'"';
+					$abcPersonValue = 2;
+					for( $i = 1; $i <= getAbcUnits($calendarId); $i++) {
+						$optionPersons .= '<input type="radio" id="abc-persons-'.$calendarId.'-'.$i.'" name="abc-persons" value="'.$i.'"';
 						if ( $i == $abcPersonValue) {
-							$optionPersons .= ' selected';
+							$optionPersons .= ' checked';
 						}
-						$optionPersons .= '>'.$i.'</option>';
+						$optionPersons .= '><label for="abc-persons-'.$calendarId.'-'.$i.'">'.$i.'</label>';
 					}
-					$output .='</td></tr><tr><td>
+					$output .='</td></tr><tr><td colspan="2">
 							
-							<b>'.__('Choose the number of persons:', 'advanced-booking-calendar').'</b> </td><td><select id="abc-persons" name="abc-persons" class="abc-persons-select">'.$optionPersons.'</select></td></tr><tr><td colspan="2">
+							<b>'.__('Choose the number of persons:', 'advanced-booking-calendar').'</b> 
+							<div class="abc-persons-select">'.$optionPersons.'</div>
+							</td></tr><tr><td colspan="2">
 							<button class="abc-submit">
 								<span class="abc-submit-text">'.__('Continue to the booking', 'advanced-booking-calendar').'</span>
 							</button>

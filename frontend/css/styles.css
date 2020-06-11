@@ -785,22 +785,6 @@ label.abc-form-error  {
 	display: none;
 }
 
-.abc-persons-select {
-	background-color: white;
-	margin: 0;
-	width: auto;
-	height: auto;
-	padding: 1em 3em 1em 1em;
-	display: inline-block;
-	/* margin-left: 1em; */
-	/* width: 5em; */
-	border: 1px #ccc solid;
-}
-
-.abc-persons-div {
-	margin: 10px 0;
-}
-
 .abc-form-hr {
 	display: none;
 }
@@ -825,11 +809,47 @@ label.abc-form-error  {
 textarea[name=message] {
 	max-width: 400px;
 	resize: vertical;
-	min-height: 80px;
+	min-height: 118px;
 }
 
 #abc-bookingform-book-submit,
 #abc-bookingform-extras-submit {
 	margin-top: 1em;
 	margin-bottom: 3em;
+}
+
+.abc-fullcolumn > .abc-column, .abc-fullcolumn > .abc-fullcolumn {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.abc-persons-select input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+.abc-persons-select label {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: solid 1px #333;
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.abc-persons-select input[type=radio]:checked + label {
+  color: white;
+  background: #333;
+}
+
+.abc-persons-select {
+  border: solid 1px #333;
+  display: inline-flex;
+  /* border-radius: 10px; */
+  flex-wrap: wrap;
+  width: auto;
+  margin-left: 10px;
 }

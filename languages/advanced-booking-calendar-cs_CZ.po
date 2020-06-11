@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Booking Calendar\n"
 "POT-Creation-Date: 2020-06-09 13:36+0000\n"
-"PO-Revision-Date: 2020-06-09 14:54+0000\n"
+"PO-Revision-Date: 2020-06-11 17:08+0000\n"
 "Last-Translator: \n"
 "Language-Team: Čeština\n"
 "Language: cs_CZ\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Report-Msgid-Bugs-To: \n"
-"X-Loco-Version: 2.4.0; wp-5.4.1"
+"X-Loco-Version: 2.4.0; wp-5.4.2"
 
 #: advanced-booking-calendar.php:170 backend/bookings.php:1068
 #, php-format
@@ -2207,7 +2207,7 @@ msgstr[2] "Volitelné další služby"
 
 #: frontend/bookingform.php:443
 msgid "Continue"
-msgstr "Dále"
+msgstr "Pokračovat"
 
 #: frontend/bookingform.php:501
 msgid "Selected extra"

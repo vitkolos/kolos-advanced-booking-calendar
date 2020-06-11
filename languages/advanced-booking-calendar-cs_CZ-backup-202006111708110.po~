@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Booking Calendar\n"
 "POT-Creation-Date: 2020-06-09 13:36+0000\n"
-"PO-Revision-Date: 2020-06-09 14:52+0000\n"
+"PO-Revision-Date: 2020-06-09 14:54+0000\n"
 "Last-Translator: \n"
 "Language-Team: Čeština\n"
 "Language: cs_CZ\n"
@@ -2226,7 +2226,9 @@ msgstr "Cena celkem"
 
 #: frontend/bookingform.php:746
 msgid "We have sent you an email including a summary of your booking!"
-msgstr "Zaslali jsme vám e-mail včetně shrnutí vaší objednávky!"
+msgstr ""
+"Zaslali jsme vám e-mail, v němž naleznete shrnutí vaší objednávky a údaje k "
+"platbě. Vaši rezervaci potvrdíme, jakmile zaplatíte."
 
 #: frontend/bookingform.php:751
 msgid ""

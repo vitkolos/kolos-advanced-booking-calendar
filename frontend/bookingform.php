@@ -412,13 +412,15 @@ function ajax_abc_booking_getBookingFormStep2 () {
 									<span class="abc-result-header">'._n('Optional extra', 'Optional extras', $amountOfExtras, 'advanced-booking-calendar').'</span>
 								</div>
 							</div>
-							<div class="abc-form-row">';
+							<div class="abc-form-row abc-fullcolumn">';
 			$i = 1;
 			foreach($extrasOptional as $extra){
 				$tempText = '<span  class="abc-extra-name abc-pointer">'.$extra["name"].', '.abc_booking_formatPrice($extra["priceValue"]).'</span>';
+				$tempText .= '<span class="abc-extra-cost abc-pointer"></br>('.$extra["priceText"].')';
 				if(strlen($extra["explanation"]) > 1){
-					$tempText .= '<span class="abc-extra-cost abc-pointer"></br>('.$extra["priceText"].')</br>'.$extra["explanation"].'</span>';
+					$tempText .= '</br>'.$extra["explanation"];
 				}
+				$tempText .= '</span>';
 				$extraTemp = '<div class="abc-column">
 								<div class="abc-option">
 									<div class="abc-optional-column-checkbox">
@@ -430,7 +432,7 @@ function ajax_abc_booking_getBookingFormStep2 () {
 								</div>
 							  </div>';
 				if($i % 2 == 1){
-					$bookingFormOutput .= '<div class="abc-form-row">'.$extraTemp;
+					$bookingFormOutput .= '<div class="abc-form-row abc-fullcolumn">'.$extraTemp;
 				}else{
 					$bookingFormOutput .= $extraTemp.'</div>';
 				}
@@ -538,61 +540,61 @@ function ajax_abc_booking_getBookingFormStep2 () {
 			$bookingFormColumn = ceil(($bookingFormSetting["inputs"]+1)/2);
 			$rowCount = 0;
 			if($bookingFormSetting["firstname"] > 0){
-				$bookingFormOutput .= '<label for="first_name">'.__('First Name', 'advanced-booking-calendar').'</label><br />
-						<input type="text" id="first_name" name="first_name"><br />';
+				$bookingFormOutput .= '<label for="first_name">'.__('First Name', 'advanced-booking-calendar').'</label>
+						<input type="text" id="first_name" name="first_name">';
 				$rowCount++;
 			}	
 			if($bookingFormSetting["lastname"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
-				$bookingFormOutput .= '<label for="last_name">'.__('Last Name', 'advanced-booking-calendar').'</label><br />
-						<input type="text" id="last_name" name="last_name"><br />';
+				$bookingFormOutput .= '<label for="last_name">'.__('Last Name', 'advanced-booking-calendar').'</label>
+						<input type="text" id="last_name" name="last_name">';
 			}	
 			if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
-			$bookingFormOutput .= '<label for="email">'.__('Email Address', 'advanced-booking-calendar').'</label><br />
-						<input type="email" id="email" name="email"><br />';
+			$bookingFormOutput .= '<label for="email">'.__('Email Address', 'advanced-booking-calendar').'</label>
+						<input type="email" id="email" name="email">';
 			$rowCount++;
 			if($bookingFormSetting["phone"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
-				$bookingFormOutput .= '<label for="phone">'.__('Phone Number', 'advanced-booking-calendar').'</label><br />
-						<input type="tel" id="phone" name="phone" value="+420 "><br />';
+				$bookingFormOutput .= '<label for="phone">'.__('Phone Number', 'advanced-booking-calendar').'</label>
+						<input type="tel" id="phone" name="phone" value="+420 ">';
 			}
 			if($bookingFormSetting["street"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
-				$bookingFormOutput .= '<label for="address">'.__('Street Address, House no.', 'advanced-booking-calendar').'</label><br />
-						<input type="text" id="address" name="address"><br />';
+				$bookingFormOutput .= '<label for="address">'.__('Street Address, House no.', 'advanced-booking-calendar').'</label>
+						<input type="text" id="address" name="address">';
 			}
 			if($bookingFormSetting["zip"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
-				$bookingFormOutput .= '<label for="zip">'.__('ZIP Code', 'advanced-booking-calendar').'</label><br />
-						<input type="text" id="zip" name="zip"><br />';
+				$bookingFormOutput .= '<label for="zip">'.__('ZIP Code', 'advanced-booking-calendar').'</label>
+						<input type="text" id="zip" name="zip">';
 			}
 			if($bookingFormSetting["city"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
-				$bookingFormOutput .= '<label for="city">'.__('City', 'advanced-booking-calendar').'</label><br />
-						<input type="time" id="city" name="city" value="15:00"><br />';
+				$bookingFormOutput .= '<label for="city">'.__('City', 'advanced-booking-calendar').'</label>
+						<input type="time" id="city" name="city" value="15:00">';
 			}
 			if($bookingFormSetting["county"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
-				$bookingFormOutput .= '<label for="county">'.__('State / County', 'advanced-booking-calendar').'</label><br />
-						<input type="time" id="county" name="county" value="10:00"><br />';
+				$bookingFormOutput .= '<label for="county">'.__('State / County', 'advanced-booking-calendar').'</label>
+						<input type="time" id="county" name="county" value="10:00">';
 			}
 			if($bookingFormSetting["country"] > 0){
 				// if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				// $rowCount++;
-				// $bookingFormOutput .= '<label for="country">'.__('Country', 'advanced-booking-calendar').'</label><br />
-				// 		<input type="text" id="country" name="country" value="'.substr(get_locale(), 0,2).'"><br />';
-				$bookingFormOutput .= '<input type="text" id="country" name="country" value="'.substr(get_locale(), 0,2).'">';
+				// $bookingFormOutput .= '<label for="country">'.__('Country', 'advanced-booking-calendar').'</label>
+				// 		<input type="text" id="country" name="country" value="'.substr(get_locale(), 0,2).'">';
+				$bookingFormOutput .= '<input type="hidden" id="country" name="country" value="'.substr(get_locale(), 0,2).'">';
 			}
 			if($bookingFormSetting["message"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
-				$bookingFormOutput .= '<label for="message">'.__('Message, special note for stay', 'advanced-booking-calendar').'</label><br />
+				$bookingFormOutput .= '<label for="message">'.__('Message, special note for stay', 'advanced-booking-calendar').'</label>
 						<textarea id="message" name="message"></textarea>';
 			}
 			if($bookingFormSetting["optincheckbox"] > 0){

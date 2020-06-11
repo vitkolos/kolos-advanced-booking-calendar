@@ -594,7 +594,7 @@ function ajax_abc_booking_getOptionalExtras(){
 				$priceClass = ' abc-priceindicator';
 			}	
 			$tempText = '<span class="abc-extra-name abc-pointer">'.$extra["name"].', '.abc_booking_formatPrice($extra["priceValue"]).'</span>';
-			if(strlen($extra["explanation"]) > 1){
+			if(strlen($extra["explanation"]) > 1 || true){
 				$tempText .= '<span class="abc-extra-cost abc-pointer"></br>('.$extra["priceText"].')</span>';
 			}	
 			$output .= '<div class="abc-column">
@@ -627,7 +627,7 @@ function ajax_abc_booking_getMandatoryExtras(){
 		$extrasOptional = getAbcExtrasList($numberOfDays, $abcPersons, 2);
 		foreach($extrasOptional as $extra){
 			$tempText = '<span class="abc-extra-name">'.$extra["name"].', '.abc_booking_formatPrice($extra["priceValue"]).'</span>';
-			if(strlen($extra["explanation"]) > 1){
+			if(strlen($extra["explanation"]) > 1 || true){
 				$tempText .= '<span class="abc-extra-cost"></br>('.$extra["priceText"].')</span>';
 			}	
 			$output .= '<div class="abc-column">
@@ -835,7 +835,7 @@ function abc_booking_editBookingContent() {
 				$priceClass = ' abc-priceindicator';
 			}
 			$tempText = '<span class="abc-extra-name abc-pointer">'.$extra["name"].', '.abc_booking_formatPrice($extra["priceValue"]).'</span>';
-			if(strlen($extra["explanation"]) > 1){
+			if(strlen($extra["explanation"]) > 1 || true){
 				$tempText .= '<span class="abc-extra-cost abc-pointer"></br>('.$extra["priceText"].')</span>';
 			}
 			$extraOptionalOutput .= '<div class="abc-column">
@@ -851,7 +851,7 @@ function abc_booking_editBookingContent() {
 		$extraMandatoryOutput = '';
 		foreach($extrasMandatory as $extra){
 			$tempText = '<span class="abc-extra-name">'.$extra["name"].', '.abc_booking_formatPrice($extra["priceValue"]).'</span>';
-			if(strlen($extra["explanation"]) > 1){
+			if(strlen($extra["explanation"]) > 1 || true){
 				$tempText .= '<span class="abc-extra-cost"></br>('.$extra["priceText"].')</span>';
 			}	
 			$extraMandatoryOutput .= '<div class="abc-column">
@@ -2071,7 +2071,7 @@ function advanced_booking_calendar_show_bookings() {
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="phone">'.__('Phone Number', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="phone" name="phone" placeholder="+420 603 123 456">
+									<input type="text" id="phone" name="phone" value="+420 ">
 								</div>
 							</div>
 							<!--<div class="uk-form-row">
@@ -2089,19 +2089,19 @@ function advanced_booking_calendar_show_bookings() {
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="city">'.__('City', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="city" name="city" placeholder="15:00">
+									<input type="text" id="city" name="city" value="15:00">
 								</div>
 							</div>
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="county">'.__('State / County', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="county" name="county" placeholder="10:00">
+									<input type="text" id="county" name="county" value="10:00">
 								</div>
 							</div>
 							<div class="uk-form-row">
 								<label class="uk-form-label" for="country">'.__('Country', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
-									<input type="text" id="country" name="country" placeholder="česky">
+									<input type="text" id="country" name="country" value="cs">
 								</div>
 							</div>
 							<div class="uk-form-row">
