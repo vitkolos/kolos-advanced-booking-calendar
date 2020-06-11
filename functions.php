@@ -1126,8 +1126,14 @@ function getAbcExtrasList($numberOfDays, $abcPersons, $optionalOnly = 0){
 	                $extrasList[$row["id"]]["priceText"] = sprintf( __('%s for each of the %d persons and %d days', 'advanced-booking-calendar'), $price, $abcPersons, $days);
 	                break;
 	        }
-	        $extrasList[$row["id"]]["id"] = intval($row["id"]);
-	        $extrasList[$row["id"]]["name"] = esc_html($row["name"]);
+            $extrasList[$row["id"]]["id"] = intval($row["id"]);
+            $langs = array("cs"=>0,"en"=>1,"fr"=>2,"de"=>3);
+            $extraName = esc_html($row["name"]);
+            $localeSubstr = substr(get_locale(), 0,2);
+            $langIndex = isset($langs[$localeSubstr]) ? $langs[$localeSubstr] : 0;
+            $extraNameArray = explode(" / ", $extraName);
+            $extraNameTranslated = isset($extraNameArray[$langIndex]) ? $extraNameArray[$langIndex] : $extraName;
+	        $extrasList[$row["id"]]["name"] = $extraNameTranslated;
 	        $extrasList[$row["id"]]["explanation"] = esc_html($row["explanation"]);
 	        switch($row["mandatory"]){
 	            case 'yes':

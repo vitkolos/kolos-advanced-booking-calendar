@@ -443,13 +443,12 @@ function ajax_abc_booking_setDataRange() {
 						'.abc_booking_formatPrice(abc_booking_getTotalPrice($calendarId, date("Y-m-d", $start), $numberOfDays));
 				$extrasMandatory = getAbcExtrasList($numberOfDays, 1, 2, $calendarId); // Getting mandatory extras
 				if(count($extrasMandatory) > 0){
-					$langs = array("cs"=>0,"en"=>1,"fr"=>2,"de"=>3);
 					$output .= '</td></tr><tr><td><b>'.abc_booking_getCustomText('extras').': </b></td><td>';
 					$maxExtras = count($extrasMandatory);
 					$extraCounter = 0;
 					foreach($extrasMandatory as $extra){
 						$extraCounter++;
-						$output .= abc_booking_formatPrice($extra["priceValue"]).' ('.explode(" / ", $extra["name"])[$langs[substr(get_locale(), 0,2)]].')';
+						$output .= abc_booking_formatPrice($extra["priceValue"]).' ('.$extra["name"].')';
 						$output .= ($extraCounter == $maxExtras) ? '' : ', ';
 					}
 				}

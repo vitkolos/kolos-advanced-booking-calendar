@@ -463,16 +463,15 @@ function ajax_abc_booking_getBookingFormStep2 () {
 				switch($extra["mandatory"]){
 					case '1':
 						$mandatoryCosts += $extra["priceValue"];
-						$tempText = '<span class="abc-extra-name">'.$extra["name"].' – '.abc_booking_formatPrice($extra["priceValue"]).'</span>';
-						if(strlen($extra["explanation"]) > 1){
-							$tempText .= '<span class="abc-extra-cost"></br>('.$extra["priceText"].')</br>'.$extra["explanation"].'</span>';
-						}
+						// $tempText = '<span class="abc-extra-name">'.$extra["name"].' – '.abc_booking_formatPrice($extra["priceValue"]).'</span>';
+						// if(strlen($extra["explanation"]) > 1){
+						// 	$tempText .= '<span class="abc-extra-cost"></br>('.$extra["priceText"].')</br>'.$extra["explanation"].'</span>';
+						// }
 						// $extrasMandatory .= '<div class="abc-column">'.$tempText.'</div>';
 						if(strlen($extrasMandatory) > 1){
 							$extrasMandatory .= ', ';
 						}
-						$langs = array("cs"=>0,"en"=>1,"fr"=>2,"de"=>3);
-						$extrasMandatory .= explode(" / ", $extra["name"])[$langs[substr(get_locale(), 0,2)]];
+						$extrasMandatory .= $extra["name"];
 						break;
 					case '0':
 						if(in_array($extra["id"], $extrasSelected)){
@@ -481,7 +480,7 @@ function ajax_abc_booking_getBookingFormStep2 () {
 							if(strlen($extrasOptional) > 1){
 								$extrasOptional .= ', ';
 							} 
-							$extrasOptional .= $extra["name"].': '.abc_booking_formatPrice($extra["priceValue"]);
+							$extrasOptional .= $extra["name"].' ('.abc_booking_formatPrice($extra["priceValue"]).')';
 						}
 						break;	
 				}
