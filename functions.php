@@ -621,13 +621,13 @@ function sendAbcAdminMail($bookingData){
                 if(strlen($optionalExtras) > 1){
                     $optionalExtras.= ', ';
                 }
-                $optionalExtras .= $extra["name"].': '.abc_booking_formatPrice($extra["priceValue"]);
+                $optionalExtras .= $extra["name"].' ('.abc_booking_formatPrice($extra["priceValue"]).')';
             }elseif($extra["mandatory"] == 1){
                 $totalPrice += $extra["priceValue"];
                 if(strlen($mandatoryExtras) > 1){
                     $mandatoryExtras .= ', ';
                 }
-                $mandatoryExtras.= $extra["name"].': '.abc_booking_formatPrice($extra["priceValue"]);
+                $mandatoryExtras.= $extra["name"].' ('.abc_booking_formatPrice($extra["priceValue"]).')';
             }
         }
     }
@@ -811,7 +811,7 @@ function sendAbcAdminMail($bookingData){
           <td class="container-padding content" align="left" style="padding-left:24px;padding-right:24px;padding-top:12px;padding-bottom:12px;background-color:#ffffff">
             <br>
 
-<div class="title" style="font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:600;color:#374550">'.date(getAbcSetting('dateformat'), strtotime($bookingData["start"])).' - '.date(getAbcSetting('dateformat'), strtotime($bookingData["end"])).'</div>
+<div class="title" style="font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:600;color:#374550">'.date(getAbcSetting('dateformat'), strtotime($bookingData["start"])).' – '.date(getAbcSetting('dateformat'), strtotime($bookingData["end"])).'</div>
 <br>
 
 <div class="body-text" style="font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:20px;text-align:left;color:#333333">
@@ -822,13 +822,10 @@ function sendAbcAdminMail($bookingData){
 '.abc_booking_getCustomText('roomType').': '.$calendarName.'<br><br>
 '.__('Email', 'advanced-booking-calendar').': '.$bookingData["email"].'<br>
 '.__('Phone', 'advanced-booking-calendar').': '.$bookingData["phone"].'<br>
-'.__('Address', 'advanced-booking-calendar').': '.$bookingData["address"].'<br>
-'.__('ZIP Code', 'advanced-booking-calendar').': '.$bookingData["zip"].'<br>
 '.__('City', 'advanced-booking-calendar').': '.$bookingData["city"].'<br>
-'.__('State / County', 'advanced-booking-calendar').': '.$bookingData["county"].'<br><br>
+'.__('State / County', 'advanced-booking-calendar').': '.$bookingData["county"].'<br>
 '.__('Country', 'advanced-booking-calendar').': '.$bookingData["country"].'<br><br>
-'.__('Payment Selection', 'advanced-booking-calendar').': '.$paymentOutput.'<br><br>
-'.$priceOutput.'
+'.$priceOutput.'<br>
 '.__('Message', 'advanced-booking-calendar').': '.$bookingData["message"].'
   <br><br>
 </div>
@@ -848,7 +845,23 @@ $adminBody .='
 	<td style="border-radius:4px;" align="center" bgcolor="#0085ba" width="400" height="50">
 		<div class="contentEditableContainer contentTextEditable">
 	    	<div class="contentEditable" align="center">
-				<a target="_blank" href="'.admin_url().'admin-post.php?action=abc_booking_confBooking&id='.$bookingData["booking_id"].'" class="link1" style="color:#fff">'.__('Click here to confirm', 'advanced-booking-calendar').'</a>
+				<a target="_blank" href="'.admin_url().'admin.php?page=advanced_booking_calendar" class="link1" style="color:#fff">'.__('Open admin', 'advanced-booking-calendar').'</a>
+			</div> 
+	  	</div>
+	</td>
+	</tr>
+	<tr>
+	<td height="20">
+		<div class="contentEditableContainer contentTextEditable">
+	    	&nbsp;
+	  	</div>
+	</td>	
+    </tr>
+	<tr>
+	<td style="border-radius:4px;" align="center" bgcolor="f7f7f7" width="400" height="50">
+		<div class="contentEditableContainer contentTextEditable">
+	    	<div class="contentEditable" align="center">
+				<a target="_blank" href="'.admin_url().'admin-post.php?action=abc_booking_confBooking&id='.$bookingData["booking_id"].'" class="link1" style="color: #555555">'.__('Click here to confirm', 'advanced-booking-calendar').'</a>
 			</div> 
 	  	</div>
 	</td>
@@ -886,19 +899,11 @@ $adminBody .='
 	</td>	
     </tr>';
 }	
-$adminBody .='<!--<tr>
-      <td class="container-padding footer-text" align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;color:#aaaaaa;padding-left:24px;padding-right:24px">
-        <br><br>
-        Are you looking for more features in a Booking Plugin, like PayPal or Stripe gateways?<br/>
-		Take a look at our <a target="_blank" href="https://www.booking-calendar-plugin.com/pro-download/?cmp=AdminEmail">Pro Version</a>!<br/>
-		Use discount code <b>BASICUPGRADE</b> to save 10€.
-        <br><br>
-      </td>
-    </tr>-->
+$adminBody .='
     <tr>
       <td class="container-padding footer-text" align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;color:#aaaaaa;padding-left:24px;padding-right:24px">
         <br><br>
-        Sent by your WordPress Site '.wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES ).' using <a target="_blank" href="https://www.booking-calendar-plugin.com">Advanced Booking Calendar</a>.
+        <a target="_blank" href="'.home_url().'">'.wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES ).'</a>
         <br><br>
       </td>
     </tr>
