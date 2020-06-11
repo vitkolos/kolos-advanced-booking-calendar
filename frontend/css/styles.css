@@ -828,7 +828,8 @@ textarea[name=message] {
 	min-height: 80px;
 }
 
-#abc-bookingform-book-submit {
+#abc-bookingform-book-submit,
+#abc-bookingform-extras-submit {
 	margin-top: 1em;
 	margin-bottom: 3em;
 }

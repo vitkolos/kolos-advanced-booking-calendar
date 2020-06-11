@@ -139,7 +139,7 @@ jQuery(document).on('click', '.abc-reset', function(){
 	jQuery('.abc-date-selected').removeClass('abc-date-selected');
 });
 
-jQuery('.abc-singlecalendar').on('click', '.abc-date-item', function(){
+jQuery('.abc-singlecalendar').on('click', '.abc-date-selector', function(){
 	var uniqid = jQuery(this).data('id');
 	var calendar = jQuery(this).data('calendar');
 	var date = jQuery(this).data('date');
@@ -202,7 +202,7 @@ jQuery('.abc-singlecalendar').on('click', '.abc-date-item', function(){
 	return false;	
 });
 
-jQuery('.abc-singlecalendar').on('mouseenter', '.abc-date-item', function(){
+jQuery('.abc-singlecalendar').on('mouseenter', '.abc-date-selector', function(){
 	var uniqid = jQuery(this).data('id');
 	var date = jQuery(this).data('date');
 	var dateDate = setDateYYYYMMDD(date);
@@ -231,7 +231,7 @@ jQuery('.abc-singlecalendar').on('mouseenter', '.abc-date-item', function(){
 	}
 });
 
-jQuery('.abc-singlecalendar').on('mouseleave', '.abc-date-item', function(){
+jQuery('.abc-singlecalendar').on('mouseleave', '.abc-date-selector', function(){
 	var uniqid = jQuery(this).data('id');
 	var date = jQuery(this).data('date');
 	var abcSingleCheckin = jQuery('#abc_singlecalendar_' + uniqid).data('checkin-' + uniqid);

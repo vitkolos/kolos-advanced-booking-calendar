@@ -438,7 +438,7 @@ function ajax_abc_booking_getBookingFormStep2 () {
 			}					
 			$bookingFormOutput .= '
 					</div>
-					<div class="abc-form-row">
+					<div class="abc-form-row abc-fullcolumn">
 						<div id="abc-bookingform-extras-submit" data-persons="'.$abcPersons.'" data-from="'.$abcFromValue.'" data-to="'.$abcToValue.'" data-calendar="'.$calendarId.'" class="abc-submit">
 							<span class="fa fa-chevron-right"></span>
 							<span>'.__('Continue', 'advanced-booking-calendar').'</span>
@@ -583,30 +583,11 @@ function ajax_abc_booking_getBookingFormStep2 () {
 						<input type="time" id="county" name="county" value="10:00"><br />';
 			}
 			if($bookingFormSetting["country"] > 0){
-				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
-				$rowCount++;
-				$bookingFormOutput .= '<label for="country">'.__('Country', 'advanced-booking-calendar').'</label><br />
-						<input type="text" id="country" name="country" value="';
-				if(isset($_POST["lang"])) {
-					switch ($_POST["lang"]) {
-						case 'en':
-							$bookingFormOutput .= 'English';
-							break;
-
-						case 'fr':
-							$bookingFormOutput .= 'français';
-							break;
-
-						case 'de':
-							$bookingFormOutput .= 'Deutch';
-							break;
-						
-						default:
-							$bookingFormOutput .= 'česky';
-							break;
-					}
-				}
-				$bookingFormOutput .= '"><br />';
+				// if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
+				// $rowCount++;
+				// $bookingFormOutput .= '<label for="country">'.__('Country', 'advanced-booking-calendar').'</label><br />
+				// 		<input type="text" id="country" name="country" value="'.substr(get_locale(), 0,2).'"><br />';
+				$bookingFormOutput .= '<input type="text" id="country" name="country" value="'.substr(get_locale(), 0,2).'">';
 			}
 			if($bookingFormSetting["message"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
