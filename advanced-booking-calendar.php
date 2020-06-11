@@ -21,6 +21,7 @@ include('backend/extras.php');
 include('backend/coupons.php');
 include('backend/tinymce.php');
 include('backend/more-features.php');
+include('phpqrcode/qrlib.php'); 
 
 global $abcUrl, $abcDir;
 $abcUrl = plugin_dir_url(__FILE__);
