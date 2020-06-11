@@ -516,7 +516,7 @@ label.abc-form-error  {
 
  .abc-singlecalendar {
  	width: 100%;
- 	/* max-width: 400px; */
+ 	max-width: 500px;
  	font-size: 12px;
  	background-color: rgb(240, 240, 240);
  	margin-left: auto;
@@ -852,4 +852,9 @@ textarea[name=message] {
   flex-wrap: wrap;
   width: auto;
   margin-left: 10px;
+}
+
+.abc-booking-form label.abc-form-error {
+	margin-top: -10px;
+	margin-bottom: 14px;
 }

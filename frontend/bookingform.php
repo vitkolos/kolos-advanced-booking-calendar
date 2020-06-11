@@ -130,7 +130,7 @@ function abc_booking_showBookingForm( $atts ) {
 	$validateRules = array('email' => array( 'required' => true, 'email' => true));
 	if($bookingFormSetting["firstname"] == 2){$validateRules["first_name"]["required"] = true;}
 	if($bookingFormSetting["lastname"] == 2){$validateRules["last_name"]["required"] = true;}
-	if($bookingFormSetting["phone"] == 2){$validateRules["phone"]["required"] = true;}
+	if($bookingFormSetting["phone"] == 2){$validateRules["phone"]["required"] = true; $validateRules["phone"]["minlength"] = 7;}
 	if($bookingFormSetting["street"] == 2){$validateRules["address"]["required"] = true;}
 	if($bookingFormSetting["zip"] == 2){$validateRules["zip"]["required"] = true;}
 	if($bookingFormSetting["city"] == 2){$validateRules["city"]["required"] = true;}

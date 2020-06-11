@@ -343,6 +343,7 @@ function getAbcAvailabilities(calendarId){
 		jQuery('#abc-bookingresults').html(response);
 		jQuery("#abc-bookingresults").slideDown("slow");
 		jQuery('.abc-submit').attr('disabled',false);
+		setTimeout(()=>{jQuery('#abc-form-wrapper input:text:visible').first().focus();},300);
 	});	
 	return false;	
 }
@@ -465,7 +466,7 @@ jQuery(document).on('click', '#abc-bookingform-coupon-submit', function(){
 jQuery(document).on('click', '#abc-bookingform-extras-submit', function(){
 	jQuery('#abc-bookingresults').fadeOut('medium');
 	jQuery('html, body').animate({
-        scrollTop: jQuery("#abc-bookingresults").offset().top - 150
+        // scrollTop: jQuery("#abc-bookingresults").offset().top - 150
     	}, 1000);
 	data = {
 		action: 'abc_booking_getBookingFormStep2',
@@ -480,6 +481,7 @@ jQuery(document).on('click', '#abc-bookingform-extras-submit', function(){
 		jQuery('#abc-bookingresults').html(response);
 		jQuery('#abc-bookingresults').fadeIn('medium');
 		jQuery('#abc-back-to-availabilities').show();
+		setTimeout(()=>{jQuery('#abc-form-wrapper input:text:visible').first().focus();},300);
 	});	
 	return false;
 });
@@ -530,7 +532,7 @@ jQuery(document).on('click', '#abc-bookingform-book-submit', function(){
 		submitHandler: function (form) { 
 			jQuery('#abc-form-content').fadeOut('medium');
 			jQuery('#abc_bookinform_loading').show();
-			jQuery('html, body').animate({ scrollTop: (jQuery('#abc-form-wrapper').offset().top - 150)}, 'slow');
+			// jQuery('html, body').animate({ scrollTop: (jQuery('#abc-form-wrapper').offset().top - 150)}, 'slow');
 			jQuery.post(ajax_abc_booking_showBookingForm.ajaxurl, data, function (response){
 				jQuery('#abc_bookinform_loading').hide();
 				jQuery('#abc-form-content').html(response);
