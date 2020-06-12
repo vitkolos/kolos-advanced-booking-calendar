@@ -824,34 +824,39 @@ textarea[name=message] {
 }
 
 .abc-persons-select input[type=radio] {
-  position: absolute;
-  visibility: hidden;
-  display: none;
+	position: absolute;
+	visibility: hidden;
+	display: none;
 }
 
 .abc-persons-select label {
-  display: inline-block;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 5px 10px;
-  border: solid 1px #333;
-  flex-grow: 1;
-  flex-shrink: 0;
-  text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 5px 10px;
+	border: solid 1px #333;
+	flex-grow: 1;
+	flex-shrink: 0;
+	text-align: center;
+	transition: background-color 0.2s;
+}
+
+.abc-persons-select label:hover {
+	background-color: #ccc;
 }
 
 .abc-persons-select input[type=radio]:checked + label {
-  color: white;
-  background: #333;
+	color: white;
+	background-color: #333;
 }
 
 .abc-persons-select {
-  border: solid 1px #333;
-  display: inline-flex;
-  /* border-radius: 10px; */
-  flex-wrap: wrap;
-  width: auto;
-  margin-left: 10px;
+	border: solid 1px #333;
+	display: inline-flex;
+	/* border-radius: 10px; */
+	flex-wrap: wrap;
+	width: auto;
+	margin-left: 10px;
 }
 
 .abc-booking-form label.abc-form-error {
