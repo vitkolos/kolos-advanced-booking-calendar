@@ -39,18 +39,18 @@ function abc_booking_showSingleCalendar( $atts ) {
 			}	
 
 			
-			$codeContents = 'SPD*1.0*ACC:CZ_BANK_000000_CIS_UCTU_*AM:_CASTKA_*CC:CZK*MSG:_ZPRAVA_*X-VS:_VARIABILNI_SYMBOL_';
+			$codeContents = 'SPD*1.0*ACC:CZ6830300000001577308012*AM:1234*CC:CZK*MSG:ApartVit.cz (11. 12. - 13. 12. 2014)*X-VS:987';
 
 			$text = QRcode::text($codeContents);
-			$raw = join("<br>", $text);
-			
+			$raw = join("</div><div>", $text);
 			$raw = strtr($raw, array(
-				'0' => '<span style="color:white">&#9608;&#9608;</span>',
-				'1' => '&#9608;&#9608;'
+				'0' => '<span class="qr-w"></span>',
+				'1' => '<span class="qr-b"></span>',
 			));
     
 			$calSingleOutput = ''
-			.'<pre style="font-size:7px;color:initial;background-color:initial;line-height:1">'.$raw.'</pre>'
+			.'<pre class="qr-c" style="color:black;background-color:white;padding:10px;white-space:nowrap"><div>'.$raw.'</div></pre>'
+			.'<style>.qr-w,.qr-b{display:inline-block;width:8px;height:8px}.qr-b{background-color:black}.qr-w{background-color:white}.qr-c>div{line-height:8px}</style>'
 			.abcEnqueueCustomCss().'
 				<div class="abc-singlecalendar" data-checkin-'.$divId.'="0" data-offset-'.$divId.'="0" data-month-'.$divId.'="0" id="abc_singlecalendar_'.$divId.'">
 					<div class="abc-box abc-single-row">
