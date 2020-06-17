@@ -218,7 +218,14 @@ function abc_booking_getBookingContent($state, $offset = 0, $itemsOnPage = 10, $
 				if(strlen($extraOutput) > 0){
 					$extraOutput .= ', ';
 				}
-				$extraOutput .= $extras[$extrarow["extra_id"]];
+				$langs = array("cs"=>0,"en"=>1,"fr"=>2,"de"=>3);
+				$localeSubstr = substr(get_locale(), 0,2);
+				$langIndex = isset($langs[$localeSubstr]) ? $langs[$localeSubstr] : 0;
+
+				$extraName = $extras[$extrarow["extra_id"]];
+				$extraNameArray = explode(" / ", $extraName);
+				$extraNameTranslated = isset($extraNameArray[$langIndex]) ? $extraNameArray[$langIndex] : $extraName;
+				$extraOutput .= $extraNameTranslated;
 			}
 		}
 		$extraOutputTable = '';
