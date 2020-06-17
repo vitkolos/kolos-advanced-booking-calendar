@@ -265,7 +265,7 @@ function generateQrCode($data) {
 	}
 	$resultString = '<h1>'.__('QR payment', 'advanced-booking-calendar').'</h1>';
 
-	$codeContents = 'SPD*1.0*ACC:CZ6830300000001577308012*AM:'.$qr[1].'*CC:CZK*MSG:ApartVit.cz ('
+	$codeContents = 'SPD*1.0*ACC:'.get_option('abc_subject_confirmed').'+'.get_option('abc_subject_canceled').'*AM:'.$qr[1].'*CC:CZK*MSG:ApartVit.cz ('
 	.ltrim($qr[4], '0').'. '.ltrim($qr[3], '0').'. - '.ltrim($qr[7], '0').'. '.ltrim($qr[6], '0').'. '.ltrim($qr[5], '0').')*X-VS:'.$qr[0].'';
 
 	ob_start();
@@ -281,8 +281,8 @@ function generateQrCode($data) {
 	.'<tr><td>'.__('Amount', 'advanced-booking-calendar').'</td><td>'.abc_booking_formatPrice($qr[1]).'</td></tr>'
 	.'</table><table>'
 	.'<tr><th colspan="2">'.__('Details for an international payment', 'advanced-booking-calendar').'</th></tr>'
-	.'<tr><td>IBAN</td><td>'.get_option('abc_subject_confirmed').'</td></tr>'
-	.'<tr><td>SWIFT</td><td>'.get_option('abc_subject_canceled').'</td></tr></table>';
+	.'<tr><td>'.__('IBAN', 'advanced-booking-calendar').'</td><td>'.get_option('abc_subject_confirmed').'</td></tr>'
+	.'<tr><td>'.__('SWIFT/BIC', 'advanced-booking-calendar').'</td><td>'.get_option('abc_subject_canceled').'</td></tr></table>';
 
 	return $resultString;
 }

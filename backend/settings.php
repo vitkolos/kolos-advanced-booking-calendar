@@ -617,8 +617,12 @@ function advanced_booking_calendar_show_settings() {
 					<li><a href="#">'.__('General Settings', 'advanced-booking-calendar').'</a></li>
 					<li><a href="#">'.__('Booking Form Settings', 'advanced-booking-calendar').'</a></li>
 					<li><a href="#">'.__('Other', 'advanced-booking-calendar').'</a></li>
-					<!--<li><a href="#">'.__('Payment Settings', 'advanced-booking-calendar').'</a></li>
-					<li><a href="#">'.__('Text Customization', 'advanced-booking-calendar').'</a></li>-->
+					<!--<li><a href="#">'
+					// .__('Payment Settings', 'advanced-booking-calendar')
+					.'</a></li>
+					<li><a href="#">'.
+					// __('Text Customization', 'advanced-booking-calendar').
+					'</a></li>-->
 		  </ul>
 		  <ul id="tab-content" class="uk-switcher uk-margin">
 		   	<li>	
@@ -639,13 +643,21 @@ function advanced_booking_calendar_show_settings() {
 			      	</div>
 			    </div>
 			  <!--<div class="uk-form-row">
-			      <label class="uk-form-label" for="newsletter">Advanced Booking Calendar '.__('Newsletter', 'advanced-booking-calendar').':</label>
+				  <label class="uk-form-label" for="newsletter">Advanced Booking Calendar '.
+				//   __('Newsletter', 'advanced-booking-calendar').
+				  ':</label>
 			       <div class="uk-form-controls">
 			      <fieldset>
-			      	<input '.$newslettertrue.' type="radio" name="newsletter" id="newsletter-true" value="1"><label for="newsletter-true"> '.__('Yes, I want to get vital informations on how to raise my occupation rate and stay tuned about Advanced Booking Calendar', 'advanced-booking-calendar').'</label><br/>
-			      	<input '.$newsletterfalse.' type="radio" name="newsletter" id="newsletter-false" value="0"><label for="newsletter-false"> '.__('No, disable the newsletter', 'advanced-booking-calendar').'</label>
+					  <input '.$newslettertrue.' type="radio" name="newsletter" id="newsletter-true" value="1"><label for="newsletter-true"> '.
+					//   __('Yes, I want to get vital informations on how to raise my occupation rate and stay tuned about Advanced Booking Calendar', 'advanced-booking-calendar').
+					  '</label><br/>
+					  <input '.$newsletterfalse.' type="radio" name="newsletter" id="newsletter-false" value="0"><label for="newsletter-false"> '.
+					//   __('No, disable the newsletter', 'advanced-booking-calendar').
+					  '</label>
 			      </fieldset>
-			      	<p class="description">'.__('You will receive regular tips on how to create great Hotel websites and informations about this plugin. We promise to never spam you. You can unsubscribe anytime.', 'advanced-booking-calendar').'</p>
+					  <p class="description">'.
+					//   __('You will receive regular tips on how to create great Hotel websites and informations about this plugin. We promise to never spam you. You can unsubscribe anytime.', 'advanced-booking-calendar').
+					  '</p>
 				     </div>
 			    </div>-->
 				<div class="uk-form-row">
@@ -742,9 +754,10 @@ function advanced_booking_calendar_show_settings() {
 			      	<input '.$poweredbytrue.' type="radio" name="poweredby" id="poweredby-true" value="1"><label for="poweredby-true"> '.__('Enabled', 'advanced-booking-calendar').'</label><br/>
 			      	<input '.$poweredbyfalse.' type="radio" name="poweredby" id="poweredby-false" value="0"><label for="poweredby-false"> '.__('Disabled', 'advanced-booking-calendar').'</label>
 			      </fieldset>
-			      	<p class="description">'.__('If link is enabled, a tiny "powered by Advanced Booking Calendar"-link will show up below the calendar overview and the booking form.', 'advanced-booking-calendar').'</p>
+					  <p class="description">'.
+					  __('If link is enabled, a tiny "powered by Advanced Booking Calendar"-link will show up below the calendar overview and the booking form.', 'advanced-booking-calendar').'</p>
 				     </div>
-			    </div>
+			    </div>-->
 			    <div class="uk-form-row">
 			      <label class="uk-form-label" for="deletion">'.__('Delete Data on Uninstall', 'advanced-booking-calendar').':</label>
 			      <div class="uk-form-controls">
@@ -752,11 +765,15 @@ function advanced_booking_calendar_show_settings() {
 			      	<input '.$deletiontrue.' type="radio" name="deletion" id="deletion-true" value="1"><label for="deletion-true"> '.__('Enabled', 'advanced-booking-calendar').'</label><br/>
 			      	<input '.$deletionfalse.' type="radio" name="deletion" id="deletion-false" value="0"><label for="deletion-false"> '.__('Disabled', 'advanced-booking-calendar').'</label>
 			      </fieldset>
-			      	<p class="description">'.__('If enabled, the data created by this plugin will be deleted when uninstalling the plugin.', 'advanced-booking-calendar').'</p>
+					  <p class="description">'.
+					  __('If enabled, the data created by this plugin will be deleted when uninstalling the plugin.', 'advanced-booking-calendar').
+					  '</p>
 				     </div>
 			    </div>
-			    <div class="uk-form-row">
-			      <label class="uk-form-label" for="usage">'.__('Commit Usage Data', 'advanced-booking-calendar').':</label>
+			    <!--<div class="uk-form-row">
+				  <label class="uk-form-label" for="usage">'.
+				//   __('Commit Usage Data', 'advanced-booking-calendar').
+				  ':</label>
 			      <div class="uk-form-controls">
 			      <fieldset>
 			      	<input '.$usagetrue.' type="radio" name="usage" id="usage-true" value="1"><label for="usage-true"> '.__('Enabled', 'advanced-booking-calendar').'</label><br/>
@@ -935,7 +952,7 @@ function advanced_booking_calendar_show_settings() {
 				</div>
 				<h4>'.__('Canceling a confirmed Booking', 'advanced-booking-calendar').'</h4>-->
 				<div class="uk-form-row">
-					<label class="uk-form-label" for="subjectcanceled">'.__('SWIFT', 'advanced-booking-calendar').'</label>
+					<label class="uk-form-label" for="subjectcanceled">'.__('SWIFT/BIC', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">
 						<input class="uk-form-width-large" name="subjectcanceled" id="subjectcanceled" value="'.esc_attr(stripslashes(get_option('abc_subject_canceled'))).'"/>
 					</div>
@@ -947,12 +964,12 @@ function advanced_booking_calendar_show_settings() {
 					</div>
 				</div>
 				<h4>'.__('Rejecting an open Booking', 'advanced-booking-calendar').'</h4>-->
-				<div class="uk-form-row">
+				<!--<div class="uk-form-row">
 					<label class="uk-form-label" for="subjectrejected">'.__('Empty', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">
 						<input class="uk-form-width-large" name="subjectrejected" id="subjectrejected" value="'.esc_attr(stripslashes(get_option('abc_subject_rejected'))).'"/>
 					</div>
-				</div>	
+				</div>-->
 				<!--<div class="uk-form-row">
 					<label class="uk-form-label" for="textrejected">'.__('Text for a rejection mail', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">

@@ -632,8 +632,8 @@ function getGuestMailText() {
     $abc_text_unconfirmed .= __('Variable symbol', 'advanced-booking-calendar').": [abc_booking_id]\n";
     $abc_text_unconfirmed .= __('Amount', 'advanced-booking-calendar').": [abc_total_price]\n\n";
     $abc_text_unconfirmed .= __('Details for an international payment', 'advanced-booking-calendar').":\n";
-    $abc_text_unconfirmed .= "IBAN: ".get_option('abc_subject_confirmed')."\n";
-    $abc_text_unconfirmed .= "SWIFT: ".get_option('abc_subject_canceled')."\n";
+    $abc_text_unconfirmed .= __('IBAN', 'advanced-booking-calendar').": ".get_option('abc_subject_confirmed')."\n";
+    $abc_text_unconfirmed .= __('SWIFT/BIC', 'advanced-booking-calendar').": ".get_option('abc_subject_canceled')."\n";
     $abc_text_unconfirmed .= $abc_text_details;
     $abc_text_unconfirmed .= $abc_goodbye;
 
