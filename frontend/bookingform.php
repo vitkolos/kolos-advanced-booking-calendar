@@ -268,16 +268,12 @@ function generateQrCode($data) {
 	$codeContents = 'SPD*1.0*ACC:CZ6830300000001577308012*AM:'.$qr[1].'*CC:CZK*MSG:ApartVit.cz ('
 	.ltrim($qr[4], '0').'. '.ltrim($qr[3], '0').'. - '.ltrim($qr[7], '0').'. '.ltrim($qr[6], '0').'. '.ltrim($qr[5], '0').')*X-VS:'.$qr[0].'';
 
-	$text = QRcode::text($codeContents);
-	$raw = join("</div><div>", $text);
-	$raw = strtr($raw, array(
-		'0' => '<b data-w></b>',
-		'1' => '<b data-b></b>',
-	));
+	ob_start();
+	QRCode::png($codeContents, null, QR_ECLEVEL_L, 7, 3);
+	$raw = base64_encode( ob_get_contents() );
+	ob_end_clean();
 
-	$resultString .= ''
-	.'<pre class="qr-c" style="color:black;background-color:white;padding:0;white-space:nowrap"><div>'.$raw.'</div></pre>'
-	.'<style>[data-w],[data-b]{display:inline-block;width:8px;height:8px}[data-b]{background-color:black}[data-w]{background-color:white}.qr-c>div{line-height:8px}</style>';
+	$resultString .= '<img alt="'.__('QR payment', 'advanced-booking-calendar').'" src="data:image/png;base64,'.$raw.'" />';
 
 	$resultString .= '<table><tr><th colspan="2">'.__('Payment details', 'advanced-booking-calendar').'</th></tr>'
 	.'<tr><td>'.__('Account number', 'advanced-booking-calendar').'</td><td></td></tr>'
