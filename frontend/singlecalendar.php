@@ -37,20 +37,8 @@ function abc_booking_showSingleCalendar( $atts ) {
 					<div class="abc-box abc-col-day abc-dayname abc-dotted">'.__('Sa', 'advanced-booking-calendar').'</div>
 					<div class="abc-box abc-col-day abc-dayname abc-dotted">'.__('Su', 'advanced-booking-calendar').'</div>';
 			}	
-
-			
-			$codeContents = 'SPD*1.0*ACC:CZ6830300000001577308012*AM:1234*CC:CZK*MSG:ApartVit.cz (11. 12. - 13. 12. 2014)*X-VS:987';
-
-			$text = QRcode::text($codeContents);
-			$raw = join("</div><div>", $text);
-			$raw = strtr($raw, array(
-				'0' => '<span class="qr-w"></span>',
-				'1' => '<span class="qr-b"></span>',
-			));
     
 			$calSingleOutput = ''
-			.'<pre class="qr-c" style="color:black;background-color:white;padding:10px;white-space:nowrap"><div>'.$raw.'</div></pre>'
-			.'<style>.qr-w,.qr-b{display:inline-block;width:8px;height:8px}.qr-b{background-color:black}.qr-w{background-color:white}.qr-c>div{line-height:8px}</style>'
 			.abcEnqueueCustomCss().'
 				<div class="abc-singlecalendar" data-checkin-'.$divId.'="0" data-offset-'.$divId.'="0" data-month-'.$divId.'="0" id="abc_singlecalendar_'.$divId.'">
 					<div class="abc-box abc-single-row">

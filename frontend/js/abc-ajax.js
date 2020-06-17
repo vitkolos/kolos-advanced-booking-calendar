@@ -389,6 +389,9 @@ jQuery(document).ready(function() {
 		jQuery('html, body').animate({
                     // scrollTop: jQuery("#abc-form-content").offset().top
                 }, 2000);
+	} else {
+		jQuery('#abc-bookingresults').html("Někde se stala chyba.");
+		jQuery("#abc-bookingresults").slideDown("slow");
 	}
 });
 

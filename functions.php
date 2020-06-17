@@ -318,7 +318,7 @@ function abc_booking_getTotalPrice($calendarId, $startDate, $numberOfDays) {
 
 function abc_booking_getBookingVars(){
     $bookingVars = array('abc_calendar_name', 'abc_total_price', 'abc_room_price', 'abc_optional_extras', 'abc_mandatory_extras', 'abc_checkin_date', 'abc_checkout_date', 'abc_person_count', 'abc_first_name', 'abc_last_name',
-        'abc_email', 'abc_phone', 'abc_address', 'abc_zip', 'abc_city', 'abc_county', 'abc_country', 'abc_message', 'abc_payment', 'abc_discount', 'abc_booking_id');
+        'abc_email', 'abc_phone', 'abc_address', 'abc_zip', 'abc_city', 'abc_county', 'abc_country', 'abc_message', 'abc_payment', 'abc_discount', 'abc_booking_id', 'abc_qr');
     return $bookingVars;
 }
 
@@ -551,7 +551,10 @@ function sendAbcGuestMail($bookingData){
 	
 	if( isset($bookingData["payment"]) ){
     	$placeholder["abc_payment"] = $bookingData["payment"];
-	}
+    }
+    
+    $placeholder["abc_qr"] = get_permalink(getAbcSetting("bookingpage")).'?lang='.substr(get_locale(), 0,2)
+    .'&qr='.$placeholder["abc_booking_id"].'-'.$totalPrice.'-'.$bookingData["start"].'-'.$bookingData["end"];
 
     $adminEmail = getAbcSetting('email');
     if( !filter_var($adminEmail,FILTER_VALIDATE_EMAIL) ){
@@ -592,6 +595,8 @@ function sendAbcGuestMail($bookingData){
     if( getAbcSetting("emailcopy") == "1" ) { // Sending email copy to admin
     	wp_mail( getAbcSetting('email'), stripslashes(__('EMAIL COPY:', 'advanced-booking-calendar').' '.$subject), stripslashes($text), $headers );
     }
+
+    return $placeholder["abc_qr"];
 }
 
 function sendAbcAdminMail($bookingData){

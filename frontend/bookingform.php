@@ -188,6 +188,10 @@ function abc_booking_showBookingForm( $atts ) {
 		$abcPostCalendarId = $_POST['abc-calendarId'];		
 	}
 
+	if(isset($_GET['qr'])) {
+		return generateQrCode($_GET['qr']);
+	}
+
 	$abcPersonValue = 1;
 	if(isset($_POST['abc-persons'])){ // Checking for cookies
 		$abcPersonValue = intval($_POST['abc-persons']);
@@ -251,6 +255,40 @@ function abc_booking_showBookingForm( $atts ) {
 	}
 	$bookingFormResult .= '</div>';
 	return $bookingFormResult;
+}
+
+function generateQrCode($data) {
+	$qr = explode('-', $data);
+	$controlString = str_replace('-', '', $data);
+	if(count($qr) != 8 || !is_numeric($controlString) || strlen($controlString) < 8) {
+		return "Při generování kódu nastala chyba.";
+	}
+	$resultString = '<h1>'.__('QR payment', 'advanced-booking-calendar').'</h1>';
+
+	$codeContents = 'SPD*1.0*ACC:CZ6830300000001577308012*AM:'.$qr[1].'*CC:CZK*MSG:ApartVit.cz ('
+	.ltrim($qr[4], '0').'. '.ltrim($qr[3], '0').'. - '.ltrim($qr[7], '0').'. '.ltrim($qr[6], '0').'. '.ltrim($qr[5], '0').')*X-VS:'.$qr[0].'';
+
+	$text = QRcode::text($codeContents);
+	$raw = join("</div><div>", $text);
+	$raw = strtr($raw, array(
+		'0' => '<b data-w></b>',
+		'1' => '<b data-b></b>',
+	));
+
+	$resultString .= ''
+	.'<pre class="qr-c" style="color:black;background-color:white;padding:0;white-space:nowrap"><div>'.$raw.'</div></pre>'
+	.'<style>[data-w],[data-b]{display:inline-block;width:8px;height:8px}[data-b]{background-color:black}[data-w]{background-color:white}.qr-c>div{line-height:8px}</style>';
+
+	$resultString .= '<table><tr><th colspan="2">'.__('Payment details', 'advanced-booking-calendar').'</th></tr>'
+	.'<tr><td>'.__('Account number', 'advanced-booking-calendar').'</td><td></td></tr>'
+	.'<tr><td>'.__('Variable symbol', 'advanced-booking-calendar').'</td><td>'.$qr[0].'</td></tr>'
+	.'<tr><td>'.__('Amount', 'advanced-booking-calendar').'</td><td>'.abc_booking_formatPrice($qr[1]).'</td></tr>'
+	.'</table><table>'
+	.'<tr><th colspan="2">'.__('Details for an international payment', 'advanced-booking-calendar').'</th></tr>'
+	.'<tr><td>IBAN</td><td></td></tr>'
+	.'<tr><td>SWIFT</td><td></td></tr></table>';
+
+	return $resultString;
 }
 
 //AJAX-Request for saving the customer inputs to the cookie, checking availabilities and calculating prices.
@@ -332,7 +370,6 @@ function ajax_abc_booking_getBookingResult () {
 					$tempRoom .= __('Total price', 'advanced-booking-calendar').': '.abc_booking_formatPrice($totalSum).', '.__('average', 'advanced-booking-calendar').': '.abc_booking_formatPrice(number_format(($totalSum/$numberOfDays), 2, $priceformat, '')).'
 							<form action="'.get_permalink().'" method="post">
 								<div data-persons="'.$abcPersons.'" data-from="'.$abcFromValue.'" data-to="'.$abcToValue.'" data-calendar="'.$row["id"].'" class="abc-bookingform-book abc-submit">
-									<span class="fa fa-chevron-right"></span>
 									<span>'.abc_booking_getCustomText('selectRoom').'</span>
 								</div>
 							</form>';
@@ -442,7 +479,6 @@ function ajax_abc_booking_getBookingFormStep2 () {
 					</div>
 					<div class="abc-form-row abc-fullcolumn">
 						<div id="abc-bookingform-extras-submit" data-persons="'.$abcPersons.'" data-from="'.$abcFromValue.'" data-to="'.$abcToValue.'" data-calendar="'.$calendarId.'" class="abc-submit">
-							<span class="fa fa-chevron-right"></span>
 							<span>'.__('Continue', 'advanced-booking-calendar').'</span>
 						</div>	
 					</div>
@@ -740,7 +776,7 @@ function ajax_abc_booking_getBookingFormBook () {
 		$bookingData["booking_id"] = setAbcBooking($bookingData);
 		
 		// Sending emails 
-		sendAbcGuestMail($bookingData);
+		$payLink = sendAbcGuestMail($bookingData);
 		sendAbcAdminMail($bookingData);
 		
 		// Returning Thank-You-Page
@@ -748,6 +784,11 @@ function ajax_abc_booking_getBookingFormBook () {
 				<div class="abc-form-row">
 					<span class="abc-result-header">'.abc_booking_getCustomText('thankYou').'</span></br>
 					<span>'.__('We have sent you an email including a summary of your booking!', 'advanced-booking-calendar').'</span>
+					<div>
+						<a class="abc-submit" id="abc-bookingform-pay" href="'.$payLink.'">
+							<span>'.__('Pay now', 'advanced-booking-calendar').'</span>
+						</a>
+					</div>
 				</div>';
 		$bookingFormOutput .= abc_booking_setPageview('bookingform/booking-successful'); // Google Analytics Tracking
 		
