@@ -563,22 +563,25 @@ function sendAbcGuestMail($bookingData){
 
     $subject = '';
     $text = '';
+
+    $mailTexts = getGuestMailText();
+
     switch( $bookingData["state"] ) {
         case 'open':
-            $subject = get_option('abc_subject_unconfirmed');
-            $text = get_option('abc_text_unconfirmed');
+            $subject = $mailTexts['abc_subject_unconfirmed'];
+            $text = $mailTexts['abc_text_unconfirmed'];
             break;
         case 'confirmed':
-            $subject = get_option('abc_subject_confirmed');
-            $text = get_option('abc_text_confirmed');
+            $subject = $mailTexts['abc_subject_confirmed'];
+            $text = $mailTexts['abc_text_confirmed'];
             break;
         case 'canceled':
-            $subject = get_option('abc_subject_canceled');
-            $text = get_option('abc_text_canceled');
+            $subject = $mailTexts['abc_subject_canceled'];
+            $text = $mailTexts['abc_text_canceled'];
             break;
         case 'rejected':
-            $subject = get_option('abc_subject_rejected');
-            $text = get_option('abc_text_rejected');
+            $subject = $mailTexts['abc_subject_rejected'];
+            $text = $mailTexts['abc_text_rejected'];
             break;
     }
 
@@ -597,6 +600,68 @@ function sendAbcGuestMail($bookingData){
     }
 
     return $placeholder["abc_qr"];
+}
+
+function getGuestMailText() {
+    $abc_greeting = __("Dear [abc_first_name] [abc_last_name],", 'advanced-booking-calendar')."\n";
+    $abc_goodbye = sprintf(__('Your %s-Team', 'advanced-booking-calendar'), get_option( 'blogname' ));
+    $abc_goodbye .= "\n".'https://www.apartvit.cz/';
+
+    $abc_text_details = __("Your details", 'advanced-booking-calendar').":\n";
+    $abc_text_details .= __("Room type", 'advanced-booking-calendar').": [abc_calendar_name]\n";
+    $abc_text_details .= __("Room price", 'advanced-booking-calendar').": [abc_room_price]\n";
+    $abc_text_details .= __("Selected extras", 'advanced-booking-calendar').": [abc_optional_extras]\n";
+    $abc_text_details .= __("Additional costs", 'advanced-booking-calendar').": [abc_mandatory_extras]\n";
+    $abc_text_details .= __("Total price", 'advanced-booking-calendar').": [abc_total_price]\n\n";
+    $abc_text_details .= __("From", 'advanced-booking-calendar').": [abc_checkin_date] ([abc_city])\n";
+    $abc_text_details .= __("To", 'advanced-booking-calendar').": [abc_checkout_date] ([abc_county])\n";
+    $abc_text_details .= __("Number of guests", 'advanced-booking-calendar').": [abc_person_count]\n";
+    $abc_text_details .= __("Name", 'advanced-booking-calendar').": [abc_first_name] [abc_last_name]\n";
+    $abc_text_details .= __("Email", 'advanced-booking-calendar').": [abc_email]\n";
+    $abc_text_details .= __("Phone", 'advanced-booking-calendar').": [abc_phone]\n";
+    $abc_text_details .= __("Your message to us", 'advanced-booking-calendar').": [abc_message]\n\n";
+
+    $abc_subject_unconfirmed = sprintf(__('Your booking at %s', 'advanced-booking-calendar'),get_option( 'blogname' )).': [abc_checkin_date] – [abc_checkout_date]';
+
+    $abc_text_unconfirmed =  $abc_greeting; 
+    $abc_text_unconfirmed .= sprintf(__("Thank you for booking at %s. Your booking will be confirmed as soon as you pay for the accommodation. We will send you a confirmation email then.", 'advanced-booking-calendar'), get_option( 'blogname' ))."\n\n";
+    $abc_text_unconfirmed .= __("Payment details", 'advanced-booking-calendar').":\n";
+    $abc_text_unconfirmed .= __("QR payment", 'advanced-booking-calendar').":\n[abc_qr]\n\n";
+    $abc_text_unconfirmed .= $abc_text_details;
+    $abc_text_unconfirmed .= $abc_goodbye;
+
+    $abc_subject_confirmed = sprintf(__('Confirming your booking at %s', 'advanced-booking-calendar'),get_option( 'blogname' )).' - [abc_checkin_date] - [abc_checkout_date]';
+
+    $abc_text_confirmed = $abc_greeting;
+    $abc_text_confirmed .= __("We are happy to confirm your booking!", 'advanced-booking-calendar')."\n\n";
+    $abc_text_confirmed .= $abc_text_details;
+    $abc_text_confirmed .= __("If you have any questions regard your stay, feel free to contact us.", 'advanced-booking-calendar')."\n\n";
+    $abc_text_confirmed .= $abc_goodbye;
+
+    $abc_subject_canceled = sprintf(__('Canceling your booking at %s', 'advanced-booking-calendar'),get_option( 'blogname' ));
+
+    $abc_text_canceled = $abc_greeting;
+    $abc_text_canceled .= __("We are very sorry to cancel your booking! We already had another reservation for your requested travel period.", 'advanced-booking-calendar')."\n";
+    $abc_text_canceled .= sprintf(__("Please check our website at %s for an alternative. We would be very happy to welcome you any time soon.", 'advanced-booking-calendar'), get_site_url())."\n\n";
+    $abc_text_canceled .= $abc_goodbye;
+
+    $abc_subject_rejected = sprintf(__('Rejecting your booking at %s', 'advanced-booking-calendar'),get_option( 'blogname' ));
+
+    $abc_text_rejected = $abc_greeting;
+    $abc_text_rejected .= __("We are very sorry to reject your booking! We already had another reservation for your requested travel period.", 'advanced-booking-calendar')."\n";
+    $abc_text_rejected .= sprintf(__("Please check our website at %s for an alternative. We would be very happy to welcome you any time soon.", 'advanced-booking-calendar'), get_site_url())."\n\n";
+    $abc_text_rejected .= $abc_goodbye;
+
+    return array(
+        'abc_subject_unconfirmed' => $abc_subject_unconfirmed,
+        'abc_text_unconfirmed' => $abc_text_unconfirmed,
+        'abc_subject_confirmed' => $abc_subject_confirmed,
+        'abc_text_confirmed' => $abc_text_confirmed,
+        'abc_subject_canceled' => $abc_subject_canceled,
+        'abc_text_canceled' => $abc_text_canceled,
+        'abc_subject_rejected' => $abc_subject_rejected,
+        'abc_text_rejected' => $abc_text_rejected
+    );
 }
 
 function sendAbcAdminMail($bookingData){
