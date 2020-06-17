@@ -269,20 +269,20 @@ function generateQrCode($data) {
 	.ltrim($qr[4], '0').'. '.ltrim($qr[3], '0').'. - '.ltrim($qr[7], '0').'. '.ltrim($qr[6], '0').'. '.ltrim($qr[5], '0').')*X-VS:'.$qr[0].'';
 
 	ob_start();
-	QRCode::png($codeContents, null, QR_ECLEVEL_L, 7, 3);
+	QRCode::png($codeContents, null, QR_ECLEVEL_L, 7, 2);
 	$raw = base64_encode( ob_get_contents() );
 	ob_end_clean();
 
 	$resultString .= '<img alt="'.__('QR payment', 'advanced-booking-calendar').'" src="data:image/png;base64,'.$raw.'" />';
 
 	$resultString .= '<table><tr><th colspan="2">'.__('Payment details', 'advanced-booking-calendar').'</th></tr>'
-	.'<tr><td>'.__('Account number', 'advanced-booking-calendar').'</td><td></td></tr>'
+	.'<tr><td>'.__('Account number', 'advanced-booking-calendar').'</td><td>'.get_option('abc_subject_unconfirmed').'</td></tr>'
 	.'<tr><td>'.__('Variable symbol', 'advanced-booking-calendar').'</td><td>'.$qr[0].'</td></tr>'
 	.'<tr><td>'.__('Amount', 'advanced-booking-calendar').'</td><td>'.abc_booking_formatPrice($qr[1]).'</td></tr>'
 	.'</table><table>'
 	.'<tr><th colspan="2">'.__('Details for an international payment', 'advanced-booking-calendar').'</th></tr>'
-	.'<tr><td>IBAN</td><td></td></tr>'
-	.'<tr><td>SWIFT</td><td></td></tr></table>';
+	.'<tr><td>IBAN</td><td>'.get_option('abc_subject_confirmed').'</td></tr>'
+	.'<tr><td>SWIFT</td><td>'.get_option('abc_subject_canceled').'</td></tr></table>';
 
 	return $resultString;
 }

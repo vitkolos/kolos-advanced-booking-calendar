@@ -605,7 +605,7 @@ function sendAbcGuestMail($bookingData){
 function getGuestMailText() {
     $abc_greeting = __("Dear [abc_first_name] [abc_last_name],", 'advanced-booking-calendar')."\n";
     $abc_goodbye = sprintf(__('Your %s-Team', 'advanced-booking-calendar'), get_option( 'blogname' ));
-    $abc_goodbye .= "\n".'https://www.apartvit.cz/';
+    $abc_goodbye .= "\n".home_url();
 
     $abc_text_details = __("Your details", 'advanced-booking-calendar').":\n";
     $abc_text_details .= __("Room type", 'advanced-booking-calendar').": [abc_calendar_name]\n";
@@ -616,7 +616,7 @@ function getGuestMailText() {
     $abc_text_details .= __("From", 'advanced-booking-calendar').": [abc_checkin_date] ([abc_city])\n";
     $abc_text_details .= __("To", 'advanced-booking-calendar').": [abc_checkout_date] ([abc_county])\n";
     $abc_text_details .= __("Number of guests", 'advanced-booking-calendar').": [abc_person_count]\n";
-    $abc_text_details .= __("Name", 'advanced-booking-calendar').": [abc_first_name] [abc_last_name]\n";
+    $abc_text_details .= __("Full Name", 'advanced-booking-calendar').": [abc_first_name] [abc_last_name]\n";
     $abc_text_details .= __("Email", 'advanced-booking-calendar').": [abc_email]\n";
     $abc_text_details .= __("Phone", 'advanced-booking-calendar').": [abc_phone]\n";
     $abc_text_details .= __("Your message to us", 'advanced-booking-calendar').": [abc_message]\n\n";
@@ -626,7 +626,14 @@ function getGuestMailText() {
     $abc_text_unconfirmed =  $abc_greeting; 
     $abc_text_unconfirmed .= sprintf(__("Thank you for booking at %s. Your booking will be confirmed as soon as you pay for the accommodation. We will send you a confirmation email then.", 'advanced-booking-calendar'), get_option( 'blogname' ))."\n\n";
     $abc_text_unconfirmed .= __("Payment details", 'advanced-booking-calendar').":\n";
+    $abc_text_unconfirmed .= "----------\n";
     $abc_text_unconfirmed .= __("QR payment", 'advanced-booking-calendar').":\n[abc_qr]\n\n";
+    $abc_text_unconfirmed .= __('Account number', 'advanced-booking-calendar').": ".get_option('abc_subject_unconfirmed')."\n";
+    $abc_text_unconfirmed .= __('Variable symbol', 'advanced-booking-calendar').": [abc_booking_id]\n";
+    $abc_text_unconfirmed .= __('Amount', 'advanced-booking-calendar').": [abc_total_price]\n\n";
+    $abc_text_unconfirmed .= __('Details for an international payment', 'advanced-booking-calendar').":\n";
+    $abc_text_unconfirmed .= "IBAN: ".get_option('abc_subject_confirmed')."\n";
+    $abc_text_unconfirmed .= "SWIFT: ".get_option('abc_subject_canceled')."\n";
     $abc_text_unconfirmed .= $abc_text_details;
     $abc_text_unconfirmed .= $abc_goodbye;
 

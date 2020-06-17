@@ -98,19 +98,19 @@ function abc_booking_editEmailSettings() {
 	if ( !current_user_can( abc_booking_admin_capabilities() ) ) {
 		wp_die("You don't have access to this page.");
 	}
-	if (isset($_POST["subjectunconfirmed"]) && isset($_POST["textunconfirmed"]) 
-			&& isset($_POST["subjectconfirmed"]) && isset($_POST["textconfirmed"])
-			&& isset($_POST["subjectcanceled"]) && isset($_POST["textcanceled"])
-			&& isset($_POST["subjectrejected"]) && isset($_POST["textrejected"])
+	if (isset($_POST["subjectunconfirmed"]) //&& isset($_POST["textunconfirmed"]) 
+			&& isset($_POST["subjectconfirmed"])// && isset($_POST["textconfirmed"])
+			&& isset($_POST["subjectcanceled"]) //&& isset($_POST["textcanceled"])
+			&& isset($_POST["subjectrejected"]) //&& isset($_POST["textrejected"])
 		) {
 			update_option ('abc_subject_unconfirmed', sanitize_text_field($_POST["subjectunconfirmed"]));
-			update_option ('abc_text_unconfirmed', implode( "\n", array_map( 'sanitize_text_field', explode( "\n", $_POST["textunconfirmed"] ))));
+			// update_option ('abc_text_unconfirmed', implode( "\n", array_map( 'sanitize_text_field', explode( "\n", $_POST["textunconfirmed"] ))));
 			update_option ('abc_subject_confirmed', sanitize_text_field($_POST["subjectconfirmed"]));
-			update_option ('abc_text_confirmed', implode( "\n", array_map( 'sanitize_text_field', explode( "\n", $_POST["textconfirmed"] ))));
+			// update_option ('abc_text_confirmed', implode( "\n", array_map( 'sanitize_text_field', explode( "\n", $_POST["textconfirmed"] ))));
 			update_option ('abc_subject_canceled', sanitize_text_field($_POST["subjectcanceled"]));
-			update_option ('abc_text_canceled', implode( "\n", array_map( 'sanitize_text_field', explode( "\n", $_POST["textcanceled"] ))));
+			// update_option ('abc_text_canceled', implode( "\n", array_map( 'sanitize_text_field', explode( "\n", $_POST["textcanceled"] ))));
 			update_option ('abc_subject_rejected', sanitize_text_field($_POST["subjectrejected"]));
-			update_option ('abc_text_rejected', implode( "\n", array_map( 'sanitize_text_field', explode( "\n", $_POST["textrejected"] ))));
+			// update_option ('abc_text_rejected', implode( "\n", array_map( 'sanitize_text_field', explode( "\n", $_POST["textrejected"] ))));
 	}
 
 	wp_redirect(  admin_url( "admin.php?page=advanced-booking-calendar-show-settings&setting=email" ) );
@@ -616,7 +616,7 @@ function advanced_booking_calendar_show_settings() {
 		  <ul class="uk-tab" data-uk-tab="{connect:\'#tab-content\',swiping:false}">
 					<li><a href="#">'.__('General Settings', 'advanced-booking-calendar').'</a></li>
 					<li><a href="#">'.__('Booking Form Settings', 'advanced-booking-calendar').'</a></li>
-					<li><a href="#">'.__('Email Settings', 'advanced-booking-calendar').'</a></li>
+					<li><a href="#">'.__('Other', 'advanced-booking-calendar').'</a></li>
 					<!--<li><a href="#">'.__('Payment Settings', 'advanced-booking-calendar').'</a></li>
 					<li><a href="#">'.__('Text Customization', 'advanced-booking-calendar').'</a></li>-->
 		  </ul>
@@ -900,65 +900,65 @@ function advanced_booking_calendar_show_settings() {
 				</div>	-->
 			</li>
 		   	<li>
-			  <h3>'.__('Placeholders', 'advanced-booking-calendar').'</h3>
+			  <!--<h3>'.__('Placeholders', 'advanced-booking-calendar').'</h3>
 			  <p>'.__('You can use the following placeholder in both subject and text. They will be replaced with the actual content when the email is send to the guest:', 'advanced-booking-calendar').'<br/>
 			  <i>'.$placeholderList.'</i></p>
-			  <hr>
+			  <hr>-->
 			  <form method="post" class="uk-form uk-form-horizontal" action="admin-post.php">
 				<input type="hidden" name="action" value="abc_booking_editEmailSettings" />
-				<h3>'.__('Templates', 'advanced-booking-calendar').'</h3>
-				<h4>'.__('Unconfirmed Booking', 'advanced-booking-calendar').'</h4>
+				<!--<h3>'.__('Templates', 'advanced-booking-calendar').'</h3>
+				<h4>'.__('Unconfirmed Booking', 'advanced-booking-calendar').'</h4>-->
 				<div class="uk-form-row">
-					<label class="uk-form-label" for="subjectunconfirmed">'.__('Subject for an unconfirmed booking mail', 'advanced-booking-calendar').'</label>
+					<label class="uk-form-label" for="subjectunconfirmed">'.__('Account number', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">
 						<input class="uk-form-width-large" name="subjectunconfirmed" id="subjectunconfirmed" value="'.esc_attr(stripslashes(get_option('abc_subject_unconfirmed'))).'"/>
 					</div>
 				</div>	
-				<div class="uk-form-row">
+				<!--<div class="uk-form-row">
 					<label class="uk-form-label" for="textunconfirmed">'.__('Text for an unconfirmed booking mail', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">
 						<textarea class="uk-form-width-large" rows="10" name="textunconfirmed" id="textunconfirmed">'.esc_textarea(stripslashes(get_option('abc_text_unconfirmed'))).'</textarea>	
 					</div>
 				</div>
-				<h4>'.__('Confirming an open Booking', 'advanced-booking-calendar').'</h4>
+				<h4>'.__('Confirming an open Booking', 'advanced-booking-calendar').'</h4>-->
 				<div class="uk-form-row">
-					<label class="uk-form-label" for="subjectconfirmed">'.__('Subject for a booking confirmation mail', 'advanced-booking-calendar').'</label>
+					<label class="uk-form-label" for="subjectconfirmed">'.__('IBAN', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">
 						<input class="uk-form-width-large" name="subjectconfirmed" id="subjectconfirmed" value="'.esc_attr(stripslashes(get_option('abc_subject_confirmed'))).'"/>
 					</div>
 				</div>	
-				<div class="uk-form-row">
+				<!--<div class="uk-form-row">
 					<label class="uk-form-label" for="textconfirmed">'.__('Text for a booking confirmation mail', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">
 						<textarea class="uk-form-width-large" rows="10" name="textconfirmed" id="textconfirmed">'.esc_textarea(stripslashes(get_option('abc_text_confirmed'))).'</textarea>	
 					</div>
-				<h4>'.__('Canceling a confirmed Booking', 'advanced-booking-calendar').'</h4>
 				</div>
+				<h4>'.__('Canceling a confirmed Booking', 'advanced-booking-calendar').'</h4>-->
 				<div class="uk-form-row">
-					<label class="uk-form-label" for="subjectcanceled">'.__('Subject for a cancelation mail', 'advanced-booking-calendar').'</label>
+					<label class="uk-form-label" for="subjectcanceled">'.__('SWIFT', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">
 						<input class="uk-form-width-large" name="subjectcanceled" id="subjectcanceled" value="'.esc_attr(stripslashes(get_option('abc_subject_canceled'))).'"/>
 					</div>
 				</div>	
-				<div class="uk-form-row">
+				<!--<div class="uk-form-row">
 					<label class="uk-form-label" for="textcanceled">'.__('Text for a cancelation mail', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">
 						<textarea class="uk-form-width-large" rows="10" name="textcanceled" id="textcanceled">'.esc_textarea(stripslashes(get_option('abc_text_canceled'))).'</textarea>	
 					</div>
 				</div>
-				<h4>'.__('Rejecting an open Booking', 'advanced-booking-calendar').'</h4>
+				<h4>'.__('Rejecting an open Booking', 'advanced-booking-calendar').'</h4>-->
 				<div class="uk-form-row">
-					<label class="uk-form-label" for="subjectrejected">'.__('Subject for a rejection mail', 'advanced-booking-calendar').'</label>
+					<label class="uk-form-label" for="subjectrejected">'.__('Empty', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">
 						<input class="uk-form-width-large" name="subjectrejected" id="subjectrejected" value="'.esc_attr(stripslashes(get_option('abc_subject_rejected'))).'"/>
 					</div>
 				</div>	
-				<div class="uk-form-row">
+				<!--<div class="uk-form-row">
 					<label class="uk-form-label" for="textrejected">'.__('Text for a rejection mail', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">
 						<textarea class="uk-form-width-large" rows="10" name="textrejected" id="textrejected">'.esc_textarea(stripslashes(get_option('abc_text_rejected'))).'</textarea>	
 					</div>
-				</div>
+				</div>-->
 				<div class="uk-form-row">
 					<input class="button button-primary" type="submit" value="'.__('Save', 'advanced-booking-calendar').'" />
 				</div>	
