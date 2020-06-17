@@ -976,19 +976,19 @@ function abc_booking_editBookingContent() {
 								</div>
 							</div>
 							<div class="uk-form-row">
-								<label class="uk-form-label" for="city">'.__('City', 'advanced-booking-calendar').'</label>
+								<label class="uk-form-label" for="city">'.__('Checkin time', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
 									<input type="text" id="city" name="city" value="'.$er['city'].'">
 								</div>
 							</div>
 							<div class="uk-form-row">
-								<label class="uk-form-label" for="county">'.__('State / County', 'advanced-booking-calendar').'</label>
+								<label class="uk-form-label" for="county">'.__('Checkout time', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
 									<input type="text" id="county" name="county" value="'.$er['county'].'">
 								</div>
 							</div>
 							<div class="uk-form-row">
-								<label class="uk-form-label" for="country">'.__('Country', 'advanced-booking-calendar').'</label>
+								<label class="uk-form-label" for="country">'.__('Language', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
 									<input type="text" id="country" name="country" value="'.$er['country'].'">
 								</div>
@@ -2094,19 +2094,19 @@ function advanced_booking_calendar_show_bookings() {
 								</div>
 							</div>-->
 							<div class="uk-form-row">
-								<label class="uk-form-label" for="city">'.__('City', 'advanced-booking-calendar').'</label>
+								<label class="uk-form-label" for="city">'.__('Checkin time', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
 									<input type="text" id="city" name="city" value="15:00">
 								</div>
 							</div>
 							<div class="uk-form-row">
-								<label class="uk-form-label" for="county">'.__('State / County', 'advanced-booking-calendar').'</label>
+								<label class="uk-form-label" for="county">'.__('Checkout time', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
 									<input type="text" id="county" name="county" value="10:00">
 								</div>
 							</div>
 							<div class="uk-form-row">
-								<label class="uk-form-label" for="country">'.__('Country', 'advanced-booking-calendar').'</label>
+								<label class="uk-form-label" for="country">'.__('Language', 'advanced-booking-calendar').'</label>
 								 <div class="uk-form-controls">
 									<input type="text" id="country" name="country" value="cs">
 								</div>

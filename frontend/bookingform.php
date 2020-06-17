@@ -360,7 +360,7 @@ function ajax_abc_booking_getBookingResult () {
 				$tempRoom .= strlen($row["infoText"]) > 0 ? esc_html($row["infoText"]).'<br/>' : '';	
 				$minimumStay = abc_booking_checkMinimumStay($row["id"], $normFromValue, $normToValue);		
 				if($minimumStay > 0){
-					$tempRoom .= '<b><span class="abc-too-short">'.sprintf( __('Your stay is too short. Minimum stay for those dates is %d nights.', 'advanced-booking-calendar'), $minimumStay ).'</span></b>';					
+					$tempRoom .= '<b><span class="abc-too-short">'.sprintf( __('Your stay is too short. Minimum stay for those dates is %d nights. However, you can complete the reservation, we will only contact you subsequently to agree on the conditions.', 'advanced-booking-calendar'), $minimumStay ).'</span></b>';					
 				}
 				if(true) {
 					$tempRoom .= __('Total price', 'advanced-booking-calendar').': '.abc_booking_formatPrice($totalSum).', '.__('average', 'advanced-booking-calendar').': '.abc_booking_formatPrice(number_format(($totalSum/$numberOfDays), 2, $priceformat, '')).'
@@ -607,19 +607,19 @@ function ajax_abc_booking_getBookingFormStep2 () {
 			if($bookingFormSetting["city"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
-				$bookingFormOutput .= '<label for="city">'.__('City', 'advanced-booking-calendar').'</label>
+				$bookingFormOutput .= '<label for="city">'.__('Checkin time', 'advanced-booking-calendar').'</label>
 						<input type="time" id="city" name="city" value="15:00">';
 			}
 			if($bookingFormSetting["county"] > 0){
 				if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				$rowCount++;
-				$bookingFormOutput .= '<label for="county">'.__('State / County', 'advanced-booking-calendar').'</label>
+				$bookingFormOutput .= '<label for="county">'.__('Checkout time', 'advanced-booking-calendar').'</label>
 						<input type="time" id="county" name="county" value="10:00">';
 			}
 			if($bookingFormSetting["country"] > 0){
 				// if($rowCount == $bookingFormColumn){$bookingFormOutput .= '	</div><div class="abc-column">';}
 				// $rowCount++;
-				// $bookingFormOutput .= '<label for="country">'.__('Country', 'advanced-booking-calendar').'</label>
+				// $bookingFormOutput .= '<label for="country">'.__('Language', 'advanced-booking-calendar').'</label>
 				// 		<input type="text" id="country" name="country" value="'.substr(get_locale(), 0,2).'">';
 				$bookingFormOutput .= '<input type="hidden" id="country" name="country" value="'.substr(get_locale(), 0,2).'">';
 			}
@@ -779,7 +779,7 @@ function ajax_abc_booking_getBookingFormBook () {
 		$bookingFormOutput .= '
 				<div class="abc-form-row">
 					<span class="abc-result-header">'.abc_booking_getCustomText('thankYou').'</span></br>
-					<span>'.__('We have sent you an email including a summary of your booking!', 'advanced-booking-calendar').'</span>
+					<span>'.__('We have sent you an email including a summary of your booking and payment details. We will confirm your reservation as soon as you pay.', 'advanced-booking-calendar').'</span>
 					<div>
 						<a class="abc-submit" id="abc-bookingform-pay" href="'.$payLink.'">
 							<span>'.__('Pay now', 'advanced-booking-calendar').'</span>

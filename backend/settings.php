@@ -856,7 +856,7 @@ function advanced_booking_calendar_show_settings() {
 			      	</div>
 			    </div>-->
 			    <div class="uk-form-row">
-			    	<label class="uk-form-label" for="county">'.__('State / County', 'advanced-booking-calendar').':</label>
+			    	<label class="uk-form-label" for="county">'.__('Checkout time', 'advanced-booking-calendar').':</label>
 			    	<div class="uk-form-controls">
 				    	<fieldset>
 				      		<input type="radio" name="county" id="county-required" value="2"'.$county[2].'> <label for="county-required"> '.__('Required', 'advanced-booking-calendar').'</label><br/>
@@ -866,7 +866,7 @@ function advanced_booking_calendar_show_settings() {
 			      	</div>
 			    </div>
 			    <div class="uk-form-row">
-			    	<label class="uk-form-label" for="city">'.__('City', 'advanced-booking-calendar').':</label>
+			    	<label class="uk-form-label" for="city">'.__('Checkin time', 'advanced-booking-calendar').':</label>
 			    	<div class="uk-form-controls">
 				    	<fieldset>
 				      		<input type="radio" name="city" id="city-required" value="2"'.$city[2].'> <label for="city-required"> '.__('Required', 'advanced-booking-calendar').'</label><br/>
@@ -876,7 +876,7 @@ function advanced_booking_calendar_show_settings() {
 			      	</div>
 			    </div>
 			    <div class="uk-form-row">
-			    	<label class="uk-form-label" for="country">'.__('Country', 'advanced-booking-calendar').':</label>
+			    	<label class="uk-form-label" for="country">'.__('Language', 'advanced-booking-calendar').':</label>
 			    	<div class="uk-form-controls">
 				    	<fieldset>
 				      		<input type="radio" name="country" id="country-required" value="2"'.$country[2].'> <label for="country-required"> '.__('Required', 'advanced-booking-calendar').'</label><br/>

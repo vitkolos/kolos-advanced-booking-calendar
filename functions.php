@@ -899,9 +899,9 @@ function sendAbcAdminMail($bookingData){
 '.abc_booking_getCustomText('roomType').': '.$calendarName.'<br><br>
 '.__('Email', 'advanced-booking-calendar').': '.$bookingData["email"].'<br>
 '.__('Phone', 'advanced-booking-calendar').': '.$bookingData["phone"].'<br>
-'.__('City', 'advanced-booking-calendar').': '.$bookingData["city"].'<br>
-'.__('State / County', 'advanced-booking-calendar').': '.$bookingData["county"].'<br>
-'.__('Country', 'advanced-booking-calendar').': '.$bookingData["country"].'<br><br>
+'.__('Checkin time', 'advanced-booking-calendar').': '.$bookingData["city"].'<br>
+'.__('Checkout time', 'advanced-booking-calendar').': '.$bookingData["county"].'<br>
+'.__('Language', 'advanced-booking-calendar').': '.$bookingData["country"].'<br><br>
 '.$priceOutput.'<br>
 '.__('Message', 'advanced-booking-calendar').': '.$bookingData["message"].'
   <br><br>
