@@ -519,8 +519,8 @@ label.abc-form-error  {
  	max-width: 500px;
  	font-size: 12px;
  	background-color: rgb(240, 240, 240);
- 	margin-left: auto;
- 	margin-right: auto;
+ 	/* margin-left: auto;
+ 	margin-right: auto; */
  	display: block;
  	margin-bottom: 20px;
  }

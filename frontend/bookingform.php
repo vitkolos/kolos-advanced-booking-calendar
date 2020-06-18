@@ -279,7 +279,7 @@ function generateQrCode($data) {
 	.'<tr><td>'.__('Account number', 'advanced-booking-calendar').'</td><td>'.get_option('abc_subject_unconfirmed').'</td></tr>'
 	.'<tr><td>'.__('Variable symbol', 'advanced-booking-calendar').'</td><td>'.$qr[0].'</td></tr>'
 	.'<tr><td>'.__('Amount', 'advanced-booking-calendar').'</td><td>'.abc_booking_formatPrice($qr[1]).'</td></tr>'
-	.'</table><table>'
+	.'</table><br><table>'
 	.'<tr><th colspan="2">'.__('Details for an international payment', 'advanced-booking-calendar').'</th></tr>'
 	.'<tr><td>'.__('IBAN', 'advanced-booking-calendar').'</td><td>'.get_option('abc_subject_confirmed').'</td></tr>'
 	.'<tr><td>'.__('SWIFT/BIC', 'advanced-booking-calendar').'</td><td>'.get_option('abc_subject_canceled').'</td></tr></table>';
