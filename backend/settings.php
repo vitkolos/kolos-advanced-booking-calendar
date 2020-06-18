@@ -612,7 +612,7 @@ function advanced_booking_calendar_show_settings() {
 	echo '<div class="wrap">
 		  <h1>'.__('Settings', 'advanced-booking-calendar').'</h1>
 		  '.$settingsMessage.'
-		  <div>
+		  <div><style>.abc-d-none{display:none}</style>
 		  <ul class="uk-tab" data-uk-tab="{connect:\'#tab-content\',swiping:false}">
 					<li><a href="#">'.__('General Settings', 'advanced-booking-calendar').'</a></li>
 					<li><a href="#">'.__('Booking Form Settings', 'advanced-booking-calendar').'</a></li>
@@ -642,7 +642,7 @@ function advanced_booking_calendar_show_settings() {
 			      </fieldset>
 			      	</div>
 			    </div>
-			  <!--<div class="uk-form-row">
+			  <div class="uk-form-row abc-d-none">
 				  <label class="uk-form-label" for="newsletter">Advanced Booking Calendar '.
 				//   __('Newsletter', 'advanced-booking-calendar').
 				  ':</label>
@@ -659,7 +659,7 @@ function advanced_booking_calendar_show_settings() {
 					//   __('You will receive regular tips on how to create great Hotel websites and informations about this plugin. We promise to never spam you. You can unsubscribe anytime.', 'advanced-booking-calendar').
 					  '</p>
 				     </div>
-			    </div>-->
+			    </div>
 				<div class="uk-form-row">
 			      <label class="uk-form-label" for="bookingpage">'.__('Page with booking form', 'advanced-booking-calendar').':</label>
 			      <div class="uk-form-controls">
@@ -747,7 +747,7 @@ function advanced_booking_calendar_show_settings() {
 			      			<a href="https://wordpress.org/plugins/google-universal-analytics/" target="_blank">Google Universal Analytics</a>.</p>
 				     </div>
 			    </div>
-			    <!--<div class="uk-form-row">
+			    <div class="uk-form-row abc-d-none">
 			      <label class="uk-form-label" for="poweredby">'.__('Powered-by-Link', 'advanced-booking-calendar').':</label>
 			      <div class="uk-form-controls">
 			      <fieldset>
@@ -757,7 +757,7 @@ function advanced_booking_calendar_show_settings() {
 					  <p class="description">'.
 					  __('If link is enabled, a tiny "powered by Advanced Booking Calendar"-link will show up below the calendar overview and the booking form.', 'advanced-booking-calendar').'</p>
 				     </div>
-			    </div>-->
+			    </div>
 			    <div class="uk-form-row">
 			      <label class="uk-form-label" for="deletion">'.__('Delete Data on Uninstall', 'advanced-booking-calendar').':</label>
 			      <div class="uk-form-controls">
@@ -770,7 +770,7 @@ function advanced_booking_calendar_show_settings() {
 					  '</p>
 				     </div>
 			    </div>
-			    <!--<div class="uk-form-row">
+			    <div class="uk-form-row abc-d-none">
 				  <label class="uk-form-label" for="usage">'.
 				//   __('Commit Usage Data', 'advanced-booking-calendar').
 				  ':</label>
@@ -781,7 +781,7 @@ function advanced_booking_calendar_show_settings() {
 			      </fieldset>
 			      	<p class="description">'.__('If enabled, you will help us to make this plugin better by committing some usage data.', 'advanced-booking-calendar').' '.__('Your visitors will not be affected. No sensible data will be transmitted.', 'advanced-booking-calendar').'</p>
 				     </div>
-			    </div>-->
+			    </div>
 			    <div class="uk-form-row">
 			      <label class="uk-form-label" for="accessLevel">'.__('Access Level', 'advanced-booking-calendar').':</label>
 			      <div class="uk-form-controls">
@@ -835,7 +835,7 @@ function advanced_booking_calendar_show_settings() {
 				     	</fieldset>
 			      	</div>
 			    </div>
-			    <!--<div class="uk-form-row">
+			    <div class="uk-form-row abc-d-none">
 			    	<label class="uk-form-label" for="street">'.__('Street Address, House no.', 'advanced-booking-calendar').':</label>
 			    	<div class="uk-form-controls">
 				    	<fieldset>
@@ -845,7 +845,7 @@ function advanced_booking_calendar_show_settings() {
 				     	</fieldset>
 			      	</div>
 			    </div>
-			    <div class="uk-form-row">
+			    <div class="uk-form-row abc-d-none">
 			    	<label class="uk-form-label" for="zip">'.__('ZIP Code', 'advanced-booking-calendar').':</label>
 			    	<div class="uk-form-controls">
 				    	<fieldset>
@@ -854,7 +854,7 @@ function advanced_booking_calendar_show_settings() {
 				      		<input type="radio" name="zip" id="zip-disabled" value="0"'.$zip[0].'> <label for="zip-disabled"> '.__('Disabled', 'advanced-booking-calendar').'</label>
 				     	</fieldset>
 			      	</div>
-			    </div>-->
+			    </div>
 			    <div class="uk-form-row">
 			    	<label class="uk-form-label" for="county">'.__('Checkout time', 'advanced-booking-calendar').':</label>
 			    	<div class="uk-form-controls">
@@ -895,7 +895,7 @@ function advanced_booking_calendar_show_settings() {
 				     	</fieldset>
 			      	</div>
 			    </div>
-			    <!--<div class="uk-form-row">
+			    <div class="uk-form-row abc-d-none">
 			    	<label class="uk-form-label" for="optincheckbox">'.__('Opt-in-Checkbox', 'advanced-booking-calendar').':</label>
 			    	<div class="uk-form-controls">
 				    	<fieldset>
@@ -904,7 +904,7 @@ function advanced_booking_calendar_show_settings() {
 				      		<input type="radio" name="optincheckbox" id="optincheckbox-disabled" value="0"'.$optincheckbox[0].'> <label for="optincheckbox-disabled"> '.__('Disabled', 'advanced-booking-calendar').'</label></br>
 						</fieldset>
 			      	</div>
-			    </div>-->
+			    </div>
 				<div class="uk-form-row">
 					<input class="button button-primary" type="submit" value="'.__('Save', 'advanced-booking-calendar').'" />
 				</div>	
