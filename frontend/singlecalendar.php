@@ -443,17 +443,17 @@ function ajax_abc_booking_setDataRange() {
 				$numberOfDays = abc_booking_dateDiffInDays($end, $start);
 				$output .= '</td></tr><tr><td><b>'.abc_booking_getCustomText('roomPrice').': </b></td><td>
 						'.abc_booking_formatPrice(abc_booking_getTotalPrice($calendarId, date("Y-m-d", $start), $numberOfDays));
-				$extrasMandatory = getAbcExtrasList($numberOfDays, 1, 2, $calendarId); // Getting mandatory extras
-				if(count($extrasMandatory) > 0){
-					$output .= '</td></tr><tr><td><b>'.abc_booking_getCustomText('extras').': </b></td><td>';
-					$maxExtras = count($extrasMandatory);
-					$extraCounter = 0;
-					foreach($extrasMandatory as $extra){
-						$extraCounter++;
-						$output .= abc_booking_formatPrice($extra["priceValue"]).' ('.$extra["name"].')';
-						$output .= ($extraCounter == $maxExtras) ? '' : ', ';
-					}
-				}
+				// $extrasMandatory = getAbcExtrasList($numberOfDays, 1, 2, $calendarId); // Getting mandatory extras
+				// if(count($extrasMandatory) > 0){
+				// 	$output .= '</td></tr><tr><td><b>'.abc_booking_getCustomText('extras').': </b></td><td>';
+				// 	$maxExtras = count($extrasMandatory);
+				// 	$extraCounter = 0;
+				// 	foreach($extrasMandatory as $extra){
+				// 		$extraCounter++;
+				// 		$output .= abc_booking_formatPrice($extra["priceValue"]).' ('.$extra["name"].')';
+				// 		$output .= ($extraCounter == $maxExtras) ? '' : ', ';
+				// 	}
+				// }
 				$minimumStay = abc_booking_checkMinimumStay($calendarId, sanitize_text_field($_POST['start']), sanitize_text_field($_POST['end']));		
 				if($minimumStay > 0){ // Checking if the minimum number of nights to stay is reached
 					$output .= '</td></tr><tr><td colspan="2"><b>'.sprintf( __('Your stay is too short. Minimum stay for those dates is %d nights. However, you can complete the reservation, we will only contact you subsequently to agree on the conditions.', 'advanced-booking-calendar'), $minimumStay ).'';
