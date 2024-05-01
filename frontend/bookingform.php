@@ -265,15 +265,19 @@ function generateQrCode($data) {
 	}
 	$resultString = '<h1>'.__('QR payment', 'advanced-booking-calendar').'</h1>';
 
-	$codeContents = 'SPD*1.0*ACC:'.get_option('abc_subject_confirmed').'+'.get_option('abc_subject_canceled').'*AM:'.$qr[1].'*CC:CZK*MSG:ApartVit.cz ('
-	.ltrim($qr[4], '0').'. '.ltrim($qr[3], '0').'. - '.ltrim($qr[7], '0').'. '.ltrim($qr[6], '0').'. '.ltrim($qr[5], '0').')*X-VS:'.$qr[0].'';
+	if (get_option('abc_subject_confirmed')) {
+		$bic = get_option('abc_subject_canceled') ? ('+'.get_option('abc_subject_canceled')) : '';
 
-	ob_start();
-	QRCode::png($codeContents, null, QR_ECLEVEL_L, 7, 2);
-	$raw = base64_encode( ob_get_contents() );
-	ob_end_clean();
+		$codeContents = 'SPD*1.0*ACC:'.get_option('abc_subject_confirmed').$bic.'*AM:'.$qr[1].'*CC:CZK*MSG:ApartVit.cz ('
+		.ltrim($qr[4], '0').'. '.ltrim($qr[3], '0').'. - '.ltrim($qr[7], '0').'. '.ltrim($qr[6], '0').'. '.ltrim($qr[5], '0').')*X-VS:'.$qr[0].'';
 
-	$resultString .= '<img alt="'.__('QR payment', 'advanced-booking-calendar').'" src="data:image/png;base64,'.$raw.'" />';
+		ob_start();
+		QRCode::png($codeContents, null, QR_ECLEVEL_L, 7, 2);
+		$raw = base64_encode( ob_get_contents() );
+		ob_end_clean();
+
+		$resultString .= '<img alt="'.__('QR payment', 'advanced-booking-calendar').'" src="data:image/png;base64,'.$raw.'" />';
+	}
 
 	$resultString .= '<table><tr><th colspan="2">'.__('Payment details', 'advanced-booking-calendar').'</th></tr>'
 	.'<tr><td>'.__('Account number', 'advanced-booking-calendar').'</td><td>'.get_option('abc_subject_unconfirmed').'</td></tr>'

@@ -1119,7 +1119,7 @@ function abc_booking_customMessageSend() {
 							}
 							if (filter_var($er["email"], FILTER_VALIDATE_EMAIL)) {
 								$headers[] = 'MIME-Version: 1.0' . "\r\n";
-								$headers[] = 'From: '.htmlspecialchars_decode(get_option('blogname')).' <'.$adminEmail.'>'."\r\n";
+								$headers[] = 'Reply-To: '.$adminEmail."\r\n";
 								wp_mail($er["email"], stripslashes($_POST["subject"]), stripslashes($_POST["message"]), $headers);
 								if( getAbcSetting("emailcopy") == "1" ) { // Sending email copy to admin
 									wp_mail( getAbcSetting('email'), stripslashes(__('EMAIL COPY:', 'advanced-booking-calendar').' '.$_POST["subject"]), stripslashes($_POST["message"]), $headers);

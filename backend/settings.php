@@ -923,6 +923,12 @@ function advanced_booking_calendar_show_settings() {
 			  <hr>-->
 			  <form method="post" class="uk-form uk-form-horizontal" action="admin-post.php">
 				<input type="hidden" name="action" value="abc_booking_editEmailSettings" />
+				<div class="uk-form-row">
+					<label class="uk-form-label" for="subjectrejected">'.__('Currencies', 'advanced-booking-calendar').'</label>
+					<div class="uk-form-controls">
+						<input class="uk-form-width-large" name="subjectrejected" id="subjectrejected" value="'.esc_attr(stripslashes(get_option('abc_subject_rejected'))).'"/>
+					</div>
+				</div>
 				<!--<h3>'.__('Templates', 'advanced-booking-calendar').'</h3>
 				<h4>'.__('Unconfirmed Booking', 'advanced-booking-calendar').'</h4>-->
 				<div class="uk-form-row">
@@ -964,12 +970,6 @@ function advanced_booking_calendar_show_settings() {
 					</div>
 				</div>
 				<h4>'.__('Rejecting an open Booking', 'advanced-booking-calendar').'</h4>-->
-				<!--<div class="uk-form-row">
-					<label class="uk-form-label" for="subjectrejected">'.__('Empty', 'advanced-booking-calendar').'</label>
-					<div class="uk-form-controls">
-						<input class="uk-form-width-large" name="subjectrejected" id="subjectrejected" value="'.esc_attr(stripslashes(get_option('abc_subject_rejected'))).'"/>
-					</div>
-				</div>-->
 				<!--<div class="uk-form-row">
 					<label class="uk-form-label" for="textrejected">'.__('Text for a rejection mail', 'advanced-booking-calendar').'</label>
 					<div class="uk-form-controls">

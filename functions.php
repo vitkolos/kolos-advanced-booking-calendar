@@ -591,7 +591,7 @@ function sendAbcGuestMail($bookingData){
         $text = str_replace('['.$var.']', $placeholder[$var], $text);
     }
 
-    $headers[] = 'From: '.wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES ).' <'.$adminEmail.'>'."\r\n";
+    $headers[] = 'Reply-To: '.$adminEmail."\r\n";
 
     wp_mail( $placeholder["abc_email"], stripslashes($subject), stripslashes($text), $headers ); // Sending email to customer
 
@@ -749,7 +749,6 @@ function sendAbcAdminMail($bookingData){
     $priceOutput .= __('Total price', 'advanced-booking-calendar').': '.abc_booking_formatPrice($totalPrice).'<br>';
     $adminEmail = getAbcSetting('email');
     $headers[] = 'Content-type: text/html; charset="UTF-8' . "\r\n";
-    $headers[] = 'From: '.wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES ).' <'.$adminEmail.'>'."\r\n";
     $headers[] = 'Reply-To: '.$bookingData["first_name"].' '.$bookingData["last_name"].' '.' <'.$bookingData["email"].'>'."\r\n";
     $subject = __('Booking Request', 'advanced-booking-calendar').' '.wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
     $adminBody = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -1383,4 +1382,44 @@ function abcEnqueueCustomCss(){
 	}
 	return $output;
 }
+
+function abc_getPaymentInfo() {
+    // this function is not actually used
+    $data = [];
+    $data['currencies'] = get_option('abc_subject_rejected');
+    $data['accountNumbers'] = get_option('abc_subject_unconfirmed');
+    $data['ibans'] = get_option('abc_subject_confirmed');
+    $data['bics'] = get_option('abc_subject_canceled');
+    $currencyNumber = 100;
+
+    foreach ($data as $key => $value) {
+        $data[$key] = array_map('trim', explode(',', $value));
+        $c = count($data[$key]);
+
+        if ($c < $currencyNumber) {
+            $currencyNumber = $c;
+        }
+    }
+
+    $result = [];
+
+    for ($i=0; $i < $c; $i++) { 
+        $result[$i] = [
+            'currency' => $data['currencies'][$i],
+            'accountNumber' => $data['accountNumbers'][$i],
+            'iban' => $data['ibans'][$i],
+            'bic' => $data['bics'][$i]
+        ];
+    }
+
+    return $result;
+}
+
+function abc_safeEmailFrom($from) {
+    return str_replace(',', '', $from);
+}
+
+add_filter( 'wp_mail_from_name', function( $name ) {
+	return abc_safeEmailFrom(wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES ));
+} );
 ?>
