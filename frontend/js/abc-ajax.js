@@ -76,6 +76,7 @@ function buttonLR(el, right, num) {
 		end: abcSingleCheckout
 	};
 
+	// kód níže ruší vybrané datum při přepnutí měsíce směrem doprava, pokud mezi vybraným datem a koncem toho měsíce najde obsazený rozsah
 	if(right) {
 		var item = jQuery('#abc_singlecalendar_' + uniqid + ' .abc-date-item').last();
 
@@ -102,7 +103,7 @@ function buttonLR(el, right, num) {
 				firstIteration = false;
 			}
 			tempDate.setDate(tempDate.getDate() - 1);
-			if(getDateYYYYMMDD(tempDate).slice(-2) != item.html()) {
+			if(getDateYYYYMMDD(tempDate) != date) {
 				jQuery('#abc_singlecalendar_' + uniqid).data('checkin-' + uniqid, 0);
 				jQuery('#abc-booking-' + uniqid).html(ajax_abc_booking_SingleCalendar.hint);
 			}
