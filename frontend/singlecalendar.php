@@ -456,9 +456,9 @@ function ajax_abc_booking_setDataRange() {
 				// }
 				$minimumStay = abc_booking_checkMinimumStay($calendarId, sanitize_text_field($_POST['start']), sanitize_text_field($_POST['end']));		
 				if($minimumStay > 0){ // Checking if the minimum number of nights to stay is reached
-					$output .= '</td></tr><tr><td colspan="2"><b>'.sprintf( __('Your stay is too short. Minimum stay for those dates is %d nights. However, you can complete the reservation, we will only contact you subsequently to agree on the conditions.', 'advanced-booking-calendar'), $minimumStay ).'';
+					$output .= '</td></tr><tr><td colspan="2"><b>'.sprintf( __('Your stay is too short. Minimum stay for those dates is %d nights.', 'advanced-booking-calendar'), $minimumStay ).'';
 				}
-				if(getAbcSetting("bookingpage") > 0 && get_option('abc_bookingformvalidated') == 1){ // Checking if bookingpage in the settings has been defined
+				if($minimumStay == 0 && getAbcSetting("bookingpage") > 0 && get_option('abc_bookingformvalidated') == 1){ // Checking if bookingpage in the settings has been defined
 					$optionPersons = '';
 					$abcPersonValue = 2;
 					for( $i = 1; $i <= getAbcUnits($calendarId); $i++) {
